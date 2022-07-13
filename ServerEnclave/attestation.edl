@@ -1,0 +1,193 @@
+// Copyright (c) Open Enclave SDK contributors.
+// Licensed under the MIT License.
+
+/* Copyright (c) 2021 SUSTech University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+enclave {
+    from "openenclave/edl/attestation.edl" import *;
+    from "openenclave/edl/syscall.edl" import *;
+    from "platform.edl" import *;
+    include "common/log.h"
+
+    trusted {
+        public int get_enclave_format_settings(
+            [in] const oe_uuid_t* format_id,
+            [out] uint8_t** format_settings,
+            [out] size_t* format_settings_size);
+
+        // Return the public key of this enclave along with the enclave's evidence.
+        // Another enclave can use the evidence to attest the enclave and verify
+        // the integrity of the public key.
+        public int get_evidence_with_public_key(
+            [in] const oe_uuid_t* format_id,
+            [in, size=format_settings_size] uint8_t* format_settings_buffer,
+            size_t format_settings_size,
+            [out] uint8_t **pem_key,
+            [out] size_t *pem_key_size,
+            [out] uint8_t **evidence_buffer,
+            [out] size_t *evidence_buffer_size);
+
+        // Attest and store the public key of another enclave
+        public int verify_evidence(
+            [in] const oe_uuid_t* format_id,
+            [in, count=pem_key_size] uint8_t *pem_key,
+            size_t pem_key_size,
+            [in, count=evidence_size] uint8_t *evidence,
+            size_t evidence_size,
+            size_t uuid);
+
+        public int rsa_encrypt_and_sig_aes( 
+            [out] uint8_t** rsa_public_key,
+            [out] size_t *  rsa_public_key_size,
+            [out] uint8_t** encrypt_aes_data,
+            [out] size_t*  encrypt_aes_data_size,
+            [out] uint8_t** sig_aes_data,
+            [out] size_t*  sig_aes_data_size,
+            size_t uuid
+            );
+        
+        public int rsa_decrypt_verify_sig_and_set_aes( 
+            [in,count=rsa_public_key_size] uint8_t* rsa_public_key,
+                size_t  rsa_public_key_size,
+            [in,count=encrypt_aes_data_size] uint8_t* encrypt_aes_data,
+                size_t  encrypt_aes_data_size,
+            [in,count=sig_aes_data_size] uint8_t* sig_aes_data,
+                size_t sig_aes_data_size);
+
+        public int rsa_decrypt_client_aes( 
+            [in,count=encrypt_aes_data_size] uint8_t* encrypt_aes_data,
+                size_t  encrypt_aes_data_size,
+            [in,count=mrenclave_size] uint8_t* mrenclave,
+                size_t mrenclave_size,
+            size_t uuid);
+
+        public int aes_decrypt_ecdsa_reply( 
+            [in,count=encrypt_aes_data_size] uint8_t* encrypt_aes_data,
+            size_t  encrypt_aes_data_size,
+            size_t uuid);
+            
+        public int aes_decrypt_client_messages( 
+            [in,count=encrypt_aes_data_size] uint8_t* encrypt_aes_data,
+            size_t  encrypt_aes_data_size,
+            [in,count=32] uint8_t* mrenclave,
+            size_t mrenclave_size, 
+            [out] uint8_t** reply_data,
+            [out] size_t*  reply_data_size,
+            size_t client_id, 
+            [out] size_t* reply_type);
+        
+        public int aes_encrypt_ecdsa( 
+            [out] uint8_t** encrypt_aes_data,
+            [out] size_t*  encrypt_aes_data_size,
+            size_t uuid);
+
+        // ecdsa sign message for another enclave using the public key stored for it
+        public int ecdsa_sign_message( 
+            int policy,
+            [in, count=data_size] uint8_t* data,
+            size_t  data_size,
+            [out] uint8_t** sig,
+            [out] size_t*  sig_size);
+
+        // Process ecdsa message
+        public int ecdsa_verify_sign_message(  
+            [in, count=size] uint8_t* data,
+            size_t  size,
+            [in, count=sig_data_size] uint8_t* sig_data,
+            size_t sig_data_size,
+            [in,count=ecdsa_key_size] uint8_t *ecdsa_key, 
+            size_t ecdsa_key_size);
+
+        // get all peer data and sig data
+        public int create_kpi_certificate_ecall(  
+            [out] uint8_t** pki_certificate,
+            [out] size_t*  pki_certificate_size,
+            size_t uuid);
+
+        public int process_kpi_certificate_ecall(
+            [in, count=pki_certificate_size] uint8_t* pki_certificate,
+            size_t  pki_certificate_size,
+            size_t uuid); 
+        
+        public int seal_state_data(int sealPolicy,
+                             [out] sealed_data_t** sealed_data,
+                             [out] size_t* sealed_data_size);
+                             
+        public int LedgerRead_key(
+            [out]uint8_t **publickey_id, 
+            [out]size_t *publickey_id_size, 
+            [out]uint8_t **sgx_uid, 
+            [out]size_t *sgx_uid_size);
+
+        public int LedgerRead_other_key(
+            [out]uint8_t **publickey_id, 
+            [out]size_t *publickey_id_size, 
+            [out]uint8_t **sgx_uid, 
+            [out]size_t *sgx_uid_size,
+            size_t uuid);
+
+            
+            
+        public int verify_ed25519([in,count = signture_size] uint8_t* signture,
+            size_t signture_size,
+            [in,count=source_text_size] uint8_t* source_text,
+            size_t source_text_size);
+
+
+        public void set_uuid_ecall(size_t uuid);
+
+
+/*-------------------------------------Here is the ROTE implementation------------------------------------------------------------------*/
+        public int updateLocalASECounterTable(size_t AE_uuid,
+                                            [in,count = ITHash_size] uint8_t* ITHash,
+                                            size_t ITHash_size);
+        public int ecdsa_signed(size_t AE_uuid,
+                            int policy,
+                            [out] unsigned char** signed_data,
+                            [out] size_t *signed_data_size,
+                            [out] unsigned char** encrypt_data,
+                            [out] size_t* encrypt_data_size
+        );
+        public int verify(  size_t AE_uuid,
+                            int policy,
+                            [in,count=sig_data_size] unsigned char* sig_data,
+                            size_t sig_data_size,
+                            [in,count=encrypt_data_size] unsigned char* encrypt_data,
+                            size_t encrypt_data_size 
+        );
+        public int signed_with_verify(  size_t uuid,
+                            int policy,
+                            [in,count=sig_data_size] unsigned char* sig_data,
+                            size_t sig_data_size,
+                            [in,count=encrypt_data_size] unsigned char* encrypt_data,
+                            size_t encrypt_data_size,
+                            int signed_policy,
+                            [out] unsigned char** signed_data,
+                            [out] size_t *signed_data_size,
+                            [out] unsigned char** encrypt_data_out,
+                            [out] size_t* encrypt_data_out_size
+        );
+    };
+
+    untrusted {
+        //There is Ocall implement
+        int seal_host_write(
+            size_t sealed_data_size,
+            [out] unsigned char* sealed_data,
+        );
+    };
+
+};
