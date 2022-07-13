@@ -1,0 +1,3 @@
+ToolSet: 1.0 (local)Options: 
+
+Options:-DCMAKE_MAKE_PROGRAM=/home/cooper/.cache/JetBrains/RemoteDev/dist/880329aca0c3c_CLion-2022.1.3/bin/ninja/linux/ninja

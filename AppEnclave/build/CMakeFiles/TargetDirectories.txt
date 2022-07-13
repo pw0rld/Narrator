@@ -1,0 +1,16 @@
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/CMakeFiles/rebuild_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/CMakeFiles/runsgxlocal.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/CMakeFiles/edit_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/CMakeFiles/sign.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/CMakeFiles/run.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/common/CMakeFiles/rebuild_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/common/CMakeFiles/common.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/common/CMakeFiles/edit_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/enclave/CMakeFiles/edit_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/enclave/CMakeFiles/enclave_a_signed.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/enclave/CMakeFiles/rebuild_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/enclave/CMakeFiles/enclave_a.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/enclave/CMakeFiles/public_key_a.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/host/CMakeFiles/rebuild_cache.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/host/CMakeFiles/attestation_host.dir
+/home/pw0rld/Desktop/sample_test/four/Distributed-TEE-systems-niu/test_demo/Narrator/AE_Client/build/host/CMakeFiles/edit_cache.dir
