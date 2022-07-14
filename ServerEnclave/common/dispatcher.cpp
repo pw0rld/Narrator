@@ -1838,15 +1838,18 @@ int ecall_dispatcher::LedgerRead_key(uint8_t **publickey_id, size_t *publickey_i
     memcpy(*sgx_uid, m_enclave_signer_id, sizeof(m_enclave_signer_id));
     *sgx_uid_size = sizeof(m_enclave_signer_id);
 
-    *publickey_id = (uint8_t *)oe_host_malloc(256);
+    uint8_t m_rsa_public_key[512];
+    m_crypto->copy_rsa_public_key(m_rsa_public_key);
+    *publickey_id = (uint8_t *)oe_host_malloc(512);
     if (*publickey_id == nullptr)
     {
         TRACE_ENCLAVE("publickey_id malloc failed!!!");
         return ret;
     }
-    memset(*publickey_id, 0, 256);
-    memcpy(*publickey_id, Re_persistent_state_table.m_ecdsa_public_key, 256);
-    *publickey_id_size = 256;
+
+    memset(*publickey_id, 0, 512);
+    memcpy(*publickey_id, m_rsa_public_key, 512);
+    *publickey_id_size = 512;
     ret = 0;
     TRACE_ENCLAVE("LedgerRead Successful!");
     return ret;
@@ -1865,19 +1868,19 @@ int ecall_dispatcher::LedgerRead_other_key(uint8_t **publickey_id, size_t *publi
     memcpy(*sgx_uid, m_enclave_signer_id, sizeof(m_enclave_signer_id));
     *sgx_uid_size = sizeof(m_enclave_signer_id);
 
-    *publickey_id = (uint8_t *)oe_host_malloc(256);
+    *publickey_id = (uint8_t *)oe_host_malloc(512);
     if (*publickey_id == nullptr)
     {
         TRACE_ENCLAVE("publickey_id malloc failed!!!");
         return ret;
     }
-    memset(*publickey_id, 0, 256);
+    memset(*publickey_id, 0, 512);
     vector<peer_info_t>::iterator it;
-    it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
+    it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid); // FIXME
     if (it != peer_info_vec2.end())
     {
-        memcpy(*publickey_id, (*it).ecdsa_public_key, 256);
-        *publickey_id_size = 256;
+        memcpy(*publickey_id, (*it).rsa_public_key, 512);
+        *publickey_id_size = 512;
 
         ret = 0;
         TRACE_ENCLAVE("LedgerOtherRead Successful!");
@@ -1885,49 +1888,7 @@ int ecall_dispatcher::LedgerRead_other_key(uint8_t **publickey_id, size_t *publi
     }
     else
     {
-        TRACE_ENCLAVE("LedgerOtherRead failed! Can not find the peer message");
+        TRACE_ENCLAVE("LedgerOtherRead failed! Can not find the peer message. Now uuid is %d", uuid);
         return 1;
     }
 }
-
-// int ecall_dispatcher::read_other_info(uint8_t **publickey_id, size_t *publickey_id_size, uint8_t **sgx_uid, size_t *sgx_uid_size, size_t uuid)
-// {
-//     int ret = 1;
-//     // uint8_t otherdata[65] = {0};
-//     vector<peer_info_t>::iterator it;
-//     vector<string> sp;
-//     string string_message;
-//     int nonce;
-//     int other_counter;
-//     memset(decrypt_data, 0, sizeof(decrypt_data));
-//     // check whether the AE uuid
-
-//     it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
-//     if (it == peer_info_vec2.end())
-//     {
-//         TRACE_ENCLAVE("Find peer failed.");
-//         ret = 1;
-//         return ret;
-//     }
-//     *publickey_id = (uint8_t *)oe_host_malloc(257);
-//     if (*publickey_id == nullptr)
-//     {
-//         TRACE_ENCLAVE("publickey_id malloc failed!!!");
-//         return ret;
-//     }
-//     memset(*publickey_id, 0, 257);
-//     memcpy(*publickey_id, it->ecdsa_public_key, 256);
-//     *publickey_id_size = 256;
-//     *sgx_uid = (uint8_t *)oe_host_malloc(sizeof(it->) + 1);
-//     if (*sgx_uid == nullptr)
-//     {
-//         TRACE_ENCLAVE("sgx_uid malloc failed!!!");
-//         return ret;
-//     }
-//     memset(*sgx_uid, 0, 33);
-//     memcpy(*sgx_uid, it->enclave_signer_id, 32);
-//     *sgx_uid_size = 32;
-//     ret = 0;
-//     TRACE_ENCLAVE("read_other_info Successful!");
-//     return ret;
-// }

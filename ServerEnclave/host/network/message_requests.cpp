@@ -531,7 +531,7 @@ string create_ecdsa_pki_certificate(oe_enclave_t *attester_enclaves, size_t uuid
 
     if (PRINT_ATTESTATION_MESSAGES)
     {
-        cout << "[+]Local Re process create_ecdsa_pki_certificate failed.Peer (" << my_ip << ":" << to_string(my_port) << ") generate pki certificate for system initializaiton." << endl;
+        cout << "[+]Local Re process create_ecdsa_pki_certificate Successful .Peer (" << my_ip << ":" << to_string(my_port) << ") generate pki certificate for system initializaiton." << endl;
     }
     return encrypt_data_string;
 }

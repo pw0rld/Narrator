@@ -53,7 +53,7 @@ void system_init()
 			boost::this_thread::sleep(boost::posix_time::milliseconds(1));
 		}
 
-		bool is_system_init_finished = true;
+		bool is_system_init_finished = false;
 		bool ready_setup_pki = true;
 		bool self_tendermint_flag = true;
 		int check_tendermint_counter = 0;
@@ -64,7 +64,7 @@ void system_init()
 
 			if (PRINT_ATTESTATION_MESSAGES)
 			{
-				cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
+				// cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
 			}
 
 			if (ser->is_peer_connected(i) == false && (ser->get_peer_role(i)).compare("se_slave") == 0)
@@ -81,7 +81,7 @@ void system_init()
 				if (ser->get_peer_wait_count(i) > 0)
 				{
 					ser->decrease_peer_wait_count(i);
-					boost::this_thread::sleep(boost::posix_time::milliseconds(1000));
+					// boost::this_thread::sleep(boost::posix_time::milliseconds(1000));
 				}
 				else
 				{
@@ -97,6 +97,7 @@ void system_init()
 			// generate AES key for secure communication
 			case SYSTEM_INIT_SECURE_CHANNEL:
 			{
+				cout << "something worry?" << endl;
 				if (ser->get_peer_wait_count(i) > 0)
 				{
 					ser->decrease_peer_wait_count(i);
@@ -145,7 +146,6 @@ void system_init()
 						int is_tru = read_and_verify_tendermint(tendermint_data, se_enclave);
 						if (is_tru == 0)
 						{
-							// ser->set_peer_attest_state(i, SYSTEM_INIT_DONE);
 							cout << "[+]Check tendermint record is not exist " << endl;
 							bool is_write = write_tendermint(se_enclave);
 							if (is_write)
@@ -175,9 +175,14 @@ void system_init()
 			{
 				// This setp will check tendermint chain that is exists the peer record or not exists
 				// Master will cycle check
-				if (checkTendermintSetup(i, se_enclave) == true) // make sure all peer send its PKI key to master peer
+				if (checkTendermintSetup(ser->get_peer_uuid(i), se_enclave) == true) // make sure all peer send its PKI key to master peer
 				{
 					check_tendermint_counter++;
+				}
+				else
+				{
+					cout << "checkTendermintSetup failed!!!!" << endl;
+					exit(1);
 				}
 			}
 			// complete the init process

@@ -341,20 +341,22 @@ int read_and_verify_tendermint(std::string data, oe_enclave_t *enclave)
     cout << "Get information from tendermint error" << endl;
     return -1;
   }
-  // TODO Separate the ed25519 verify and the curl request
-  // std::cout << "response_data " << response_data << std::endl;
+
+  std::cout << "response_data " << response_data << std::endl;
   json j = json::parse(response_data);
   std::string codespace = j["response"]["codespace"].dump(); // sync with tendermint return message
   std::string log = j["response"]["log"].dump();
   std::string height = j["response"]["height"].dump();
   std::string signture = "";
   std::string value = j["response"]["value"].dump();
+  std::cout << "codespace " << codespace << std::endl;
   log = replace_all(log, "\"", "");
   height = replace_all(height, "\"", "");
   codespace = replace_all(codespace, "\"", "");
   value = replace_all(value, "\"", "");
   string source_text = "";
   source_text = log + height;
+  std::cout << "source_text " << source_text << std::endl;
   uint8_t *source_text_uint;
   source_text_uint = (uint8_t *)malloc(source_text.size() + 1);
   memset(source_text_uint, 0, source_text.size() + 1);
@@ -384,7 +386,7 @@ int read_and_verify_tendermint(std::string data, oe_enclave_t *enclave)
   source_text_uint = NULL;
   free(signture_text_uint);
   signture_text_uint = NULL;
-  if (log.compare("exist") == 0)
+  if (log.compare("exists") == 0)
   { // If the tendermint exist the record, return failed
     cout << "[-The record is exist-]" << endl;
     return 1;

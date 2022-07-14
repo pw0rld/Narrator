@@ -184,12 +184,8 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         return;
       }
       // processing the received remote-attestation reply
-      if (ser->get_peer_attest_state(index) != SYSTEM_INIT_SECURE_CHANNEL) // make sure initialize the only
+      if (ser->get_peer_attest_state(index) == SYSTEM_INIT_START) // make sure initialize the only
       {
-        if (PRINT_ATTESTATION_MESSAGES)
-        {
-          cout << "[+]RA_Reply process.Peer (" << my_ip << ":" << to_string(my_port) << ") receive remote-attestation from peer (" << sender_ip << ":" << to_string(sender_port) << ")." << endl;
-        }
         if (process_attestation_remote_pk_evidence(sp, se_enclaves))
         {
           ser->set_peer_attest_state(index, SYSTEM_INIT_SECURE_CHANNEL);
@@ -222,7 +218,8 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         printf("\033[32;1m Warnning: unknown aes setup message.\n\033[0m");
         fflush(stdout);
       }
-      if (PRINT_ATTESTATION_MESSAGES)
+      // if (PRINT_ATTESTATION_MESSAGES)
+      if (1)
       {
         cout << "[+]AES_Setup process.Peer (" << my_ip << ":" << to_string(my_port) << ") receive aes-setup request from peer (" << sender_ip << ":" << to_string(sender_port) << ")." << endl;
       }

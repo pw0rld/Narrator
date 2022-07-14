@@ -213,8 +213,9 @@ int Crypto::Sha256(const uint8_t *data, size_t data_size, uint8_t sha256[32])
 int Crypto::Ed25519(const uint8_t *msg, size_t msg_size, uint8_t signature[64])
 {
     // TODO add a base64 cover to uint8
+    // 5B0558D683504CBB10C08719E96940EBA66546DD7A3BE63408FC18BADF956FEB
     // uint8_t privateKey[64] = {209, 192, 92, 122, 89, 246, 136, 40, 250, 213, 139, 243, 119, 77, 102, 235, 237, 170, 213, 115, 39, 153, 134, 11, 15, 90, 13, 124, 27, 73, 189, 139, 220, 235, 137, 53, 217, 169, 182, 46, 233, 121, 14, 47, 253, 130, 172, 17, 205, 100, 70, 176, 51, 153, 17, 15, 112, 9, 147, 116, 27, 251, 143, 93};
-    uint8_t publicKey[32] = {106, 135, 216, 127, 193, 149, 66, 87, 255, 131, 197, 120, 158, 24, 129, 84, 86, 75, 89, 89, 104, 142, 107, 248, 179, 181, 42, 123, 150, 194, 177, 138};
+    uint8_t publicKey[32] = {0xCA, 0x45, 0xC1, 0x30, 0xD, 0x22, 0x2B, 0xCC, 0xD7, 0x81, 0x6A, 0x5C, 0x9C, 0x5E, 0x7, 0x8F, 0x59, 0xA7, 0x48, 0x44, 0x78, 0xBE, 0xAE, 0xC9, 0xB1, 0xCE, 0x2A, 0xA1, 0xFD, 0x90, 0x78, 0xF0};
     // Ed25519::sign(signature, privateKey, publicKey, msg, 17);
     if (!Ed25519::verify(signature, publicKey, msg, msg_size))
     {
@@ -231,6 +232,7 @@ int Crypto::Ed25519(const uint8_t *msg, size_t msg_size, uint8_t signature[64])
         TRACE_ENCLAVE("Ed25519 Signature Error! Please check msg and signature for consistency.");
         return 1;
     }
+    TRACE_ENCLAVE("Ed25519 Signature Successful!");
     return 0;
 }
 

@@ -37,27 +37,27 @@ for i ($PROCESS) {
 }
 fi
 
-PROCESS=`ps -ef|grep attestation|grep -v grep|grep -v PPID|awk '{ print $2}'`
+# PROCESS=`ps -ef|grep attestation|grep -v grep|grep -v PPID|awk '{ print $2}'`
 
-for i ($PROCESS) {
-    echo "Clean pre programs attestation process and pid is\n $i"
-    ps -ef | grep attestation | grep -v grep | awk '{print $2}' |sudo xargs kill -9
-}
+# for i ($PROCESS) {
+#     echo "Clean pre programs attestation process and pid is\n $i"
+#     ps -ef | grep attestation | grep -v grep | awk '{print $2}' |sudo xargs kill -9
+# }
 
 
 
-peer_array=(8002 8003)
-ip="192.168.1.107"
-for pi ($peer_array) {
-    echo "sudo nohup ./cmake-build-debug/host/attestation_host ./cmake-build-debug/enclave/enclave_a.signed $pi ./host/network/_peers $ip"
-    /bin/rm $pi.txt
-    nohup ./host/attestation_host ./enclave/enclave_a.signed $pi ../host/network/_peers $ip >> $pi.txt &
-}
-
-# local_array=(8002 8003)
+# peer_array=(8002 8003)
 # ip="192.168.1.107"
 # for pi ($peer_array) {
-#     echo "sudo nohup ./host/attestation_host ./enclave/enclave_a.signed $pi ../host/network/_peers $ip"
+#     echo "sudo nohup ./cmake-build-debug/host/attestation_host ./cmake-build-debug/enclave/enclave_a.signed $pi ./host/network/_peers $ip"
 #     /bin/rm $pi.txt
 #     nohup ./host/attestation_host ./enclave/enclave_a.signed $pi ../host/network/_peers $ip >> $pi.txt &
 # }
+
+# # local_array=(8002 8003)
+# # ip="192.168.1.107"
+# # for pi ($peer_array) {
+# #     echo "sudo nohup ./host/attestation_host ./enclave/enclave_a.signed $pi ../host/network/_peers $ip"
+# #     /bin/rm $pi.txt
+# #     nohup ./host/attestation_host ./enclave/enclave_a.signed $pi ../host/network/_peers $ip >> $pi.txt &
+# # }
