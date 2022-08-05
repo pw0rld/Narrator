@@ -1,26 +1,24 @@
-# Narrator
-Secure and Practical State Continuity for Trusted Execution on Cloud
-Narrator是基于Intel可信架构SGX的一个对抗云厂商的可信系统DEMO。
+# Narrator: Secure and Practical State Continuity for Trusted Execution on Cloud
+Narrator is a demo which based Intel SGX to explanation our paper.
 
-## 系统架构
+## Architecture
 
-
-
+TODO
 
 
-## 环境要求:
 
-依赖于SGX环境，需要可以能够满足SGX的环境机器。
+## Requirements:
 
-Boost C++库
+Dependent on the SGX environment, real machines that can meet the SGX environment are required.
 
-```
+### Boost C++
+```bash
 sudo apt-get install libboost-all-dev
 ```
 
-### DCAP Driver 安装
+### DCAP Driver install
 
-```
+```bash
 echo 'deb [arch=amd64] https://download.01.org/intel-sgx/sgx_repo/ubuntu focal main' | sudo tee /etc/apt/sources.list.d/intel-sgx.list
 wget -qO - https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key | sudo apt-key add -
 echo "deb http://apt.llvm.org/focal/ llvm-toolchain-focal-10 main" | sudo tee /etc/apt/sources.list.d/llvm-toolchain-focal-10.list
@@ -35,9 +33,9 @@ chmod +x sgx_linux_x64_driver.bin
 sudo ./sgx_linux_x64_driver.bin
 ```
 
-查看是否安装成功
+Check successful of install:
 
-```
+```bash
 pw0rld@pw0rld-code:~/Desktop/build$ dmesg | grep -i sgx
 [ 2199.851152] intel_sgx: loading out-of-tree module taints kernel.
 [ 2199.851186] intel_sgx: module verification failed: signature and/or required key missing - tainting kernel
@@ -45,11 +43,11 @@ pw0rld@pw0rld-code:~/Desktop/build$ dmesg | grep -i sgx
 [ 2199.852119] intel_sgx: Intel SGX DCAP Driver v1.41
 ```
 
-## 安装ECDSA
+## Attestation DHCP: 
 
-使用1.8版本的ECDSA服务
+In our project, we use DHCP with version 1.8x
 
-```
+```bash
 wget https://deb.nodesource.com/setup_14.x
 sudo chmod +x setup_14.x
 sudo ./setup_14.x
@@ -74,11 +72,15 @@ sudo ./build.sh
 sudo dpkg -i sgx-dcap-pccs_1.8.100.2-focal1_amd64.deb
 ```
 
-需要自行配置PCS API Key
+Then your should register the [Intel® SGX Services for ECDSA Attestation](https://api.portal.trustedservices.intel.com/) 
+and input your PCS API Key in `/opt/intel/sgx-dcap-pccs/config/default.json`
 
-测试是否成功
+Noteworthy, in your Local Network, there has only dhcp service needs to exit.
 
-```
+Peers can modify `/etc/sgx_default_qcnl.conf` to use the dhcp server
+
+Test for dhcp server working
+```bash
 curl --noproxy "*" -v -k -G "https://127.0.0.1:8081/sgx/certification/v2/rootcacrl"
     
  
@@ -87,16 +89,21 @@ curl --noproxy "*" -v -k -G "https://127.0.0.1:8081/sgx/certification/v2/rootcac
 
 sudo PM2_HOME=/opt/intel/sgx-dcap-pccs/.pm2/ pm2  restart pccs
 ```
+More information about DHCP Server:
+https://github.com/openenclave/openenclave/blob/master/docs/DesignDocs/SGX_QuoteEx_Integration.md
+https://github.com/openenclave/openenclave/blob/master/docs/GettingStartedDocs/Contributors/NonAccMachineSGXLinuxGettingStarted.md
+https://api.portal.trustedservices.intel.com/provisioning-certification
 
-## openenclave安装
 
-```
+## openenclave SDK install
+
+```bash
 sudo apt -y install clang-10 libssl-dev gdb libsgx-enclave-common libsgx-quote-ex libprotobuf17 libsgx-dcap-ql libsgx-dcap-ql-dev az-dcap-client libsqlite3-dev
 sudo apt-get install python3-pip
 sudo pip3 install cmake
 sudo apt install doxygen
 sudo apt install git
-#源码安装openenclave
+#source build openenclave sdk
 git clone --recursive --branch=v0.14.0  https://github.com/openenclave/openenclave.git 
 cd openenclave
 git submodule update --init --recursive 
@@ -106,3 +113,10 @@ sudo make && make install
 source /opt/openenclave/share/openenclave/openenclaverc
 ```
 
+## Tendermint build
+```bash
+cd tendermint-ansible
+cd tendermint_core
+make install_abci
+make build
+```

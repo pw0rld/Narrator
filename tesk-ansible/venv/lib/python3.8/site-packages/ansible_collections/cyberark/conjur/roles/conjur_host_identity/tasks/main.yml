@@ -1,5 +1,0 @@
----
-- include: identity_check.yml  # registers variable 'conjurized'
-- include: identity.yml
-- include: summon.yml
-- include: summon-conjur.yml
