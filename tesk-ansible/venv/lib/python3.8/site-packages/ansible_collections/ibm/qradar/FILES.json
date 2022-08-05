@@ -1,0 +1,642 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79da1020dd623c4292a9ac8f2c5e237e43aa906d883eff0e406b83340e7753af",
+   "format": 1
+  },
+  {
+   "name": "changelogs/config.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2c4dcbe8870d9e338d757b61e3f3cc08ab7f4535795d67a3df7b5f15e4fd6c8",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.deploy_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "905ea7071de3986d5fec78b1314b7901838add60f05418861c47667c11762605",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.log_source_management_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c41b799dd116c238ced34f34146cadfde57de1f52de6d59ed269007a7fe74be0",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.offense_action_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "499aa85776594aa101b48286715c4f50980807f3aeb057e05c983c2b853ae1f3",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.offense_info_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "147d44b8ed4d5fd6cf7fb4df19b370625e9064455e76f5ccad4139a979ba29c2",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.offense_note_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20b656a582532cb4f46af1840c6d9e6bfb7e75299ce84b30a2aaa1f9bf9db15c",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.qradar_httpapi.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "106a02861e7dbe55afc34f804645e3e999f176100ab731496b3f6177dac642b1",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.rule_info_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09b14d7c0ec8cdbab8e1805b2805db16752e60ea54f1b5d3bab48f48d905ecf7",
+   "format": 1
+  },
+  {
+   "name": "docs/ibm.qradar.rule_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76fb279657bfaf0a7aae7c26b102b00ac20c1a4222c10eee1f8dc4627a863603",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df18179bb2f5447a56ac92261a911649b96821c0b2c08eea62d5cc6b0195203f",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/httpapi",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/httpapi/qradar.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b3b89e5a16cec34d90543c9698f8afddc4e79ed4183edcc87d9ea35990d16cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/qradar.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "559fafb79d39c920ac4dccc73ffaff5804d9492d621710b2b2746ba36ca58938",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e061cdb5af3a9c2f2c7f14ca300feb52a2cd41e3669f7814311cfcedaeec08f7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_log_source_management.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1afac76ef7ab4ee68dfc16d206fca3575c79b40289cfcded1421b90c3f534ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_offense_action.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "013f428f597c2ca88843c7324bafe566ecd8c6bc40e1995323d1b105174fe930",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_offense_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5351fda8f1695f0fa1598ffe985be11f48d98d954f4dadcc0db53742897a3ceb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_offense_note.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05f9b8eb65ecd60ce33f6570b67ac22554e9ae3a30500c831e95a8fba373817b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_rule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a28b66ce8d562b32bcf0fb029a27c1e1492e910aad54853428eda6639375604",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qradar_rule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "03df12b984ed4754c1d277a18132e44b48a8ba4895fc5a4fed97199be06ca2fd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e061cdb5af3a9c2f2c7f14ca300feb52a2cd41e3669f7814311cfcedaeec08f7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/log_source_management.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1afac76ef7ab4ee68dfc16d206fca3575c79b40289cfcded1421b90c3f534ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/offense_action.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "013f428f597c2ca88843c7324bafe566ecd8c6bc40e1995323d1b105174fe930",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/offense_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5351fda8f1695f0fa1598ffe985be11f48d98d954f4dadcc0db53742897a3ceb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/offense_note.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05f9b8eb65ecd60ce33f6570b67ac22554e9ae3a30500c831e95a8fba373817b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/rule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a28b66ce8d562b32bcf0fb029a27c1e1492e910aad54853428eda6639375604",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/rule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "03df12b984ed4754c1d277a18132e44b48a8ba4895fc5a4fed97199be06ca2fd",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deploy",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deploy/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deploy/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/deploy/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/log_source_management",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/log_source_management/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/log_source_management/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b7fef6816593f4cbf240ab9c371a86f9a20229fae339fc64fd9f492c5937d724",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/log_source_management/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/offense",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/offense/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/offense/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "985949c5779a18b1d13a05230a565e24d4edc5b8e9d87ae16ea47c07a44e3a75",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/offense/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_deploy",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_deploy/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_log_source_management",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_log_source_management/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_offense",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_offense/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_rule",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/qradar_rule/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/rule",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/rule/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/rule/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1d47767a0f7a9e41ac6cfe46ae8f0184a05fa4f81f5ef7b64c0387fce1a163c1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/rule/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e317ad2cb83962cf790cc6c46c9c099b2b1636a63a18192532a624f196b78df1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/target-prefixes.network",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4d2f34d7884174dabd0e91e1f2ae1a22499f44e634261344ad065a167f5f862",
+   "format": 1
+  },
+  {
+   "name": "tests/unit",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/builtins.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba13a350ade8ef804336f888d5883b8e54f8bddfb9d0fadc10277a8ca6540f4e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/mock.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "52ecd54195edca933104eb3e937547c7395ff604ada2694a8b184c2c1466dbf1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/compat/unittest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ed698b1faec43d87a2c1ebcb15a2aae48b09ff355bb9a598e5f5a1c928dbb30",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/loader.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "99243cafb4042ee1354d81e3f21647b18bba2b81e1bcd0d77d5487d6069740b9",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/path.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77760b066115f34f1ecce2387f8194ba254f3dc44ed89f439f3e6adfd258cdf1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/procenv.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7f9e134ebd607e1b2910d62cd8997535c8a2cced4473a2bf5cdaae2233e3049",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/vault_helper.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "feae23166b6eb502f7d9b77c314970516c9a99aaad7de01295b4dfdad53c5c09",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/mock/yaml_helper.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "94e2f3c867d2582c9f7a0e99e544718e355025c4a51c9925e70158fa89b3609e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules/conftest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2af4846e50d461a131ad3edfb609fbb39a9eb1796048c62e4ead8234bcf5c6a1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/modules/utils.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ecb4e4c4a3a490b49d33d043d246bea11580cfe5460e70630a793c2ffd0ff450",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49ba996dc4735c3463e9af561344346dfae14bcc1a68096ce78364b377f0df1f",
+   "format": 1
+  },
+  {
+   "name": "tests/.keep",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "63e02bf68769e25aba8db3f3cf2c1cd8b1e92e71ce3ef2d13e949b994e424b75",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1be8b9be5ba075e678fabb99be003f307daed05dd8854e7afb58b1c99bccf129",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d11d3cdcff67282e449a2f6ad34cfb0cc75e1c4bad5baba0461267656e7f9227",
+   "format": 1
+  },
+  {
+   "name": "bindep.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f20e24c3b24e3738a72623924e20848bb3bab9ea951099b7d2fcce091b9673a8",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "test-requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad90d08593439234a22fd641e4227e1e68afb5582315933f81a5dbeaf2f4dd39",
+   "format": 1
+  },
+  {
+   "name": "tox.ini",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa849abc071b00742c00b96e3df480355a2af2c60e4c920f085a9ac5616d8d4b",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

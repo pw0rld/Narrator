@@ -1,0 +1,782 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/workflows",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a6c43ee57fd06bc0384090a5a059206c2c1a7bdf82a6b5694a6cf8453be045a",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4abf762bdb90c9851c19f580dcda19b234668662b73068a9c0da33c07a2dfe15",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a73582e96f0fe1f13aec960b6e176e75fcd5b9b50cc844a0b7cfcb32cdb23821",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/place_holder",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f5614008729520e63806d0dbb04f177ad75b25ba1aead1bb32585b45b1199d69",
+   "format": 1
+  },
+  {
+   "name": "meta/execution-environment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2618d9d80b89823126599a1c179e6590f6708e9843704dbd1b2c98832764888",
+   "format": 1
+  },
+  {
+   "name": "playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/generic_ansible_sample.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4d804261c8c28d3a39afe649c255f983cdfd92b0b09eef320e046c10c60c7d84",
+   "format": 1
+  },
+  {
+   "name": "playbooks/generic_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0e6347a4ddc84cc8daf6d73f6c9a26cd10b1d9a12d6ef971a1e888a448303b27",
+   "format": 1
+  },
+  {
+   "name": "playbooks/create_GMCV_in_CG.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69b5d3f520619991ac8e75d5140bd6a5a46720e114e8f7afff2c41d5c90c11be",
+   "format": 1
+  },
+  {
+   "name": "playbooks/initial_setup_system_complete.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea539e79717b3515133f0c41aa8228289cd136edecc0f0fe541702a09d663bee",
+   "format": 1
+  },
+  {
+   "name": "playbooks/map_volume_to_host.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3380e97a8e0fdc785e73fd3aec82199db7e388c1e714f0fda36bec2e87ce2811",
+   "format": 1
+  },
+  {
+   "name": "playbooks/volume_migrate.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6992e1442f6691b982492f8cc8daca45a6a84973c60667248924aabc9daa9b08",
+   "format": 1
+  },
+  {
+   "name": "playbooks/volumegrp_create.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d58341d383558e50798b3c140087079d254e10614e22d4165b600470565c4109",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c82ee692702ec1dd604cdbc38ff252114e5204e1b0627045a66c9451e7a918ac",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/ibm_svc_ssh.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b0f1101e8c8562a6c68f8488e0710e202414874acbb88e494bb5b9ac2096b5d",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/ibm_svc_utils.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "658472245a5b16299628f6fd04bd432aa1f74408d863619010011a458de042af",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_auth.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b81f6b4db66443e632239ff4af910b95c92e571a40994874ba423113c805a9f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_complete_initial_setup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1905de93c10ca651eedd79c81b442c0bf5fd33e9c484713e2cf6eb33d3d71785",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_hostcluster.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8fce89bbadd9cc1e0f0de387be02b103396a54f687cd17a7db84f12acd57b77e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_initial_setup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0edd72c14df89b51c6ac297f9ecf4d73890ac8b23d49a013ed06c83bfcf729d2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_callhome.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2bfa05adc0609f15011fbe1c1b9c8c45852c783ee560a88049b55dd15299a186",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_consistgrp_flashcopy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8a71ca2e95c76aae46bcad1223c20ed948d94cfdaa9319e2d3a2f38c50cf4d8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_cv.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a9eb49551a8d77107fb11a3ea60daed8cb4630cd0fe0dd4f8f9a1a66d03cbd7d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_flashcopy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e716ba71c8b06026f19d5085bf46c1fdff89bda8e33c44048ff86ceee2f624a6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_ip.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a1564d37a960f0864d8fa977d6871aa95096f0c7423d691c8fd3d8b93315fbe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_migration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71c6bcf739134f8817cf5a1ceeac470b25a6058f7ed9146f635fd06e3266dafb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_mirrored_volume.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d3dc16d5803c5227143c0aa96abcf5eb13bcd5309b51e25f312082e4c39dafe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_ownershipgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "149fb744c1e70a8bfada761da6fda45c9035f780474370f447a8540305d57767",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_portset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab91f1b85232e82b418c616eb86e4c901d5e47fb2df565b4bf661f819eabc891",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_replication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "feebabbc03efd86c82f55de6e1c976083764752cd55a8cc8944c02d2d5e6a7e6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_replicationgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "264fbe5d6ad76ea098bdd694a291b3e842c3363cf1212030d694b99a54190720",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_sra.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a422d26617db8a33e5d20f8b958e985ae4141b066508e75411f15d1c8045b2a0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_user.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a748c40e02a044ae36034f6789c7f62d44e8cc298d926e06de7ec5e6b566ab3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_usergroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "795c8b2d00d0306edc5593446201107356a3f69db938cd2862eb409c35c8605c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_mdisk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3c2903182074095bad71c2992576e5227661668c4ed4422be004cfc1e6b29abb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_mdiskgrp.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1fb94043e52f8c09c7cb0b92a4810c655231971fd8abb3f3a8f66ef0b61e9465",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_start_stop_flashcopy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8542e5ec1020a807e1aecd6ecb44f14e60bf4641dddb5224c025411f7e5f47e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_start_stop_replication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "26a75e103b07d72e9b8f6a46cd25e10cee53cf4098f31413062d0da559e12cda",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_vol_map.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77a6cb11357cf1f244c961094ea9d2245d0a9f145b9dd944ade609f7b6a4832b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svcinfo_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46fd74bdfa5c21e661c9a65123bc978ecdffd7f9aac94564e00440cb313664dd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svctask_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b24e5881e0e417e3723ce4593fb1d8cc60b1be546c12c358f129f742d0418c2d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_sv_manage_ip_partnership.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cccfb97b0336b1f7c259032a85d08e65c1b78ac73ae6e2dc4bb8fd6b19c08b1d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_sv_manage_snapshot.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59a93acf02d3ae9b380bd329145e52087ba1eb257479184a754fbdd7a1e3f2df",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_sv_manage_snapshotpolicy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4622fda636da34c0026fc406ba503604b22cdab2a82e60bf6b731777a8947fa7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_host.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6ab885df198fb1f99a988ec0dc4e7dce6d5bd6a40aab0d0b133a75eeb605eced",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ae8ebebbe8aa12ec2160f023b0d0f3f606a3340225ca3c371d977d33d9ab56c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_safeguarded_policy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b94125c94575fdeaef7a5c5682b69c1f8d32d590e191c1ca6bcbd999f94e5d69",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_volume.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aa7362a2a6a4528a02eb3c4a023781511792332a9bc73b8a59d254835bc3f340",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_manage_volumegroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b3e689e04e11a418fad639935009d2ba7b935ade17ec337f90245defb319751",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/ibm_svc_vdisk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f55f1ef8fe1ff8b6b178ddb8cb1688b940bbb7108951f2b313f98e593a9ad59",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/place_holder",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.9.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "daff51a57f16f15f70a99b4356bc389ca3543c680dddf58f2721b4f652698ee0",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.13.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "daff51a57f16f15f70a99b4356bc389ca3543c680dddf58f2721b4f652698ee0",
+   "format": 1
+  },
+  {
+   "name": "tests/unit",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/module_utils/test_ibm_svc_ssh.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6f8c6893ede922696cb32e7327905799b8ced07620273efa30aa53361fd06bf",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/module_utils/test_ibm_svc_utils.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "714222f158fc9c3d94830f0b9653f6b9773bf09d466d529968d30de2297421a7",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_auth.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcbe779c8945b5dd2ae56441c830dffe0d306c644d60955d2d95d88fc89074e2",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_complete_initial_setup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "187bae51452a2d69c08e229e9fe8d4742b7cdc79fcbedf0c9ded20a0e19849bb",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_hostcluster.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b285af061c2e81f3baff642f56566da3b69fb9057f91c739a1c48270a6f9aee",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2cf742a3c1c3007de07dc9ecf94c6c72138d88aada8f08c8656dab9569d7456c",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_initial_setup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6d836087b171b39982b4e0abeb28afeadc0c19e0befa119fdd7dcc4ac471490",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_callhome.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c863e5cf376bb135a1c3b066e7972f81915f505651a8a6aaddd239fd10d62c1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_consistgrp_flashcopy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d69eab89afd086c37d637bed17d9cf181e8d8085510d0415497a1c7d4d45819e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_cv.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1dbb60f628fffdb19cedd915fc19041f58ae4d56ce236c45e0de9ae09c8da511",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_flashcopy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cab4c0cb49a09fd9b06c3e38e54ad6caa32efe1461c571ace2756281e59edee4",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_ip.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a3f7171af40820bf4b6f8aed69d3e09dd8ebac39e242bd5eaaac91489da51c91",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_migration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df30d5c512a395424c7e7ef3b645a59300462f2286d6ace4c95cce6573c2f5d7",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_mirrored_volume.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8937fb4013f7ecbf6b3773b2e852fd87d3b4d68cc20c5753f0e37e936a4e5c0b",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_ownershipgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1616f8f6f0bcb35513e177f00c155554b30909f78464453370b215e5245b535c",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_portset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05ea78b694fcb7b3284cfcb46cc1f062a9df55342771292403ebb2eba28d46a3",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_replication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0343cf2f92f4cca23471c46372bccac602db38eb41bec56890e0ccea4e940b7",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_replicationgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "972bbd8d1cfda500a1651d831a35d16d6fd6e8caddf4d80480371aa17528bf6b",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_safeguarded_policy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c84c0dc60dab3e2aed8c51e9140c4f45e5844608b06c563d9c93bbe3d3f0384",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_sra.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78774c98fbcf2a543fb6d49b82dea61c6d4a8105d6d2a8bc949f6980840e9037",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_user.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc0a63fa0a7498b8320927737988824a187052032dbba16eedba25092c9eb6f5",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_usergroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "afff9022506bf5c5a0f38b3a45cae4e326635e960808294532d4276b45e5042e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_mdisk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51717d02bef44db970d6073ee870592a0282569893351d6946162e3f4e866a4e",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_mdiskgrp.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "334cd61e38a9436b1396a8212785a1bc37bd2fbd2fe62b7a5662663f666d88ca",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_start_stop_flashcopy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c1d7d6b567ea9a7b59755464df59e951a2173b200cbd91a313986093780c2f5",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_start_stop_replication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e76618cdc63825c97bd3d3ff0b7631ff7516c93540094aa3137007a5a5462ec",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_vdisk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69ca79500c2039bf8ff858aef6376d726183cd619fa304e90cf600b5c2b70255",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_vol_map.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27d92040a95ed23d9e5d860b880f7bcf343da767bf2932aafe83f33fb5b3287",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svcinfo_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f7d9be0c049635ad29ea2f7676dab82069fc8747dab75488f005887029d6634",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svctask_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f48e7a9815bb15cdfe937f946041055356318feff170014b3ad2f763484078f",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_sv_manage_ip_partnership.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8bc51c38ab2c6a049d00112c45de31e3c1a19d02b85f0d32a7c578d94a158499",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_sv_manage_snapshot.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "662b9c1dd457a3d3b155bb314c432d5e418b9c5935e793a1eda1b33b82eb9524",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_sv_manage_snapshot_policy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "047cb1813da22efb4724c565ec07224a9e7c7768743ab324409e74004f1dd83f",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_host.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e0b2013aa5e0383f8b177e0d66f884191188a8ffaceaf22370274ae330993010",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_volume.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07dae23c57bafbf59f710093f7df835aa918c4a04b743e0d78e43028c6fe8fd9",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/plugins/modules/test_ibm_svc_manage_volumegroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9439bf08ee51d59a3fa26833ad4a2778b006f69f14cc085c9a80dba4068ff795",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e51f76fad3f96b57e1b49b0a03b25059a42f724f125e78336f32a2dcd7750226",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebc6fd889d9c6a169c830bd34317f9d55659570a1d074ac58f1a7dab07cfa1cc",
+   "format": 1
+  },
+  {
+   "name": "requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "134abe94ea511975eb2cc46a0150599afc81fb12e0a09ddbcf97d2ec39cb7357",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

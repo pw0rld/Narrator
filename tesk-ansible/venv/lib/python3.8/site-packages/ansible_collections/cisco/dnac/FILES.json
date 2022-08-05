@@ -1,0 +1,5486 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cef0b2884a9f43663717328019888311de5b8a62e0d24f91fc0f36939e5e50e9",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc6ceeb68669a9cb63691da8555378618b3428c1f917b01ac51cb98490677d4",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/module_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b943c8fca0be5aaf9dac9b7290b3b7de0e0ac5eea1bc2ca3a9b7d185a472990",
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/module.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f967d0b01179a2daaee8061f7120bd9bf95c33947ceeca602307f6a9a7a244b",
+   "format": 1
+  },
+  {
+   "name": "plugins/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce019c2fa0b74e9457b36287058bb0f80bde03324d1499da1a80cd4a9b7ae4e1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_member.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d27dab6d8a2b0b883879237b7ddd3cacccb0877fe57e4d31b56b34ec58ef13b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/disasterrecovery_system_operationstatus_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "396d0e2333033be14af043e4f2f43945238013ff6ecad56344e93b38fd8bd1e5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_by_serial_number_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7de65e6ba9c462e3955c771768d3f828edc821c99ec24b7c52e12667d9187883",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_enterprise_ssid_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5042c27f1a39ee9cd90aad9a615c548c9992cf5d58d42cdabb1f452d14c8a50d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e93f7f401bdfaffe8a3032ca9cf6f5f7c5404a4e5a996daaf6c25b3289d5c9f8",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_custom_prompt.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c44b67d7bcfb65027aa62979c249f26f1941b367d0064e5210cf583cfc8d3792",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_deploy_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "900244523a6c7789e84042419ee4b1937edcdcc4913f108dc257ec5b46740d16",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/file_namespaces_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65c09154c8411838c47c2297c4d4dbc860bfc33983d8bb404cbe31b1544f7398",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/syslog_config_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbae571940060860c4a5d711dc0284f28d53f94e12b51bdd60d355ddb968a440",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/buildings_planned_access_points_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38c1e2d879a6abe346236147f60f263657c8dfae60f7e6e3a55b01df772c09bd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reports_view_group_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a325c0f5aeeeffb0e485e8846d30c8e717229f14987807d9cee81d7a0dbb437",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_provision_ssid_create_provision.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce5ae97f4c0ae1f22329c3291fd874aa6657de841f1555a93d1803c8071df127",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_claim.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "43c3fee49202d0664a07962d27ec649d537cb207f5c86d3e0a261eb02b559efe",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/snmpv2_read_community_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a64434ed5c94403939ebe7b9a75bcc4880fad782f306b9eefcf1e52edcc89cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/snmp_properties.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e903e57978341f0779028c636c1537ecaf62fc9606719102601c4d60bdcec165",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a487047edfb499f74180880b7f258b1aca977815eb1a29dd4b9bf761f2e55516",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_config_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0897d5525167aa579f2f49d454ebf8e241749bee8d26830bc30fe67f2d5c6033",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16da92dcac2048c1e68633896da6c99a003bf952f6a5d3f15a97ae245e572962",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_assign_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4245b552fe01e78230d6c245c691935738eff879f61f4f6f2f86ea5d459da1d3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_control_plane_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3995c873454db26b4c2f170a3990279a67278c5c177bfec945c17a6f20d6ccad",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/profiling_rules_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23b66e85b4941972f695c00e824434d150c24f10428e64ab4fc95437fa8b6792",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/task_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e529d15343acf5348b1d63205ff41130231c659454cad468794c7e02b40642bb",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_sensor_test_results_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a904e42c9f800997b73c8c8934aa94193bf8ed7f0eb6d97845ef4a7fa7a2c37b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_dynamic_interface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a4ee0fc872f5994b73cde2e13591dc98670496ce815720f2cd14f907a4b08ec",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/nfv_provision_detail_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68368a37cd271a47de91e9f5b229150cc61bd91edb760edc4df71455850fb04f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/interface_operation_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "220a5bc1521ea255c04f0334e8998b2d8d3fb0ac3b216ac7b363b0cf2a77b2b0",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_member_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de1e6a70d75ba1b1208f81fc1401897f16945bb702e0abeccc79d3b090b35267",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/lan_automation_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5fe4fd076c7b8f73dbb693cf4cca143fc1042ba0c25123a9b6531126f9d05d5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/endpoint_analytics_profiling_rules.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "98c2afcc621016a761848cb853036d533498bc437160937d07e128a8bed5dd65",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/business_sda_wireless_controller_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c81b9dfcb414b0734472388fe874f93786fc4d1c7899aafac52256f67553e9a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/associate_site_to_network_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7bc94ba2885e8736e1fec8fa30d51d686556dedc4f5adb653643d9c963427bf7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compliance_check_run.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "39c960885d52842cf4ec26364627048cc7668b778d066b8966740e4376103566",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_unclaim.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32e8810329180beddd34661fb3bd0832119fb832775617d2f88bc9253346d0e3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/interface_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "92ee9dec0b92afdabade328f0e16903aa45ae10c2f8098a65d3187f4008d401c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/lan_automation_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "211b18e42769568a4900a9aec2c7dc0516bc7a595decbb25841873c63aa43903",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_authorize.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4af732ced83cb878c6c45c866c59e34f958411447552cd9df3495f2b735684c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/task_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "101bc557df51dde0ba35f2a37b87beb96b1c87838b8d9f625d5857c1cf187c79",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/app_policy_intent_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "365cefef5571c6c96e1defbcb27755f5d1b2a8446a11a1556706add6ec6f0874",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_import.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "655a3d810bf3f1248d25fa5772a1643d94fba3de4150a4c08e04e855cea0e1ac",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/authentication_import_certificate_p12.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "519a664842bfec993a20228b88f07d68e147d2a640ee9333bb985b041e3e87ca",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/topology_network_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "248750c93ab26cf710c212594b616128bba496a2f7ccc8a9f489cbf9472c7fdd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_provision_device_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a30e2001c132ed0444446e537620f142f729b8c76cc8d6d6825b8ff2a4e12f43",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcf22cf17e705eadafe60a27439776ddaebc72e76ceaeb9237d5ea4ddddf8190",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_device_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "378cbcb8f8cf91c568e356224512de483cf23d8b1eb8dabcd0573e2e1b3bf5ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_email.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4d3f33f3e54b73ed9e759853ffa0a18b90879250859a27aa17306b538b0a8c59",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sensor.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf4f5c9cbbad79b07e49256fe082e5d35f1b21096e9d0a0f63dcb64af315c364",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_design_floormap.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6ddc4a5601df5b1911faf50f5016712f161d9d03f7c8d795e8a76fadb0547c41",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/global_pool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9290800a874c3982220e588c6eab6dedb80e7eb007da1fec8a010820f5ddcc6f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_interface_by_ip_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1fffb1a05737defab84898b53613b6669f595f830be8e5405f6550c63b2fb2f6",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_chassis_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "783b01488af68de8b75d9b19b2f1ea4ee0b60735ef335544a7405162e5b766cf",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_authentication_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5eec83405b1d12d7d3b08915ff927d5ce861d439910a02772c65867f94d7f54c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/client_detail_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa28affa3883fe6a27022030e57804e9e99d057bdac4e13fe10d86a58d6dc5b5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_term_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b342ccab6662fab804db27f9a03090fb7175bba390c969f41b22a8db08d2decd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_device_deregistration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f98711a1a0ffad95d51644fa45f7ecb2bd23e98b7f9a761dcc7070e190fd585",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_interface_ospf_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51ea13ac1cb1b75d1d874b957e573e25ebbd519a9d0f1dccb4353ed72d46da34",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_virtual_network_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3279d7b1f47d5e4aed55dcd6955bc363a70c5aea6b73508e04aab2987c8a910b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "843ec3b3d15f0aba838c6a6dfbe3c85ebe6f65ff162b86f99b34e9a43f72ddbb",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/business_sda_hostonboarding_ssid_ippool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ac291928c7065fde0f396d9507bda00f413232b90547d589f20f67f8129f9e94",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/business_sda_wireless_controller_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fda77f6375b79e9c1a7fdfdb80f19ff0ce839b5add7116e69c9bf1402403d786",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_provision_device_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa1880059ce0219f4cf026f6680f742d10704826148d2ad0a03eef80f4995d7a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_sync.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df9dedcba629d8f569c8ca6e1fe5b484bd2cb1cf1f91281f76acfd7a457b6446",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_rf_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb4d9a7e3d4d9f12030a0a15dd40ff3aa71e3b55b98179abb955260cf71df6e5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_site_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "829b2e85be1e2c7af105e2565977036a8566c4525ba9dd84df4511046fda03eb",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_syslog_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10439c8dd6fa1616c3e7278f89971e3732582fd5e8b7da85e0702bf473d89b7d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_import_project.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cef157a5e7c05ab98d66813e16d626eda82ff608c99726b6b95d3693ea2b4829",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/topology_vlan_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aa2cf4497cd08bfef2a614118bf4485b3c6f04137064fd1b51256684e8b0a290",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2f094d2d29329904b57ae0d9a7a5166f26296b87cb598319f3128f51e17e5954",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_series_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fd81a9f25f5c4a9c00244b74c3544b516a1c20779902e7ecee70ee6b82d5410",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_clone.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c41101b0db0a2104b4bcbb6364fc531ce81c4a2ad1de759aec2d2cf20455812",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/swim_image_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4b380d06a479cb9624af131afef733a884c5877b35533f748c461f1f924f3d9",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_provision_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "608eb5680afa74cb016012cedeb254278529043e061b948ff8797d96ff4ff7ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/system_performance_historical_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd6801599f5621a66538b6034cb8430a204e1aa43299bf2bca24e70e0c6a715d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_control_plane_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1843e4e2fca21b163a948a7e702879f156063b573f87d807b96d583a5f759c43",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/threat_detail.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c51655dd0a90b6c55a74d91107149f91deab11d213efc5b343d7262c480a9cb2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_version_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "609ed34bf187c357d1c69cd738626b36f679e8f6c72b367ba233d527af026df2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/syslog_config_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c391f241e6b92db7030dac869881acffb3d5204f2832ca01e3fe8fc1dcf1522",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/nfv_provision_details.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf4acdb0c6468dc0ef90f1ec33bac23ec66510d1e822936141cbe53acb56b81e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_details_rest_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8d201cb30c52241483abdd8f42cc208e15032def6b9c2f8a018f5ac17877955c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d6df9569ea8e8991f7f4d52e86af3ac2b6c141b22bf00878d176c1ccd40b183",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_design_floormap_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80803791534b6d45e965ebfd619c42ed31c9fa2bcdc1b27fd45c470e5731debc",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_job_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59835ee2e162ea715c60b8eac3ab51e80a5269cd2890db007d42364d61f7f7bb",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/global_pool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3de2ce01cc67436e6713497eedd5e9d8301489916a359e4b4c6e984afa897af",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a2c5d8a78ecbed92a5931a6b4f7a8e2ebc212a35add3fe323614314c727b190",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_replacement.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b0c0f6e37b25878be8b220dd9d7857e5ee62939152b2ef936258ad7aa464094",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sensor_test_template_duplicate.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2bacf940789281434e90e30b0e5e4f4b6e50ba51754b1d172fd009a65d436373",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_dynamic_interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a45a930cd28f7d2285ee28440c5853ac1be47629f08b074f03bf58a42c7c9206",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a6eabc9e115f7a120adb9ca950b24373f2ded1977fb44e06d8a2dfa68a487db",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/qos_device_interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4781316fad2efab3b259615df962c2b0e83334c589e21c7995e946de478d94ab",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_workflow_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76bc5c782c2e10be0e4a155e8b0b4209eb12246c56135798aa72ecdf8b682faa",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_smart_account_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e03537ac1a2905aaa494e21738ff2b19179fd4cc4d8106644f1f0be8fa3332ce",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_module_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36e7f556f4941634ca75c1f16dc1e2062abc37c5d43177d80ed7809a4dcb73a2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/assign_device_to_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2de0099f6682d64b5d7409bf3642fe04ecf614e652adb0e10d08ce5a02533a11",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_config_connector_types_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f97745d6817b310372209d46ed5a8ba9b54528e7ef05954c07765dc02fb8b30",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_inventory_insight_link_mismatch_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5116b2d38282acf4a06446791780dbb62c21f447274818a7dbfb7500e2a2633f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/task_operation_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f6444f44f2a5e8e76d57e735f3e0a4842932c2190ea771f98071ab416e48dc98",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88e2b84df89d0ff3fe912cfedf93351de7a3fcc85d73068fa7edf4ce6ffc188d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_virtual_network_v2.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "082e6cc1ec36a739e09bfd173a8346e3fa8b15b0a04f5740c7507709c4376869",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_by_ip_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de46dbf0d5176bf1f0d9e573ab829d9d3729450e5ef31b726ef401485f4c093f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_lexicographically_sorted_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f89a6405c0e263fbf08e612e7184dac04a234f6cbfdb114737c11e11a980a581",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_workflow.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "463a007fa834f97a436e6b645cf47f8ba4008528219dfb832c097dcabf51d83c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ab1a242deee5781cca942a4c8b3a3aa88f8279085f187428ed0d2d45a707f4c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/topology_layer_3_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "783d4b33d3cdeafad77238e9c144a2e1570c981da2dbc72bc5815089f0db6505",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_credential_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e41419e89bb6e0768415967f42cf89dedd69603f55a6e5d3c96d77944234b420",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/snmpv2_write_community_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d4a6e1f1855ae52dd2b47447d5ba85388457b45cac85b0f4459f1268758565f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/global_credential_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49c7ba14110a8b8005970cb8f57d0333d7d062d86a665be49cbc1b320d087453",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_rf_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61ebfbc845588cf662e7acbabc999f13101c6cc7d7d752326ab4e570b9ff7fb7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/applications_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71615f34ac265b0e9f50e3272025ac534c6118c3787dcd06f3f2c0f643994396",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sensor_test_template_edit.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bdd4bfd7d57a7f56c6594bfb1bc5c406d0d8762fb4ad252bf05242b25a167a1d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_stack_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a40aafaab21e28f223cbefcb7f4502459f2b388dc851fc0588a215704783bca",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/global_credential_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e8375dfb2323b7f01ffc5691cba62a483466145b6b70c4d6ee283515f54f81a6",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_multicast.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c027de5c404105627474d9357da3ada5c34e796bfd99afea5fdb562c4ba2361a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_device_role_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64c746b5a150a2779d7d8343c7c6a69a065d7947b7ff805d000e95c76926641a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_virtual_account_devices_sync.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64d9457494360d40e7e06be5243ea3a59561be1df16e89fa7a89a1a42e00e911",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/applications.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6543f4175307162813ec97875ac7a144f6348f8e31c593b426c5843f5207a105",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/itsm_integration_events_failed_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d3649db5b6f827d23151d975e3c890cce0db5983a93baa0cde05ecbfef94935",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_export_project.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3915460a759feefce3004a3d4c7894094049ee1d5fd452f4217f605cb96ad5c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reserve_ip_subpool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ba29285b43ce2c85ef7d2b6efc21494a7fa332cf39d69373eda40cca7a99b07",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_interface_neighbor_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fbb914e2a4f752be6a243f9b54b76c69bab7418b8ad3e536b87a06c05a9540e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_polling_interval_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a04d4a1343d78aec2360a5d04badeed17c1600f491daaa95e6b18f15e25af50",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_membership.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5baeadf354e21ecb0710f33f1739dd74db8af6663597425e0715eeabc548db56",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/profiling_rules_in_bulk_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19d50252c27a09fdcece980971602ce8192aa1295deefdc38a0b8ef7f4bbc5e5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_artifact_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11e2e9db986b80200e83de82a1d6d590abb62b661cde9ba141a867c1aec5f4e7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_module_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd0bd57fa6a05a9a054cef176b9056c4d38b3891d5e49ae9461a2d7ec6797e4c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/global_credential_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "264e78c0ce4d45191375ceb0d2b8a4e0bae847c07a5746edd44650c53e1155c5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_server_profile_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71fa543e8ec9ce8aad48d65bbee0d979c007642fc2df7a19eba38d79e96a3aed",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/projects_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22e7a442921c5e86b7b8058063bcc89e8036ce25f2e9ec9c96ab65e20eda5b8c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_claim_to_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ddd4b8ca6b6688aabb0b360eddbeed25177061ac49d87b85e460591f5274c57d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/applications_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c856f54df96da2fbef0a5ff7ffb4f4a4a56cb4671007c297bc40bd566c9a25e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_wireless_lan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f90f673ce44bddb431e1355cf9a4a66d3f0b84c10c82801f91c2ba5b858b108",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_config_preview.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "230ca79eb09cb3eac767e7fb87182faf0365f7639856edf812af86318453e113",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/path_trace.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f42e21564d7f1d5aeaff6c7cd69466fb6358834b8c7837c5bc5b8e71bc90039",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_replacement_deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "880f873ab5b8048facf93cafd602f6d7bf0521e193f07475de03a61d7a20894f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/system_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4101703b248890baf3e71f2968ad965b7b350aa548aad35a745e4d42401b4a18",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/app_policy_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cfa0d772e07fbf9831caec6686c9fff96833f028353d3494dd9c50acf0592df",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "015301427cc638ce841fc8689683f5596c686800f6f6f1978cd4bfb96b63e93c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/client_proximity_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11a7dac1a69c44d5a0b56cce55ffc31ced8979707b0298d08ceba9e7e8b79e60",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_member_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a230a1ba7a6b4a938c5231b7a13d71d6d8e835ba8a550550b49485c5f3e1794a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_global_polling_interval_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de5cd82f076a8b83f1bba9391908be01c9908ecb9d0207960c12c6b8cf2238a3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/application_sets_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb48da1a41dc628b37642abb18881b00929c7f1ec3c37ee8057eb3555b1720ea",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_provision_access_point.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06e72f0fc70b3778dca18c35f9e08e373c8ef9a6f257ce3ae27934ee595aef40",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91da3f2d3e87772f24fd4d657880b7048adbd5fb1787b108b61a3e2eadd5621d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_global_settings_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b4ddaed4aca4edc030b29cddc170d9b0490f4a16cd83b0b2f9949eccab37153",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/planned_access_points_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2fda31186f7a55adc70dda8f7604e72835fe682d181a71bd3e6e6aabf450eb7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "74ec91367e90c402d8af52429dd94d6956f707611684da181fbaba4b3f1c889a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/disassociate_site_to_network_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a40e6575494b60004333caeea3c873deb9fab1f837877ace884ae9921b54ae5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/security_advisories_per_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b4c2fdbb41610acb30669079879a6a4c5804daa16b725242c8db87bbaa3e8a3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ff5b4099241644a471ec56ce45ff855b6cba71ade107d6d82aa176ab9e7ac098",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/authentication_import_certificate.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "37ac84a52518e08d6277bc71aa62932247555ea14e1f1eefef3310816c5ba782",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_port_assignment_for_user_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e8d6ed0943fc0039916313f275619e8a6d5660c15d9c2af8819f715e8cb457a7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ac66c8000f8259033f92f77c70fefd20cb781240151c05e05cab744f457877d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/nfv_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3214fe392b5cfff56e7ee2cda5b87840cb1517143cd8945d941a590c6581b50a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbe0219a276fdb8c32bb16daa35470cf27c40da105ffd1a02de12c17c243b540",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_custom_prompt_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "429258f9c348ec28b01abca5d968d2aa08b26db200ff7886630f466832ac7d80",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a687957ad40a293835888e71527df0e975d14ae9643538eb6bb9a2e76f9ff94",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_virtual_account_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2dae0f69ef785cf301a423c485435082c9ff42a8c4a5d80133212da60a3479cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_credential_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf97d4089093680530105929d7ec8cac9a65d6ba3edb53f0c26dbdb619343c3d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/topology_layer_2_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2203c33916e8fddc1b23419f79bdb58a3917daf31b2148e153df3b1f0bfa3ad4",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/threat_detail_count.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e613599bdc8d16fbf52be764c5064b008ab59bd1963e9b6482c24ba4f2daed03",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_credential_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d224d877088ef2fa5213b18362c2d693c514a5f4c8e5c07750529d4182d40a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "66f1f96dc4827bb608902d4759f7048c701fdd947fca99a4d0a200ffb66b2a5a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/http_read_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aca30deb8e5335cfd932fed68b30ef559ec2a66a3e9d8876cf86d533ef52856b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compliance_device_details_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d9c808af749f3e83b105e5bc0f7d58ce3554c416ceeab0e32b90ce37c2f08e6b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/swim_import_local.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8dd1c5d02ff6dc70dff6724e4fa62f657faf4654660e9e8f487eefe7ed725976",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_export_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be7908e142e2316544819564a6da0f0f9712e26cde0351332b7af0d3067421f2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/transit_peer_network_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0c8491f7c3bbbd3a2f0f340cf4bee5844c45e6cf12e1220a3b460dd1a18aecc",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_provision_ssid_delete_reprovision.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c5c47a6a9f3db9d685b3f9eff2a9a18553788c890d988eb5ecfaaa0a5c4300e2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_virtual_network_v2_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f23e505b674aebb2df0a250bc7426cdc58807b6f7ab9b2d4fbee4677abdb317",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ee183b977f3f13bf1a8af1dffafefaee95cceeebd40b4f0e36037c1f6cd9a26e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_authentication_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4051100a3e87c63cf9cdfbd378017833adc1c8bc15973c12064afaa599b6d614",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/command_runner_run_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3048f6e4a0dcd3a079ba22a16048d5d4b9440783d96b9efdaef6dadab4816a32",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_edge_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36bd3070422d065562fbe290da62c292869faaeaadd25118b8fa27526f8818c6",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/client_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a96ef91cd760ce7dbedd5a44e10c08e8a83990112f5a4dd00574937b92ec2a5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_provision_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "378f44f2aa948d1bcf15efd4ce4f53388e986dbc066f07e4b22fc7d8f50aae9b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/interface_network_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "161388676f2baa19e1e1fcdb0edbcaa3e385c75085e214f7bc5f26cd1cd9bb35",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reserve_ip_subpool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b642fdd94b41f01155ac2ace2fd1f9740dabe537a92a8518a8be4f0dbbf70e1e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_version_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a28318ac1d64282d29117cc920e06d7893573eb1652d19d174f152daa611f5e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/dna_command_runner_keywords_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e954b2a66203b5fd106db56bb32cf2acd8abd6a998ba010527dadc8a4d167a1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_member_type_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebb19ae490efda05659d1ba6e86a98b34f553c7b3e486f7a4be14309e96ed4f3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/cli_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76be1e7004db40898fde05224984a13b1401d0a1f987713c0aabeb57b6a814b0",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_webhook_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24de6e919f6d5f8a1c677d9d3db0048ee1420db9c4fa091aa7908e76194a6871",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_device_license_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "292f6ba68afd106777456232c4ad56c65bfeb00ddb59d0e9a788cf7cd1b61074",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c24dea08e5472f4a15b62116a58fdf249a82e4813cbb5219b48632233c7aede",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/disasterrecovery_system_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b54e57c5577f12358839d23d14216c48426c132a087f3b122c13f8ce4ee0abd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_replacement_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0bb253c54240578561b9b49c97090c5bb8624915027ed24233cbcc229c9662e1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_virtual_account_deregister.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e18133c1a4489ea734cc6df820c28e8d581f9a84435e6fdc57e8920c98eeccb9",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_import_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ffcaefa88be9cfe867616cd1f2f6e15755f8f7927dc9562c2edc8fb254c1606a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dde49434e1a52a27e6e47a73d42d438a7bbb1de50ab1aaa27f05133b611d88a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_series_audit_logs_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8320aa210b599d5e3bec0d58f940034af84ddf75db24f86a06e253741edf894d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/service_provider_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd5f74a42bcba366369a6bb63454aaf397702ea782d274460704c5253a1fe0b5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/endpoint_analytics_profiling_rules_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2278f163b9da0d232f40c7e272f63c7bb4f5e5b32554e48d2b1f6ca7f378285c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/system_health_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a1753cfb4daaa5ff0729420736a9057be928e2d0a233079621378b081bb2e83",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb4e51af0d85a43ffad2384537df585b7e737d0d7dcd7b112de0877dec6e0671",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/template_preview.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "977d508876e2ca26ed316145a19feaa44673aff21f64a669b163fe16128cfde5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2743d540303922158767bfa6422f6559c231bd3739b3ec7ca8e829ea82b0956c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_equipment_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f9b7b922148b75ca971390fe1978ad4c411b21f6afd2572dc67b3ce13218f578",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_virtual_network_ip_pool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8de6973637134e8ffb55676061ab19d6aaeee9c3eee9dfff883bd75439b08ee0",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/lan_automation_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1f7a900eb098a16f03bd5ad1baa510b47ee53d6181cda9124cf699621467bc3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/app_policy_default_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cce25593565d7bb8fe302ea6524fbeb3ed36d1f98de8362ab59ca3dd44976ab2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/swim_import_via_url.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "70c195dc1189a6ab18ce241c1012891a662f159ca46d65362af69add4155865c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/business_sda_hostonboarding_ssid_ippool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8ad4b9171938e6605c2b2e76e2a9f1a32faa1614ab5f89560f8e233fbb729665",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/snmp_properties_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ae9e33d93941ef2ed1a5980e92c4934c6bb14c4d0a7f25e5e035ad964ccabf9a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_email_config_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab119ab38b5461d51a89af6fa8ec422f1a9ee2187ed3231cad1ceb11a785e1a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/swim_trigger_activation.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25e88b22c280ab81df32f2c252edba4d4ea8ea8df23bb851b22c0c37ff40dd76",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_artifact_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e842c6a103ac73287e9a971b7277f5a8c5eb4082688d9aa4850bacbff2306bdd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5cad31d799e07327956b5d1580127d3bb3b632a70c79f6e1da46d1a8ab37d619",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/nfv_provision.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c551d98bd72266e2b4d1381a2e4cc24ad6beefdd536b0fe547290e7d39c4aae",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_psk_override.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dcaa6b9471bba0cd0bb3a1334ab65dc41aff6b96627f5c2569b58ee967e8c45",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8c0136466839d1795867be6c97e1705a4ad79f24ccc3f6068b247532cc5d7fd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_rest_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77abd5371f55d2761ecfdca768f810e23edf05a31808ff4e2d1f782ac1698ee7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reports_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44e205257ff7fc004d3dbefc3e6b1f2c4b417eaf3fb056ab56df5fe86cdb6bdb",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/lan_automation_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "986f07e8fc2fe44599d35ef4d54292f5e995b2189c5f45087841bf13776e851c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/http_write_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "877aea365a574924a1d120ac3ab63fdb0795d35e7edce33b431b3f45be7e6a6c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_interface_isis_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab2720c4b7cea844240212a07fb6b75ec75fe85e8bcd374c1563c3e739626063",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_multicast_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "661345394e7f45ba5ce5e131868157131c4e819cbbab4f654a2507ff320cc269",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/topology_physical_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c33a948274609b0acec054d7bea93f4d903efa29375ebce55cca4e153907eec",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/security_advisories_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6425f45d53b97023a136dd72112ddbbb8583e5083d950fb8e7f8f1cbaecc604f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d885717cc417911e2d2a45b0f4f42a56434888f6df6fdef43d5dfdbf47baba3d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_details_email_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "efdec21d7da566abd71ea9d01824ec4fdb6cf32e955e365204cef0f7a5e8503e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/lan_automation_log_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a015ecd679499ade59b5f0a4af3d1c3b0b6bb2a26736663202afcd3227732924",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_supervisor_card_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6596fcae992aec40be5c1883c55a8336a900d059e9c8bd15188114fea8b6014f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_interface_poe_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a38b963a537281a4f41a3baf4f647f24c59323304d5c466fda7515e47ce07fba",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/wireless_enterprise_ssid.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0816373a1a03a76cbccf6c1d7a0e0b6e6530e61850edf5a0dd7343b096fe15d2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_email_config_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27cf519f868668948c9b25e6316f858e6ae7f5723c5698d7e7b7f6cb9e4c4889",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/threat_summary.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05cdec399002378527a05bb647694f91926f9ae402c24d8daaa788480d0ef19b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36e94076b5f6ca38a4f9acfaf43a98b11de5eeabe5734e91d828f05692d3782e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_poe_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b45f55c732ca3d846fe02e90b74cdb39279633d4e3964151863c11161b3c88d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_virtual_account_sync_result_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4bcfec6a3905c7294d5c555cb6c692893c71f6cd8c391525c05d1fc0237793aa",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_project.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "adc174e5fb49c6395a04cd438c55922773a8b4b7a2c1287ddcae41317fd471af",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "caf642ca32da089161db5158b4652a8eac1d1249b6244d02a10757cba5f4604c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_meraki_organization_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7b4fe18316e7774643c9227da7db979f80362a4149034791b987921a0038631",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_email_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ef01b120c8cebaee14e4cf67e46e8023e9a6ebed7cb2921d24f14b79abb0ee61",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_webhook_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17d8c59c616c36113f771979592d5ee0a3341a1be22dcff36ae097df88b9e765",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10b676527917b1f46e4dac4bfd25f8c49af10ee74e9944b4fcce167bc8919bbd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/dnacaap_management_execution_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f609110db27fa69afa0282857637e6824f1f5f70f7789b65918f428084b6c7a7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4513332944d33e6ecd45b734c915ebb383a068e75d0ab3ea6fe10ddf2842598",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reports.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "524f07a391c3579de6243907ba008ea53b66de0b3a9bfe12645326be5095a6a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reports_view_group_view_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67d0b205c5e14cf155ce6a46274f5c347caf4e4057e2e25eaea48f86a07b331a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_details_syslog_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cee3d0370cda496a3e94c0f4412e322c7746d8c233dc873375bd3d3d1e60ed75",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_device_license_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa7e049d81339a09964b824c113fa565865bd019ba83dc57a26d52229e9fddc8",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/path_trace_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aebaebf4a3f813f9fb0838df3c1322e5591ef6a6353c498d21eafe5b61cc7fc7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59e9c68971933d4e9eca3c2f610f74a17832f10a9f5e8853a767d6f205183990",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_membership_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8081ae5d290e1b92468c7743227898824159e3aef0fc54ac8b97ba22507dcc7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_border_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "caa36551cc9f9d90e1313ab3a232b40ff389672a9b2c9116fe2077f1a3ef394b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_syslog.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3791605375a6848cbc56e381b1491aceca2c069578244d099090f9692ba0a740",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_interface_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "87faa9f6d08de0f3f98abbd57b94d9bb9cd4c67be5c1a91310880cad1a87a6b0",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_api_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eeb32f3d51b6917ba3be00f8e310eb7c13c836ea3a077efb8cb0f77762a60717",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_series_audit_logs_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46ce3fd077a4c0cb4f254bcfa1e713ce1900cf3965fb100c73058e7e22d51c4b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_border_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61e2ec0bbd1aa8b80aedd1d2940f6b19274c3f49cf4e2950a88ebddbcb7fdba0",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10105d3a36148f40b80fccbaf4acd7645fde1097de03054b137914b7162fe5e3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/application_sets.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f9473d1f81cde7ed3da76b2eb57b1b56e79cdea940b30121823bb86a6c9f963",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d648bdb4ccaee95afb4a11a4f338ba8001547268684d8770acd08f106bebe76b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0822e5b9b5aa549439c04c7b51190cc269882a25771c725ef837da1a2215b8d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/application_sets_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f78bd9b437edaadb9e59bba0989baa2db39a5765da444e1f9945a33335857020",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_family_identifiers_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "528285564463de02c0fa9cb00efea245aa059d85db22e4310f28171eb5bb5b1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compliance_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f19ad1c56edfa95068f61ee1db5d5068152ae117783767d78ea7d2e2e290d7a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_configurations_export.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2559650703e54a103a0d758b20b6abf73effd4de9c41ce3b75bc6ffd7a0e7201",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_reset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a92a38d33a72e2099d2de32ba6df0b0f85e65e3afcb6d37aaf31d44487e5ba02",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_device_history_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "707aceb3579431de7911b5450fc9ffb3fb5cea120a25cbe1ff4c8dbc70e73604",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/task_tree_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5988c5f0a95f10e250376d7dc61fa7861732a4a7e3db22d8b6139b44382c27e1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_vlan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bec46472a9cbdb2e168a11b23b5f70ecd01e6c2f6bdf803e5f088be5e1a2626d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/itsm_cmdb_sync_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f6cae6ebfb1ad4a86dadb97408da760e1c91d69abf3a637fe85177bae9f21b9",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/file_import.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9891a5a38a595aba988f5dbf57eb827298e4ae1347a15213575e7429a80dd00a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/app_policy_queuing_profile_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5583b34a00471154e34867ccaa3319ce4167d00aebbd16ddd2a33f1269ffc056",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d684d40614dd91cae8487570525bb6f42287c28bef90ae9d8d9a989b0a89d098",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_port_assignment_for_access_point.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83f486e424aa738864eb86f06a9efd411dbeffc91a88de3615730a0075df69bd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/nfv_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c9755d8cb01c5fa72017b6972e81e1b78c53de6bd5a66b2f21540f327c071b9",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sensor_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcee36596e9ca678a70ac575f85b7afeb5c45263bc42437e140e5dcfdffff181",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b54ae5d126151be73665f0174fe59ef8bf2084add786d8d548b139422555087",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reserve_ip_subpool_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e9a3bbd7c7ff26d4d018bf8dea5e9f8780bc5634bd17739bdbb8b49f89bee17e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_edge_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24d5d078b7bdb30028586ef57d83bba8af7d894e6cb5d2e14604c3d22e1228fa",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/issues_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc6486505eee136bf1c8cc6a371316bebdc5afb197f3b743bebc96d7b41a6d18",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reserve_ip_subpool_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c420dc63b8e3cff37f728f89aefa7f5270c009e73c6d7c889c1e414ef18f1936",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/system_performance_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5926d765044f104dd3c54ab3a428cc67c734e79f4220a61dfe1bbadd9f2c9ad1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_virtual_accounts_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "943d7cbd065b1781c79d0d1f7093b27217d43ef783372076c46f010d2837eccf",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/qos_device_interface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e34f2cb3c26400a9c7a325939210cb624db62d6538e26f677d1cf6739c013715",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/platform_nodes_configuration_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c93fa48aad161899993b18eefaf5eac078652c6d371340b2e0b1e4f61b1c54a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_usage_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6b8d82f3a4e3d30c88f3470c2db0fa26543e1e379d440e02c00eef6e2c3cefcf",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/swim_trigger_distribution.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5030a606dc52eb5bf7b854ef461bd866178945d5de57b76d44973c8045c98254",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_config_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "93c11f9fb04345ce13b09f2c7d99aa7c7a03aabff07fcb88911026d2b654e59b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/golden_tag_image_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b9318db60069bc37a9ca6a1ba62c35175f2d016ce1af99e8952d9a62ef61f2a5",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/app_policy_queuing_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d05bcf5ffc3aa2e139ff096da3585bb92e67874e6b185455ce381f417a7e7250",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d17d63e407b8ef8f10427eec9c588400ce64d69472b663e680585ac8ff58ace9",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/file_namespace_files_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0ddb689365238d5a8944ae79135d4971d7b04cb0ce7869c0331c4c3abd45d4c",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/service_provider_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aa7553ee2d8360df2828a6c8abb6a18a3506f679464b8a1e7619c26eb9316f0b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_device_registration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0774cd9e593ddde2390b5c948a1501771b78b1ff3e335530ed4080f9298cf4ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68c82ebb2e3dccb54ee0f2175338002020dd0f6518ba0f5ef359bb7bb7ba171f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/topology_site_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "02c663d0aadd091254929da59a4d1b37ac87f4b6a4f16b31c4398a391b957c3e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "14f555e3a8faf7c4ac50f631b948e5857c19585aef22f7cd05da50ba25b098f4",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_functional_capability_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "806b5b5addeab12aae752e74de3b133ba5493a3e51f3f31b4845080166a95626",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/business_sda_virtual_network_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "722461eb0b3e5d01002e4cce9fbb80ee3ec36b73316f2f72dd4edda44ccf9e54",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_virtual_network_ip_pool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e551141fc5615d614843decf523f42d8c7b478c183e1c5bf93b06d9f7ffbec2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_port_assignment_for_access_point_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c4e0c8b9bbf8c2d187a02c47da460706215770b35f50c25fc8b62871f2c7fb3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/snmpv3_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a066b234e198d4772b9c71b8c713c4eed01d1a977d6b7a11064d275eb46d4510",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_deploy_v2.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27be488eeac1d42d452f034f881f3675da06764a1d7388532de40edb96818ea2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/applications_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68e10c4a41939887e7f021632f381f065deac222d64ac57db2c0cf8318db0b78",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_virtual_network.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46a5b18aa30a42266104bf7916226d43e0760a13014aa09651ede76e7af0304d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/interface_network_device_detail_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "66a0472de51bb80e0ab8fcb060b55b0b59a6cb8c0951a30908e0b33f8e8013a2",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/security_advisories_ids_per_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b582766fd339f124044896e846019de0074fb73c4483722a2bed7e2f5cb6a845",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/platform_release_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b16042ada164f4e0952b70d6eab6cb712d9f16492459cca43261380dec0c9d74",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4323cd920063dc4e7a91a4a9477acb1899119ff08b34720ea103a302615775d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_series_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c299e8c7292de04cb81550c5a339e42670f1ffafb43eade55f62eda077a29183",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/app_policy_queuing_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e79c70e74b02778ee287a4350344b9e86eb1e72fbb6cb3010fceed9f832ab5e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/service_provider_profile_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6213d9f0c661cb73ffd8571bebc5511a5154cf27ff4956412e22259907d0843",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/service_provider_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8ba9cb5f50393bb17e97e136558b485fae9e8a95bd27e07fe4de8aa6ea58be61",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_update_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b1b73f677995bf5348a2b973d8f04c4e53840760143660ec6158a08b192f4b1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_port_assignment_for_user_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "978faac34436908cb5d7ffbf5487c913fccd4afeba30a3a4dcf67160ec14b210",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/transit_peer_network.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a91d438bcab8d6380c6cedaabac617e298ec45f111691e78330b9c793fe6a7e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31e7395e48abedd68fe6088eb0e6124f8f8932f67d58efcb4e6be9ac39aa3838",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_replacement_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1ae809afeb15ddf46f21cc4b7180da90c4f0ce951fabc02008a83f5b44d0ef3e",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sensor_test_run.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f3d94a0c125d96fb3b3c9d527c2226b45d466846666d9dbdf11a9ea5ec6ccf01",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0735d2346337a51383eeea16ed5b49d2030287e2c7ebe0a95f18b68f4e879f7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "703f95da4ac9774a5cd5f14ff1eb6f3c5debbffe646537bb5a773a1a7af3c081",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/netconf_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "58cbb5426eb168279cdfab8633c296143d0ec0e673b9e6e84b489cab962ccba0",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_register_for_wsa_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "66ac9a096f34c8c6a2d0726ca454041166cbfe3bb59a26071394cc67ad9abf7f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/client_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a98020c492a68e8e21d5f59ab89e990c51461b408940d216523c57e2c919b433",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/interface_network_device_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7078f4bd25af7a6d25af77d712ba3af5c711580073f25075b600bf4baec1cc44",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compliance_device_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a030137debb0fdb6cc405fabe7972a322d359466ef8fa2d7cfe7d63384552ec7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/discovery_range_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "950d647b1de7535c421b7537f3de6127b7d77b35765a1bec5650728ffbaa679a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_workflow_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "da23d2f863c9d177ce94afe0a9a9aefe8eb8f125de1ccb0a8605fe4a381911ad",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3c3f48cd4d2491ef984d13058a677e1508636b5af1e6f1a3e8124a2c08795742",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_export.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d04cc77305e6aa1927e2916f432cf00d3563dab2c9af932947fd73ed2ea4f3e8",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/templates_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "60ad68ef614f306f5bb991408526ab3e1fd1aa414505ca3faa3e44407abe3164",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_series_audit_logs_parent_records_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "87ad711cd866043b16fecb6e7c7f3b44d29b73ba803a93be3e0acd60563e3411",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_with_snmp_v3_des_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "376fe4143343d09d649773abbe726f392a65086b360fad4246194c8cd7c4d129",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/license_virtual_account_change.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13c4cfe67e2820906a324b8f0270df23f05e75787271d25341911fa8fc6e0e01",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compliance_device_by_id_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "57ef8a4bbae876ea5b13556242c28f888b9c87374b9631dd9c2230d4538dd7ca",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_virtual_account_add.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7a8b5a4892c84f3552b55369f600b286a1dea120183f8c1a73fa1d9c8811b96",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/tag.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4df1f490193eaa8263d2ec9009ec0fd0f012476de8efa61254ed6d82ec45360f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reports_executions_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "beb80482b5391350a6cb26a07b3cdc863c4dced91e5dbe24100567575f3e8fc3",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/sda_fabric_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbee94e81318de941e1f3e4aa6cdb91e961714e8f99d77f0b27c5ff39e610e25",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/device_credential_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45079aa572393ad48bb64cd7d439276cbe6fd9e237015a1eb7de1d2b30bf70d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/file_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0fa5cb9b0d1055a6cff2a86d4f4c5abfd1da47b0b8c0fd48686da5680b954b0f",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/event_subscription_rest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "572f1fc9a1eab49917831dee8eddcb7b0d29ffe74792b75899d839d200ddbe50",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/security_advisories_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6d1b0d629e61ed5ced4e0e346a2d26b53e83909188113c39b38b9a6d97c7d3d",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6dd560eac32565cadff62bb827e6637eb0631412fb3de8d8f327a56e8a26dde",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_smart_account_domains_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1bb9b4000b54bcd276e8918bb553e812f297b7d96e45c2440947cc5c793b092",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/security_advisories_devices_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d533c53edb9b6ac9055e9c315f8904631cb6b0249699edc42e4eaad1469a07b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/reserve_ip_subpool_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d6e62b4011500d0a4194d5354f5efd6812f0a8ea4605f874da6a8e1a9aca7652",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/itsm_integration_events_retry.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2cba253bde29a8cff8dcc6976240e015faade8e2f22ae404958d0685f8a54d61",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/user_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6712e495465d5ab87c7eee36f718f9d75210efe4624b1462734a8098454a4658",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/site_assign_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5caf21c2e2300a795bf11605c306d98153e5f6bd1ce062a7d812950d2d361568",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/golden_tag_image_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "43981e17e0e4365c19d9a6fb68112cc6481b7da93e26b5532ee580d53e7a1629",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/network_device_linecard_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "18fe01c8cc9e0a162a53d0872029fc3482e9a46e9d425358947f7f35ab2b1a58",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/issues_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6dc714f6947e9a91e4d35522b80b5641c7d36fd68eae3f1d40d7f34e2e78f740",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/golden_image_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d89d5c9e58a149e2cd22ec2178fef7bfb0eb888dac1b3da8f7828d68afdb7ecd",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/qos_device_interface_info_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e88f05de8cddfb51c0ec07e2a9be107579b08c916ad3a7c5774d5dc06abb802a",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/compliance_device_status_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "82058a984c2a1054590e35614b30a18fe1cf415667d0bfbc01f66a6e2a370963",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template_project_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a3346fad2e0afa51dac18b8510cbffbd633336be81c6545094b18f897909b4b",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/pnp_global_settings.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50092b2dd1478b73c5b3d20a51d38d402bdb860dfba0db14c6fe7443138597a7",
+   "format": 1
+  },
+  {
+   "name": "plugins/action/configuration_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "daee7ecf86686227e944fdf36f95025ad42c93b5ff8061200de93a0179368d58",
+   "format": 1
+  },
+  {
+   "name": "plugins/plugin_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/plugin_utils/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/plugin_utils/exceptions.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5bf87d6eabd64d78177d92d28a1a266014ec305ba584f6a56b38c082bf6b5a2",
+   "format": 1
+  },
+  {
+   "name": "plugins/plugin_utils/dnac.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "85ed9ae1669a42b1651fb38ca5968b5fb2ce41bd63d601a7ea39fc96bf2d34d0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_member.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a493152e65b296652cffe88ae6342682c4dabfe95a96b2912e816469e9b102b3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/disasterrecovery_system_operationstatus_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8fd0409b787f6349566feccd41b6057a783983773111e4025e5b176af3d0777f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_by_serial_number_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20215e275e1fa0569b5bd1991dfe76fba3940176eeb33cab003d7e5d015fadc0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_enterprise_ssid_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b047418b3ce1fcc5282d95896c2c64fb834bb27b5b36d7bf71bc5fde7aa98d4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00ebefd335ac439a76575291a2b161c1cddad3b0e19f24c1cd09fa7ba7ce277b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_custom_prompt.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e33efb21844c9c4339ed913584dee2057f825d1e243531388db6c7b09d9c998e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_deploy_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f629d81d2d6553203339048babec26a1d01212799b1563d029851db750cd3ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/file_namespaces_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "490299d73076011be5acb42455f623d1b7156ae3dfa96b202ca6c83e33a4cbfc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/syslog_config_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49a99dfbc17c0820d83532b7a5f025c661e131d6fdb8bde5246faac8a8322da7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/buildings_planned_access_points_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d6b2e40a12dee8028ef944558a824711f8f5297ab01f0690d711ca47fd381628",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reports_view_group_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "12aa3b507ab7bcf0390d8ec2f992e6382c524937b8923fc951fdb1d7c223824e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_provision_ssid_create_provision.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1097b192139e32ceac2085a561b3a4b9a13f0b80b942f2c3f993e3d4b0843804",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_claim.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "404eea99232695c3fda8aca1a2ef0ac5a205dd7f437acb16672041ba660cb494",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/snmpv2_read_community_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d44d397cc143ac268e3a59bfba32e2c02c0a990e9a1f008e54b30cdd70c9f7d4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/snmp_properties.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49ed1aaa03696082914aee0d858aeac97e056f012dcac6faeb39e84dedc77b84",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2bc3a33ab35f4049b6cf6500b8c9df735b1e29c567fa389ba08a7b5c58ec2e0d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_config_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7db56ceb88f0478ba3604af275f0cd8f569404f1bd05096d88af2bbf521cc1f4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1ce344b698f008edef357568ed3890969ee108b68c933efbfee45105137ad2cf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_assign_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b7ca2a0fe217c1b0d9bcc58b120760c56562c1d78764603819dcb6551173d35",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_control_plane_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "583915de0573c3c917ef6dc46d2eb514fcedde369f72f14a6455074c80283904",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/profiling_rules_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2be93c9d4ac5edde68eb30a7cfb3e7c70c2f5bd420dd6292151eb84e0acb8c51",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/task_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f13d5f48ba9d014ad007e2d91d2dd63d649536da827c17292c19c508f48fd46",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_sensor_test_results_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "842bdc7d1b92a0ca053fee1cc4c7d37f0c2949f21ec2a2b5b26b769e4419f297",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_dynamic_interface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e791d5d9b3d1c47d8d8bd0ae0cc503377a159697156540847b5087ba36b518c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/nfv_provision_detail_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abbbe93196fb8846adfa59d6b7e54ca5fd82eb472dc4b7dd7ed7f1a97983b0a2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/interface_operation_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f45a617600e3e3a3de24c26eb713097ecd1b587dac95a94d55a582cb5c6babc5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_member_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "915737cbee1b0967bc5482a16212407afb7e24cee494e22c3b954704310c7089",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/lan_automation_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1a1d94a736165195d6e9c3db6dd17a0700cbf909d6699ac3cb75e659f05f285",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/endpoint_analytics_profiling_rules.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a497de69e6bc8e935dec07612aa223f9378b38be50ec1f4087a4eedb4ae99db",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/business_sda_wireless_controller_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c522f4e2ae59ed852202f1acdbc0a792e9b5b6b9a3043f19ea6650e0270ba227",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/associate_site_to_network_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ae54cd406d7523a5b8739725a94da5d6dfe85cad3f04b7b5f397e9c1073453ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compliance_check_run.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23374475883dbcc5a6dd64eaf77c3e0f9933e06d25b05d93dd6f9b2e1c309c47",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_unclaim.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6dda4395fd073ef488d2936a00be43ad314e76982bb601436b81dddd6ab0af2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/interface_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6475c564925ce8ae1539d374d8c03f74714be31ba9c5ab57ca2a778aed2d9375",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/lan_automation_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be9b5111fcb42b9056974d56cfa3dad7dd5ecfad239fe36a786eec3a24d2383c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_authorize.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24aceb0100ea4fe92f0e9d3daf11b5c1e0e84fdbf7dc497dc282d8e02861cd43",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/task_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "654eea1eb471515ec804a056146894dc9cc495e127572f59921c73ced3dbb8c9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/app_policy_intent_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3d02311a1c996a273f24925ddbe610ab51f0ae370589d329ab67178bb37f9b6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_import.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ceeeada90dacb3440e52c0d2928f051e0f7c7dd8276391b6c6395239d1b4086",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/authentication_import_certificate_p12.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9eab3587d6d4f9dd6766a0b031649ec3710bba4209d3e8f2720a47be466304af",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/topology_network_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b60bf3b60ecd3c0fe1d0794c8bf302d9be70105081c7b1f3a28de883bbbe6859",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_provision_device_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8661876eb7c37207c3f797a457a10af4cd8edc3ab4f83d97eab5ee649285d667",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "58357c4a222074a15b5d1ce057f57f8dc116c4ce6bd393fa26cd3d659c0c75a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_device_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "775e9cab18bb860f26f567d6d7091df273f3f40c329853fc6a2e4a917cd1d1f0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_email.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00d0e10318d2e8881404691005c296acdee0b157a66105d5c5615509db3fbff2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sensor.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7b15e3a7ad2ef1debe1d83980d1a0f42532cf6d32c50394050045b3349396a6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_design_floormap.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "659b886ffa40bcec0d6c574afb66e0a998d2709c04885f8b09e7ad39ea302709",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/global_pool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a95d444066823887cff34ba2cf7e0d0c2d423ff3f550e100c305d86fa743005",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_interface_by_ip_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0726c6e150e293a618602398bbf6cbe95a32025862b00eb3ceba862742233e72",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_chassis_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "254c0acc15e67b9021e4564900ce8810850eba74fdfd6315e12d2122d1328bae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_authentication_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7afb6eb46ff8809c42b1ac23a786e915adf2474036bf5d06a3db454e77e236ba",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/client_detail_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22fb4d1f1376f3398b1e0a63c892c62b1e300cd673b0b66837e0b514b401da7d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_term_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb26368f88cb7a1bb5507cfadc09fcaa7712e47078ebf1afcab094188bc8860d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_device_deregistration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44cc5b1ee46712e2c7d78304b55e4a2e281bc104b0141c0ad57ff33ed03a7f2c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_interface_ospf_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "edccbabbca9b926286c674122926daa5fb8fdc5f4fc1da381a54411ea5a698d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_virtual_network_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06e1f6b6fba0e33b0a34b329b6327cc1b868ba849d058bfb3d1cb53679d84cf5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "daf573b594189e3ebff24f1a0486a4b4f8a3e025db921ec718f687273bf28bf0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/business_sda_hostonboarding_ssid_ippool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "57bc8f68c82df0bac026cd44a124a81352b6bb0aab37fee1d4fa6a86ee5a85cf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/business_sda_wireless_controller_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51477a25d3933ddac9c79ec1586fd0f45bf895e63455e720e19b70fb616ca818",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_provision_device_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41d3848aa9265093409602acf909c2018336c2bf08125fcac8a9c89b8c572670",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_sync.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "26b5d7e1eabfbeff8a8029f1daa9825d5912f3ecb1622a9775e9822128fdcf6d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_rf_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1fe78a88097df8417c655fa69ea8766b6f5b30ac89cf2d654bfe9876f46aec09",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_site_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20ca197f6f7adae6c304503db2df771ed42db2a4e5ee32618252bad98eb2343c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_syslog_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e5ce9ded5e7a0be0169eebbf500daf16f177991600554e4157875848eacb52e7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_import_project.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a658a08dd92318f70220718576e52454c0e71e130e77a5728e75a3c5e2cefcf8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/topology_vlan_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbf76f74e15329a6965481b524d2b0cf8a3ce1cc1f334ec2139edab853c0dd7c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ddab6cff23c3362e7eec5f079d864f22e63e4aad1e502b19eb199aa7401f9c62",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_series_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "01382a75a9269215de8988829ca04ee1c3810ff5fb1e82167367bc0e6b196148",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_clone.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6db4a9f7f9bb3270b4d2058e9df31c77fdfde182d11bc1ea43083b31b7aa785",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/swim_image_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d6bbda991747d4184322ff0286aa42b42831156bc8747a276c83019111e2948b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_provision_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbbf45cc8c8fbf2de40f0bb7cd6532e4074b466f449a3872861b3cca59b89934",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/system_performance_historical_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07328a31d9d88e4c96631cf5e38793baff7be261dfe46580fde345a751df9b19",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_control_plane_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22383f6388fff27dc08108ddb49f34099670082dee393ecf5e99b48589e64f93",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/threat_detail.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f783a3b95044b92be75f0c152c4388f8dede23d80050ebbaaff8381eeb070075",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_version_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea7b48f3a3bfc26fef9b86602ffbf14245b0584bd688ad41411a259cb15d018a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/syslog_config_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41098be60bf193a5f08a19eaf4149a15e0a4608d96b0e78c79c04e01f10d4cad",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/nfv_provision_details.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7832cf6b1db0e02a887601fdbb4470ed8de18f46be04bedd41439fecbbbb16c4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_details_rest_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "936b21584d50dc652bfff156c761f3e2782580ab542126068ffca9aac87e69d9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "154435c34f708e4209461a33e95433591c2ad694b182c8fc0e2bb272554bfeda",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_design_floormap_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fdace45bec13e5e59cb888234e64693932748fb7d16b9d2da1ff03c767f0a92",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_job_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e04829fb98530a043f67d1c938ae0baafbae7c84e99fe06e1664417fff79a681",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/global_pool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c5464aac6947825f5b871a6429ba026ac53d9402319c4926c98cceb8075f7829",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41868020468636e40373802066b697bf21629d9778d5ef3ed1c96f6aad4712e0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_replacement.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "368bb9f307f192e4c38c141d263a5c596d01044f606eea0f8030685b5b0bb946",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sensor_test_template_duplicate.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c7d93d8091fed0ef6892f30cbc304c055cf54ee50791404ac76760d2ef1540f0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_dynamic_interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aaaecb563630e5fe0fc238713e1e15ece7831e2c371499cf46ced22598ad70c1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1992d7062c345e3a8f1881cc24468163fe294b2f1d770bedbb12657e43cf5be1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qos_device_interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "55a61dcf66f0db73427cfe11d3b0654f8ba59e55dc7cd360ebd0fb8b8a7da7fb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_workflow_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f16252827c253d49b9461fc0a91b149ef72bcd2c629b1467b258a48d2beeb9c8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_smart_account_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e9d4999ecea3d74e6a09760c6a2c18b436b9c066c3273318c53f1ca7cb313ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_module_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d75559782ce5f83c6e8da520c4fb675278d266f0764ce74d47ee181b9c573bcb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/assign_device_to_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf27720415cd25b904f303fe3bcdfa8e71574a831657b0974ad2401794213229",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_config_connector_types_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e9b623f41ca44a9b6f2254e2f0988169aed6331ef19b74b1a2f42e1238c4ab12",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_inventory_insight_link_mismatch_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c323c2bc3079544cf1bc2a0451c2758b2111964428edd32b59b601de31a31ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/task_operation_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce704bf1a48b903333605fac35b8de22945e86b93d4ee2ef09c2bdc6befaf1d0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "03e7e091ababe2952dcab39972d3fe62271d2c34b2dd34f76fd2551d8a4d2acd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_virtual_network_v2.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "43f5703e1f39102ada74734efa2e2122e1ffbd029eb6fefd321a9076e89e48ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_by_ip_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c5150c85d3ed51a94cb455805dd53bd2adc8bbe6beba76c6c6120a667ddeefc0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_lexicographically_sorted_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e95612fc37e545c53e684f330774b50005b2aa11030c7c71428b34acd162ccb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_workflow.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a984af3dbb1d51e2cfb3d6d725ce8ffa5399aea56784f84f60cbb0992954cda",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d00cdaab09857a8c3e4e5d5fb8b1f7ca078689e65b8613ec71a4eb11f6962e3a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/topology_layer_3_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "befafb00783fdb91054f75c59b1c2da39e0a5d182e4550a58305293c3daacd0a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_credential_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5d68baf6a1a54965bfe0505c097b2adabc077359d7449b3971ee85461220ea9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/snmpv2_write_community_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5df2f301db580b0b9241a14a4b79241e70d31b7c4efe529b739f9185eeecb0d8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/global_credential_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1bf00d6235ce6388f200ed491a316688848a17c60c18e02d53d14966eb0ed9f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_rf_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a0646723c91af9624886a557a84522efd26ae4276f6be39c1338f657a7ac0181",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/applications_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "968656795440a820706c96a7d97a83a0c15ec0a87ad3ab6f295e6d452e418b9b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sensor_test_template_edit.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41e7a1768594274154b6c836a0001efa836f4e40099f0030161eef2597ff59e8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_stack_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09434bebf727c0bdd62e553380e692a92a66624e328957671ee7d55e785501da",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/global_credential_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8137ce5a6719d6b7049f33f2e32d54af899c418d6f5fa841f459ee6cf8cacd3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_multicast.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "08723b2b68a0ca90c229a38a6639b6fc8819e147894edff0accce69b911d7319",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_device_role_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68f513d480fdd1e1db867b2a94a62117006755ab5eb3b1f036bb2ba224785a5e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_virtual_account_devices_sync.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "493c42874737576cd8770cae23ae1fba898b8a1a3a3053d96cd5643b50dde0e9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/applications.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccc19b2e7a4f074aa02499711f8dfdeb3d2542026ebf67ec53c107ba69ac931f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/itsm_integration_events_failed_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a321e09a04b63f290748d4e814a123b130b0c201a824b35ed68ae52c5d063c2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_export_project.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e54637ddf61e03c0fa25dba5f32a0dc76fd7f2b944aec3d6c9ee710450dacb95",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reserve_ip_subpool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eff2d59f839561bb8026f35dfccb38d1c21764c9023e61ca48724adad91ffe6f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_interface_neighbor_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00cd9b8f7bc2cc3f47554ab7929e1b5e1ee6fff781b37a1c4421e2eaec2d1b47",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_polling_interval_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "18a0cf610e62e59618017c6edc80f49982370bb3a088a8a6b5756482cbac993d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_membership.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d8e7cbdda5e9c69ae8a8465be5a7fb3b37dd755fefafa42d89ccc82a8f17757",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/profiling_rules_in_bulk_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "15765a1dbec2fbcc86069e58aa04c38f1d1cf2ba517a9f1785ecc79bba8c9533",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_artifact_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3431e58292c414aed59e138de355cf7dd12b48bac6f56ac5c52cbe4e611976d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_module_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5404ef653bbda62cd562160753fd77405d5c683903dd95e30c504f3dc5f4c772",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/global_credential_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d49d2d96f7e686ab565358ea6e94af1f63b019af4020ee1eaea56e356d1009c3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_server_profile_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df00855a8b17c9c7427193b7f957a75c7a76ca5434c2a84dbc1f3e2fa1aadabc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/projects_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b14b811823e036ca5c38f5078fadfff5f6e00ac40c8b27c3b01e2f118f072a66",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_claim_to_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7572d6bb3d90513767d7d510cb79c81015b36f29e9d87cbd0f760066714567c6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/applications_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2dfa81d67d38ce1a686d93590834065041b601ffdb725ee60cbe313ef5091272",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_wireless_lan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dc473450e77255a08ac4db2145b3d231eb22f7a525ce92a1cb9263020447997f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_config_preview.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9fa7886a32a02795e6a7b9f3edd6092d18b84ae36000e866125a1433c6306c61",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/path_trace.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "349b177fa3170f18c2faadd22f57d602f5746f2ac77a0746c804c4795e8888da",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_replacement_deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bc2dae7799ffaa566957fc7126e5b4983fe272a560753d6206b4216f0ac44ea",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/system_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e3ceb2b687d5e6c2e9deeec3f528f85fcc301a07fa1a3f19a650e58cc540255",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/app_policy_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7fbbe2b0904ee86480b5f53525855851dbb6b98fe28fda0ccfdbffaef8ae067",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a33765eddcfb14b86fa76ea1634f0c5681c6d5a81ee72203ecb2a9b02236c36",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/client_proximity_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5cf2b93e3ead463fb572025aca00136abad54f6d47b0733721cc7a872862f457",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_member_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a39642363999db37d6f67444bf31561e3efcd813052ccdac37400f74d94b3fe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_global_polling_interval_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d461c9522a6a61984f61fcd0a7643b7cddab2bbc990b5326af08527ffbabbda7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/application_sets_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c37a774771cdeafb3ae1a7383b61a92481e288f1da798601d4ffa2058c6be4f1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_provision_access_point.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1bb98187da07ae1ae9a20d031f93b5c265c8636ff75cbdf4b068b30ae25d9497",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd753e437004e14bb22e4234fd46ea65606f62891c441ba31363ffdc9d729abd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_global_settings_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7a2383226b187bae441ee8306f110b0f33a6f7499e1374e3723a35d0a6a3f68",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/planned_access_points_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f12538005e1f573eaa1edf0306a4243275c20e3a3bdd20a5976317fa023b1eee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2e4012b75634f266bcf38dbba9fc2668b2284c5b47f14a11f86db5ab08e3a59",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/disassociate_site_to_network_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0c94d47dedc46e5cfe58ba025637f82f56c1d33df5e83bf28ed7febd7338aaf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/security_advisories_per_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2f5a8779685a6956b9beb83fdb630df5915ef0b14a2c2e04c10cfd60a96b8100",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32c918baf54731f289410ba4fb423bb1b514190d278d5847767d44babcd78928",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/authentication_import_certificate.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b1b86bf097209a752cb26d0a61d984e0b632c917bc4084df210559830a211a25",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_port_assignment_for_user_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e81ce751c1e6b044ef6924531fc72764e5d0664b947af15ca8fc6617d863fce",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8a5c57da473e5170d4c133ab2e91928abc08e3d5431790564f909379f4bdc28",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/nfv_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4b1f86bfeb3857e8eb853c70b9d2c315f24c86e867db49dd1b035e6fe0fc8f67",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11f7d79ba2a3db65f19fd7a48c8c6cbf8c5d92e3d626d635a9755c9b33f67a8d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_custom_prompt_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea9ebcfd9790ba3ebbf10baa1bc72ca36e1bb3f2b0e52c3f9b6b3f7f3da08782",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "273a84d2ec3c151da1af26e56a0637d9f348bcf98013decdef61ab3aa186119a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_virtual_account_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6aabc68254f43ac2acbb99766da97856a16f6130d7b59b7df96ee6714345251e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_credential_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b206405646b276e142c48dd45ff04aea4e1ea38c6fb804e1213fcf3b29494cde",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/topology_layer_2_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9149eb8650757af54b7d3cf18ec840a44019cee8baa0808018abc139143ab732",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/threat_detail_count.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "398e231dd5f45adb3fa43840250f74340bea1357d98b6de55e76067fd1738ed3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_credential_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7f846407b2df65dc358cc406fe200761f2829bdbcce9ce5d588620abb8f4df5d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f45de2d396ed3eadc06c8b6fd7798bf48c2e7d219289546e67a679c71c091df",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/http_read_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c29eb34ed9e1ac53c19eecb8b50143286d42fda6849a8cd7f35ee8021c7eb6b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compliance_device_details_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1bbfeea432043aebc969a1d80ce3c8616d50f2540f6c733d8bdd184a411f7616",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/swim_import_local.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "241943bb12196b217e2d24d1d57a5e31d2f56f7b0c14c0160207a90e3df62df0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_export_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e402a63461df568eafde0380d0248645646f37a7e9f2bc794531b9124f5630e9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/transit_peer_network_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e9f144f7ed527bc321e60731cebe71b005741651f5974cf259c67759ab81c95",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_provision_ssid_delete_reprovision.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e39f71b7cf93fc661f41410e6a933ce6be0a1ca793dc2692790ece730c93515d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_virtual_network_v2_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd0ec8728f251d76f6bbd144d3afc82c7571793c945e4cc621c86f21a1247017",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b1884bfddba4a2ce0f4f501ec6d2aa3080c926c6332b9afd7439e6f0c6a4b1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_authentication_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ca18b647f7a039ffc3d8f5f50137093d415c3403230125cc3dc5c562248da98",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/command_runner_run_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a26476fd83ec51a6738249f6d09bcd2d32f099e6bd215d81d280430fde999d4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_edge_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb26aaf531847e8a0dcb445974e1585aefec241cf101ee582e8d0f6be90ed7e5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/client_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd32f8d1473c38366d9cbeb9f1a0402fd70d2b32c7a625861c2628899b090bb2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_provision_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "92091948b735a14a6eaf6034a2868f593d771964339feb17df50053cca716740",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/interface_network_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbc0ee1aa9ec50c652da86ac725957b70f437c513f0df892a938bbb663c80abe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reserve_ip_subpool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8d312d9b77364fa9ba719ddf102f96c839701cda3246ada817f106c0a17de4aa",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_version_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "39fd1d29e483ecf8a1968772ed3fa5b485915128ca28f7784c99387a39dc2d07",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/dna_command_runner_keywords_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed633c4d6b13f6bee641d73c27d579cd69b0ad12c4229055bc0ef0675d6fa607",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_member_type_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7cbfcdbfe8885646017698752b2bc218b614dd0f59c961bf4d534ff27fa422c6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/cli_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f84194547c06b5d1cfb9f9c3e967b9bbc4ec403555edfeddc78503d15be3f9cf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_webhook_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d22e31c159d87c04649878813786baacf7d5ddba92bac16d33037a02b62238e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_device_license_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50769cc585b6bed503509721dc38b53481ca64a5e2ca73c7dddf220473682b70",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04d1dd3a72f62c1d24b9c9ac72d4068ca3be730114acc9cea4f9d31ff0b6e7e0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/disasterrecovery_system_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc01c9684c95ec5f274aaa5182feeb31990aa9f4927ca62d07de45008264d003",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_replacement_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "445e36a21425b0a4865315778d7eb451a4aec85f1a002227364427aec2920ed0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_virtual_account_deregister.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f61bc832e7d7472e2b67f894fc4fd327cceddf506953b70c6a44b3b654618893",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_import_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16f6a25898d30784d7ba115cd9d626efd62bb9635f0fa2bc554c44bde3656f06",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27e5fd88443640297352efd6465c69cf04ba43eb6506e75ba0e36cd22fc10bd7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_series_audit_logs_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a188b03ebb437e5eee879ce5e94a5905465c52af6509c073b4347514e8f4d4f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/service_provider_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "90a41536cda97b4193e1606135ff578e147d3a9bb2e9c0436ea1dfd7bae75afb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/endpoint_analytics_profiling_rules_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9eec6c9f2cd3bc40552b490dd35ee56617891c9ed320ba864ac94e7700f85181",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/system_health_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2d2b2bff77c353c626c670a82fa3fd147ec0827cd68056fe5171211694e7c137",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79cbfc5ac4b5b670b70a50374befb1991487a58238963f870171c0fbc8e2d7d7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/template_preview.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "877ca94a95f5c36b72801b309f924d8a1c7baaefb1d9b60b7580ad34e4403479",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e381e3ebce0a93e8f328c998de947b873e9f02f5276b641b026814edd3ca7ff0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_equipment_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "770cb8e4d214bcf31138e6b2e540cde1d23515062fdc1fd25e67164f7e1b39c2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_virtual_network_ip_pool_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc8e4b9296c710c3270b63c8fa194c90785d0272a43e6ce2a422eccf4fa80863",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/lan_automation_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6c92eaa7b5f9d23af360ab4615378c6553762b10b4b6784693b3f6eac3d40bb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/app_policy_default_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7980cb4fad0ebf037bde4880be8fd5913c3bc036c2d90d7c451ba8447ea4ae7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/swim_import_via_url.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3aea224983a47e1027490f871e7cc41e57ace4cbdacbfcae4484c2498784d3f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/business_sda_hostonboarding_ssid_ippool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d85c7223f5a009a9e1059d3950c452bfc344424ce44cacbf2b9ab3b6b731d239",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/snmp_properties_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f9bdeb7046f0f466bf22ebf71ad9f8bcf716b828be336e2d03d58feb806a422",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_email_config_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7540d44e76b87f87c01de94ca2813e14f4b7eb27533b4be54071741c4530851b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/swim_trigger_activation.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16bc68c04da7b6a0344ef6da44235d938ed285f68d6098514b970b60503f0dd7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_artifact_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2f3f0a0e0033633c86edc3271d68ceacdf41ceae0a0b4f7c444a4d7d0a86ef8d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64793cefe6c30ed2f0af00ee0001f5d437d0e03120cfeb615267d402633237b9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/nfv_provision.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e02129f196d462c67ee8e18e0f1b80c0ada945cb30d122e7c1deb4a4f711d2c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_psk_override.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3fa1bc79adf32ee1da64adb2fdde608c905283b56ae028d2b727ba1046c0a024",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20406c15718e1a17c7978a932999f1dad88c2eeb170019552344b975c574e6fd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_rest_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1bf735c9177e8e3ec7aea732329eeba64b2abfeb618ee510eb66348d48e3e881",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reports_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0e7985e0521a63c577d73dca3a2041c6e7afc72a09584cb297fc8ca2e0c042e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/lan_automation_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1fbc55d19fa2587e6d5b02f7c5d01dfdccd9085ef8f55d1ad5ed9541afe1276",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/http_write_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "193857ac66d2410eaf6fa7d122114a9278940f6c25958d181af6e6e9ccf2f14d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_interface_isis_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a9217a1faddacf2c724d94d9dc3ffef74858db76fcec176209285643f16b92a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_multicast_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df7864ffff0eb8d26082ad242468bf79a6542fa649f383035e3b5d26c19c7ddf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/topology_physical_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "334625ebcdf48b048fed973bf626331a83af4551dc35510905fd0eb936fe72cd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/security_advisories_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5dd5975dd2a56b05cb126c25078f1e132b9dad3136caf0ef186bdb45fa32b7f9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3cb00b93dff1dac9f2471f7c23946f11f2e61ffcb4eefb0e6b13ca56de8a2805",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_details_email_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b140b3ba72d1bc860680928734cc194e6ec1e748c9825ffff1e4134aa938ea57",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/lan_automation_log_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4b5af8c977cf25e5f67f9768adf2a9390699d3de2386c9a795b5befaf99fb1e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_supervisor_card_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2c211f5ed45621f601f9f0af35660c14db92d690003a5c7b267b3f1a79c0741",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_interface_poe_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07647c3d765926850d6b681584cce31611d97cfb7906a9f24eaf6805f3a763f7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/wireless_enterprise_ssid.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "498c6062aaf34a28f5be4fd75dbd604c7d97921e19c34fbd43357667eb046f8d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_email_config_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e1fc775f07b22768593f5ac2593750ee12663be386758d3cd525861fe71e396",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/threat_summary.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ffccae9bc8e2ac2abb5d97564bd8f49b0d83861fc6a656f4f53658fd7c4aa499",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ac3a30e3dc9fdc99135f6b851f5f2def669925908717d00adfe8ad889b8fd76d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_poe_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b80b5b148e20c5bb2bda5944542f65e5cc700557248a68b6f7cdbe37de23c82",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_virtual_account_sync_result_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20cc92e88b712f03603b3f3d721036b626ba0acf764a8325a4ea404fbcc599ca",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_project.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4dc7c81093fee4fa147d8ca6fb56227fbc4041f4728d8811823c61170140c9d5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "308de7a07620eb1d3dddd76b86d6e37e3b02cb99504dd953ba06ee640cbcdb71",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_meraki_organization_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8d68dfa7d66827165abd50fd8e70cdae9c452a5767f43373be69176133154ba3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_email_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfba457bf422fc1a3582b5d1b4067c4fcc99e817f80ca223327c2fb949e06ef4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_webhook_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0fa9463b79318afec97a79d3be14dfe7d47127390865cd8b96ba5f7adc13ef86",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9070490e5be88bdebef4796afa75d343782dbb7da2903e4696c8caa521fd38f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/dnacaap_management_execution_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "93b92b6614bf3368421f1ce7f17095cb1f4dd713c5a4b0dba7321526d8b17a09",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68b19cb778402e37ab3b8afd49f9c63732d978b67f2deee06398fb19652feee3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reports.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b84eeb7b5a6816dfd086253cb587c8f60f24b4a9509da1a3d3e6bdfdcbf86c8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reports_view_group_view_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b386176d53bd81c573cbc9d38590b9a9a30d91c9cf6c7a62eedd4c56d22f9bf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_details_syslog_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f60b11e209e55ce73342925b9fe405b9a531ffcceb6d4bc3f1874f09ff5004dc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_device_license_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "751a22a2af1d148f8c7233e24f5d6fc4edaa3ccdcffaa88b6762429135b807e2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/path_trace_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f1a386b12bc96ed5b97ec1ba6c9fc5e721a6e086cc7c2f97a16546079f3e9c17",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b625eb03e3cc930701d17571d5bd4332711dd0334fe008d2b8e1ef21f8550f4b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_membership_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a980c4aba6b99af84b2ea951cf76629f4f2ddf8664ddd9d4d0c43827dbd96edb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_border_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23769dd601d6f350640b10c3c4d14da916c9a18d0c1e200457b9fbf2f005c671",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_syslog.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5d967b42d43b3fea21dc3848a875caf316be4c815a906dae0b5e5b8b3b75ce8c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_interface_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ae19ef8e22a685df873d7b80d1eb77de131477aaf9f6200507a302103490bf5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_api_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2ec7eb136ad48fba9dcaa5d7ba4d199c1e9064c70b6a08ac7daa9df1e80fb25",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_series_audit_logs_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7736f7e51e991847442b75b3b04a97c27f66627b492fb3003d10d5e023dbbaef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_border_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d92d54ec3a60ec1c401194218e2d3ba81029f0c808aac2adbcdccbe08ade5cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27531d9906e66e654b7342a34ff283dff326a9960e56d6771c4e578b4ceaa4d8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/application_sets.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aa3eec20fa5fada03396c0a9dea57e3b2cf63c9a692ed2d84c3333c00a002dc6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/interface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a832ff8dec699b1c8c5d77a3c4dbdc77a745c905d3b402ed217afa5514672ef4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2892a3f53afa1013c6303025b07d0b080ee7b2345a29393106b7b543bcc23e1e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/application_sets_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1aa95139524760423dd247051f590d77299365b684ef92ab4e73bbbc8953f21c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_family_identifiers_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10da865feb30e9911dd57be31f0f06fc4f9a402106d6d7976149f2d3e1a413f7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compliance_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c31252e81e239d8c77284ff5a5a2ee7d51399862a4f5715b6a4b36b51b55962",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_configurations_export.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c30a540a06e1cb910ea6382e373094dae6a0e71588e8ff097f52ac4ea312f7ad",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_reset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "18b0e5135b1f12fc493eabf8cacf450f993884aa97f1073c3a7c31f1c5df7329",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_device_history_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7315fa8184aa82d504e741c534b800525b3900b0956da793eaabd77517b74c1e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/task_tree_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "125140b7600f74a79b9c2f315c53793085dd8d34e775d94f1f1d9684b60bda13",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_vlan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f646411a6253d249811fa6b1d41ca4abe65a52caf16e88300a9c2314b981b6e1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/itsm_cmdb_sync_status_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8fdb9e2283035d5fa1f40117816bb20d17ff25a2a26425acacc087c2b8d6d293",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/file_import.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00f9999edb204b0bc131889b8144a814586a0ab5f94f7b3f4f608ad898e7acc8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/app_policy_queuing_profile_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cbf62e5cc720098b9414182398ce708ce2c7eb9d9d3b8f529ca1e6aca4fdc012",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "73c05d2e9cb0afc7b5e81dfbffbfe4e6ab7403e927973365c0fbdab7dd2fdcb8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_port_assignment_for_access_point.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "000f8a5207ca11180f5f437c51f26aeb6acf9a4a25a4de5e44acb26487fa9d57",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/nfv_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d5a14df84fa81ea69d705bf764bcd07435f8b307bae8f141c7a7f13e5708bad4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sensor_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41a609c6924d9fd0099ae2ba4bde44a99169d8b29a7f12f52480b39c0572ebb0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cebe3d203cfbb01de7b09c415ed1bd7a3a70180bc90d12bf3637ef646932db51",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reserve_ip_subpool_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67a190a788c0621c0cc22e5e870d3c5d6008211af07f137a5ff2cacc96e4bba6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_edge_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ee99b9c4ea374e261c17ac5e1cebab7ed25be7706f25b940b6860f8c243070d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/issues_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "81cf9d45966b553452c4930dd23159e0145fc301d90b9e6c8fd8854cfc5d695a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reserve_ip_subpool_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "92308b126fc6ccf0c8dd30ce100f7f724e1eb8b1a4d99f16ab16155faac75995",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/system_performance_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b549549a87371b66b63e077a80ca7f86461785bd71f3f591373a2ae36911a960",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_virtual_accounts_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "90d0e64aa1368141b213383a9794a264f0f898a143bcb3350cf4bf65cd4057b6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qos_device_interface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "068189fc9717491460c3e309829e220cce31f861c94fe5a7b46c1b8b23194027",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/platform_nodes_configuration_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6867889e48c7fda31d3c1023be144972d9d273443146a4638441ac7000b8fab2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_usage_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0f6f2f76015c7b3ff7fb17537f70f812befb73028f8b3028b7c0f5a1841ed03",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/swim_trigger_distribution.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "edc0a64f040485c5820ce1df6f7b454a0b6f0a17599483187ff12ede74b17876",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_config_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbe0c34b0d2a46b71f81312d4883e3f5d6f0b4a8138f39556b8a997f5e8f8122",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/golden_tag_image_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6163a15a68949d8bf3223b901378aea6a44992639b74ab9b0610dad018042113",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/app_policy_queuing_profile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4b7c8acc21aa3f22aac3d2251075ecee5843fdb154116088057a6101850c76d5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32e6ae8d6384fbdcc03043a9c7b8deca34028d82733850449b3b3d25a16373d5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/file_namespace_files_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb0c746ed693b3965548ca04a1a627237addfd2676c789af7d87f2f3950856d8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/service_provider_update.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be4c61fdcf9b1df70222e9f972954d8e5c92055db47cac8e451d78d3bdc4cdbd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_device_registration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd3cad09fbcb12a3b3db4603007fb7648a289ba3cc93e56fdbb1f8efb46b51a0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36bd2fd3491e990754318f2e2204c3ed168debb32b5d2c50674bc9b76ceba366",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/topology_site_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0363c991d458144c65935b493e73c511cceaccf63dab0d5d0bc0e366899590e7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f099da40e3175f038baba505c96bad65ba38cfd7f02818424fb1ccdc9130542",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_functional_capability_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7aff2a1f1ee0c109ff1cf292259b681de05bd7ad5dd591e5d582289393f4e57",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/business_sda_virtual_network_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ee111e016d094a3803a349ad3a90aa514ef97dfb52a9788e1c445a9ba82f737b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_virtual_network_ip_pool.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc6ce18bd351a74204c46b7e9a241eb94e9709c8948918471bf01f4e9afd4ed",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_port_assignment_for_access_point_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6cc67caec28d0b4d6ef64fba6e7087d4096bbea481148c1661bdb88deea87c4c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/snmpv3_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "57556d3551cdea9594d30ba86aa12845357312e325cb25810dcaef8d408747ff",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_deploy_v2.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aadb358a962f8f8612b72c3dd53c391633210e7286fe039f64b5c249ef6b8e8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/applications_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a34e1d9f8cfc2a8b52304e3bd368c9fc91219c5497e80aa728c7f6a5cb3b0bc2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_virtual_network.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2c41276a5ea93e2be569734742a18713f48f153847abf22c53879569e42f967",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/interface_network_device_detail_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "693ed995a9c8acc59e747b148b97ec427dec06596d7a10cfbfeca4eea34a37bb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/security_advisories_ids_per_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c889896107d426941576cf28598d2cafeee158d05d2cd0e1b22f2cab2c3fac86",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/platform_release_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec1d4db0bcc6f1d1d6be6114b16bd6da52990bc2e8cddca77ca373446a0d0615",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c696be851d0b82915270f2270a441fc9e773770b0c09a6ec1f91bedfd937f77",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_series_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ecf2ce594eeac8223fbfc5b0d1f88c905d1ae8a70e4ae81df60a7f70a033e9d6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/app_policy_queuing_profile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36be41fb0839d234bb6699ea7eabe5f83ffd9885c6c5f5eebc6f445e2cc5f107",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/service_provider_profile_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b281b82c86c417e88024d4a6efa69efe44d868b14826e5c66b1b21a8e5f9b1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/service_provider_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68ce5ee5cd0ae6f6eddf3f3f655ca0e4978f2603e71e41fb145842f0877ef0f3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_update_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad99d88a7fd457312166054d758366c1c7d0f02cdcbeb7bdb7f826764c5112ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_port_assignment_for_user_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f9cf75db29ad45f62a1a52a4ef3e3242323fe9718cf9515ba3b4675aa8b0cc64",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/transit_peer_network.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4694bfa0c2324c5c055e436c1583e9782c01948b449100c4fc95a26bf13f9d07",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76e00dbf2163fe26f942bce7853c33283e49c329f308efd355720a6f59308d79",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_replacement_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b2feb02611a371dbeaedb385a9fc984c9e77e4a711a93c324681c0f36a05249",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sensor_test_run.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "933fbcde743e737ef19d58e91243ae9419a9dbbb0a234285441f5bf7a722471b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8a25d564cd7d106ac8004a7d5ed819fc041da3b88c4c82f13cb9cb99ae89121",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "60f0b0521fb128e1192dedd3bea7b2d1eaf7821e1a8800e5ca6f912b49b7f1e3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netconf_credential.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e2b7634eb11409da5e51de25f554fcf2a4db7bebbfaf4ccba6737e0277b4c2a8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_register_for_wsa_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "42d505b246744912c92eb50a950e133477043225513ee1a8c71343b747e9c7f9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/client_health_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6201fa6e6a498c1c8158b29dfedd5a039748e62e816f0fe82434eb69184177be",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/interface_network_device_range_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d899ae84619f38b349a9316f3ab2b478be2fe5467613c75b2a5785ad661ebfa8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compliance_device_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20c4b86049407f9fdb518c99ae8b4fb54842973d04cf56e99d6b683100a53112",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/discovery_range_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "863ab91d143b794c9aa2c67f81be1e4036015701c55205970234098cd9a1dd7a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_workflow_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8002a071ef7a0e3ccae619a5ab814a461d661f8252e1919a7e55d97ef10bfb78",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2598ed66f916a932507b0871d9b846eae039a8b6ffbd9f6572bd83123b21005d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_export.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ecc00db193380040a9a5ea50371affae8ef26c1847e4613fe5aaa9e385e28ab3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/templates_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f26db7c870c674a539163c87637a4c41048d9fc6872092529334cc674288c609",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_series_audit_logs_parent_records_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a12c8869aace5baf44779be08f2102b80d0cb1302edf4d747602a4b12b226093",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_with_snmp_v3_des_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "028f1ccb9112ebc65f4aaeb23f55459719e3296194f45d1143f83a344e117309",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/license_virtual_account_change.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7197c00f4c0d69c74cec038ed981aca646c3d64bc6150f8b61ce2b24139aad0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compliance_device_by_id_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4b19432696ffaff0baa367c4e3851464519475df9355eb6f156529b23f15700b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_virtual_account_add.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bfe5a06a11bb1b76209bea731d29c67ff26ac9599b1acce978e59526251e8228",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/tag.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8aa4c397e984fda89b0824c5886a43ff7221c1d58a949c31bc32e1d8a78c291f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reports_executions_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5570493b16c7ac2b07f4fb861ff1117330a3ef44b5fac2c5e0b75cde99ef586f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/sda_fabric_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb439c5e9720a378729b549163fd024709252e3b8e90747d712d130d4e12f823",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/device_credential_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e90c817aee034b1d8309bb53a66dd413ec11b5486e074ba057fd80026dadb88",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/file_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bef4cd61f317ec0b8543bbd96cbfe43bfd103f1e9428dcc3e18b6c98b27e3a76",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/event_subscription_rest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "63e0a42147f28e47ea43140031a61aea21160c7d6023c4e9c54045aa3a552c49",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/security_advisories_summary_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "057148484a77151e30ca07d7eb1db40c020ced89ce8c5ebf2c1bc1eed66d3267",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "255c9122939b41278541959a9c2168321cfe074fa12f14e819eed294738bafaa",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_smart_account_domains_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "84937bf84ebf414c9ac2da2884261870505eb4f653c331656d76d4e669cc67ad",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/security_advisories_devices_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8096d4fcee4a044297fc4694b3b871f815915792f972fba4c2347ab5f8c6934",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/reserve_ip_subpool_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ff7a5c7f797fa7d737c1ed7a7e5b134fca42ebdb1ddbd658d8487f29b9e17144",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/itsm_integration_events_retry.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "52ecbe6aed18514d73fcddbec33ef2a1f11d3fb6a1a7918caf762364c146c8ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/user_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f09d4e11571b8b4cad61f73a380f8b6a46b5276a619a8d7b2c8f2655b98a1fba",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/site_assign_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "40508aa0e7cc27489f5a1ae7724a587082063de92d767be71bdf32b9cb76f724",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/golden_tag_image_delete.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c3ffaf512114ab50cbec2e090ffcf2805214d1812f5b4d8e71fe337d667904fc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/network_device_linecard_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c518aa64c55be539c90a768f08a493a26402021122f77143b584fb83ddd2feaa",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/issues_enrichment_details_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "263242cb664d49d2a97c759187496a8ed61a254cddbfb417b19324bedfee0415",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/golden_image_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b57e352ced3abc07ada322e456c57b6d9f0b5b0982aa02a95617d27d223a1290",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/qos_device_interface_info_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb14afdb3c2b3842956ef276de0814b7aeae0a4aa22e344462353bb72d5504f0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/compliance_device_status_count_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e6e92cd6c97c99f1f1cb71c48213484816c11fa9ed367317c2bbacf1716acc8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template_project_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c59f9116982e0ee0949fb702a6c51bc0d43b39037cc1a2fa9370095f60445d7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/pnp_global_settings.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4756fcd1d2c170ebfb697c6f054ba03187dea94036972f60f03724480538114e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/configuration_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3119b43955e9251aa8eff74d777c592e7cfce3f80723f177cd198f98b9eca95a",
+   "format": 1
+  },
+  {
+   "name": "Makefile",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61e14edc41aba4096e2d89fab66ae8795baeb4602b59ab197f4f2e15cd243e39",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.11.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3248158abca267e9835a463b5c583d7aab820f53e4f9351447ddd5f74da6ec28",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.10.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ae64ca223641f9928f083c078ba95188e86d0f01d74fd356d77481050cb4168",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.12.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.9.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ae64ca223641f9928f083c078ba95188e86d0f01d74fd356d77481050cb4168",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "48a2f61c72296aaa190a3ad670b0a5759bd047262b59b3d870e986b05878d87d",
+   "format": 1
+  },
+  {
+   "name": "playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/applications.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df26867589e307f27b211e952dec9496fcd3d51dbcd8f898da8eddedba6f4ea4",
+   "format": 1
+  },
+  {
+   "name": "playbooks/b.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1df29c148380285418b91371f892ee3fe1ec6e8f78b836f3de7dd61ce943c89",
+   "format": 1
+  },
+  {
+   "name": "playbooks/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/download_device_cmd_runner_output.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c5e39826eca17f04f0ba8121ccccc80fe30af5460562b1f07ac62016076243d",
+   "format": 1
+  },
+  {
+   "name": "playbooks/template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd4f1a151c38a64899efe1bd41151c2996ac5e988f3187971f553f603b2a5620",
+   "format": 1
+  },
+  {
+   "name": "playbooks/pnp_device.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e43e8e3c88d5a17009e572e30d999f41d712108a381a87c8c365a06d5ab454c",
+   "format": 1
+  },
+  {
+   "name": "playbooks/a.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5ad47a509c5ad91127aee35eeef1bee18e57cf4885cd6eb99b71c7754194d0d",
+   "format": 1
+  },
+  {
+   "name": "playbooks/group_vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/reports_executions_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c06bc2f1646a9fedc0a5ceefd208d34c5f8541584c895f4749fcf2eb31d592be",
+   "format": 1
+  },
+  {
+   "name": "playbooks/wireless_enterprise_ssid.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc68e457f25fe6272a9d1fb5421ea208d1fd31b3f60964034eec880e0dbfd6bb",
+   "format": 1
+  },
+  {
+   "name": "playbooks/discovery.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10437949e7c63f902ba760727984f08f28752186dff7a73390fafd4a433f42d7",
+   "format": 1
+  },
+  {
+   "name": "playbooks/network_device_custom_prompt_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7e83e610284ebcdd7ed977b74434ddf85e2194c2ab3611f890debffedbc78ae",
+   "format": 1
+  },
+  {
+   "name": "playbooks/application_set_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e92871b084c2cd03c100a8f345c46301db598b38b4b02315d6fa3600806eb0d",
+   "format": 1
+  },
+  {
+   "name": "playbooks/import_image_file.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a49ab1d0605e2986b1991509e30dfaa624e4a90fcfdc4c248a93d7241be305f",
+   "format": 1
+  },
+  {
+   "name": "playbooks/sda_virtual_network_v2.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "95a308dfa4a20e8bcf7cc54de3508722385de94116658e7c5ffbe9ffa72f7d8c",
+   "format": 1
+  },
+  {
+   "name": "playbooks/network_device_update_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7db95d35c76d7872d9dcecdfe0244320cf6bb706059229bb653b77e1cacb40c4",
+   "format": 1
+  },
+  {
+   "name": "playbooks/application_sets.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21423c6d1f16e4297a66504cb5e16285d6104199068444ffd770ebe5b182c277",
+   "format": 1
+  },
+  {
+   "name": "playbooks/credentials.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e938535d0485f0c66e9228fbba8023b8f04bbc24b49a2accd32627f8047fd3f",
+   "format": 1
+  },
+  {
+   "name": "playbooks/command_runner_run_command.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1704af4aa3fee0851ee0208f06c3b6582782ddac92861602049611f4ab366d8",
+   "format": 1
+  },
+  {
+   "name": "playbooks/tag.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cdb0b5530a5dceb949d46af7c66175bd5ff9d337355055b2cc536f44ef462658",
+   "format": 1
+  },
+  {
+   "name": "playbooks/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/files/test.template",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2dde90ef2e6a78f7bb4a9676f1b1a24b8c53dccfd6d0238e6796b096f0f1a513",
+   "format": 1
+  },
+  {
+   "name": "playbooks/hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c95416f1926509e857978b8f7b79f79d8ade1e8bacbe8e60606bd0dbe0e6ed1c",
+   "format": 1
+  },
+  {
+   "name": "playbooks/network_device_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3db7a77ed666f5c9e92ec22fe9fef67aa002570e5ee150150b5cf66edce115cb",
+   "format": 1
+  },
+  {
+   "name": "playbooks/global_credentials_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b0a86ba9dab6a6504d0bf7f78ba42e94ac4b006d0fafbfee2da3a39ef65e834",
+   "format": 1
+  },
+  {
+   "name": "playbooks/global_credentials.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f500d4c375b20d3dc174cf6b1edd4fa529160c20922dc63ac8682da5d63d86a",
+   "format": 1
+  },
+  {
+   "name": "playbooks/configuration_template_version_create.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c3d53686dd7826f02094fd5335cf7a7daa3842934f2320496c198fd5ec853d7",
+   "format": 1
+  },
+  {
+   "name": "playbooks/global_pool.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea774782442371258214954d94589171c7a2716935a4bda18dffcd2d839d4e77",
+   "format": 1
+  },
+  {
+   "name": "playbooks/reserve_ip_subpool.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "448f19e59ed1c5871c3d8a8aa2bcf71c5dd7c03508922687e10df7e63df1011f",
+   "format": 1
+  },
+  {
+   "name": "playbooks/sda_fabric_site.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "47f67a07319d368a5db6f2621be49c616ce59cf1b7541d23ca57720fd4ae5db3",
+   "format": 1
+  },
+  {
+   "name": "playbooks/sda_fabric.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "db2e6e8d30734e083d8e1a3ad93665f3a296a1238764ece5b29348fe125e9aa5",
+   "format": 1
+  },
+  {
+   "name": "playbooks/credentials.template",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ca11e1ddb242e4264b410e819db646485a28300970595f91a44158d1db8b0190",
+   "format": 1
+  },
+  {
+   "name": "playbooks/authentication_import.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80e01573ee569bdf23d9233355fb22c17fe00358d3ef52d8f106204527b33c9a",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "510209cdacfcaaca3edf61a64588fdc336720b845212546b06fd2169a7dbe20c",
+   "format": 1
+  },
+  {
+   "name": "docs/requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb6d818f16e97b11662f5d0dbd7d134c0b99841f0e812199cf984cf2dbaf4414",
+   "format": 1
+  },
+  {
+   "name": "docs/Makefile",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b756428772cb4aec9a3b2ea75d544263a542ac20e2a0dd94bb6567af3b6ff9e0",
+   "format": 1
+  },
+  {
+   "name": "docs/conf.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6c313ffad284fc0213672820293016e95af2c92a0fe5d3e32641f84d56e5497",
+   "format": 1
+  },
+  {
+   "name": "docs/_gh_include",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/_gh_include/footer.inc",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec5a9f6b1f0975e1f4ce91a2ef16394f1f68f1898a96ed61c9c229801b0a9e11",
+   "format": 1
+  },
+  {
+   "name": "docs/_gh_include/header.inc",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6bdefd901ec20bc98a1d92c65347cce0f6899fc50f2d11e6f5070abffa914f50",
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dbe52b6763def40d98cf8700fe5c50b41fead7690cf962ac0c12a05667bb0304",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f84b9b7f46cd90793175d54c0fbf60c28622d3b928d379d3658a08fe4c443f34",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d814d50e57d0fd49615568f9de9b71ddca4c2f84005ab8e75a38030baecbe205",
+   "format": 1
+  },
+  {
+   "name": ".github",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/workflows",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/sanity_tests.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6474998ea46abc674702e1e3e696606ef71ec34e29f56baa0164086c497432e8",
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/docs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8611ee91073e25e678934a5f53609f26282966c77c50c38527065bc467eb344",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/feature_request.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f48c52f209a971b8e7eae4120144d28fcf8ee38a7778a7b4d8cf1ab356617d2",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/bug_report.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51b9369cb25fa549c13b61b7fc0f0535de08d6b5be830edd04cb49fe540f2296",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f103c6a9dd07cd13a9a6f17ace6b813f47747eb9cb7e00488cb2073caaf91bb",
+   "format": 1
+  },
+  {
+   "name": "new",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".vscode",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".vscode/settings.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccc508f77af555279c715e9ca73dc77e9a7149f805d9d910fde47e22d0b7df53",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

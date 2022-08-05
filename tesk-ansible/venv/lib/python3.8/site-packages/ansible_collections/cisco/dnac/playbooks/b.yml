@@ -1,0 +1,47 @@
+---
+    - hosts: dnac_servers
+      vars_files:
+        - credentials.yml
+      vars:
+        dnac_login: &dnac_login
+          dnac_host: "{{ dnac_host }}"
+          dnac_username: "{{ dnac_username }}"
+          dnac_password: "{{ dnac_password }}"
+          dnac_verify: "{{ dnac_verify }}"
+          dnac_port: "{{ dnac_port }}"
+          dnac_version: "{{ dnac_version }}"
+          dnac_debug: "{{ dnac_debug }}"
+      gather_facts: false
+      tasks:
+        # - name: Create
+        #   cisco.dnac.transit_peer_network:
+        #     <<: *dnac_login
+        #     state: present
+        #     #state: absent
+        #     ipTransitSettings:
+        #       autonomousSystemNumber: "65001"
+        #       routingProtocolName: BGP
+        #     transitPeerNetworkName: My_Transit
+        #     transitPeerNetworkType: ip_transit
+        #   register: result
+
+        # - name: Delete all
+        #   cisco.dnac.sda_fabric_edge_device:
+        #     <<: *dnac_login
+        #     #state: present
+        #     state: absent
+        #     deviceManagementIpAddress: 10.121.1.1
+        #     #payload:
+        #     #- deviceManagementIpAddress: 10.121.1.1
+        #     #  siteNameHierarchy: TestAnsible
+        - name: Delete VNs from Fabric
+          cisco.dnac.sda_virtual_network:
+            <<: *dnac_login
+            state: absent
+            virtualNetworkName: DEFAULT_VN
+            siteNameHierarchy: Global/United Kingdom/Area/Building
+          register: result
+
+        - name: Show result
+          ansible.builtin.debug:
+            msg: "{{ result }}"

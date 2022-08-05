@@ -1,0 +1,6585 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "sanity-requirements-azure.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "744808886802b5e50f41635f0ed1440c84be548d1d6aadad4474ff2107ea5b62",
+   "format": 1
+  },
+  {
+   "name": "release-pipelines.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4ce042661648920d5ed77a3dfd3aba7da6ab9535413ab0a914c5ea578731244",
+   "format": 1
+  },
+  {
+   "name": ".DS_Store",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4762f23b16e1037caf4ee51dc68f3993051c8beb21221142a522cd704aa3b7ab",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "81cbae84a29ce7e770bf2bc7b178e50bda0ce8de6067aba661b0bc7b05b562f8",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be7ce5279bddf63454be580154b294769562bc402960bcc3dabd09eb998d8643",
+   "format": 1
+  },
+  {
+   "name": "pr-pipelines.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8123cad1d76e95a669943132dedc63f40b814056be809465f57f0a59b6298027",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/azure.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf66ae25675be299ebbe3987514739deaa592efd877ce747f5b75d3b61def824",
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/azure_tags.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "94d3b07a1a13d128fafc713782a9d0eeb1ed4745ce71c4ce78ab0a1c38fc4a82",
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/azure_rm.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a03271c807ac6ef3e78c15e4c388fc601612f1ecc5be6b3474a8603048a2ca58",
+   "format": 1
+  },
+  {
+   "name": "plugins/lookup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/lookup/azure_keyvault_secret.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a0a2f0989cc02e665a18b14bf52c9dda4526d51dbd2039d2b7ca19100e778385",
+   "format": 1
+  },
+  {
+   "name": "plugins/inventory",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/inventory/azure_rm.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ff46fa7e9207a6cdf852be64d1a1cb3a75fe0c1d252f63ad8f160c8339fa2cd",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/azure_rm_common_rest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc0dae10f4660c55afdd8da2c27fca83fd499194d1123d89c0f304919eb3e0cd",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/azure_rm_common.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00f6e564928dfbf85e69885c5453910ab0f14e84d21493fd12cf9ad9da25ddda",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/azure_rm_common_ext.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9776119347bece2607b7f8e3f4cbaa01d665d01b746d7d5ddb5181f17a412a97",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6881bdaa9626ea996fc7403871a2f04f48d2639ab47f3acbab85009c6a423998",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_trafficmanager.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6922142158a669df44e1794b2c2885f38526e768a8471e1b62079dedb04e9e02",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_registrationdefinition_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ee795a604a29249dc877563339fffe54b6c4abd2bd618e71b8f98e0bd5645bb1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabpolicy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9267b909ce6ee9c8e47848195f85c81a792475768276ccc843d2194de5ce4cf4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_proximityplacementgroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8df9d5ba81cc1d4e62bfd2edbc677c61a46e852eac6e7cf1c4ec2519e23aae6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerregistryreplication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ba93585212416aebae43f9caa634d78420bf9d82ff6ba50bd43e575487ee8f4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webappaccessrestriction.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dc6dac48bb96e404dd4a460a00c3880d58f6f9dcf0e1a2a7e91e80360daa63dd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_functionapp_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "963517b755ccf0fd25c66cad543fd41ba44ae6b949f3c12f8c80ed3b27acf919",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privatednsrecordset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b3edc3978735b65d7ee55d72f383f9b1fa65dcd0e3bbc88e3aec4682a171dc17",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualnetworkpeering_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c237e4081051d2f3446d914856df2eb510b1eb2ab672c0c82333471e0b2f66f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privatednszonelink_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0de6a41d7d1c16a7a913eb479b696cb1b8f0ea043d9301a75e1bb12b662f9bd6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_vmbackuppolicy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27e2fe291fa6fec925ffe915f16ee7b4f9d581ce130dfe3d031124fb26062595",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_iothubconsumergroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7fa30e495bf89d8ae225f89807c6c4b1ef64fba142ebb44451630b7907a245b7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinescalesetinstance.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a49bb7cae34ef6b64b18d6686036bba3466186f2600a5ab6279b73f0a4f700ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinesize_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e21e8b96251da896f89628d7b981fdeb594ace6c346d368905ea97b4d51c8427",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_storageaccount.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c2b0363333e208110568b059a216f4c26164e2e427f586217ac0e2ec104154c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerregistry.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a650728ead27c2b2f759e042acae277fba92b8901c9f522913d3a14b973552a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cdnendpoint_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27c7b8dcb865e2217ceedc450ac483afe3d2f712e7bbf0f1b02c5c12cd8ff4ad",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_dnszone.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49e3f50ecfc9fd9cea9f0101301d4a7de30b62a754062f4463569b1044f67179",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabschedule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fabdd10419b6bd98fd8ac6599a7eaaaa614129e7b222abd5b97fc066c524ffba",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachineextension.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fef1793fce641a9f20290077e64ee6b2a577c08129740b5533769d1621c070ca",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_ipgroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "017bf4582d6c7aa46987922e75dcbad717b275e62e9b4154ec531773a9cf020f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_gallery_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ffce2a8e823fdb7d3d991917acec53a92f9cda92f59b746cc61fddacc38a6d46",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_sqlserver.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17f5e0a6eb21148a9c44f68e541a174b1195022968cfece6e34b2e3f9fe964a4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualhub.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8ad24fe0016b7498e7c26ba373a9e69ddfb648380865a207598685aee7f9692",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_galleryimage_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56acc49a56a2392e68ce9b48fb8ee3c7ae7a2b6248fe3ed814bd713bbe534749",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_trafficmanagerprofile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d097156a21261f8680eb960c0a65b4825d254e362f26837ce2fdbdf672f070d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabpolicy_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e791ba6b80a2d76b20fa70d894c0a41e39cd15dde328db4688fd9b8b9677a92c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cognitivesearch_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fd547eb4160a43c1a6803db2cc6458ab34a02bbd72f13349986c3290873d1e03",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_notificationhub.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ce86b2a65ee14eb3a55da82bc08c511cc37a2b62a1f3b63a8532cc38afe5df1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_manageddisk_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8d9b9256a775ae6400a45a26a36b1d20808a9cbdd0e6b9231f56a54912463bbe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_ddosprotectionplan.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "550da1771cf7f4529dd33587ebe0dbb54443207990b55a1f63f50b37524c4ed7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabenvironment.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "496a5cb2c4ed7320824ba9109c42ce92cf7e0e730360a1c2951313037f8840b4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabartifactsource.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dee66dfc01d68583294853aec1f500d55ae17b292cad13bb4624ce1c9ff56b41",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webappvnetconnection.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2252775cb53032efa41ae7b5e643e7fe7dfb0ac1c21e82c08a4f35375b7e6b59",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_subnet_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1712a566144150b00873b03bcc3f43d44eaa01df7159bff30b2a06de4e10e12f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_registrationdefinition.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21208036cf5c96c20ab8377cab6e2de85aa531445406d4ad6799714220272f82",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabvirtualmachine_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fb1efbe1392f5cb33ec40c0a9bccb0191324797600f2d7ea247594c61315d031",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_dnsrecordset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d03ba18eb4a78c716a6db32601fdebf1a93163249d0c8b76c2c5c4e633163d7a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_datafactory.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f8968146c993b661f888c82a5348677e4b7b9cff9c5451ff609ebc1e4148f43",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_registrationassignment.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "14b149b4b5c58f62f16466a52a4f99fe17970d60b02ce492c659f742bb029ea8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_hdinsightcluster.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a31c7a7995bdaf77904f2d3958e9cf7c706257a2903636b734b1585b8c5d171",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_autoscale_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "37aa040a6263064d7833b1f6f4bf56668e42cb57b540b130857bcf7aefae859d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_galleryimageversion_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb5806922ef7e15068ba592ef408a51cd4169240a18d1a783740cbcbb24191fb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_storageblob.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "34f52b9043ef21c428b19a6d6bb383aa06f12a73546cbb702c115168c2bdf6cd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_diskencryptionset_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4b11b7599292c4636534ed6f8d03fb5731c2086b2ceac58ad95f0a7543a46764",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_monitordiagnosticsetting.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "15780b32f61ec477ad4d1bdec9d15e58a91c92ac375b8429aeae4cef0d66fe66",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_apimanagement.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dab183c44c46199acc8faba3dc4e505de8073b300723dc30737d7ee45c0478d7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_rediscache.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d042fa9f7d6943544afcfbf703e9644b0765fb815868f030e8b05696a14fe42",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_route.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd85fe366e3d1cbfb26cbbc5e228e5db2d4111bd863dd060338f4bc08acef2a8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqldatabase_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0b980b25dea40bedf9ea9e90cce6784ee8fda90845b0f4ce8298158a04bd2802",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_functionapp.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a94cbb3693ff2c155eb74abd7cfcb31ea7890f99f0b0d381132663a0c38288f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_applicationsecuritygroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "60b3aa30697b7e8b67035fb669a5b34e07c4ed76c04641c8e584eb3f05640a25",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adapplication_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91cff2ea0fbab15a5d421a7b4035df64c022b54a4b14619a4fce556409dfa4b3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_openshiftmanagedcluster_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "152976d206cf0c30ddeeaf2e054d3255323db4bd1f4c9ed3463778ddbbcdce05",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_resourcegroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80fb4692ae8b9fc8f86bc09726209128df3585e4908ea4986ae9533ee21bed33",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqlfirewallrule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a3c2020708595b2e1d615862d8c1bac86032c2c7200e49a0658a4d61aed6963",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualnetwork.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7d0456ab43a890a85209f32097152fb613152f6a0fdac151f3ecc2e4ed117ec2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_vmbackuppolicy_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f0a9e8cc6b29ff78b0cccb2af24832e1d122df83750284a5bfa2073f3a66320",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_servicebus.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b36381109de0f3c2bcc0838090c4bc3d8b9a8b57c069d921a8e4a5c8e941d996",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_storageshare_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1015f0beefb55ff8a64858441fb0e696e17472647633adad6786e0e5b76dde34",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_automationaccount_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "338ec42beabe7fe29de291dd6fc77e8342f9b85daf48c1faa360b12870b0ee03",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_hostgroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a11afb3897de3ae59ed8e4485283e4987759c185ea9e88dcb656b7adbc8a6579",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_iothub_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a9cb35ee91ebd00424dd5cdca3830afed5ac4d2942baa9105cb3d3377ce51a48",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adpassword.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24e287def9022ad205323d1ba11f662b88673c521e16cf09225dbdfed991b924",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_securitygroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a1b5954f6bc2478ad567b28d6fa55265fd598df62276a4cafb47ced216852d5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabschedule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b91b9089c46a5e0326d7c719befadab61ce9ec170750bedf949cee67e232b8f6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_snapshot.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e154aaf59c858c63b01aa49ac3804c901146af0b66b4003d192256940ce12e3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbfirewallrule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4e78c7503b994252ec5037c8400eebaf216656c45b14e63dbe471864e7073676",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_datafactory_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07b4029510a0488da63e9332fdc1875bb0e868acfc196d57ca3430f35384aa01",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_vpnsitelink_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0bcd2e2aff30dc29f81a554418e6458dc25b4442b630543728d78e63b46255b1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_trafficmanagerendpoint_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2d657881782741e1a966720351ff177260d7ff958858eda7f9d39e249af17ed",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqlconfiguration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8782a60aaef6e4509131f3d6ab6685a41231d940b2f36e9806ea5f33c154afa",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privatednszone_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a3443feb558c0e5ed4a5d58745236f5c9f1842f663bad793dba97fccc9a4edcc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinescalesetinstance_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e51a60463a8780f92f0c734415e7fe525746a130daec72a586f36f2c61745ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_resourcegroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e9fdcfa3cb597452436418078876c90a33c3b9d65d42aabb5bf1885932fc31e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqlfirewallrule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72e85f344f71d19065e32d54344fca6cf5e70c44c2bc85339380757d830a26c2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privatednszone.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ac5dd1f03de3b2f0da2a77d2c0de2b0d7e7389d7262bb6b5a866a58ec7b49ff",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_availabilityset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "60e057af78a6455d3837c2f3230f5c493fd56d8ff50d67627577b2815faebd2a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerinstance.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c125424b8764cf8f429d3459ee644f5592b7af30ec102aa294fae5ef890f5dc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_recoveryservicesvault_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "660ffc4a3c1283f749dfa3d60dbf1b1a6c48b36a055298d64da8317e9251b418",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_managementgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7778f366ad9ac5965522ed21bfc349d2374a5d4672a7a15408893fa4238f91e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabvirtualmachine.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2d726330da36851ab9e9eecf662e4139242c29c735846ceb91db4b67b311c916",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_sqldatabase_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "658c07e41f21d502181d2700db3140b0478c58749158c6653bec36c98f1057a2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqldatabase.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "47d02847c84004d488b0bbe975e6488983906f6d4659c8bbfb4f48235c9bc8c6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerregistry_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "af676d79bd5de4742db71dbc90dff4656b4d8fa1bc80bb78bd5cdf8c15a2e9f9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabvirtualnetwork.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f6232fd94dd5ee825e80b38fb16a96158f86de6ed541fa8c212beb631ffa3e69",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_aduser.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d78a02fa17ef7fd65ca80f0b0bcd6e4fab9f10576faa05ab6ec6d175b77ff63f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_backuppolicy_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec8dc5fb5385d22728688bdc62facb9842aefc44a2a1d890fa8d40fd16a7e3fe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqlfirewallrule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c5ce0544d240cb29719818a59976c18af8fe770e7005410fd47cc039981630a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualwan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31881764d9ec3996134f3802da6adf03f76dd9565266ad54a6c84a1b9d3d7cfc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_aksversion_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3c66a2de8fa62ee4ebea5f57439a17ff1b2601da3e9022f7376bfbe4e8f2d71f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachine_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a4c9f25343c3ac1b66764bdbd22856bbc35887f4d5df97ff1ed2cb99ca02e3f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_hostgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a85c91c52b9324fc87a5bb5daf09dac0ddfff1da7aac45fac0afef61e8ef172",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabartifact_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32f26219f55c5b20c1133293d33f2aa7fb25050bf82d971fd74301be0c100c80",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_aksupgrade_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19332805b37de241046f7f38b897261d632ecfd11b83c88be4b90ad8f5af6a5f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_proximityplacementgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "040b72eada589f84cbbaef35befd8dcacbbe121a231ecb2f4a3a0211bfc4077f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqlconfiguration_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7477e61906299e7fc77eeab953051fb9638f116c85ad84c9c405b27511d416a0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_servicebustopic.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a4b2de74b3189f2780eae02d6ce06e26896cb77f0266f31f3f30f590da8b141",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbdatabase_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed7bbcd08e998d91dbb988a87c83993553a1d0d57083b0dd7fd78e476a2142dc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerinstance_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "920eec7fd299e1d6ba5fea2b9dd99489665ad1f3f5687e9984e5dc5f975c6358",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cdnprofile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a048cebcc3256c508070a08252de1bbe648141c4bdaa011b190933c66f29f5f6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_datalakestore_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be8d62e968efcbecaa32b6ade43eece6a66a430b224f1bbd9048472ef7d54487",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualnetworkpeering.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8fbbf72615d5b1971a5384192b95d3adeb778ca63dfabff35c946fedecd9575f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_servicebustopicsubscription.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8f8235b9da8cdd5ff9e60be52115e9776762d940e68a5967dd2099239acc679",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_dnszone_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7634adde89b962a33349b9f49fe68f416062d44db3a2643d75dc1e02fca6f59",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqlfirewallrule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "01e0cde1cc6b409c50910de65c73d1ec62e89ab291b2658eab6f77be124386b3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabcustomimage_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab8f02d95c5a939d18300f491d1179171fdf6241638718afafe4dc0e5bbf817f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqlserver.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2b49de8410d55a1f41b459753b793354012452c6e1322115709338e40b42c3f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_batchaccount.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8800dfbd0d7d09e249520d9b7afb62d4c5d13d12c08aa33d7c9baa13a38edef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_aduser_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b51ab4e198a94e41f56ae403520ca056f9af70e725ff8319bd6a55928356e514",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_datalakestore.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4d57a64c525a5d469baad92ae342ac1dd45d71fb8ea3c18470ec5f3f086775ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachine.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e232e14b43c1d88f88f1cd3a1659cbff2ff7e6c4a46ca4daf59cedcf46ea011",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_azurefirewall_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e684f68b972c09983f0a47313b71b2f8911d3420f79583d7a7b0c7b6e4204aff",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_keyvaultsecret.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b06f3d1798e6cb1b3688dc3ca599c43a3cce84c9fdaab42bc7ee44daf1763e16",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_appgateway_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d52354e3eeb46292ebe46927243f86e0f5c27de17fa7556f411af3758b192e63",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqldatabase.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "81e8a00c9164e7ae74863c1217530bda0ce381ea4c7c161acf257ce43bc53ea7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_route_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a599c2cb3d50844dc437e6afa57018f25b9eefb64ff3d41fdcf630e50013001",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerregistrywebhook.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de8f63f7dd99e90c9b2be6f987ca362b1132a6a097555dfe9b87b1b942c5d203",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualnetworkgateway.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ac2a1c041824d5b76cd767ebbe79c7acd8ed4974e0eefeac330b66c901a210d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privateendpoint.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "84647c1e05ba3f822ca422c422caa95f19e374b2f5498e808e44bf04dced9c38",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbconfiguration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d5c12c5e773a17eed57fb57bb018ae26e17f4aec800b99ce624c7f4cc89b9547",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privateendpointdnszonegroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00e281ba4e4913cb1ce2a934d040d00d1e33503ca345a863f3123563bc7ae805",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabenvironment_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "874f820a113da5c8139097254634c5af1b1550b691bd398e39ed63a18d7fdeb7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_keyvault_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcaad18ec33ad56425ab12448dbe0d312dae5dfa0a30d909678fc0f8f7010228",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_roledefinition_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4a89e0d740a5e876a54111fa166c9d0aa6375c8ae25f7cfaea7adc3878c1cdb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_iotdevice_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cbf7cae5a21248345b344f9d2fbe991f4d8d8832cf5bdca8db8650747196e0de",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_apimanagementservice_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "646fa8f473881a03b71e20163c516e7f901e762c00bc9161921247440cec90c7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_automationrunbook_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d3d20245007ecd1baa0e46b7e5fb7335214c7a7dca696778263b089c99069932",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_aks_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "004591ed6e1120f720c4329c177bd8c3350dee871d1677e1f9e093b60c2b393e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_routetable.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e874b2ae6a0a69123e3204fdd7fc9521f17df342ba90d378e65633e6fcebf2eb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_sqlfirewallrule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4619b53dd4342b4d82a6b6dad0935dac4ce6f8660c28d9a5789d35c7e92006ea",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_galleryimageversion.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13fb28bd0ccca54c6508f639d737d76a0552375e31edf22f784e99f55f1c004e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_eventhub.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc9f947411e4a32af10f53bed84c724f98cfada0c8123a947fe80c75a863114a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_eventhub_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9bc082c5d5462028fdab9020921391df2ecb6b4ba947a9d778d2f61af2bce7d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_manageddisk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61fac939c2c5803a8e2f15f868476ffaa25bebfc4e8680cd43495aeb8468870f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_azurefirewall.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abeea16caac716edf33ed8a50c34104bb6b33ce23b7d4d629c909274032dc9a1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqlconfiguration.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b4f061a9f650f54d57a008dd4bcbd3e5c6fe9706880426b936477ffb79ecb4d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabarmtemplate_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0b8237364831a1f339a7a36adaab36eae9458d0e8b8b52004748f94e521fbc6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adserviceprincipal_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0ddd3f77e42f7e9fe8940a625ac8456c4363cf6c9e52cc8e07cb1a8ac135ccc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_apimanagementservice.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1d3ad9d852628da394800b9bee5099cf4bb9aaf42adbca20ffe1918efb2daa0a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_ipgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f049a7f2776ab451bc8dbb5dd4efa5d081ccb150a8d375d506222aeeff6f3b86",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_monitordiagnosticsetting_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "acd44f2a63c6076248a23c38e1b98accd7cbb87d0562874be5c7d926f1349ccc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cdnendpoint.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "acbb73b4ca4740d844b4290ae6ea881c354a1790957d9bb920eb0f1f6372d2f6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_ddosprotectionplan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "993c723f38d17af96afa6cc5214e7ff2e12cabb0cf2089b5794bc2055c81f17a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabcustomimage.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f971d054aee25525735d0001aaa359069cab437159766cf8ad7849f6eb93973e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_keyvaultkey_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f028a36052b10a0e60013c108b873021ac24077fac2cea1c57c7c4bc9e6ee72",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adapplication.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c9543ee259e31012859c1252c14f227415ec1ebf1373f981e5078dcbc014a15",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqldatabase_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ff3b9b7c67812e8510c60b42f89a2f8127ef1d234da09abd171efcbd21a8af7f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adpassword_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cde099a17981b2b77c6c2dfefab1dc4f16bd912fc65d4f6aa3dd228e403a88dc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cosmosdbaccount.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50797623360323248fd4f1d656ef5a240e0c83a1d82521272a787bdf36424f56",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_dnsrecordset_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d602b70843551ed8558813c7febe9d80527c2b20204f9c95b3d727dd25d5f60c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinescalesetextension_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51b381a95a195b0cff610fec1d63576d05a674a1c9441417fb90b9cdf9e90f90",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachineextension_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e783a927e9d202072f061cc06c4dcb07f3e5a3c299f0469a1282d75229e1c4fb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinescaleset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b6e0f9f4f61da87702ac17fee3ea2ae06882815fa20f07d1af6e0a7f374e262",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_expressroute.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf0af437976a14a782b81ef9064fba605bd7e5a60ff845d3ce92c54ae5009168",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_backupazurevm.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0b8d5608dfc0cb36e41cc4e73770158e66c48c1ce150a2230b1289508f6b2a0d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_loganalyticsworkspace_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16ff259e090c3258c9e87f02e65154fcb272a985fd4ab8882f93bf67759d9730",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbconfiguration_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f02e04a4a0213ee5a306562774e4e16113f42ca1ed62d8acd6f0e0b9d1a18458",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbfirewallrule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9263522e226b15e1b011bcf91f055fe834d892e85ab03d7ade8e22a6887c6ee7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbserver_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "15cb8acb6070e9b874f935b3ab12434ca258f09bce69147c33626f5549348b7e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbserver.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ef882da2eaa66551145a4dda8fab6ccf4d0c210cc3f5348423fc1616d50b0e91",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_trafficmanagerendpoint.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2a9601dd1b97c0824ad3e615d977863ac9bddd4742235b30a15b0574c0aba01",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_expressroute_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07f214397d3d4b439d52957f8c1ed1b68365a6457f415c4c8cc0ee564755ca1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_recoveryservicesvault.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2c14a2160588be1c9b7736a7c3d78950f95b9d474c516e308fb9bee3da6d94f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_backupazurevm_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3d3f444382475f967ebdb7752ebe2f5b072d1c47875eb9e48499e81f2202adb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_iothub.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aed58cc6c5baaafb4fca1a38e6589c9bd6388bb9b5c6fe7e228927adecc7ba32",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_rediscache_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d41b5fdc96973fb22465c18d354f06d772f1b83c8a7c88ee80e3d66ff0e43f2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_appgateway.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16864d31a299d0b4f6b7d2ffd3cd05ed4c8ca4a90ba8caccd27ccd8f5a54ad1b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cosmosdbaccount_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d175f6c66b85ebed5ed89c9ce6f5dabda9220aea8c4f2f4a4984d9ba8eb310a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cdnprofile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e491ccdaa13e9d77b68688bf6f786499ff755ebbe9b3b7740a4f7d5fdec2bf0e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_apimanagement_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a3b3c0d32ee1a4e2a59c81e2a53e812a4eacdcd0a3bc18cf6b27782de1bf482d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_iotdevice.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62a042c9c83472a310db43fb3e89a4f0553c005e7207170967b2cd23a562bfb9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_notificationhub_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ffe59bf844c7f639bbec84642d8e657dc7a305824b07ebc80d326c396ad3d77a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_subscription_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d5a4be7eab1f81855bdc626370e691aacedff1365df4429da7bad980f0864408",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_image_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2cab18f5d0bd21438b7fda179435757118664adc1884e6368e02734666fc698a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_deployment.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31bc654016b66f748cfabbfe2a136330f45e860f9b20d2a910c5bfeb7fd2ac90",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_subnet.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "37e767ed39bd509080af89714e532280374c2930549df287933acb825987c7c6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualnetwork_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1fd4d625f2cfd5f11aedc62dd4752ce8efe5568b6388e1c2b74aa1e64a75bf97",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_publicipaddress_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20c37d48655e8b4b5dd8102c564749e8273db566648f3ebe81fa71180d5fee6a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinescaleset_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d2de79906fdf6f5b61adce887a32d262072fcd650a7c90a56656b2899df5a72",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_roleassignment_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fb622973e14040ac8ed14a0f689ad8096753e45083efdb7e7401a13b97c4c9d3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_appserviceplan.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e9c8017c0061ff86abb5f91a5c4abd7cd16e275571e966c20baa1fdcdcbf22ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_diskencryptionset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9337071c196e74eb2a1950ac2c85baa3a6f6e758ca39b3b67542e5f3639adfa6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_automationrunbook.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a0e961cf5d3df10f5fd1c5ad0735bb7e14ed80afadecef70d4198c39deece247",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privateendpoint_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0aec4a9a5fbf3cc2e8897fd36753141cd561271b47f1ef958403417d873a2586",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_lock_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1bbeca56a8395a8f4b3b696e3a961bbf876f0d68c7748b7bd498bf52b82f64a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_registrationassignment_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "353a46466874830b7ef33530a8607f4a0b75d164c2eff08caa383fdc7f4a4e6e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_sqlfirewallrule_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed4dc226b1c796f28d37a81b92300ab884842d97770888ca4bb99f8480839ce7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerregistryreplication_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c7272f0701ca957b532c766769a1d8e3ff4c87b86fe1b65900c2e9cf00351a91",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_roleassignment.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23a604a57328603d044e8285d9cbed66f81cb483acbfdcd5f85ef8443e286140",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_autoscale.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97bf61802a82355dc4bdab371a854fb81c354e7de853d5b48f45f022402dc468",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webappvnetconnection_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a28d1672c27348d62774c25ac21b9520f07fb9706cf54f99eafb531525fe930",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_resource.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f981639129172eac489988dde1b787fd89d2075a91ed3627d95f6c080273d5f7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_loadbalancer_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aba847e9af5dbcd59dec8259af69ca6d56407d85b45f22d386a9f79528933ab1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_containerregistrywebhook_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a826d159bb37bf575453ffdcd2cf7c157110754de73a05fbd5991d0fea55cf39",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webapp_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce5a94a6b479b4d18e3c9fa0d079e9e67f14f2318b8bf74ae7a35296479352d1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_networkinterface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "98c15a50ab616e52961ca4c7b1b9f99b23cd0fb31dcc64ac5f784aef4dc0126f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_openshiftmanagedcluster.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "802b66d4b90b7058d3d8db445e10c6ca4ea4cc734b793d4de28ead45b315567a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlab.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "08b409c85f71e0ffcc535dd6e2464ee11ff0a9b63996ab63d9bacb772f1b9320",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webappaccessrestriction_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "882fd52ae0a91e7dfba1d0df591e97f23809bcc19d8e7c0ab7bb5ee21eb72b90",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_galleryimage.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19718ee7bd79871f13be044ecf133eea1565985fd87efa0a348319e69a1d4cfa",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_networkinterface_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a7a2a89ea18fb3af0f3b543efc1b6e1fbc1b761885957b27e662e56d811d8a5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqlserver.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d222a8f0806cec039cfd3858d45ff9b2e8fd32e037ee92d4d04bf63df84dd6da",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privateendpointdnszonegroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd2597ba836aeca112963cec6006ef28d45f95b77242ac19b7a865264392e152",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualhub_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dc7c22f6a33e915e961289ffb1bf8e923e8df2349cd807854c3c1e1cfcb4b51e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_loganalyticsworkspace.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "99f28785719dbdf35b8bbc1833550054022f7f5f134ff043ed8f8ea81e7603d2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_lock.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd150387d9c1b8275a862f867b7e3330213326f27bf679e64eaa6fe495cc69c8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_managementgroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "083d558ed3797ab3c4ab02eb34b81deb70886411a6dde77f6add15fa7f2cd961",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_keyvaultkey.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ebbbc7cf61a1b5a6ffcef572cf70683f14c80a35224465cd392bf9a1bb40c7d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_hdinsightcluster_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b34ac5531997d274a50a234da35524f618ea435fe813c4d2fb3a65385548200d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_storageaccount_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f07f047fb667a954d15df5b8d5106792989d0db207205537ad0176b1e97af02",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_sqlserver_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5205865413e55467a664e65c5884fded0eb88b29fec6ff8e81e47911b3d540e8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_keyvaultsecret_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1aaf1abf2733f2c4e0b411fb525122e66af3ca8f9ebdc605b2b0a9c5cc06b7e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_iotdevicemodule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "326a2e3ae2f9140cb6294d65e0955cb858cc45218951dc6eff197523b0c98aba",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_roledefinition.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e8800e3037f5f9543315bf06e0d9586808d5a32a8061d0f5fcdf9fc491f35611",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachinescalesetextension.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "978de59a135e362d297ac27678c8cb17f77b1ef063c606ec6ef36fa248d2a039",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_resource_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49da82277514b251ec2b799c5b7e3d1159248f374dd76d7365b5a504927e7547",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqlserver_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50882dc1e0efe372d9474ad38f0470f3968d89facc4ab2e7493cab7184c0ea58",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privatednszonelink.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ebdd034a0377c193e02387a4df0de3dc5df37b8e61decb34e5ccf3ff8fbd36f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_servicebussaspolicy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44a29d977796e34fbfc5279d4be8092e47542997a4d3a9133c28f634c1408be2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlab_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "90ef8ae17bdc1fb2c695af560982ae6f159be15ed37322598a89d82dfddbf2c8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_keyvault.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8ee3ff3aa802fd671ca3c33962b0a2b1e7a7947a17316a5a856c61b76009c165",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_servicebusqueue.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5fe93f5164161d495f36e20b8b96ad4ece29a201362c8f386bb5e345339143b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mariadbdatabase.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a4ea89e43f89486a18dd2aa42b37947b1df17dec127f4ae8babc0660a0634328",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_publicipaddress.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbd31d4f48a8d0e2d784a96ae3298f20c985ca8e0af1a557dd7d4270642b12fe",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualmachineimage_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ab1977dd8b964bccdd5210c4d4912287479978db443e21beb23090aa4d31277",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_routetable_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d694f6b4c88018e4d9a73171c9c1e41b5b66a59360ca10df2d475e59976f01d4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_servicebus_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97ef6c9eba33f38feb38616e40eb3a3b8d70a6de3c46204afb51d38c90601dfd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_backuppolicy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c32302c0387ca9046b948601518fb6fddf62767cf7b2d06821f16130f58547b",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_availabilityset_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "650565f89a248aa61e2248813bcb659351de9d50210ab22323b65d8a7aa085ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_postgresqlconfiguration_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c8be69d683a8e511dc6eac218b4f2b50896f64a6e63005a3566aa39d5625dca",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_aks.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2db05e038e9fa749e8428670134f5783dd1a08b73a9e12a0795bbf22fd1a9694",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_vpnsite_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b47529e3714ba7692dcfb5bec434bef63a402b2b01ce5ace42248b62bd8d3c09",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_rediscachefirewallrule.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b4d888c816401f6aafa2db782c8eb156d1bc1b9847d05b23ec20c7404bcd946",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_vpnsite.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78f1c4d4d164d8af3619c8162e0f0ecc565a5087282cc74b417254bd958adc28",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_applicationsecuritygroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8ca8454c33c14bd04b9e74a9a8f01b3a05e2c1fbb89827d3385547441d8987ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webappslot.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb44a9576a3245deef4827241bd75807d5571f7fe26971a9a1caee08c23eb023",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_deployment_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0e4ae06738c720a52fc9ed64cfe351b72795cbf998261d12ffa3738671e58376",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_loadbalancer.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea8a6b16432c0ef86ddf78d5cb87e8749a6fbdd2c6fd3b8341798af526dca27f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabartifactsource_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b089d2572a74d800b25c288292183dd1e975d4ea1ace4e1fcd44a38741e21518",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_sqldatabase.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d97ea3fcec245459e274378cb37c27c066de2cc2d4a63d4977c470a575c360a8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_storageshare.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a8a1e7afc890cb0130ec0552b0956e378ab845fb60e62e48a27a77c4eefb4b6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_image.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6f29d92d5b77fd8df81e4397c7844ddc2ea0c82ef682ae76b80acc617740b2e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_devtestlabvirtualnetwork_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "126ec1ac0fbf2dad5b157953f05e94bb654d62114421612f8d43dab507de7df4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adserviceprincipal.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2e9bb84e31db725e4e9c512fefce28db41a59f52e51fdf40c2b83b608813bee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_automationaccount.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f2e8604de17b9006cc5d1485e8daa8cbb86fcdb23cee2b8c63c9fad7e02e7df",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_monitorlogprofile.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b4ff9a74b3199c1f83aee15d88beecdbc1c4a5f5c4cdff1283c6629011f60d65",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_cognitivesearch.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4600048e981d2f5bde81418d87eb3ba109f232e09f2efda9a84af2ac3ceebf1d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_gallery.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ac4a633a3e1864f342d7b4d09589efc49dc3660f15060234d845da03e0bd7557",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_webapp.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1020535cf32a5c09ee29ad802552c8a4131229e2c15a7fe136e87d5c8a837f2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_mysqlserver_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24c3118ab0fe991a58d8c53cca462e84d913f967cd70b7100ca1ed3f615b2235",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_appserviceplan_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a343ba55ee0d4e2223923c80b0129721493e41878ef2690d6014ef23366a8e5d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_virtualwan.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1b81ce931724b45e009d54150ba674e95c16d630f9ab9222590849b8a10334a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_privatednsrecordset_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9360bdea3a885b6468c5db9984a31823acb4384272cc56103890a3b51e63f53",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_adgroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c475834442cd34f85aee1ce5c437da1289679cfd56647293698caeeaf25de63",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_securitygroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9047c4fcbc54da74ae0b19303103af95e4794e75df91f6c580070c6b3aa516a8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/azure_rm_trafficmanagerprofile_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "197d6b0cc72b1bb254b0da67b8a59d6c9f84ff3711bea483e5e1fb00bd8bf2c9",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_sqlserver",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_sqlserver/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_sqlserver/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6ebe11e6b7696eaa742d37085d2dfeae259e4352facc66f326a486185e6c06fb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_sqlserver/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_sqlserver/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_sqlserver/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f16fe2ad5d61e2fb4d3957658ffcf069cc09413058af072adb6ba6b4c9735683",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_trafficmanagerprofile",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_trafficmanagerprofile/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_trafficmanagerprofile/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b739abf8c485bccb7e252dfd965527b6c4e249ef44c9081d02c5ffe674875de",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_trafficmanagerprofile/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_trafficmanagerprofile/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_trafficmanagerprofile/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f258bc4bc5906c0e34b9c22521a56669eb93ee95cc8c69a1f80960952df4b652",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinesize_info",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinesize_info/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinesize_info/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e081ddd587cb4e9d3b8127b72c510818a26f7b1e3a77b1de7d385d4acfe38bae",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinesize_info/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinesize_info/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9632d771f57bffd1d52fa9bc8e3e7aac7c2873900050ea2047442da27db40437",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinesize_info/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_availabilityset",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_availabilityset/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_availabilityset/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0e2eb53d4c5497f97004aee8c9667104f6d3e0da1117672199d0693207b9eee6",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_availabilityset/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_availabilityset/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_availabilityset/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88b8b8936fe62c118fa3a146d2283f346dee8d0acf33dbff8f9df55ddcf5d934",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinescaleset",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinescaleset/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinescaleset/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6cd49f5c61942658b6d1c9ee21fe30962456e379a167d05967220b8b015f729b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinescaleset/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinescaleset/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachinescaleset/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5ae5b28b3e0c86e54e1d9f98fa012ba37e0c7a4fd4ea75dee10390e54e67c0f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageaccount",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageaccount/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageaccount/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d609c7ac361d12bd7fefd381a49f54b8caf331ef7d7c11b74357323e572bec16",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageaccount/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageaccount/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageaccount/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednsrecordset",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednsrecordset/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednsrecordset/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a887fcade2f6cd95b124f0ca6ac0db3003fc0351225f567bad8c718b3faa0cde",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednsrecordset/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednsrecordset/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednsrecordset/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c490b4c02a16259658dfa9d00db6d48c7ee77e7eb7ad9c374699cbc9ccc9d319",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ddosprotectionplan",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ddosprotectionplan/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ddosprotectionplan/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ede3b0ea8738cccff4cc66609a0a522a53ea4893d56170b520baf9a46cc1c391",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ddosprotectionplan/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ddosprotectionplan/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09313f621682e5e35abb0b558e057a2be56d0fe704ba9e27d5bbcd46ecce7dad",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ddosprotectionplan/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e16708f266eb03d5d907d01642a2df63e79abb9fbe946161907f88a7c187e1af",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_functionapp",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_functionapp/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_functionapp/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f8eb0bf7649dabd6b8441fd43d6cfc7f42eebade10236ac1f0c4cdb256f03379",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_functionapp/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_functionapp/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_functionapp/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetwork",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetwork/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetwork/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "153afeb644c8a88a2fbd46fc2be917a9ac515f963e1d22c5aabba4a71bc790b3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetwork/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetwork/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetwork/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roleassignment",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roleassignment/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roleassignment/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e8b700a188a470e9117c65cdc0d5cc5314c51256da556de38c6c1c10c83b3c2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roleassignment/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roleassignment/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roleassignment/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce2af6ec57a477bc3cd9cdd4afd94a899dab1122e8f6e12c460581742fb6ebc0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webapp",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webapp/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webapp/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de4b540ff24e95824e66bef32d98d748c8b0de8414b32ad86876f4d803f98534",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webapp/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webapp/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webapp/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e4db678d0cb17302a7cd390d43fc92d8bd4a5e9a8a4bde3caad742024f4138d1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineimage_info",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineimage_info/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineimage_info/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a9e415b1cc1e12c8242b3ee39cc6e4d8aaad6677ac3eb609257f4b7623335e05",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineimage_info/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineimage_info/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineimage_info/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5de7e734f26fd9c08a76b1b43cc4945245b1f25145ff7896532e0345cdee16eb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adserviceprincipal",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adserviceprincipal/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adserviceprincipal/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba365b53a15e325c136df72092c7469ed5c4d68f6aecef672ebf558fe0278438",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adserviceprincipal/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adserviceprincipal/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adserviceprincipal/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d086a09afe3da803091f6e945dc82d9cbc58661ff8a0a053d4348e7fe7f60547",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitordiagnosticsetting",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitordiagnosticsetting/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitordiagnosticsetting/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d4b7e298665eddf9f2649f2aa67aed08234d747175fa2a44dfad617b6bb9596d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitordiagnosticsetting/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitordiagnosticsetting/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitordiagnosticsetting/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1e7adabbff0dbe13440dd9e6f18c71eada60e5382672420dbf26f6ae75848b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_iothub",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_iothub/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_iothub/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9dd5eb69019ab7b70bd48ba9e30cb12e0e77be8755b356794b3422b687388a84",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_iothub/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_iothub/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_iothub/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/lookup_plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/lookup_plugins/azure_service_principal_attribute.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e07b0fac8e0c1a20cfa2195760366e950a9d012ae7bb141755499dcd3516b0a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eef3a1af735e5f730d97227c71c4b8e09ff18b535afed7bdbe5406f0c49d6b61",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvault/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ef03b50b96ebde6d86d45ac0b8574c55f53062cd0f2625494a65f02e49cf724",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ipgroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ipgroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ipgroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "227901ce7a0302d6cd5ab0814cd33185a29cf1bd85dd749847e97b955c384c6f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ipgroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ipgroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_ipgroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_gallery",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_gallery/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_gallery/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7af77dc5bb5f1f498bfb8f1d1ca5258cd8bd0c918543ba88350e1f48e36492a4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_gallery/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_gallery/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_gallery/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6b9c2354f7035b52d25413c714b03713308e65fa13bce2a4b92da4b7060082b4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_proximityplacementgroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_proximityplacementgroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_proximityplacementgroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b48b94ef155260503a61cc2e948d1709ca9375c5eb1fc63f137ed68dd243fffb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_proximityplacementgroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_proximityplacementgroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_proximityplacementgroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_servicebus",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_servicebus/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_servicebus/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f71b4ecaef35a3e2808705d5e1ea78a984ea2688f6f96dfeb65fafd28fd83eb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_servicebus/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_servicebus/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_servicebus/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1cb40b44992a284e8abd90f00f4576db368723eeae66bed6b1df9ca9621f62f3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backupazurevm",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backupazurevm/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backupazurevm/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "57c774a2973f2350433ee3cba22fc659ff21ed4837b49301c367682abb7283a4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backupazurevm/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backupazurevm/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9632d771f57bffd1d52fa9bc8e3e7aac7c2873900050ea2047442da27db40437",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backupazurevm/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "edcc28511c83400c97d615c83c6649fc1d955ade93573216f7637bfbab5b38e1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_postgresqlserver",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_postgresqlserver/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_postgresqlserver/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b044f6d67a95349732f211b9a2894231df485a6ce08bcf2011651f5497303b0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_postgresqlserver/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_postgresqlserver/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_postgresqlserver/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "34bcb3c2e69541370aa7d976ca4892a29feb8482254b84a72cdc8d0696ab33da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagementservice",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagementservice/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagementservice/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "47711914f2e3c3a383ceb27076b80fd96beee92d6a64514e4f88faa917786541",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagementservice/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagementservice/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9632d771f57bffd1d52fa9bc8e3e7aac7c2873900050ea2047442da27db40437",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagementservice/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d086a09afe3da803091f6e945dc82d9cbc58661ff8a0a053d4348e7fe7f60547",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_rediscache",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_rediscache/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_rediscache/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8aecdb789e5ebcfc80ef0b57d0c4acc5aaac6999bd35cf70a20aeffac3405dc4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_rediscache/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_rediscache/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_rediscache/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56b7286ab1e5a423e0f2e2d014af643332dee07e366ebd1e2142a4c62b3ada88",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hostgroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hostgroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hostgroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "329d00a92d2ad834aee2fffbc514b9add6993985467e2205eb7648af8061d43e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hostgroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hostgroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hostgroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mariadbserver",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mariadbserver/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mariadbserver/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "010b11742a26f158ab1b3ce763a0a383620b3eeffbe36e171baa0a11a8dfb9b2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mariadbserver/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mariadbserver/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mariadbserver/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "58383800c77b6c653672533f6680c9bea86adf182e87895a5e47cebf0f613c2f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72ba1393746eb62422a42f9f8db2d49f2b5221005c0dbfc71f680962ee59b158",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks/tasks/minimal-cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "118805d889c387eadda706f369f4b51298719569e3862829938bccd020bb3a87",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aks/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38592b52b6bdf0e7c024cfb10cea17d72ea71128efaf4f5f6a33517641a88baa",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0a017eb7b03e7143310cbcb4d523f5fbb1735eb82f09dab92b3c1d0084084dc",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/files/cert2.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "90d87c4109cc5cec7f196646328d29508f209f88009aacb9f7de2e6c4d7d95c1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/files/cert1.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46eaa93e008cd650b7f6337dab267e3d4050628ee453c052c7e625a8728fb64f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appgateway/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "460fad95536b0807eb52e2a829ef877aa8b6371132dafdd0519c190af1ce83b7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adapplication",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adapplication/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adapplication/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19bf76fa4bb13cc6de50955f44356f02bf0fa1c98626c109f335267b88037090",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adapplication/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adapplication/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adapplication/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4b4a62624e583ff233e068ce46a8b0c4e9372e737f64b15064331b460d7b99",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_securitygroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_securitygroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_securitygroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4856aa79c96c38b1fa9f1fc50506d008fb7c9251b6ef9220da2075a8b271f1a5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_securitygroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_securitygroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_securitygroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61f12369bd250545dbb7be5ebeabe8f4ce2abb37c479273c374f0e485164fdb4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loadbalancer",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loadbalancer/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loadbalancer/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "440e9cb401fbdfe8bc256ee997bdb3ad74cb99e38d7713aee894f6f480f50019",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loadbalancer/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loadbalancer/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loadbalancer/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1cb40b44992a284e8abd90f00f4576db368723eeae66bed6b1df9ca9621f62f3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/lookup_plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/lookup_plugins/azure_service_principal_attribute.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e07b0fac8e0c1a20cfa2195760366e950a9d012ae7bb141755499dcd3516b0a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "456c935c135c02e3fec9b5abc81d450e477f36000855ae8bcfe8cd805eb87e20",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultsecret/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad87baedccfdb31ee92f7006a5ee885411edb20c0ed434ff09099b58c6628376",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerregistry",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerregistry/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerregistry/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e622d70c94d79bc4d61703c18f89b1d83f9bad8a3a11f4dfbfd056e0d3eaaea3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerregistry/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerregistry/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerregistry/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2d928080149e6ed69bdef3a583b1eb2bd15bc654d62b6e340cf9cc83142bb938",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationassignment",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationassignment/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationassignment/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1251661bcc7f8f2d77e75d01fb41ece551777f463b0af803e5320b017b91fc9f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationassignment/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationassignment/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationassignment/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnszone",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnszone/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnszone/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "715315b482e38eec64dce73493c125082672c191fb9ce2d4ab00c2cadece9c93",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnszone/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnszone/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnszone/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88f028864c85990c548b18acc803eb2b67cc2b4a254957a12899ebe98da1be5c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerinstance",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerinstance/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerinstance/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a0c4b49ca5a4b5d12d6048db73f3ba1c648c79a8fcb3a7505fcb61e0e889792",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerinstance/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerinstance/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_containerinstance/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "302a2eff279ba06a7e1e7c39249e70962a989d8c4d139af41c0c91446a25b4d4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_expressroute",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_expressroute/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_expressroute/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32f6fbeb852e40cbfb1ceb7b38302a9de703e43230ceebdd9ad0951bdd8cd874",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_expressroute/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_expressroute/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_expressroute/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aduser",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aduser/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aduser/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9c78a0eb4160bbdc182c10f3a2b43fa0c7d68228882eb22290996c3124b7962a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aduser/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aduser/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_aduser/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba17918cdf1239c018330e310d35af8d55313443bf635e9e82e355193965a994",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpointdnszonegroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpointdnszonegroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpointdnszonegroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f056737b4798b79e62e5fa8541d33d6c0465e44111d35fcb2ad8a0215401fb96",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpointdnszonegroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpointdnszonegroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpointdnszonegroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0261a03c87bd323f63df9f2095beb5bbc0c4415659def677cbd521544a3f4804",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mysqlserver",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mysqlserver/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mysqlserver/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83110f661d91f508cb97d3dd485e80fa2292ebf5db0c4e23b0b9608cf6829420",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mysqlserver/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mysqlserver/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_mysqlserver/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "293c7e0a1f36cf57f6691b574e6c54c08ff7a51b5224f800336239576e246165",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkgateway",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkgateway/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkgateway/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09ee0d35e74dfa3ad583ef652393213bdc2ff533bd5c66b8d9a3fb7bc80a1d7b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkgateway/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkgateway/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkgateway/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71bf3626ff59f6f84184c9c709809bd801f5c613d277fb7debfcadbf607a6be7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationrunbook",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationrunbook/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationrunbook/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "903e6f1b3f4c52c84a61caeb089ef8e59f672660018a4a72d58c77d718ee39b4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationrunbook/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationrunbook/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationrunbook/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2346354c02e443f2b587a98bba2d579399e31742ccd4b7adcedefcf4017c2a16",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appserviceplan",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appserviceplan/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appserviceplan/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0528ad223765b5cd496767672d558d87ee809f18345de38533ea8c1cc3d36e4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appserviceplan/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appserviceplan/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_appserviceplan/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8d0138c4be0e6bd14e3ded834e4cffa23260e12e19ce7fed8022f201a9cbcfd",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpoint",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpoint/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpoint/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5879f95b5c0e10736c6f375cb6d9445acd1f5e06763b3c5e394c349f0025d93e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpoint/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpoint/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privateendpoint/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0261a03c87bd323f63df9f2095beb5bbc0c4415659def677cbd521544a3f4804",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_eventhub",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_eventhub/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_eventhub/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83f2d4bcd5021b3e86079908fe647c693ccf529ed013f8f542c6f424b16e414d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_eventhub/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_eventhub/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_eventhub/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e16708f266eb03d5d907d01642a2df63e79abb9fbe946161907f88a7c187e1af",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_image",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_image/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_image/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ae0d8d826fb3503e09ede5e153df4d58fef61fcf37f608fd20e5721f60c50569",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_image/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_image/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_image/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e199c879183108c648c69f78f80453020d933ba83624009a74f8c47668e228b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_deployment",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_deployment/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_deployment/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd4f684ffcb6c94d2943fdb1b57d47c8d1f6f9db030e8a4bdc07aca9d46b3902",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_deployment/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_deployment/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_deployment/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e098d1ba1405d013074325405a4ef33fc9dbd106ec0c8d10c07a1baa78764dc3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_openshiftmanagedcluster",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_openshiftmanagedcluster/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_openshiftmanagedcluster/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df4812c33e6d74e9b4f44fb628a50fb88940218ac8f2988dd0526dede05d0e7e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_openshiftmanagedcluster/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_openshiftmanagedcluster/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_openshiftmanagedcluster/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d69496a5c4676f0334eeecffa83c2c2e6f230ec1e10733429a63eca6b2e126f0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backuppolicy",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backuppolicy/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backuppolicy/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1097b1fd5b7fc819dbd934cc8ed5987eb07cf1860b6f1014a40356fa6fcd446",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backuppolicy/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backuppolicy/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_backuppolicy/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_batchaccount",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_batchaccount/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_batchaccount/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9cb955870559211cafdcfc256bc4c7355e4a6f38f2d35cde2a13e87566d557f6",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_batchaccount/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_batchaccount/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_batchaccount/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1e838cbe6f41ac210308e304931aaf888ad26d88ea726ce42a9137ebcf3e7a4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_publicipaddress",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_publicipaddress/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_publicipaddress/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46f0b29f7b8c9c312a8b0a2cfc343c4cfc8fa572c2de802c3824de07e3b3ae95",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_publicipaddress/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_publicipaddress/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_publicipaddress/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e49f762210d2d9df9c4d5d5ca8f3ac5452c14b64db5efe0c5c146ad666b51ed",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vpnsite",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vpnsite/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vpnsite/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c75c589f3ee772b26f1b7faadf727dbdd48606cf279d0656ad3a4e4e5aedf55f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vpnsite/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vpnsite/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vpnsite/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce2af6ec57a477bc3cd9cdd4afd94a899dab1122e8f6e12c460581742fb6ebc0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resourcegroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resourcegroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resourcegroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23647d69e51cef02cc7a6649df09491175f1f7882b83fd7ed830e644f6276b19",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resourcegroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resourcegroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resourcegroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8bcbcb85204f2c16a96bb81af47945286edd6de6d2c6ea614dbedcd4c7c3fa44",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationdefinition",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationdefinition/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationdefinition/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32102ab6d2d9338ea540df25fc05d54916e3afa0ce3f4975ce44f90d342aa8c0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationdefinition/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationdefinition/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_registrationdefinition/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagement",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagement/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagement/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69d8c5af67d0b60e5662737f281b45c510fe51439510d3460a682a3fedb4c407",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagement/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagement/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_apimanagement/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abd2f0baae4556afc8079fe436dadaf9998e6cc62edef087fed9efa961119238",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualhub",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualhub/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualhub/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bdc77df2e2a85647712fe3d59c51432ebd654d84b9a55e6f778b17db02ddbcb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualhub/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualhub/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualhub/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cognitivesearch",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cognitivesearch/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cognitivesearch/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bea4f11d0cb84221eeca14521ab31795b75b78553c83671d66b533b4d322a031",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cognitivesearch/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cognitivesearch/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cognitivesearch/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subnet",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subnet/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subnet/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cec9ac85aa29db6b8a74d52e9fb87b8d8c43854507c53564f180ad974bc0c7c2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subnet/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subnet/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subnet/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappvnetconnection",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappvnetconnection/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappvnetconnection/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ae0e18b2e0a2c32576146cbe4a418997bed6e29128f35ef0426b127b08e628c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappvnetconnection/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappvnetconnection/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappvnetconnection/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_notificationhub",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_notificationhub/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_notificationhub/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f60d658a3ba9be7276e50649efea940512e5ccd51c025353e2267dba2b24c92",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_notificationhub/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_notificationhub/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a0d6267394bef0ec4408a2fc61ed4235d8961b0df5ab9f08cc96bfb255e3e64",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_notificationhub/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e16708f266eb03d5d907d01642a2df63e79abb9fbe946161907f88a7c187e1af",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adpassword",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adpassword/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adpassword/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0fc782163730c331c8e9633db98d85e66833a0aef7b08e854af2ebd0f13caa3c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adpassword/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adpassword/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adpassword/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4b4a62624e583ff233e068ce46a8b0c4e9372e737f64b15064331b460d7b99",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszone",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszone/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszone/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "40600b53815b6c6abd11c5d56fb5851249771a18fa05084c948f29083387817e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszone/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszone/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszone/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c25b8ef01f49935eeb65d34cb87ac5f92f78eceb54e2773b404ce6801507bb5c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_acs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_acs/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_acs/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "42842e02054ce65e2f1764a031b341eb1290f37f3940547eeaa8ecd52a6559bc",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_acs/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_acs/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_acs/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0e53840d2ecc3fbb9248b8f504e9166704ef7a38ddb0cc8e18b0d42c08a14637",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/lookup_plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/lookup_plugins/azure_service_principal_attribute.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e07b0fac8e0c1a20cfa2195760366e950a9d012ae7bb141755499dcd3516b0a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f3fb60c8e52189f4c85c52ce82880ed23cc865d39fd3915e925fac9e49fe537",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_diskencryptionset/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_azurefirewall",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_azurefirewall/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_azurefirewall/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8d3e9ce72a39bf748628f884787c42178ff895158a684b250f8efc62a81fe582",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_azurefirewall/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_azurefirewall/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_azurefirewall/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "81d8ed7a774730aa9280378e6cf5d03acfc7257e4b6fb061ec10f0bf0789ccc8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2b525717e8399f9384cea43c89abb5ba1d3981359758c40781a5ce96a2366d1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/files/test-public-settings.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6cc80615c48597291d0543b7c948cb89ef14f42bb9261623a576ad5e1722f8fd",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/files/test-protected-settings.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a0cd81592f6eb09e545c1db034a95cda38cd0aae8202b3b195092be1150daecd",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachineextension/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21e7a03e80c8bde0635311e73675602493e0cc37c47f45935ef8eed2eb60225b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_managementgroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_managementgroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_managementgroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a0ca5931c945df8e3a818a9ee47b54ccb4ddde316f6dc0343076b8d637cd38c3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_managementgroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_managementgroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_managementgroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd7f5e9381709c70a75818dcf74a8bcccb05cc9e59129ccf2696438fdf8081b6",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0bec54251750cdf9c6354057ab6c9b7ca99afffa4a425fbbbf8a87d869f4e95",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/files/Ratings.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20cdf86ae984fb64eefdc57a0e03f34c83cb8b27834b33c84768cc2b62cf9d68",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageblob/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d5b4391d95a2c3ae912105db9e94fa53cfdacc92d181d41fca3df823e832c140",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subscription",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subscription/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subscription/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c3eb355d9072c9c0af5d06cb1f5c5f77a5b83ba763f0e4f391915d5e21e53ec",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subscription/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subscription/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_subscription/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappaccessrestriction",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappaccessrestriction/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappaccessrestriction/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d333680098582f571bbbbcfc357d3a8a44239a55d882a546dbe60dc324ba25a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappaccessrestriction/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappaccessrestriction/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_webappaccessrestriction/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks/test_inventory.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f3ec9b2ba8f406f7aeebb17ad9700b98d09495a59bd3d164230d0498e1737108",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks/vars.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa8077f05c5946322cb84be3650a5c76755db68f435042c70465ab2575f0bf17",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks/empty_inventory_config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "063f679a156149b304066aff325cdb51c9fed2fde34b0d374880a57b9d4158fe",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks/setup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "247b99f9817fa6a19795b56f30a0dfc4e3bf92dafc5c573319ea388654e392be",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks/create_inventory_config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e47ba2972fdd5e5a754f0a0c9e1455d35c3f3bc2c2e72b4fdc9d829bac52e5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/playbooks/teardown.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "737fcbebde4b113a4ea14235a88215e7b7a6e8da0064dc79084787cf92383df8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/test.azure_rm.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/runme.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4dcc169097be26802efe4cebc59a32123d2f0189b2293560ec05070a7f1302a3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/templates/basic.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b51b73b4f9d195b3115e623f8536561264b6a399a5578a648657901a73ca4e4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/templates/basic2.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d58df630e61547c6c728e04c9c3e81ab992118d92fd3f3104fe3dd1f2afae974",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory_azure/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6d90d24b1eb2a1a14741d9617355a8be756e4ef7343f052732a351a7f419033",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/lookup_plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/lookup_plugins/azure_service_principal_attribute.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e07b0fac8e0c1a20cfa2195760366e950a9d012ae7bb141755499dcd3516b0a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e02ec00bf475e86f3e0a2a9822e2d5a3848be1e2a9dc8491a47f8d316c1bb26",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_keyvaultkey/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c490b4c02a16259658dfa9d00db6d48c7ee77e7eb7ad9c374699cbc9ccc9d319",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resource",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resource/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resource/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b79445b3014b30b07431555845073e95d7edb3c61b69fd1d640797b59dc21c83",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resource/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resource/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_resource/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "55394b90cd9bab648a2c0b1cc00af5a236465074cb7c7300432e2c22cc35b3e3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnsrecordset",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnsrecordset/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnsrecordset/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bdc813c72d06f5c6a834a30dfe1f397f4afc23525b3bc8f239482d089b4aa73f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnsrecordset/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnsrecordset/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_dnsrecordset/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c490b4c02a16259658dfa9d00db6d48c7ee77e7eb7ad9c374699cbc9ccc9d319",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageshare",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageshare/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageshare/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd1affae59d75b0d3057dc627e4ae16cae32ce1780759adb12a41af5d351d337",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageshare/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageshare/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_storageshare/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a920a7eb516a3f720ad153906d96a9bd80d35867a996105b95f403907ec3d7f1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_autoscale",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_autoscale/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_autoscale/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8496a257f42c7c57a80ca0f8362a13beee317c144744a7b1cc55a8cf6714e780",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_autoscale/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_autoscale/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_autoscale/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "458912d5cabc35c5f6d15d8165ee8cdf0fcebb968f079cfb083abe67e9001fff",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cosmosdbaccount",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cosmosdbaccount/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cosmosdbaccount/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aa469821a13483a169363b8ec672ddcddb8fab9e907f189c06bf1ac7ef190aa",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cosmosdbaccount/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cosmosdbaccount/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cosmosdbaccount/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "90e43cb7d2ea924c27da274e3a81257e7721a52fc5e679001bfe098e5bcd4a9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszonelink",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszonelink/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszonelink/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78233de7dd58e691728201125e3f067ff14e1e42043dfab8bb526f08dd8a4f92",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszonelink/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszonelink/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_privatednszonelink/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualwan",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualwan/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualwan/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d51e9b59a02d8766bff97f88b4e82ba55deda6cdea4601c8cd18e7b07a90ef05",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualwan/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualwan/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualwan/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationaccount",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationaccount/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationaccount/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ae803c7865b2cc37f899cc7a8cb186d952e484c4d7e8c9895749d1a338797bd",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationaccount/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationaccount/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_automationaccount/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9e1630d78407f7ec52fb69b4c070d9161e21bc918cada508f52d7e94d3788ca",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roledefinition",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roledefinition/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roledefinition/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6452dedb951e21a27cd74b0bce2d03f8dadbf2002731bb619a7b821b899f580e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roledefinition/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roledefinition/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_roledefinition/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1e7adabbff0dbe13440dd9e6f18c71eada60e5382672420dbf26f6ae75848b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hdinsightcluster",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hdinsightcluster/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hdinsightcluster/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "92f5f6b8ced50765e834d134cfecb1e5b455cfcf34da381ee395e3e25ba833e6",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hdinsightcluster/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hdinsightcluster/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_hdinsightcluster/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "84c092be675c77a109e617f338ba50bae5fad8f93c93cc07c7726c10ba7640a8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/setup_azure",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/setup_azure/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adgroup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adgroup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adgroup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebff5c1be14de7ffd2557702b7927f7b5ac8065152cd7ed184aadce263cfa154",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adgroup/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adgroup/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_adgroup/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4b4a62624e583ff233e068ce46a8b0c4e9372e737f64b15064331b460d7b99",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_networkinterface",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_networkinterface/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_networkinterface/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbac93132de9243e35fd61305b93033355f3664e70ffb8d02bf829c69e459232",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_networkinterface/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_networkinterface/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_networkinterface/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "73c53acb732d4a44ad9f9f36698204399169bba6b5cfadd4ae3788702e015a75",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vmbackuppolicy",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vmbackuppolicy/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vmbackuppolicy/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df646a26110fc09a5e758f67c4d3a468c7326306651f88ac42f6340b7296714e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vmbackuppolicy/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vmbackuppolicy/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_vmbackuppolicy/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1cb40b44992a284e8abd90f00f4576db368723eeae66bed6b1df9ca9621f62f3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_recoveryservicesvault",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_recoveryservicesvault/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_recoveryservicesvault/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fae4ab7c5de6e65fcc01a077a90669725c8cd15e9c15e26543a3f1d0082a6bb0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_recoveryservicesvault/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_recoveryservicesvault/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_recoveryservicesvault/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1cb40b44992a284e8abd90f00f4576db368723eeae66bed6b1df9ca9621f62f3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_no_public_ip.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "47832d8d3733d4fa170e808dab2dcac004a4461c10de165c0253ac8c4efd4e3d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_public_ip.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "54a6abf2a5eb52ca020c7bce2ab523bc7ede4fd875e06d2c0dc65b3d4a994acd",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_image_latest.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "263d825bb35f6a8bb99439ae50a6743584c9ed1473a811287a35830dc8cd1291",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_ephemeral_os.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f4019d1883871e1adbed2ecb747bbe4991f8e2ba5b1ca638d94b493ba8fbd4d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_dual_nic.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be4269aa0031a342fff3a6bd30508637bf852730c8560484d58dff5ad69d34f5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_deallocate.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f2de3329f6b953f62fac9ece43c110e14b8eaec95958b05a1d6957f8083dc71",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/setup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46fc608c364a5696bdb130397cf1ae7afac510b571bbb885a460ed1053dc9950",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_invalid.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f57606645cb1ba005fb9051d7d91a85850bb2ad834179a136e1cd7329c452c46",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_image_specific.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c7055d889f758994fc0e32daa5aea12beccd0b0cc084a83e2c8c5448e2b6d4a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_minimal.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bcb84b417f3d6716cc823c62bbdb30d8c7884e0c77e7685c490e12f8610906b1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/tasks/azure_test_spot.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9615f3a00cbd03dc145b9c3ddf663464ce17e672ca01dc9c011b3757232bd9d2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/runme.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2cf3e6992436493fc7b38fa7b9f9f043c84485c83b9390b4a0efa9562c9e62c7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5139873cc8300ac1b263c9f857d245f47101fe6b9e79d302d169be1090ac37ca",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce7a6ce7303835f96db24016947a2bd27180399cda2909a192c8e68d50d21660",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualmachine/inventory.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16ff32d5d9d7f98cfd56285879b0cca464d09e1ebefe99b919f901b4cc8ea294",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_manageddisk",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_manageddisk/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_manageddisk/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "daa3922283cfda875ef1fd74f33aee2b06f6bb9a6ea40623dedca9203db18567",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_manageddisk/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_manageddisk/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_manageddisk/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b4cb57f8aac98bca1f03562d82f9034961bfdecba5a6e18cfab1687f9872e26",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitorlogprofile",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitorlogprofile/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitorlogprofile/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "461fe987de5839555fcdcdba971446985aa05f22e6d103bc2cfba4fa5edc61d8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitorlogprofile/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitorlogprofile/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_monitorlogprofile/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1e7adabbff0dbe13440dd9e6f18c71eada60e5382672420dbf26f6ae75848b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datalakestore",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datalakestore/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datalakestore/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b36049c831af5286ab831c0a21b2fadd6b98e37731684ce3b80121eb394aa32a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datalakestore/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datalakestore/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datalakestore/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5999b94c78f1ab2b721e218ebd8adf473444e175e0e5c881c0b66bc4687f55bf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_routetable",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_routetable/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_routetable/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b334ab3e62a9b1f0501830808bb6f4d48b7c2dea26242ee2897f4c1d1e8fd48",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_routetable/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_routetable/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_routetable/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407ecc5a8c8e15108c58d445f5ed4dcecce716e88b9cd93fb488dca0fcee7f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datafactory",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datafactory/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datafactory/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f3ff086c0c8f9eeb88e386147c056b7ac9f1792b28bbec6ef607550125b95b8b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datafactory/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datafactory/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_datafactory/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c9431776fdc476ce74c317d158a69dbea4ddb3ccfd3c708a1d829b9fd20c9a8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loganalyticsworkspace",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loganalyticsworkspace/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loganalyticsworkspace/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6b84d27aa938fc96fef7a604216eff0bd157517d4614b0a6dfc4688fe61cbb3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loganalyticsworkspace/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loganalyticsworkspace/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_loganalyticsworkspace/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfb86d809f555aa260164bf9b9830b9ea038c51462be2a8861dfcb73d7f61ec2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_workspace",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_workspace/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_workspace/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "346ad66b58e0abbd901da9144e76ef304ce4afa1ea99ae9a44b1c986d1c0c1fd",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_workspace/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_workspace/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_workspace/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e79e8c0eab04de9764c5527a6450685ecfeaff46a3d3210c5b025d3140a95819",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cdnprofile",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cdnprofile/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cdnprofile/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "30e768304ea5eb0e2b3f3bd3ae67dc47a6417e858aff43d87e21be7905369617",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cdnprofile/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cdnprofile/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_cdnprofile/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "db38423faa406d6e9617e31067ca1079915801ef73d93e96797ed2bc5820b73e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkpeering",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkpeering/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkpeering/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aaa56c6cccb1453e0e932970432e51b07a58ee471768fa85d35737d45179d52d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkpeering/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkpeering/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab7e4fe76b349cef8c93bbf0f920121ca95032af4dd83161ba49b359e615e75b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/azure_rm_virtualnetworkpeering/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f01947c58acbaf6bdf7abbd5e1dd7e2964de0855e3bc03e3fb4e32e5deeecf2c",
+   "format": 1
+  },
+  {
+   "name": "tests/utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/utils/ado",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/utils/ado/ado.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc7b85029dc9a793c1a50e8ee8ea0efba801a5aca4b064e40cdd972afe8e9253",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/timing.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ecf0a44065abce09849b04715c01c98f12c18d21e38537f637e6fdb6861f97c0",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/check_matrix.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4968d35a607fadfd806cf469cc88fe097b419ea2d81bf225b07192ed670c4f61",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/sanity.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "818237b462ed05ee765a4be2e1c27cb224a0fbadfda43ab17299172f7d9d3c74",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/timing.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fdb30d2a5fd484d8081771911f8a55a0c740c7b19bae3aae47d888fcf93dba1b",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/shippable.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3208134f7e1da1aa15ddf864b0063c91c44c23acbb91908eafe02218110f4189",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/cloud.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a03d64364942b48161928de3593167e492182bf01968d18024172bf8c417b064",
+   "format": 1
+  },
+  {
+   "name": "tests/utils/shippable/azure.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a03d64364942b48161928de3593167e492182bf01968d18024172bf8c417b064",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.14.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4fd53df2568b8f7014928868de7592ddf69a6161fdba57fad44d936de46bebe5",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.11.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c96907e1af1e326b9185dd54923c0320037bae9ac84de86a31056052a45e7a58",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.10.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c96907e1af1e326b9185dd54923c0320037bae9ac84de86a31056052a45e7a58",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.12.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c96907e1af1e326b9185dd54923c0320037bae9ac84de86a31056052a45e7a58",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.13.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6838a2b99ba27230a25566174e810261f42502c2fc07870976682cce3ec8ae25",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.9.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e16e15d0d24b63a4901856da1dfd6ce37e2c3c4afa6a58f683f67d6f90f445fa",
+   "format": 1
+  },
+  {
+   "name": "tests/config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a696298f18dd53c6bc1578512878340771121e3d77617419a6970cd09f96ab7",
+   "format": 1
+  },
+  {
+   "name": "requirements-azure.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05754bcff346debd5c09a4bfe233e2f7cfaef26981147391514f26a13e0a0000",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/execution-environment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c406e96aec09865e6e5aac8afc2f2b0bb77d39cdfae4f83bee1d6bb9eeb18fa",
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f2ea248dcdfc37444a0751541e9bf2331eaa9ff915e59afc9236aa42325b2a2",
+   "format": 1
+  },
+  {
+   "name": "CredScanSuppressions.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d57c1991974f1b79dcdb64d0a337b511d8533f8b9f679133dc0c88fb0469d71",
+   "format": 1
+  },
+  {
+   "name": "azure-pipelines.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bdb72e14d5a5d7e3296de14bdffcd8a327e427b9f8f7b63bdf3a87c74485f255",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e0a0bd12ca91ca7dbcdb0c40d5731ac2c1cd76782ff857341c05b4b44a541315",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "487ce96533dd5812320f8356ff5d45c3946e8df9a1a25e528953f379e163cb46",
+   "format": 1
+  },
+  {
+   "name": "CONTRIBUTING.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00ba032972d20bfaf47e7a89c67727c88d2d8dc7991e35d4dc0303d03b769a4b",
+   "format": 1
+  },
+  {
+   "name": "shippable.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a4011966aebfdc0af5ffc639a5441c422628bdb80336473d29270143bee9659f",
+   "format": 1
+  },
+  {
+   "name": ".idea",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".idea/inspectionProfiles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".idea/inspectionProfiles/profiles_settings.xml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6172c5997eeb3cd19c9ca2b5b97d6e2983cdd1fa60b2460d7bbb74055edcaa46",
+   "format": 1
+  },
+  {
+   "name": ".idea/vcs.xml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "55768f1f84fb117f1d0fc383e180b5d0aa5e5e6584c8c4a2995c15b4237f0972",
+   "format": 1
+  },
+  {
+   "name": ".idea/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a5548b173aac0ef943bbb3af850d676f7b651ddedb9f8d7f06735bc2809b3db",
+   "format": 1
+  },
+  {
+   "name": ".idea/workspace.xml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9190a2c28e87f0414dacc6303167b282430e1df2b040c9a726d80d4773a7f848",
+   "format": 1
+  },
+  {
+   "name": ".idea/modules.xml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e677b47faa3976dd68e5118e5d4495d935fbd219026ed2cf4f0ec19b8d285774",
+   "format": 1
+  },
+  {
+   "name": ".idea/azcollection.iml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c344d6de8f6a11a62bd62611d63c18aa5501626dcacb182708ad4f0f4dd7bf04",
+   "format": 1
+  },
+  {
+   "name": ".idea/misc.xml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e79daaa1d3200ba24477c73925d0695f656be3a0ae5f85b13d4f659bc72831fb",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

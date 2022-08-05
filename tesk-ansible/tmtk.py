@@ -306,8 +306,8 @@ def tmtest(cfg_file, command, subcommand, **kwargs) -> int:
             fn = network_fetch_logs
     #     elif subcommand == "reset":
     #         fn = network_reset
-        # elif subcommand == "info":
-        #     fn = network_info
+        elif subcommand == "info":
+            fn = network_info
     # elif command == "loadtest":
     #     if subcommand == "start":
     #         fn = loadtest_start
@@ -360,6 +360,14 @@ def network_state(
         state,
     )
     logger.info("Successfully changed state of network component(s): %s", state)
+
+def network_info(
+    cfg: "TestConfig",
+    **kwargs):
+    # logger.info("Get node info")
+    # TODO
+
+
 
 def network_fetch_logs(
     cfg: "TestConfig",
@@ -574,9 +582,9 @@ def ansible_deploy_tendermint(
     peers: List[TendermintNodeConfig],):
 
     workdir = os.path.join(cfg.home, "tendermint")
+    print(workdir)
     if not os.path.isdir(workdir):
         raise Exception("Missing working directory: %s", workdir)
-    
     logger.info("Generating Ansible configuration for all nodes")
     extra_vars = {
         "service_name": "tendermint",
@@ -587,7 +595,7 @@ def ansible_deploy_tendermint(
         "service_template": "tendermint.service.jinja2",
         "service_desc": "Tendermint",
         "service_exec_cmd": "/usr/local/bin/tendermint node --mode validator --proxy-app=kvstore",
-        "src_binary": "/usr/local/bin/tendermint",
+        "src_binary": "{0}/tendermint".format(os.getcwd()),
         "dest_binary": "/usr/local/bin/tendermint",
         "src_config_path": os.path.join(workdir, "config"),
     }

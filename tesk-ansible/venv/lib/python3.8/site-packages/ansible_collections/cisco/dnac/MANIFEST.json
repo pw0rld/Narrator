@@ -1,0 +1,39 @@
+{
+ "collection_info": {
+  "namespace": "cisco",
+  "name": "dnac",
+  "version": "6.5.2",
+  "authors": [
+   "Rafael Campos <rcampos@altus.cr>",
+   "William Astorga <wastorga@altus.cr>",
+   "Jose Bogarin <jbogarin@altus.cr>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cisco",
+   "dnac",
+   "cloud",
+   "collection",
+   "networking",
+   "sdn"
+  ],
+  "description": "Ansible Modules for Cisco DNA Center",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.utils": ">=2.0.0,<3.0"
+  },
+  "repository": "https://github.com/cisco-en-programmability/dnacenter-ansible",
+  "documentation": "https://cisco-en-programmability.github.io/dnacenter-ansible/",
+  "homepage": "https://github.com/cisco-en-programmability/dnacenter-ansible",
+  "issues": "https://github.com/cisco-en-programmability/dnacenter-ansible/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "b1ad774b1c5db91f6c07b4bdf2cf19f21b1fce5b06feedb45d64ebc8fcc67b53",
+  "format": 1
+ },
+ "format": 1
+}

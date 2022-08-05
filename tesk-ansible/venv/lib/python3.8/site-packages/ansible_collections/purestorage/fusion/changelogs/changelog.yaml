@@ -1,0 +1,57 @@
+ancestor: null
+releases:
+  1.0.0:
+    modules:
+    - description: Manage API clients in Pure Storage Fusion
+      name: fusion_api_client
+      namespace: ''
+    - description: Manage arrays in Pure Storage Fusion
+      name: fusion_array
+      namespace: ''
+    - description: Create Availability Zones in Pure Storage Fusion
+      name: fusion_az
+      namespace: ''
+    - description: Manage host access policies in Pure Storage Fusion
+      name: fusion_hap
+      namespace: ''
+    - description: Create hardware types in Pure Storage Fusion
+      name: fusion_hw
+      namespace: ''
+    - description: Collect information from Pure Fusion
+      name: fusion_info
+      namespace: ''
+    - description: Manage Network Interface Groups in Pure Storage Fusion
+      name: fusion_nig
+      namespace: ''
+    - description: Manage placement groups in Pure Storage Fusion
+      name: fusion_pg
+      namespace: ''
+    - description: Manage protection policies in Pure Storage Fusion
+      name: fusion_pp
+      namespace: ''
+    - description: Manage role assignments in Pure Storage Fusion
+      name: fusion_ra
+      namespace: ''
+    - description: Manage storage classes in Pure Storage Fusion
+      name: fusion_sc
+      namespace: ''
+    - description: Manage storage services in Pure Storage Fusion
+      name: fusion_ss
+      namespace: ''
+    - description: Manage tenants in Pure Storage Fusion
+      name: fusion_tenant
+      namespace: ''
+    - description: Manage tenant networks in Pure Storage Fusion
+      name: fusion_tn
+      namespace: ''
+    - description: Manage tenant spaces in Pure Storage Fusion
+      name: fusion_ts
+      namespace: ''
+    - description: Manage volumes in Pure Storage Fusion
+      name: fusion_volume
+      namespace: ''
+    release_date: '2022-05-25'
+  1.0.1:
+    release_date: '2022-05-27'
+  1.0.2:
+    release_date: '2022-06-13'

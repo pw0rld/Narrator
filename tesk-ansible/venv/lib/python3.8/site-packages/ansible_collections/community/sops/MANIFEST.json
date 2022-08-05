@@ -1,0 +1,34 @@
+{
+ "collection_info": {
+  "namespace": "community",
+  "name": "sops",
+  "version": "1.2.3",
+  "authors": [
+   "Edoardo Tenani"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "sops",
+   "encryption",
+   "decryption",
+   "secret",
+   "vault"
+  ],
+  "description": "Support usage of mozilla/sops from your Ansible playbooks",
+  "license": [],
+  "license_file": "COPYING",
+  "dependencies": {},
+  "repository": "https://github.com/ansible-collections/community.sops",
+  "documentation": null,
+  "homepage": "https://github.com/ansible-collections/community.sops",
+  "issues": "https://github.com/ansible-collections/community.sops/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "c8cc5f971eb5f7fb57e9d5d400daebecd8c83c9b56f069189c95141c2ce20d97",
+  "format": 1
+ },
+ "format": 1
+}

@@ -1,0 +1,7 @@
+ipaddress
+jmespath
+netapp-lib
+requests
+six
+solidfire-sdk-python
+xmltodict

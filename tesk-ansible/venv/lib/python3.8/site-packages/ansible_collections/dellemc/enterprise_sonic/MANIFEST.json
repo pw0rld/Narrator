@@ -1,0 +1,42 @@
+{
+ "collection_info": {
+  "namespace": "dellemc",
+  "name": "enterprise_sonic",
+  "version": "1.1.1",
+  "authors": [
+   "Senthil Kumar Ganesan <Senthil_Kumar_Ganesa@Dell.com>",
+   "Abirami <Abirami_N@Dell.com>",
+   "Dhivya <Dhivya_P@Dell.com>",
+   "Mohamed Javeed <Mohamed_Javeed_Faroo@Dell.com>",
+   "Nirai Madai <Niraimadaiselvam_Mar@Dell.com>",
+   "Shade Talabi <Shade_Talabi@Dell.com>",
+   "Kerry Meyer <Kerry_Meyer@Dell.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "dellemc",
+   "dell",
+   "networking",
+   "nos",
+   "sonic"
+  ],
+  "description": "Ansible Network Collection for Enterprise SONiC Distribution by Dell Technologies",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.netcommon": ">=2.0.0"
+  },
+  "repository": "https://github.com/ansible-collections/dellemc.enterprise_sonic",
+  "documentation": null,
+  "homepage": null,
+  "issues": "https://github.com/ansible-collections/dellemc.enterprise_sonic/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "2a836dafaed2175c4061fa3451d0f9b9fab7b15da8027febe42fd75fcfa3fab5",
+  "format": 1
+ },
+ "format": 1
+}

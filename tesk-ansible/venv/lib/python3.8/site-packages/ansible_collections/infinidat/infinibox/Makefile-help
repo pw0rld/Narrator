@@ -1,0 +1,65 @@
+# ##@ Help Group Name
+# .PHONY: recipe_name
+# To pick up the recipe name, use:
+# recipe_name:  ## Recipe help.
+#   @eval $(_begin)
+#   ...works...
+#   @eval $(_finish)
+
+# Color vars
+_use_color ?= true
+_help_padding ?= 30
+_escape = \033
+_red    = $(_escape)[0;31m
+_green  = $(_escape)[0;32m
+_yellow = $(_escape)[0;33m
+_blue   = $(_escape)[0;34m
+_purple = $(_escape)[0;35m
+_cyan   = $(_escape)[0;36m
+_white  = $(_escape)[0;37m
+_tp_black   = 0
+_tp_red     = 1
+_tp_green   = 2
+_tp_yellow  = 3
+_tp_blue    = 4
+_tp_magenta = 5
+_tp_cyan    = 6
+_tp_white   = 7
+_tp_reset   = 9
+
+
+# Use _make to execute make with consistent options
+_make = make --no-print-directory
+_watch = watch -n 1 --no-title
+
+# Other vars
+_LEADER =   "================ ["
+_FOLLOWER = "] ================"
+
+ifeq ($(_use_color),true)
+	# tput  color ref: https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux?answertab=votes#tab-top
+	# Colorize output headings
+	_tp_heading = $(_tp_magenta)
+	_begin = echo  "$$(tput setaf $(_tp_heading))$(_LEADER) Begin $@ $(_FOLLOWER)$$(tput sgr 0)"
+	_finish = echo "$$(tput setaf $(_tp_heading))$(_LEADER) Completed $@ $(_FOLLOWER)$$(tput sgr 0); echo"
+	_recipe = $(_green)
+	_reset  = $(_escape)[0m
+else
+	# No colorize output headings
+	_begin = echo "$(_LEADER) Begin $@ $(_FOLLOWER)"
+	_finish = echo "$(_LEADER) Completed $@ $(_FOLLOWER); echo"
+	_recipe =
+	_reset  =
+endif
+
+##@ General
+.PHONY: help
+help:  ## Display this help.
+	@echo "$(_purpose)"
+	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make $(_recipe)<recipe>$(_reset)\n"} /^[a-zA-Z_0-9-]+:.*?##/ { printf "$(_recipe)%-$(_help_padding)s$(_reset) %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s$(_reset)\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+
+.PHONY: color-help
+color-help:  ## Edit Makefile-help to change color schemes.
+	@eval $(_begin)
+	@echo "Edit Makefile-help to change color schemes"
+	@eval $(_finish)

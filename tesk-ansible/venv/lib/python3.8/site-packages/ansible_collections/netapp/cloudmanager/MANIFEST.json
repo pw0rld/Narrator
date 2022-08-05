@@ -1,0 +1,37 @@
+{
+ "collection_info": {
+  "description": "Ansible collection to create CloudManager connectors, CVO instances, CVO aggregates, CVO volumes, and more.", 
+  "repository": "https://github.com/ansible-collections/netapp.cloudmanager", 
+  "tags": [
+   "netapp", 
+   "cvo", 
+   "cloudmanager", 
+   "amazon", 
+   "cloud", 
+   "storage", 
+   "azure", 
+   "gcp"
+  ], 
+  "dependencies": {}, 
+  "authors": [
+   "NetApp Ansible Team <ng-ansibleteam@netapp.com>"
+  ], 
+  "issues": "https://github.com/ansible-collections/netapp.cloudmanager", 
+  "name": "cloudmanager", 
+  "license": [], 
+  "documentation": "https://docs.ansible.com/ansible/latest/collections/netapp/", 
+  "namespace": "netapp", 
+  "version": "21.18.0", 
+  "readme": "README.md", 
+  "license_file": "COPYING", 
+  "homepage": "https://netapp.io/configuration-management-and-automation/"
+ }, 
+ "file_manifest_file": {
+  "format": 1, 
+  "ftype": "file", 
+  "chksum_sha256": "1428db87564769b7106bd79a872cb872288b40680a85584c9f5e03ad37034323", 
+  "name": "FILES.json", 
+  "chksum_type": "sha256"
+ }, 
+ "format": 1
+}

@@ -1,0 +1,9 @@
+1.	New release v1.4.0
+2. Changes
+release_summary: 'Release v1.4.0 of the ``ansible-mso`` collection on 2022-01-27.
+
+  This changelog describes all changes made to the modules and plugins included in
+  this collection since v1.3.0.
+
+  '
+3. Detailed changelog: https://github.com/xinyuezhao/ansible-mso/compare/v1.3.0...v1.4.0

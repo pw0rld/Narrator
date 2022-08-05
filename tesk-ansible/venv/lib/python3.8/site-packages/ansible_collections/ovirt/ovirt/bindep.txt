@@ -1,0 +1,6 @@
+gcc [compile platform:centos-8 platform:rhel-8]
+libcurl-devel [compile platform:centos-8 platform:rhel-8]
+libxml2-devel [compile platform:centos-8 platform:rhel-8]
+openssl-devel [compile platform:centos-8 platform:rhel-8]
+python38-devel [compile platform:centos-8 platform:rhel-8]
+qemu-img [platform:centos-8 platform:rhel-8]

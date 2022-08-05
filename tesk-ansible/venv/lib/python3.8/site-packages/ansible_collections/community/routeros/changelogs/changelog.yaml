@@ -1,0 +1,212 @@
+ancestor: null
+releases:
+  0.1.0:
+    changes:
+      minor_changes:
+      - facts - now also collecting data about BGP and OSPF (https://github.com/ansible-collections/community.network/pull/101).
+      - facts - set configuration export on to verbose, for full configuration export
+        (https://github.com/ansible-collections/community.network/pull/104).
+      release_summary: 'The ``community.routeros`` continues the work on the Ansible
+        RouterOS modules from their state in ``community.network`` 1.2.0. The changes
+        listed here are thus relative to the modules ``community.network.routeros_*``.
+
+        '
+    fragments:
+    - 0.1.0.yml
+    - 101_update_facts.yml
+    - 104_facts_export_verbose.yml
+    release_date: '2020-10-26'
+  0.1.1:
+    changes:
+      bugfixes:
+      - api - fix crash when the ``ssl`` parameter is used (https://github.com/ansible-collections/community.routeros/pull/3).
+      release_summary: Small improvements and bugfixes over the initial release.
+    fragments:
+    - 0.1.1.yml
+    - 3-api-ssl.yml
+    release_date: '2020-10-31'
+  1.0.0:
+    changes:
+      bugfixes:
+      - routeros terminal plugin - allow slashes in hostnames for terminal detection.
+        Without this, slashes in hostnames will result in connection timeouts (https://github.com/ansible-collections/community.network/pull/138).
+      release_summary: 'This is the first production (non-prerelease) release of ``community.routeros``.
+
+        '
+    fragments:
+    - 1.0.0.yml
+    - community.network-138-routeros-allow-slash.yml
+    release_date: '2020-11-17'
+  1.0.1:
+    changes:
+      bugfixes:
+      - api - remove ``id to .id`` as default requirement which conflicts with RouterOS
+        ``id`` configuration parameter (https://github.com/ansible-collections/community.routeros/pull/15).
+      release_summary: Maintenance release with a bugfix for ``api``.
+    fragments:
+    - 1.0.1.yml
+    - 13-remove-id-restriction-for-api.yaml
+    release_date: '2020-12-11'
+  1.1.0:
+    changes:
+      minor_changes:
+      - command - added support for a dash (``-``) in username (https://github.com/ansible-collections/community.routeros/pull/18).
+      - facts - added support for a dash (``-``) in username (https://github.com/ansible-collections/community.routeros/pull/18).
+      release_summary: This release allow dashes in usernames for SSH-based modules.
+    fragments:
+    - 1.1.0.yml
+    - 18-support-dashes-in-username.yml
+    release_date: '2021-01-04'
+  1.2.0:
+    changes:
+      bugfixes:
+      - api - when using TLS/SSL, remove explicit cipher configuration to insecure
+        values, which also makes it impossible to connect to newer RouterOS versions
+        (https://github.com/ansible-collections/community.routeros/pull/34).
+      minor_changes:
+      - Avoid internal ansible-core module_utils in favor of equivalent public API
+        available since at least Ansible 2.9 (https://github.com/ansible-collections/community.routeros/pull/38).
+      - api - add options ``validate_certs`` (default value ``true``), ``validate_cert_hostname``
+        (default value ``false``), and ``ca_path`` to control certificate validation
+        (https://github.com/ansible-collections/community.routeros/pull/37).
+      - api - rename option ``ssl`` to ``tls``, and keep the old name as an alias
+        (https://github.com/ansible-collections/community.routeros/pull/37).
+      - fact - add fact ``ansible_net_config_nonverbose`` to get idempotent config
+        (no date, no verbose) (https://github.com/ansible-collections/community.routeros/pull/23).
+      release_summary: Bugfix and feature release.
+    fragments:
+    - 1.2.0.yml
+    - 23-idempotent_config.yml
+    - 34-api-ciphers.yml
+    - 37-api-validate-cert-options.yml
+    - ansible-core-_text.yml
+    release_date: '2021-06-29'
+  2.0.0:
+    changes:
+      minor_changes:
+      - command - the ``commands`` and ``wait_for`` options now convert the list elements
+        to strings (https://github.com/ansible-collections/community.routeros/pull/55).
+      - facts - the ``gather_subset`` option now converts the list elements to strings
+        (https://github.com/ansible-collections/community.routeros/pull/55).
+      release_summary: A new major release with breaking changes in the behavior of
+        ``community.routeros.api`` and ``community.routeros.command``.
+    fragments:
+    - 2.0.0.yml
+    - 55-linting.yml
+    release_date: '2021-10-31'
+  2.0.0-a1:
+    changes:
+      breaking_changes:
+      - 'api - due to a programming error, the module never failed on errors. This
+        has now been fixed. If you are relying on the module not failing in case of
+        idempotent commands (resulting in errors like ``failure: already have such
+        address``), you need to adjust your roles/playbooks. We suggest to use ``failed_when``
+        to accept failure in specific circumstances, for example ``failed_when: "''failure:
+        already have '' in result.msg[0]"`` (https://github.com/ansible-collections/community.routeros/pull/39).'
+      release_summary: First prerelease for a new major release with a breaking change
+        in the behavior of ``community.routeros.api``.
+    fragments:
+    - 2.0.0-a1.yml
+    - 39-api-fail.yml
+    release_date: '2021-07-31'
+  2.0.0-a2:
+    changes:
+      breaking_changes:
+      - api - splitting commands no longer uses a naive split by whitespace, but a
+        more RouterOS CLI compatible splitting algorithm (https://github.com/ansible-collections/community.routeros/pull/45).
+      - command - the module now always indicates that a change happens. If this is
+        not correct, please use ``changed_when`` to determine the correct changed
+        status for a task (https://github.com/ansible-collections/community.routeros/pull/50).
+      bugfixes:
+      - api - improve splitting of ``WHERE`` queries (https://github.com/ansible-collections/community.routeros/pull/47).
+      - api - when converting result lists to dictionaries, no longer removes second
+        ``=`` and text following that if present (https://github.com/ansible-collections/community.routeros/pull/47).
+      - routeros cliconf plugin - adjust function signature that was modified in Ansible
+        after creation of this plugin (https://github.com/ansible-collections/community.routeros/pull/43).
+      minor_changes:
+      - api - make validation of ``WHERE`` for ``query`` more strict (https://github.com/ansible-collections/community.routeros/pull/53).
+      release_summary: Second prerelease for a new major release with breaking changes
+        in the behavior of ``community.routeros.api`` and ``community.routeros.command``.
+    fragments:
+    - 2.0.0-a2.yml
+    - 43-sanity.yml
+    - 45-api-split.yml
+    - 47-api-split.yml
+    - 50-command-changed.yml
+    - 53-api-where.yml
+    - 53-quoting-filters.yml
+    plugins:
+      filter:
+      - description: Join a list of arguments to a command
+        name: join
+        namespace: null
+      - description: Convert a list of arguments to a list of dictionary
+        name: list_to_dict
+        namespace: null
+      - description: Quote an argument
+        name: quote_argument
+        namespace: null
+      - description: Quote an argument value
+        name: quote_argument_value
+        namespace: null
+      - description: Split a command into arguments
+        name: split
+        namespace: null
+    release_date: '2021-10-14'
+  2.1.0:
+    changes:
+      bugfixes:
+      - query - fix query function check for ``.id`` vs. ``id`` arguments to not conflict
+        with routeros arguments like ``identity`` (https://github.com/ansible-collections/community.routeros/pull/68,
+        https://github.com/ansible-collections/community.routeros/issues/67).
+      - quoting and unquoting filter plugins, api module - handle the escape sequence
+        ``\_`` correctly as escaping a space and not an underscore (https://github.com/ansible-collections/community.routeros/pull/89).
+      minor_changes:
+      - Added a ``community.routeros.api`` module defaults group. Use with ``group/community.routeros.api``
+        to provide options for all API-based modules (https://github.com/ansible-collections/community.routeros/pull/89).
+      - Prepare collection for inclusion in an Execution Environment by declaring
+        its dependencies (https://github.com/ansible-collections/community.routeros/pull/83).
+      - api - add new option ``extended query`` more complex queries against RouterOS
+        API (https://github.com/ansible-collections/community.routeros/pull/63).
+      - api - update ``query`` to accept symbolic parameters (https://github.com/ansible-collections/community.routeros/pull/63).
+      - api* modules - allow to set an encoding other than the default ASCII for communicating
+        with the API (https://github.com/ansible-collections/community.routeros/pull/95).
+      release_summary: Feature and bugfix release with new modules.
+    fragments:
+    - 2.1.0.yml
+    - 63-add-extended_query.yml
+    - 68-fix-query-id-check.yml
+    - 83-ee.yml
+    - 89-quoting.yml
+    - 90-api-action-group.yml
+    - 95-api-encoding.yml
+    modules:
+    - description: Collect facts from remote devices running MikroTik RouterOS using
+        the API
+      name: api_facts
+      namespace: ''
+    - description: Find and modify information using the API
+      name: api_find_and_modify
+      namespace: ''
+    release_date: '2022-05-25'
+  2.2.0:
+    changes:
+      bugfixes:
+      - Include ``LICENSES/BSD-2-Clause.txt`` file for the ``routeros`` module utils
+        (https://github.com/ansible-collections/community.routeros/pull/101).
+      minor_changes:
+      - All software licenses are now in the ``LICENSES/`` directory of the collection
+        root. Moreover, ``SPDX-License-Identifier:`` is used to declare the applicable
+        license for every file that is not automatically generated (https://github.com/ansible-collections/community.routeros/pull/101).
+      release_summary: New feature release.
+    fragments:
+    - 101-licenses.yml
+    - 2.2.0.yml
+    modules:
+    - description: Retrieve information from API
+      name: api_info
+      namespace: ''
+    - description: Modify data at paths with API
+      name: api_modify
+      namespace: ''
+    release_date: '2022-07-31'
