@@ -1,0 +1,22 @@
+[Unit]
+Description={{ service_name }}
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User={{ service_user }}
+Group={{ service_name }}
+PermissionsStartOnly=true
+ExecStart={{ service_exec_cmd }}
+KillSignal=SIGTERM
+LimitAS=infinity
+LimitRSS=infinity
+LimitCORE=infinity
+LimitNOFILE=65536
+LimitMEMLOCK=infinity
+StandardOutput=file:/var/log/tendermint.log
+StandardError=file:/var/log/tendermint.log
+
+[Install]
+WantedBy=multi-user.target

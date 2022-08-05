@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  vars:
+    service_name: tendermint
+    service_log_path: "/var/log/tendermint*"
+    local_log_path: "/tmp/tendermint-logs/"
+  tasks:
+    - name: Archive log files for node
+      archive:
+        path: "{{ service_log_path }}"
+        dest: "/tmp/archived-logs.tar.bz2"
+
+    - name: Fetch compressed logs
+      fetch:
+        src: "/tmp/archived-logs.tar.bz2"
+        dest: "{{ local_log_path }}/{{ inventory_hostname }}/archived-logs.tar.bz2"
+        flat: yes
+
+    - name: Unarchive compressed logs locally
+      become: no
+      local_action: "command tar xf {{ local_log_path }}/{{ inventory_hostname }}/archived-logs.tar.bz2 -C {{ local_log_path }}/{{ inventory_hostname }}"
+
+    - name: Delete local log archive
+      become: no
+      local_action: "command rm {{ local_log_path }}/{{ inventory_hostname }}/archived-logs.tar.bz2"

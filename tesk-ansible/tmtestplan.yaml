@@ -1,0 +1,106 @@
+# A global identifier to apply across the entire test network. Will be added
+# to the `Group` tags on all created AWS resources. This identifier is included
+# in metrics submitted from the Tendermint nodes in this network.
+# This is also used as the Tendermint network chain ID.
+id: testnet_abcd
+
+# Configuration relating to monitoring of the Tendermint network nodes. Right
+# now, the idea is to support SignalFX and/or InfluxDB. At least one of the two
+# must be configured.
+monitoring:
+  # Any SignalFX-related configuration parameters will go here.
+  signalfx:
+    enabled: no
+    api_token: $SIGNALFX_API_TOKEN
+    realm: $SIGNALFX_REALM
+
+  influxdb:
+    enabled: yes
+    # Set to `yes` to deploy the Grafana/InfluxDB monitoring server. If set to
+    # `no`, you will need to supply InfluxDB details to which to send the
+    # metrics.
+    deploy: yes
+
+    # Where do you want to deploy the monitoring server?
+    region: 
+
+    # If deploy is set to `no`, the InfluxDB URL is required.
+    url: 
+
+    # These options can't be changed at the moment.
+    #database: tendermint
+    #username: tendermint
+
+    # What password should we use for InfluxDB? If not specified, a strong
+    # password will automatically be generated.
+    password: 
+
+# Allows you to specify different configurations of your ABCI application, each
+# with its own unique identifier. You can leave this section out completely if
+# you're going to be using one of the built-in apps (like the kvstore), or if
+# the binary you're deploying uses Tendermint as a library.
+abci:
+  # Each ABCI application configuration lists 3 Ansible playbooks: one for
+  # deploying your ABCI app, one for starting it, and one for stopping it.
+  # Each configuration allows for specifying extra Ansible variables using the
+  # extra_vars parameter. You can specify any number of variables here and they
+  # will be passed into your playbook during its execution.
+  myabciapp:
+    deploy:
+      playbook: ./myabciapp/deploy.yaml
+      extra_vars:
+        somevar: somevalue
+        othervar: 1234
+    start:
+      playbook: ./myabciapp/start.yaml
+    stop:
+      playbook: ./myabciapp/stop.yaml
+
+# The entry node_group_templates is not actually parsed - what's more important
+# here is to note that PyYAML supports YAML anchors and aliases, which
+# allow you to define templates in your YAML files.
+validators:
+    # If you want to deploy an official release of Tendermint, just specify
+    # a version number here and its binary will be deployed from GitHub.
+    binary: /path/to/binary
+
+    # What's the initial state of the Tendermint service? Can be "started" or
+    # "stopped".
+    service_state: started
+
+    # Leaving this out assumes you're either using a built-in ABCI
+    # application (like the kvstore) or your binary is built using Tendermint
+    # as a library.
+    abci:
+
+    # Are these nodes to be validators? (Default: yes)
+    validators: yes
+
+    # Are these nodes' details to be included in the `genesis.json` file?
+    # (Default: yes)
+    in_genesis: yes
+
+load_tests:
+  - load0:
+      # In future, `tm-load-test` will be supported. This will influence all of
+      # the following parameters.
+      method: tm-bench
+
+      # The number of VMs (running tm-bench) to start
+      client_nodes: 1
+
+      # A list of targets for this load test
+      targets:
+        # Can specify an entire group to connect to all endpoints
+        - my_validators
+        # Can specify a single node within a group
+        - late_joiner_validators[0]
+      
+      # The number of seconds for which to run the load test
+      time: 120
+      broadcast_tx_method: async
+      connections: 1
+      # The number of transactions per second to generate
+      rate: 1000
+      # The number of bytes to generate per transaction
+      size: 250

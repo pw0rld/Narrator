@@ -1,0 +1,7 @@
+wheel
+pyyaml
+ansible
+colorlog
+requests
+toml
+pytz
