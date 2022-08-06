@@ -185,7 +185,6 @@ int main(int argc, const char *argv[])
         boost::thread t1(secure_channel);
         mythread = &t1;
     }
-
     // Start the server
     server.Re_piplines_vector.reserve(sizeof(Re_piplines) * 1000);
     server.run_network();

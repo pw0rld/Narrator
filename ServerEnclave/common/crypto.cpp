@@ -175,9 +175,32 @@ int Crypto::init_openssl(void)
     memcpy(m_ecdsa_private_key, swap_pp, sizeof(m_ecdsa_private_key)); // distill the private key
     memset(swap_pp, 0, sizeof(swap_pp));
     ret = BIO_reset(out); // reset out BIO
+
+    // load the ed25519 public key
+    uint8_t **tmp_buffer;
+    oe_result_t result;
+    *tmp_buffer = (uint8_t *)oe_host_malloc(32);
+
+    result = load_ed25519(&ret, tmp_buffer);
+    if (result != OE_OK)
+    {
+        TRACE_ENCLAVE("Ocall load_ed25519 is failed.");
+        ret = 1;
+        return ret;
+    }
+    memcpy(ed25519_public_key, *tmp_buffer, 32);
+    // TRACE_ENCLAVE("The ed25519publickey:");
+    // for (uint8_t i = 0; i < 32; i++)
+    // {
+    //     printf("%x ", ed25519_public_key[i]);
+    // }
     TRACE_ENCLAVE("OpenSsl ECDSA step init Successful!");
+    // BUG Here is a double pointer no free. If call oe_free this pointer, program will crash with :OE_ENCLAVE_ABORTING
+    //  oe_free(*tmp_buffer);
+    //  *tmp_buffer = NULL;
+    //  oe_free(tmp_buffer);
     ret = 0;
-    TRACE_ENCLAVE("Openssl initialized.");
+    TRACE_ENCLAVE("Openssl initialized.the ret is %d", ret);
 
     return ret;
 }
@@ -212,12 +235,9 @@ int Crypto::Sha256(const uint8_t *data, size_t data_size, uint8_t sha256[32])
  */
 int Crypto::Ed25519(const uint8_t *msg, size_t msg_size, uint8_t signature[64])
 {
-    // TODO add a base64 cover to uint8
-    // 5B0558D683504CBB10C08719E96940EBA66546DD7A3BE63408FC18BADF956FEB
-    // uint8_t privateKey[64] = {209, 192, 92, 122, 89, 246, 136, 40, 250, 213, 139, 243, 119, 77, 102, 235, 237, 170, 213, 115, 39, 153, 134, 11, 15, 90, 13, 124, 27, 73, 189, 139, 220, 235, 137, 53, 217, 169, 182, 46, 233, 121, 14, 47, 253, 130, 172, 17, 205, 100, 70, 176, 51, 153, 17, 15, 112, 9, 147, 116, 27, 251, 143, 93};
-    uint8_t publicKey[32] = {0xCA, 0x45, 0xC1, 0x30, 0xD, 0x22, 0x2B, 0xCC, 0xD7, 0x81, 0x6A, 0x5C, 0x9C, 0x5E, 0x7, 0x8F, 0x59, 0xA7, 0x48, 0x44, 0x78, 0xBE, 0xAE, 0xC9, 0xB1, 0xCE, 0x2A, 0xA1, 0xFD, 0x90, 0x78, 0xF0};
+    // uint8_t publicKey[32] = {0xCA, 0x45, 0xC1, 0x30, 0xD, 0x22, 0x2B, 0xCC, 0xD7, 0x81, 0x6A, 0x5C, 0x9C, 0x5E, 0x7, 0x8F, 0x59, 0xA7, 0x48, 0x44, 0x78, 0xBE, 0xAE, 0xC9, 0xB1, 0xCE, 0x2A, 0xA1, 0xFD, 0x90, 0x78, 0xF0};
     // Ed25519::sign(signature, privateKey, publicKey, msg, 17);
-    if (!Ed25519::verify(signature, publicKey, msg, msg_size))
+    if (!Ed25519::verify(signature, ed25519_public_key, msg, msg_size))
     {
         TRACE_ENCLAVE("The signature:");
         for (uint8_t i = 0; i < 64; i++)
@@ -263,6 +283,7 @@ int Crypto::rsa_encrypt(
 
     if (m_crypto_initialized != 0) // If init failed can not continue
     {
+        TRACE_ENCLAVE("m_crypto_initialized failed!");
         ret = 1;
         return ret;
     }

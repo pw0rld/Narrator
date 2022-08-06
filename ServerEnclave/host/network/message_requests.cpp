@@ -385,6 +385,7 @@ string create_encrypted_aes_pk(oe_enclave_t *attester_enclaves, size_t uuid)
     if ((result != OE_OK) || (ret != 0))
     {
         cout << "[-]Local Re process create_encrypted_aes_pk failed.Peer (" << my_ip << ":" << to_string(my_port) << ") failed to obtain ase pk for secure communication channel." << endl;
+        exit(1);
         return "-1";
     }
 

@@ -20,11 +20,11 @@
 
 #include <openenclave/enclave.h>
 
-
 #include "log.h"
 #include <openenclave/enclave.h>
 #include <openssl/pem.h>
 #include <openenclave/corelibc/stdlib.h>
+#include "common/attestation_t.h"
 #include <openssl/evp.h>
 #include <openssl/ecdsa.h>
 #include <openssl/ecdh.h>
@@ -33,8 +33,6 @@
 #include <openssl/aes.h>
 #include <openssl/rsa.h>
 #include <openssl/bn.h>
-
-
 
 #define OE_RSA_PRIVATE_KEY_SIZE 2048
 #define PUBLIC_KEY_SIZE 512
@@ -50,7 +48,8 @@ private:
   uint8_t m_rsa_public_key[PUBLIC_KEY_SIZE];
   uint8_t m_rsa_private_key[OE_RSA_PRIVATE_KEY_SIZE];
   uint8_t m_aes_key[128];
-  uint8_t m_aes_iv[16] = {0}; /*initial iv value for aes*/
+  uint8_t m_aes_iv[16] = {0};           /*initial iv value for aes*/
+  uint8_t ed25519_public_key[32] = {0}; /*initial iv value for aes*/
   int m_crypto_initialized;
   // uint8_t m_other_ecdsa_pubkey[256];
   size_t uuid;
@@ -59,11 +58,10 @@ private:
   EC_KEY *eckey = NULL;
   BIO *out = NULL;
 
-
   RSA *rsa;
   BIGNUM *e;
-  BN_GENCB* gencb;
-  EVP_PKEY* pkey;
+  BN_GENCB *gencb;
+  EVP_PKEY *pkey;
   int out_len;
   int in_len;
   char swap_pp[2048];
@@ -71,15 +69,14 @@ private:
   AES_KEY AesKey;
   // char *Aes_Key;
   unsigned char Aes_Key[128];
-  unsigned char ivec[16];	
+  unsigned char ivec[16];
   BIGNUM *bn;
   // unsigned char in[10] = "11111111";
   // unsigned char aes_aout[10];
   // unsigned char iv[AES_BLOCK_SIZE] = {0};
-  unsigned char* rsa_out;
-  unsigned char* plainText;
+  unsigned char *rsa_out;
+  unsigned char *plainText;
   int padding = RSA_PKCS1_PADDING;
-
 
 public:
   Crypto();
@@ -125,7 +122,7 @@ public:
   }
 
   // copy aes key
-  //FIXME change to pointer
+  // FIXME change to pointer
   void copy_aes_key(uint8_t *aes_key)
   {
     memcpy(aes_key, m_aes_key, sizeof(m_aes_key));
@@ -213,9 +210,8 @@ public:
       size_t data_size,
       uint8_t *sign_data,
       size_t *sign_data_size);
-      
-private:
 
+private:
   // init_openssl initializes the crypto module.
   // int init_openssl(void);
   int init_openssl(void);

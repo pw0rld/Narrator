@@ -97,7 +97,6 @@ void system_init()
 			// generate AES key for secure communication
 			case SYSTEM_INIT_SECURE_CHANNEL:
 			{
-				cout << "something worry?" << endl;
 				if (ser->get_peer_wait_count(i) > 0)
 				{
 					ser->decrease_peer_wait_count(i);

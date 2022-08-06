@@ -506,7 +506,6 @@ int ecall_dispatcher::rsa_encrypt_and_sig_aes(
         TRACE_ENCLAVE("Dispatcher Info: encrypt aes key failed.");
         ret = 1;
         return ret;
-        ;
     }
     else
     {

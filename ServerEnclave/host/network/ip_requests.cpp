@@ -5,7 +5,7 @@
 
 extern string my_ip;
 extern uint32_t my_port;
-
+std::string tendermint_url = "http://10.20.61.124:26657";
 using namespace boost::archive::iterators;
 
 bool key_present(string key, map<string, int> &passed)
@@ -68,13 +68,10 @@ bool parse__process_msg(vector<std::string> sp, map<string, int> &passed, string
   sender_ip = sp[1];
   sender_port = safe_stoi(sp[2], pr);
   msg = sp[3];
-  // nb.parent         = safe_stoull(  sp[ 4], pr );
-  // nb.hash           = safe_stoull(  sp[ 5], pr );
 
   if (PRINT_TRANSMISSION_ERRORS && !(pr && sender_ip.size() > 0))
   {
     cout << "Could not get proper values of process_block" << endl;
-    // cout << pr << " " << sender_ip << " " << nb.chain_id << endl;
 
     for (int i = 1; i <= 5; i++)
       cout << sp[i] << endl;
@@ -333,7 +330,7 @@ int read_and_verify_tendermint(std::string data, oe_enclave_t *enclave)
   // Ledger.Read()
   int ret = 0;
   oe_result_t result = OE_OK;
-  std::string url = "http://localhost:26657/abci_query?data=\"" + data + "\"";
+  std::string url = tendermint_url + "/abci_query?data=\"" + data + "\"";
   std::string response_data = "";
   ret = get_url_response(url, response_data);
   if (ret)
@@ -344,11 +341,11 @@ int read_and_verify_tendermint(std::string data, oe_enclave_t *enclave)
 
   std::cout << "response_data " << response_data << std::endl;
   json j = json::parse(response_data);
-  std::string codespace = j["response"]["codespace"].dump(); // sync with tendermint return message
-  std::string log = j["response"]["log"].dump();
-  std::string height = j["response"]["height"].dump();
+  std::string codespace = j["result"]["response"]["codespace"].dump(); // sync with tendermint return message
+  std::string log = j["result"]["response"]["log"].dump();
+  std::string height = j["result"]["response"]["height"].dump();
   std::string signture = "";
-  std::string value = j["response"]["value"].dump();
+  std::string value = j["result"]["response"]["value"].dump();
   std::cout << "codespace " << codespace << std::endl;
   log = replace_all(log, "\"", "");
   height = replace_all(height, "\"", "");
@@ -447,7 +444,7 @@ bool write_tendermint(oe_enclave_t *enclave)
   string tendermint_data = publickey_id_s + sgx_uid_s + "22";
   cout << "tendermint_data " << tendermint_data << endl;
 
-  std::string url = "http://localhost:26657/broadcast_tx_commit?tx=\"" + tendermint_data + "\"";
+  std::string url = tendermint_url + "/broadcast_tx_commit?tx=\"" + tendermint_data + "\"";
   std::string response_data2 = "";
   ret = get_url_response(url, response_data2);
   free(publickey_id);

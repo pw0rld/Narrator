@@ -366,6 +366,7 @@ def network_info(
     **kwargs):
     # logger.info("Get node info")
     # TODO
+    pass
 
 
 

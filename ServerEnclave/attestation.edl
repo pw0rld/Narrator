@@ -188,6 +188,9 @@ enclave {
             size_t sealed_data_size,
             [out] unsigned char* sealed_data,
         );
+        int load_ed25519(
+            [out] uint8_t **ed25519_publickey
+        );
     };
 
 };

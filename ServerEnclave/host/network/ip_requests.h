@@ -23,4 +23,6 @@ int get_url_response(const std::string &url, std::string &out_response_data);
 
 int read_and_verify_tendermint(std::string data, oe_enclave_t *enclave);
 bool write_tendermint(oe_enclave_t *enclave);
+bool Base64Decode(const string &input, string *output);
+
 #endif
