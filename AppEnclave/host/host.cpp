@@ -43,63 +43,64 @@ using boost::asio::ip::tcp;
 using namespace std;
 using namespace std::chrono;
 
-string my_ip="badip";
+string my_ip = "badip";
 uint32_t my_port;
 mt19937 rng;
 unsigned long time_of_start;
 boost::thread *mythread;
-tcp_server *ser=NULL;
-oe_enclave_t* cl_enclave = NULL;
-bool is_system_init = false; 
+tcp_server *ser = NULL;
+oe_enclave_t *cl_enclave = NULL;
+bool is_system_init = false;
 
 // Input parmarers: argv1  enclave path; argv2 IP port; argv3 peer config; argv4 public ip addr; argv5 private ip addr
-int main(int argc, const char* argv[]){
+int main(int argc, const char *argv[])
+{
 
-    //create enclave from path
-    uint32_t flags = OE_ENCLAVE_FLAG_DEBUG; 
+    // create enclave from path
+    uint32_t flags = OE_ENCLAVE_FLAG_DEBUG;
     cl_enclave = create_enclave(argv[1], flags);
 
-    //Get my ip and port and setup server 
-    //TODO: remove 
-    //string ip = get_my_local_ip();
-    //my_ip = ip;
+    // Get my ip and port and setup server
+    // TODO: remove
+    // string ip = get_my_local_ip();
+    // my_ip = ip;
     uint32_t port = atoi(argv[2]);
     my_port = port;
     string some_ip = string(argv[3]);
-    if( split(some_ip,".").size() == 4 ){
+    if (split(some_ip, ".").size() == 4)
+    {
         my_ip = some_ip;
-        cout << "[+] Provided public ip and port: (" <<my_ip << ":" << port << ")." << endl;
+        cout << "[+] Provided public ip and port: (" << my_ip << ":" << port << ")." << endl;
     }
-    
-    //setup the server sevice
+
+    // setup the server sevice
     boost::asio::io_service io_service;
     tcp_server server(io_service, my_ip, my_port);
-    ser = &server;    
-    
+    ser = &server;
+
     Peer pr;
     pr.port = atoi(argv[4]);
     some_ip = string(argv[5]);
-    if( split(some_ip,".").size() == 4 ){
+    if (split(some_ip, ".").size() == 4)
+    {
         pr.ip = some_ip;
         cout << "[+] Provided server's ip and port: (" << pr.ip << ":" << pr.port << ")." << endl;
     }
     pr.connected = false;
-    server.add_peer(pr, false );
+    server.add_peer(pr, false);
 
-
-    //The thread to init system
+    // The thread to init system
     boost::thread t1(system_init);
     mythread = &t1;
 
-    //The thread to generate requests
-    boost::thread t2(state_requests);
-    mythread = &t2;
+    // //The thread to generate requests
+    // boost::thread t2(state_requests);
+    // mythread = &t2;
 
-    //Start the server
+    // Start the server
     server.run_network();
-    time_of_start = std::chrono::system_clock::now().time_since_epoch() /  std::chrono::milliseconds(1);
+    time_of_start = std::chrono::system_clock::now().time_since_epoch() / std::chrono::milliseconds(1);
     io_service.run();
-    
 
     pause();
 exit:

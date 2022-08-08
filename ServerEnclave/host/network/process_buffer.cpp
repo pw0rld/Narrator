@@ -466,6 +466,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       uint32_t sender_port = safe_stoi(sp[2], pr);
       int batch_group = safe_stoi(sp[5], pr);
       int index = ser->find_peer_index_by_ip_and_port(sender_ip, sender_port);
+      int uuid_index = ser->find_uuid_by_ip_and_port(sender_ip, sender_port);
       if (!(process_AE_Update_Return_Echo_verify(sp, se_enclaves)))
       {
         cout << "【WA】RE main Verify Failed!" << endl;
@@ -484,20 +485,26 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         now_time = ser->print_time();
         if (PRINT_ATTESTATION_MESSAGES)
           cout << "[+]Local Re Collected all of the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
-        string send_message = process_AE_Update_Return_Echo_genc_message(se_enclaves, index, sp[5]);
+        string send_message = process_AE_Update_Return_Echo_genc_message(se_enclaves, uuid_index, sp[5]);
         if (PRINT_ATTESTATION_MESSAGES)
           cout << "[+]Local Re genc Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
+        cout << "debug uuid_index " << uuid_index << " index " << index << endl;
         if (sp.size() > 6)
         {
+          cout << "debug1" << endl;
           for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
           {
-            if (it->round == 1 && stoi(sp[6]) == it->index)
+            cout << "debug2" << endl;
+            if (it->round == 1 && stoi(sp[5]) == it->index)
             {
+              cout << "debug3" << endl;
               it->round = 2;
               break;
             }
           }
+          cout << "debug4" << endl;
         }
+        cout << "debug5" << endl;
         for (map<int, string>::iterator it = ser->Re_tmp_quorum.begin(); it != ser->Re_tmp_quorum.end(); ++it)
         {
           ser->fetch_return_echo_messages(it->first, send_message);

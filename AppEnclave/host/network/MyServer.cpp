@@ -48,7 +48,7 @@ extern oe_enclave_t *cl_enclave;
 extern tcp_server *ser;
 extern mt19937 rng;
 
-//extern string my_ip;
+// extern string my_ip;
 bool established_token = false;
 std::mutex mtx;
 string folder_sessions = string(FOLDER_SESSIONS);
@@ -111,7 +111,7 @@ tcp_connection::tcp_connection(boost::asio::io_service &io_service)
 {
 }
 
-//tcp_server
+// tcp_server
 tcp_server::tcp_server(boost::asio::io_service &io_service, string ip, uint32_t port)
     : acceptor_(io_service, tcp::endpoint(tcp::v4(), port)), my_ip(ip), my_port(port), t(new boost::asio::deadline_timer(io_service)), bytes_received(0), bytes_txs_received(0)
 {
@@ -316,7 +316,7 @@ void tcp_server::run_network()
         }
 
         peers[i].session->socket().async_connect(*ep, [this, i](boost::system::error_code const &ec)
-        {
+                                                 {
           if (!ec)
           {
             if (i < peers.size())
@@ -334,8 +334,7 @@ void tcp_server::run_network()
           else
           {
             close_peer_connection(i);
-          }
-        });
+          } });
       }
     }
   }
@@ -374,23 +373,22 @@ void tcp_server::start_accept()
 int64_t tcp_server::print_time()
 {
 
-  std::chrono::milliseconds ms = std::chrono::duration_cast< std::chrono::milliseconds >(
-      std::chrono::system_clock::now().time_since_epoch()
-  );
+  std::chrono::milliseconds ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+      std::chrono::system_clock::now().time_since_epoch());
   // std::cout << ms.count() << std::endl;
-	// const boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
-	// const boost::posix_time::time_duration td = now.time_of_day();
-	// const long hours  = td.hours();
-	// const long minutes  = td.minutes();
-	// const long seconds  = td.seconds();
-	// const long milliseconds = td.total_milliseconds() - (hours * 3600 + minutes * 60 + seconds) * 1000;
-  return ms.count();  
+  // const boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
+  // const boost::posix_time::time_duration td = now.time_of_day();
+  // const long hours  = td.hours();
+  // const long minutes  = td.minutes();
+  // const long seconds  = td.seconds();
+  // const long milliseconds = td.total_milliseconds() - (hours * 3600 + minutes * 60 + seconds) * 1000;
+  return ms.count();
 }
-
 
 void tcp_server::handle_accept(tcp_connection::pointer new_connection, const boost::system::error_code &error)
 {
-  if (!error){
+  if (!error)
+  {
     string connecting_ip = new_connection->socket().remote_endpoint().address().to_string();
     if (REJECT_CONNECTIONS_FROM_UNKNOWNS && peer_ips.find(connecting_ip) == peer_ips.end())
     {
@@ -407,7 +405,7 @@ void tcp_server::handle_accept(tcp_connection::pointer new_connection, const boo
   start_accept();
 }
 
-//Send local attestation challenge to SE
+// Send local attestation challenge to SE
 void tcp_server::send_attestation_challenge()
 {
   string msg = create_attestation_local_format_setting(cl_enclave);
@@ -418,7 +416,7 @@ void tcp_server::send_attestation_challenge()
   }
 }
 
-//send encrypted aes key to SE
+// send encrypted aes key to SE
 void tcp_server::setup_secure_channel_to_server()
 {
   string msg = create_aes_channel(cl_enclave);
@@ -429,7 +427,7 @@ void tcp_server::setup_secure_channel_to_server()
   }
 }
 
-//init the state at SE if not setup previously
+// init the state at SE if not setup previously
 void tcp_server::send_client_requests(size_t message_type)
 {
   cout << "Start to send_client_requests.And milliseconds time is " << ser->print_time() << endl;
@@ -438,7 +436,7 @@ void tcp_server::send_client_requests(size_t message_type)
 
   if (msg.compare("-1") != 0)
   {
-    msg = "#AE_Update_Counter_Requests," + my_ip + "," + to_string(my_port) + "," + msg + ",";
+    msg = "#AE_Update_Counter_Requests," + my_ip + "," + to_string(my_port) + "," + msg + "," + to_string(ser->print_time()) + ",";
     peers[0]._strand->post(boost::bind(&tcp_server::strand_write, this, msg, 0));
     cout << "Create Send client requests over. And milliseconds time is " << ser->print_time() << endl;
   }
@@ -499,16 +497,15 @@ string tcp_server::get_server_ip()
   return peers[0].ip;
 }
 
-bool tcp_server::check_ip_and_port(string ip, uint32_t port){
-    if ((ip.compare(peers[0].ip) == 0) && (port == peers[0].port))
-      return true;
-    else 
-      return false;
-    
+bool tcp_server::check_ip_and_port(string ip, uint32_t port)
+{
+  if ((ip.compare(peers[0].ip) == 0) && (port == peers[0].port))
+    return true;
+  else
+    return false;
 }
 
 int tcp_server::get_peers_size()
 {
   return peers.size();
 }
-

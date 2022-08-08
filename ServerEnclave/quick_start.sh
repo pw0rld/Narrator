@@ -61,3 +61,6 @@ fi
 # #     /bin/rm $pi.txt
 # #     nohup ./host/attestation_host ./enclave/enclave_a.signed $pi ../host/network/_peers $ip >> $pi.txt &
 # # }
+
+
+# ./host/attestation_host ./enclave/enclave_a.signed 8093 10.16.55.3 8001 10.16.55.3

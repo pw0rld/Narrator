@@ -557,6 +557,8 @@ void tcp_server::fetch_return_echo_messages(uint32_t index, string message)
     return;
   }
   string msg = "#AE_Update_return_echo," + my_ip + "," + to_string(my_port) + "," + message + ",";
+  cout << "debug6 " << index << endl;
+  // BUG Usually segmentation fault
   peers[index]._strand->post(boost::bind(&tcp_server::strand_write, this, msg, index));
 }
 // INFO ROTE

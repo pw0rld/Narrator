@@ -583,21 +583,21 @@ bool process_AE_Update_Counter(vector<std::string> sp, oe_enclave_t *attester_en
         return false;
     }
     ae_queues aq;
+    cout << "sp:" << sp[4] << " " << sp[5] << " " << endl;
     cout << "?啥问题" << sp.size() << endl;
     // memcpy(aq.encrypt_data, encrypt_data, encrypt_data_size);
     aq.encrypt_data_size = 0;
     aq.uuid = uuid;
     aq.first_connect = false;
     aq.index_time = sp[5];
-    aq.timestamp = sp[6];
+    aq.timestamp = sp[5];
     aq.round = 1;
-    aq.index = stoi(sp[5]);
-    for (size_t i = 0; i < 1; i++)
+    aq.index = (uuid);             // TODO index也好像不知道干什么这一块有点混乱,这一处需要重写。
+    for (size_t i = 0; i < 1; i++) //一个当50
     {
         if (PRINT_ATTESTATION_MESSAGES)
             cout << "[+]Local Re push ae requests into queue .The requests id is " << sp[5] << " Time is " << ser->print_time() << endl;
-
-        ser->ae_queues_vector.push_back(aq); //一个当50
+        ser->ae_queues_vector.push_back(aq);
     }
 
     return true;
@@ -755,6 +755,8 @@ string process_AE_Update_Return_Echo_genc_message(oe_enclave_t *attester_enclave
         cout << "[-]Local Re process_AE_Update_Return_Echo_genc_message failed. Re main return echo step 2 ecdsa signed is failed" << endl;
         return message;
     }
+    if (PRINT_ATTESTATION_MESSAGES)
+        cout << "[+process_AE_Update] Local Re Process Batch.Finish `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << RE_uuid << endl;
     string encrypt_data_string = uint8_to_hex_string(encrypt_data, encrypt_data_size);
     // string ecdsa_sigature_string = uint8_to_hex_string(ecdsa_sigature, ecdsa_sigature_size);
     message = encrypt_data_string + ",null," + uuid;
@@ -795,6 +797,8 @@ string process_AE_Update_Final_Echo(vector<std::string> sp, oe_enclave_t *attest
         cout << "[-]Local Re process_AE_Update_Final_Echo failed.Peer (" << my_ip << ":" << to_string(my_port) << ") failed to decrypt ecdsa-pk from peer (" << sender_ip << ":" << to_string(sender_port) << ")." << endl;
         return message;
     }
+    if (PRINT_ATTESTATION_MESSAGES)
+        cout << "[+process_AE_Update_Final] Local Re Process Batch.Finish `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << uuid << endl;
     string encrypt_data_string = uint8_to_hex_string(encrypt_data, encrypt_data_size);
     string ecdsa_sigature_string = uint8_to_hex_string(ecdsa_sigature, ecdsa_sigature_size);
     message = encrypt_data_string + "," + ecdsa_sigature_string + "," + sp[5];

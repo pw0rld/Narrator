@@ -57,7 +57,8 @@ extern unsigned long time_of_start;
 
 #define max_lengths (32 * 1024 * 1024) // max length of receiving buffer
 
-class tcp_connection : public boost::enable_shared_from_this<tcp_connection>{
+class tcp_connection : public boost::enable_shared_from_this<tcp_connection>
+{
 public:
   typedef boost::shared_ptr<tcp_connection> pointer;
   static pointer create(boost::asio::io_service &io_service);
@@ -93,7 +94,8 @@ typedef tcp::socket *bpv;
 class tcp_server
 {
 public:
-  //network funtions
+  // network funtions
+  bool isRequestPending = false;
   tcp_server(boost::asio::io_service &io_service, string ip, uint32_t port);
   void add_peer(Peer p, bool is_connected);
   void add_indirect_peer_if_doesnt_exist(string p);
@@ -106,7 +108,7 @@ public:
   void add_bytes_received(uint32_t br, uint32_t mbr);
   bool add_ping(string tt, int dnext, bool overwrite);
   void write_to_all_peers(string message);
-  //used funtion
+  // used funtion
   uint32_t get_server_port();
   string get_server_ip();
   void setup_secure_channel_to_server();
@@ -117,6 +119,7 @@ public:
   bool is_server_connected();
   void reply_aes_secure_channel_to_peer(uint32_t index);
   int64_t print_time();
+
 private:
   void start_accept();
   void handle_accept(tcp_connection::pointer new_connection, const boost::system::error_code &error);
@@ -124,7 +127,7 @@ private:
   void write(int index);
   void strand_write(string message, int index);
   void strand_proceed(int index);
-  //ip info
+  // ip info
   string my_ip;
   uint32_t my_port;
   tcp::acceptor acceptor_;

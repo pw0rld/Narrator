@@ -33,32 +33,34 @@
 
 using namespace std;
 extern tcp_server *ser;
-extern oe_enclave_t* cl_enclave;
+extern oe_enclave_t *cl_enclave;
 extern string my_ip;
-extern uint32_t my_port; 
-extern bool is_system_init; 
-bool isRequestPending = false; 
+extern uint32_t my_port;
+extern bool is_system_init;
 void state_requests()
 {
-	//periodically run the thread to execute system setup
-	try{
+	// periodically run the thread to execute system setup
+	try
+	{
 		boost::this_thread::sleep(boost::posix_time::milliseconds(EXPECTED_REQUESTS_INTERVEL_IN_MILLISECONDS));
 	}
-	catch (boost::thread_interrupted){
+	catch (boost::thread_interrupted)
+	{
 		state_requests();
 	}
-	
-	//if the system is initialized and no pending requests, then generate state update requests 
-	if(is_system_init == true && isRequestPending == false){
+
+	// if the system is initialized and no pending requests, then generate state update requests
+	if (is_system_init == true && ser->isRequestPending == false)
+	{
 		ser->send_client_requests(STATE_UPDATE);
-		isRequestPending = true;
+		ser->isRequestPending = true;
 		if (PRINT_STATES_MESSAGES)
-        {
-            std::cout << "Peer (" << my_ip << ":" << my_port << ") send state-update request to server (" << ser->get_server_ip() << ":" << ser->get_server_port() << ")." << std::endl;
-        }
+		{
+			std::cout << "Peer (" << my_ip << ":" << my_port << ") send state-update request to server (" << ser->get_server_ip() << ":" << ser->get_server_port() << ")." << std::endl;
+		}
 	}
 
 	state_requests();
-	
+
 	return;
 }

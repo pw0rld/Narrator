@@ -1489,11 +1489,11 @@ int ecall_dispatcher::ecdsa_signed(size_t uuid,
 {
     int ret = 1;
     string message = "";
-    uint8_t *sig_message;
+    uint8_t sig_message[64];
     string tmp;
     size_t sig_size;
     uint8_t *encrypt_buffer;
-    size_t encrypt_buffer_size;
+    size_t encrypt_buffer_size = 0;
     vector<peer_info_t>::iterator it;
     vector<Local_AE_counter_table>::iterator it_local;
     // check whether the RE
@@ -1501,10 +1501,13 @@ int ecall_dispatcher::ecdsa_signed(size_t uuid,
     if (it == peer_info_vec2.end())
     {
         // Can not find the RE
+        for (size_t i = 0; i < peer_info_vec2.size(); i++)
+        {
+            TRACE_ENCLAVE("UUID peer is %d", peer_info_vec2[i].uuid);
+        }
         TRACE_ENCLAVE("Can not find RE!!Please check attestation part! %zu", uuid);
-        //         ret = 1;
+        ret = 1;
         return ret;
-        ; // FIXME Send ae uuid or re uuid?
     }
     // 0 is first ECHO
     // 1 is returned ECHO
@@ -1543,11 +1546,13 @@ int ecall_dispatcher::ecdsa_signed(size_t uuid,
 
         break;
     }
-    // encrypt_buffer = (uint8_t *)malloc();
+    encrypt_buffer = (uint8_t *)malloc(sizeof(sig_message) + 150); // TODO 如何计算encrypt buffer的大小
     ret = m_crypto->aes_encrypt(sig_message, sizeof(sig_message), encrypt_buffer, &encrypt_buffer_size, Re_persistent_state_table.m_aes_key);
     *encrypt_data = (uint8_t *)oe_host_malloc(encrypt_buffer_size);
     memcpy(*encrypt_data, encrypt_buffer, encrypt_buffer_size);
     *encrypt_data_size = encrypt_buffer_size;
+    free(encrypt_buffer);
+    encrypt_buffer = NULL;
     ret = 0;
     return ret;
 };

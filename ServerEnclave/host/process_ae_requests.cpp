@@ -76,14 +76,14 @@ void process_ae_requests()
             {
                 control_wait--;
                 if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+] Local Re Process Batch.This requests index is " << index_re << " AE requests id is " << ae_index_covert_v << " and now batch process vector size is " << vector_queue_size << " and batch vector size is " << ser->ae_queues_vector.size() << " Time is " << ser->print_time() << endl;
+                    cout << "[+Ae] Local Re Process Batch.This requests index is " << index_re << " AE requests id is " << ae_index_covert_v << " and now batch process vector size is " << vector_queue_size << " and batch vector size is " << ser->ae_queues_vector.size() << " Time is " << ser->print_time() << endl;
             }
             if (batch_turnon && vector_queue_size > 0)
             {
                 control_wait = 15;
                 ae_index_covert = ae_index_covert - vector_queue_size;
                 if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+] Local Re Process Batch.Into If branch. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                    cout << "[+Ae] Local Re Process Batch.Into If branch. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 ret = 1;
                 temp_queue_vector.clear();
                 ser->ae_queues_vector_size.push_back(vector_queue_size);
@@ -92,7 +92,7 @@ void process_ae_requests()
                     if (ser->ae_queues_vector.front().encrypt_data_size > 2048)
                     {
                         if (PRINT_ATTESTATION_MESSAGES)
-                            cout << "[-]Local Re Process Batch error.Error size is more bigger!!" << endl;
+                            cout << "[-Ae]Local Re Process Batch error.Error size is more bigger!!" << endl;
                         continue;
                     }
                     memcpy(temp_queue.encrypt_data, ser->ae_queues_vector.front().encrypt_data, ser->ae_queues_vector.front().encrypt_data_size);
@@ -102,10 +102,10 @@ void process_ae_requests()
                     ae_queues temp_test;
                     temp_test.index = ser->ae_queues_vector.front().index;
                     temp_test.uuid = ser->ae_queues_vector.front().uuid;
-                    temp_test.index_time = ser->ae_queues_vector.front().index_time;
+                    temp_test.index_time = ser->ae_queues_vector.front().index_time; //这块好像没用到?
                     temp_test.timestamp = ser->ae_queues_vector.front().timestamp;
 
-                    cout << "[+] Local Re Process Batch.Process If branch. This requests index is " << ser->print_time() << " and id is " << temp_test.index << endl;
+                    cout << "[+Ae] Local Re Process Batch.Process If branch. This requests index is " << ser->print_time() << " and id is " << temp_test.index << endl;
                     ser->ae_queues_vector_process.push(temp_test);
                     ser->ae_queues_vector.erase(ser->ae_queues_vector.begin());
                 }
@@ -115,10 +115,10 @@ void process_ae_requests()
                 memcpy(temp_data_buffer, &temp_queue_vector, temp_queue_size);
                 int64_t new_time = ser->print_time();
                 if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+] Local Re Process Batch.Ready Into `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                    cout << "[+Ae] Local Re Process Batch.Ready Into `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 result = updateLocalASECounterTable(se_enclave, &ret, -1, temp_data_buffer, temp_queue_size);
                 if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+] Local Re Process Batch.Finish `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                    cout << "[+Ae] Local Re Process Batch.Finish `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 free(temp_data_buffer);
                 temp_data_buffer = NULL;
                 if (ret == 0)
@@ -126,22 +126,22 @@ void process_ae_requests()
                     uint8_t *encrypt_data;
                     size_t encrypt_data_size;
                     if (PRINT_ATTESTATION_MESSAGES)
-                        cout << "[+] Local Re Process Batch.Ready Into `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                        cout << "[+Ae] Local Re Process Batch.Ready Into `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
 
-                    result = ecdsa_signed(se_enclave, &ret, 0, 3, nullptr, 0, &encrypt_data, &encrypt_data_size);
+                    result = ecdsa_signed(se_enclave, &ret, 2, 3, nullptr, 0, &encrypt_data, &encrypt_data_size); // BUG
                     if ((result != OE_OK) || (ret != 0))
                     {
-                        cout << "[-]Local Re Process Batch error.Something failed for updateLocalASECounterTable batch " << endl;
+                        cout << "[-Ae]Local Re Process Batch error.Something failed for updateLocalASECounterTable batch " << endl;
                         return;
                     }
                     if (PRINT_ATTESTATION_MESSAGES)
-                        cout << "[+] Local Re Process Batch.Finish `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                        cout << "[+Ae] Local Re Process Batch.Finish ae `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
 
                     string encrypt_data_string = uint8_to_hex_string(encrypt_data, encrypt_data_size);
                     message = encrypt_data_string + ",1";
                     message += "," + to_string(index_re);
                     if (PRINT_ATTESTATION_MESSAGES)
-                        cout << "[+] Local Re Process Batch.Ready to send peer RE. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                        cout << "[+Ae] Local Re Process Batch.Ready to send peer RE. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                     for (map<int, map<string, uint32_t>>::iterator it = ser->Re_Peers.begin(); it != ser->Re_Peers.end(); ++it)
                     {
                         string sender_ip = (it->second).begin()->first;
@@ -181,7 +181,7 @@ void process_ae_requests()
                     free(encrypt_data);
                     encrypt_data = NULL;
                     if (PRINT_ATTESTATION_MESSAGES)
-                        cout << "[+] Local Re Process Batch.Finish send peer RE. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                        cout << "[+Ae] Local Re Process Batch.Finish send peer RE. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                     index_re++;
                 }
             }
