@@ -42,19 +42,6 @@ extern string my_ip;
 extern uint32_t my_port;
 extern string my_role;
 
-// string &replace_all(string &str, const string &old_value, const string &new_value)
-// {
-//   while (true)
-//   {
-//     string::size_type pos(0);
-//     if ((pos = str.find(old_value)) != string::npos)
-//       str.replace(pos, old_value.length(), new_value);
-//     else
-//       break;
-//   }
-//   return str;
-// }
-
 void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
 {
   size_t pos_h = m.find("#");

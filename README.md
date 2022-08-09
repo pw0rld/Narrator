@@ -120,3 +120,16 @@ cd tendermint_core
 make install_abci
 make build
 ```
+
+## Start 
+At first, your should setup the tendermint network.
+
+```Bash
+
+./host/attestation_host ./enclave/enclave_a.signed 8001 ../host/network/_peers 192.168.1.107 # ServerEnclave
+
+./host/attestation_host ./enclave/enclave_a.signed 8003 192.168.1.107 8001 192.168.1.107 # APPEnclave
+
+```
+
+The configuration of `./host/network/_peers` is about the Narrator peers. 
