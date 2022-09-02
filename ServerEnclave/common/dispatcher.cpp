@@ -1454,6 +1454,7 @@ int ecall_dispatcher::updateLocalASECounterTable(size_t AE_uuid, uint8_t *ITHash
         return 1;
     }
     memcpy(Re_persistent_state_table.ITHash, tempHash, 32);
+    // INFO POLICY_UNIQUE is 1 and POLICY_PRODUCT is 2
     ret = acceptNewState(1); // Seal the last status
     if (ret != 0)
     {
