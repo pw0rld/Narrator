@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Set narrator service to desired state
+      service: "name=narrator state={{ state }}"

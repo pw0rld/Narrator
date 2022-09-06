@@ -157,7 +157,7 @@ def ansible_deploy_tendermint(
         )
         i += 1
 
-
+    print(workdir)
     inventory_file = os.path.join(workdir, "inventory")
     save_ansible_inventory(inventory_file, inventory)
     extra_vars_file = os.path.join(workdir, "extra-vars.yaml")
@@ -219,31 +219,6 @@ def ansible_fetch_logs(
         os.path.join("ansible", "fetch-logs.yaml"),
     ])
 
-def load_test_config(filename: str) -> TestConfig:
-    """Loads the configuration from the given file. Throws an exception if any
-    validation fails. On success, returns the configuration."""
-
-    # resolve the tmtest home folder path
-    tmtest_home = os.path.expanduser(TMTEST_HOME)
-    # ensure_path_exists(tmtest_home)
-    if not os.path.isdir(tmtest_home):
-        os.makedirs(tmtest_home, mode=0o755, exist_ok=True)
-        logger.debug("Created folder: %s", tmtest_home)
-    with open(filename, "rt") as f:
-        cfg_dict = yaml.safe_load(f)
-    
-    if "id" not in cfg_dict:
-        raise Exception("Missing required \"id\" parameter in configuration file")
-
-    config_base_path = os.path.dirname(os.path.abspath(filename))
-    return TestConfig(
-        id=cfg_dict["id"],
-        # monitoring=load_monitoring_config(cfg_dict.get("monitoring", dict())),
-        # abci=load_abci_configs(cfg_dict.get("abci", dict()), config_base_path),
-        # node_groups=load_node_groups_config(cfg_dict.get("node_groups", []), config_base_path, abci_config),
-        # load_tests=load_load_tests_config(cfg_dict.get("load_tests", [])),
-        home=tmtest_home,
-    )
 
 class CommonTendermintClass():
     def __init__(self,cfg_file):

@@ -1,0 +1,13 @@
+---
+# Ansible playbook for deploying Tendermint nodes
+- hosts: all
+  become: yes
+  become_user: root
+  vars:
+    # For this script to work, you need a `node_groups` variable whose entries
+    # correspond to the configurations for each and every node group you want to
+    # deploy.
+    copy_node_config: yes
+    truncate_logs: yes
+  roles:
+    - narrator

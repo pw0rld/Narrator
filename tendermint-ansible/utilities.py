@@ -72,9 +72,38 @@ TendermintNodeKey = namedtuple("TendermintNodeKey",
 )
 
 AnsibleInventoryEntry = namedtuple("AnsibleInventoryEntry",
-    ["alias", "ansible_host", "node_id"],
-    defaults=[None, None, None],
+    ["alias", "ansible_host", "node_id","port"],
+    defaults=[None, None, None,None],
 )
+
+
+def load_test_config(filename: str) -> TestConfig:
+    """Loads the configuration from the given file. Throws an exception if any
+    validation fails. On success, returns the configuration."""
+
+    # resolve the tmtest home folder path
+    tmtest_home = os.path.expanduser(TMTEST_HOME)
+    # ensure_path_exists(tmtest_home)
+    if not os.path.isdir(tmtest_home):
+        os.makedirs(tmtest_home, mode=0o755, exist_ok=True)
+        logger.debug("Created folder: %s", tmtest_home)
+    with open(filename, "rt") as f:
+        cfg_dict = yaml.safe_load(f)
+    
+    if "id" not in cfg_dict:
+        raise Exception("Missing required \"id\" parameter in configuration file")
+
+    config_base_path = os.path.dirname(os.path.abspath(filename))
+    return TestConfig(
+        id=cfg_dict["id"],
+        # monitoring=load_monitoring_config(cfg_dict.get("monitoring", dict())),
+        # abci=load_abci_configs(cfg_dict.get("abci", dict()), config_base_path),
+        # node_groups=load_node_groups_config(cfg_dict.get("node_groups", []), config_base_path, abci_config),
+        # load_tests=load_load_tests_config(cfg_dict.get("load_tests", [])),
+        home=tmtest_home,
+    )
+
+
 
 def configure_env_var_yaml_loading(fail_on_missing=False):
     for matcher in ENV_VAR_MATCHERS:
@@ -166,6 +195,8 @@ def save_ansible_inventory(filename: str, inventory: OrderedDictType[str, List])
                         line += " ansible_host=%s" % entry.ansible_host
                     if entry.node_id is not None:
                         line += " node_id=%s" % entry.node_id
+                    if entry.port is not None:
+                        line += " port=%s" % entry.port
                     line += " ansible_ssh_user=root"
                     f.write("%s\n" % line)
                 else:

@@ -1,0 +1,22 @@
+[Unit]
+Description={{ service_name }}
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User={{ service_user }}
+Group={{ service_name }}
+PermissionsStartOnly=true
+ExecStart={{ dest_source }}/ServerEnclave/build/host/attestation_host {{ dest_source }}/ServerEnclave/build/enclave/enclave_a.signed {{ port }} {{ dest_source }}/ServerEnclave/host/network/_peers {{ ansible_host }}
+KillSignal=SIGTERM
+LimitAS=infinity
+LimitRSS=infinity
+LimitCORE=infinity
+LimitNOFILE=65536
+LimitMEMLOCK=infinity
+StandardOutput=file:/var/log/narrator.log
+StandardError=file:/var/log/narrator.log
+
+[Install]
+WantedBy=multi-user.target

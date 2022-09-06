@@ -1,0 +1,44 @@
+# Playbook for helping to deploy Tendermint
+---
+- name: Ensure service group exists
+  group:
+    name: "{{ service_group }}"
+    state: present
+
+- name: Ensure service user exists
+  user:
+    name: "{{ service_user }}"
+    shell: "{{ service_user_shell }}"
+    home: "/root"
+    group: "{{ service_group }}"
+
+- name: Sync the narrator core across to the server
+  synchronize:
+    src: "{{ src_source }}"
+    dest: "{{ dest_source }}"
+    
+
+- name: Ensure correct service binary permissions
+  file:
+    path: "{{ dest_source }}"
+    mode: 777
+
+
+- name: Clean history narrator build
+  become: no
+  action: "command chdir={{ dest_source }}/ServerEnclave rm build -rf"
+- name: Set the build env narrator
+  become: no
+  action: "command chdir={{ dest_source }}/ServerEnclave mkdir build"
+- name: Genc make file of narrator 
+  become: no
+  action: "command chdir={{ dest_source }}/ServerEnclave/build cmake .."
+- name: make 
+  become: no
+  action: "command chdir={{ dest_source }}/ServerEnclave/build make -j4"
+- name: Ensure systemd service is present
+  template:
+    src: "{{ service_template }}"
+    dest: "/etc/systemd/system/{{ service_name }}.service"
+- name: Reload systemd
+  systemd: daemon_reload=yes

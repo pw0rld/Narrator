@@ -3,6 +3,7 @@
 Test kit for Tendermint testnet
 """
 from CommonTendermint import *
+from CommonNarrator import *
 
 def main():
     parser = argparse.ArgumentParser(
@@ -140,7 +141,7 @@ def main():
 
     # narrator network deploy
     parser_narrator_deploy = parser_narrator_network.add_parser(
-        "deploy_narrator", 
+        "deploy", 
         help="Deploy narrator network according to its configuration file",
     )
     parser_narrator_deploy.add_argument(
@@ -148,6 +149,12 @@ def main():
         action="store_true",
         help="If this flag is specified and configuration is already present for a particular node group, it will not be overwritten/regenerated",
     )
+    # narrator network start
+    parser_narrator_start = parser_narrator_network.add_parser(
+        "start", 
+        help="start narrator network",
+    )
+
 
     args = parser.parse_args()
 
@@ -179,6 +186,7 @@ def tmtest(cfg_file, command, subcommand, **kwargs) -> int:
     from execution."""
     try:
         tendermint_class = CommonTendermintClass(cfg_file)
+        narrator_class = CommonNarratorClass(cfg_file)
     except Exception as e:
         logger.error("Failed to load configuration from file: %s", cfg_file)
         logger.exception(e)
@@ -203,9 +211,10 @@ def tmtest(cfg_file, command, subcommand, **kwargs) -> int:
                 fn = network_info
         elif command == "narrator":
             if subcommand == "deploy":
-                fn = network_deploy_narrator
+                fn = narrator_class.network_sync_narrator_core()
                 pass
             if subcommand == "start":
+                fn = narrator_class.network_deploy_narrator("started")
                 pass
             if subcommand == "stop":
                 pass
