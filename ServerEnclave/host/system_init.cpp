@@ -55,7 +55,7 @@ void system_init()
 
 		bool is_system_init_finished = false;
 		bool ready_setup_pki = true;
-		bool self_tendermint_flag = true;
+		// bool self_tendermint_flag = false;
 		int check_tendermint_counter = 0;
 		// iterate for each SE peer to do remote attestation
 		for (uint32_t i = 0; i < ser->get_peers_size(); i++)
@@ -138,7 +138,7 @@ void system_init()
 			{
 				if (ser->isPKISetup()) // make sure all peer send its PKI key to master peer
 				{
-					if (self_tendermint_flag)
+					if (ser->self_tendermint_flag)
 					{
 						std::cout << "Now enter the blockchain setp" << std::endl;
 						string tendermint_data = read_other_info(se_enclave);
@@ -165,7 +165,7 @@ void system_init()
 				}
 				else
 				{
-					std::cout << "Master send pki failed. " << std::endl;
+					// std::cout << "Master send pki failed. " << std::endl;
 					break;
 				}
 			}
@@ -174,26 +174,36 @@ void system_init()
 			{
 				// This setp will check tendermint chain that is exists the peer record or not exists
 				// Master will cycle check
-				if (checkTendermintSetup(ser->get_peer_uuid(i), se_enclave) == true) // make sure all peer send its PKI key to master peer
+				if (ser->self_tendermint_flag)
 				{
-					check_tendermint_counter++;
-				}
-				else
-				{
-					cout << "checkTendermintSetup failed!!!!" << endl;
-					exit(1);
+					if (checkTendermintSetup(ser->get_peer_uuid(i), se_enclave) == true) // make sure all peer send its PKI key to master peer
+					{
+						check_tendermint_counter++;
+					}
+					else
+					{
+						cout << "checkTendermintSetup failed!!!!" << endl;
+						exit(1);
+					}
 				}
 			}
 			// complete the init process
 			case SYSTEM_INIT_DONE:
 			{
 				// The setp is the finally setp, in this step will check tendermint record.
-				if (check_tendermint_counter == ser->Re_Peers.size())
+				if (ser->self_tendermint_flag)
 				{
-					cout << "SYSTEM_INIT_DONE Finish" << endl;
+					if (check_tendermint_counter == ser->Re_Peers.size())
+					{
+						cout << "SYSTEM_INIT_DONE Finish" << endl;
+						is_system_init_finished = true;
+						check_tendermint_counter = 0;
+						break;
+					}
+				}
+				else
+				{
 					is_system_init_finished = true;
-					check_tendermint_counter = 0;
-					break;
 				}
 			}
 			default:

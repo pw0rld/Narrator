@@ -20,7 +20,7 @@
 #include <openenclave/attestation/sgx/report.h>
 #include <openenclave/attestation/verifier.h>
 #include <openenclave/enclave.h>
-//transfer uint8 to string
+// transfer uint8 to string
 std::string uint8_to_hex_string(const uint8_t *v, const size_t s)
 {
     std::stringstream ss;
@@ -32,7 +32,7 @@ std::string uint8_to_hex_string(const uint8_t *v, const size_t s)
     return ss.str();
 }
 
-//transfer string to uint8,and save results in vector
+// transfer string to uint8,and save results in vector
 std::vector<uint8_t> hex_string_to_uint8_vec(const string &hex)
 {
     std::vector<uint8_t> bytes;
@@ -45,10 +45,10 @@ std::vector<uint8_t> hex_string_to_uint8_vec(const string &hex)
     return bytes;
 }
 
-/** 
- * @brief transfer sting that contains ascii synmbols to uint8 
- * @param hex 
- * @return std::vector<uint8_t> 
+/**
+ * @brief transfer sting that contains ascii synmbols to uint8
+ * @param hex
+ * @return std::vector<uint8_t>
  */
 std::vector<uint8_t> hex_string_to_uint8_vec_version2(const string &hex)
 {
@@ -73,17 +73,17 @@ std::string uint8_to_hex_string_version2(const uint8_t *v, const size_t s)
 }
 
 /**
- * @brief split the input string 
- * @param str 
- * @param delim 
- * @return vector<string> 
+ * @brief split the input string
+ * @param str
+ * @param delim
+ * @return vector<string>
  */
 vector<string> split(const string &str, const string &delim)
 {
     vector<string> res;
     if ("" == str)
         return res;
-    //covert string to char array
+    // covert string to char array
     char *strs = new char[str.length() + 1];
     strcpy(strs, str.c_str());
 
@@ -102,8 +102,8 @@ vector<string> split(const string &str, const string &delim)
 
 /**
  * @brief init ecall_dispatcher
- * @param name 
- * @param enclave_config 
+ * @param name
+ * @param enclave_config
  */
 ecall_dispatcher::ecall_dispatcher(
     const char *name,
@@ -112,7 +112,7 @@ ecall_dispatcher::ecall_dispatcher(
 {
     m_enclave_config = enclave_config;
     m_initialized = initialize(name);
-    //TRACE_ENCLAVE("Crypto Init %d.", m_initialized);
+    // TRACE_ENCLAVE("Crypto Init %d.", m_initialized);
 }
 
 ecall_dispatcher::~ecall_dispatcher()
@@ -141,7 +141,7 @@ bool ecall_dispatcher::initialize(const char *name)
     }
 
     other_enclave_signer_id_size = sizeof(m_other_enclave_signer_id);
-    result = oe_get_report_v2(0, NULL, 0, NULL, 0, &report, &report_size); //obtain my mrenclave
+    result = oe_get_report_v2(0, NULL, 0, NULL, 0, &report, &report_size); // obtain my mrenclave
     if (result != OE_OK)
     {
         TRACE_ENCLAVE("Error: oe_get_report_v2 failed.(%s)", oe_result_str(result));
@@ -172,7 +172,7 @@ exit:
  * @brief obtain encalve's format_setting
  * @param format_id local or remote attestation
  * @param format_settings_buffer the buffer for storing format_setting
- * @param format_settings_buffer_size 
+ * @param format_settings_buffer_size
  * @return success: 0  failure: 1
  */
 int ecall_dispatcher::get_enclave_format_settings(
@@ -234,13 +234,13 @@ exit:
 
 /**
  * @brief Generate attestation evidence and one pair of rsa keys
- * @param format_id 
- * @param format_settings 
- * @param format_settings_size 
- * @param pem_key 
- * @param pem_key_size 
- * @param evidence_buffer 
- * @param evidence_buffer_size 
+ * @param format_id
+ * @param format_settings
+ * @param format_settings_size
+ * @param pem_key
+ * @param pem_key_size
+ * @param evidence_buffer
+ * @param evidence_buffer_size
  * @return success: 0 failure 1
  */
 int ecall_dispatcher::get_evidence_with_public_key(
@@ -308,7 +308,7 @@ int ecall_dispatcher::get_evidence_with_public_key(
         TRACE_ENCLAVE("Error: copying key_buffer failed, out of memory");
         goto exit;
     }
-    //m_crypto->copy_rsa_public_key(key_buffer);
+    // m_crypto->copy_rsa_public_key(key_buffer);
     memcpy(key_buffer, m_rsa_public_key, sizeof(m_rsa_public_key));
     *pem_key = key_buffer;
     *pem_key_size = sizeof(m_rsa_public_key);
@@ -334,12 +334,12 @@ exit:
 
 /**
  * @brief verify receiving local or remote evidence and set rsa public key
- * @param format_id 
+ * @param format_id
  * @param pem_key rsa的public key
- * @param pem_key_size 
- * @param evidence 
- * @param evidence_size 
- * @return Success: 0  Failure: 1 
+ * @param pem_key_size
+ * @param evidence
+ * @param evidence_size
+ * @return Success: 0  Failure: 1
  */
 int ecall_dispatcher::verify_evidence(
     const oe_uuid_t *format_id,
@@ -353,7 +353,6 @@ int ecall_dispatcher::verify_evidence(
     uint8_t encrypt_data[1024];
     size_t encrypt_data_size;
 
-    
     if (m_initialized != 0)
     {
         TRACE_ENCLAVE("Error: ecall_dispatcher initialization failed.");
@@ -366,7 +365,7 @@ int ecall_dispatcher::verify_evidence(
         TRACE_ENCLAVE("Error: verify_evidence_and_set_public_key failed.");
         goto exit;
     }
-    m_crypto->copy_other_rsa_key(pem_key, pem_key_size); 
+    m_crypto->copy_other_rsa_key(pem_key, pem_key_size);
 
     if (PRINT_DISPATCH_MESSAGES)
     {
@@ -379,10 +378,10 @@ exit:
 }
 
 /**
- * @brief compare two componets 
- * @param rsa_public_key1              
- * @param rsa_public_key2           
- * @param rsa_public_key_size 
+ * @brief compare two componets
+ * @param rsa_public_key1
+ * @param rsa_public_key2
+ * @param rsa_public_key_size
  * @return  Equal true   unequal false
  */
 bool ecall_dispatcher::compare_rsa_key(
@@ -403,12 +402,11 @@ bool ecall_dispatcher::compare_rsa_key(
     return ret;
 }
 
-
 /** use rsa key to encrypt aes key
- * @brief 
- * @param sig_aes_data 
- * @param sig_aes_data_size 
- * @return int 
+ * @brief
+ * @param sig_aes_data
+ * @param sig_aes_data_size
+ * @return int
  */
 int ecall_dispatcher::rsa_encrypt_aes_key(
     uint8_t **encrypt_aes_data,
@@ -424,7 +422,7 @@ int ecall_dispatcher::rsa_encrypt_aes_key(
     m_crypto->get_aes_key(m_aes_key);
     m_crypto->retrieve_othet_rsa_public_key(other_rsa_public_key);
 
-    //use the receiver rsa public key to encrypt the aes secret key
+    // use the receiver rsa public key to encrypt the aes secret key
     ret = m_crypto->rsa_encrypt(other_rsa_public_key, sizeof(other_rsa_public_key), m_aes_key, sizeof(m_aes_key), encrypt_data, &encrypt_data_size);
     if (ret != 0)
     {
@@ -443,14 +441,14 @@ int ecall_dispatcher::rsa_encrypt_aes_key(
         memcpy(*encrypt_aes_data, encrypt_data, encrypt_data_size);
         *encrypt_aes_data_size = encrypt_data_size;
     }
-    
+
     // output the mrenclave
     *mrenclave = (uint8_t *)oe_host_malloc(sizeof(m_other_enclave_signer_id));
     memcpy(*mrenclave, m_other_enclave_signer_id, sizeof(m_other_enclave_signer_id));
     *mrenclave_size = sizeof(m_other_enclave_signer_id);
     if (PRINT_DISPATCH_MESSAGES)
     {
-        TRACE_ENCLAVE("Dispatcher Info: mrenclave succed.");
+        // TRACE_ENCLAVE("Dispatcher Info: mrenclave succed.");
     }
     ret = 0;
 exit:
@@ -463,27 +461,29 @@ string rand_str(int len)
     char c;
     string end_synbol = "@";
     int idx;
-    for(int i = 0;i < len; i++){
+    for (int i = 0; i < len; i++)
+    {
         c = 'a' + rand() % 26;
         str.push_back(c);
     }
-    str += end_synbol;//The end symbol
+    str += end_synbol; // The end symbol
     return str;
 }
 
 /**
- * @brief sent init application state request 
- * @param encrypt_data 
- * @param encrypt_data_size 
- * @return int 
+ * @brief sent init application state request
+ * @param encrypt_data
+ * @param encrypt_data_size
+ * @return int
  */
 int ecall_dispatcher::aes_encrypt_client_messages(
-    uint8_t* requests_message,
-    size_t  requests_message_size,
+    uint8_t *requests_message,
+    size_t requests_message_size,
     uint8_t **encrypt_data,
     size_t *encrypt_data_size,
     uint8_t **mrenclave,
-    size_t *mrenclave_size){
+    size_t *mrenclave_size)
+{
 
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
@@ -491,52 +491,56 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     uint8_t data[1024];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
-    memset(data,0,sizeof(data));
-    memset(encrypt_aes_data,0,sizeof(encrypt_aes_data));
-    memset(m_aes_key,0,sizeof(m_aes_key));
-    memset(ITHash,0,sizeof(ITHash));
+    memset(data, 0, sizeof(data));
+    memset(encrypt_aes_data, 0, sizeof(encrypt_aes_data));
+    memset(m_aes_key, 0, sizeof(m_aes_key));
+    memset(ITHash, 0, sizeof(ITHash));
     m_crypto->get_aes_key(m_aes_key);
 
     string message = rand_str(20);
-    if((requests_message_size + message.size()) > sizeof(data)){
+    if ((requests_message_size + message.size()) > sizeof(data))
+    {
         TRACE_ENCLAVE("Encrypt data buffer is more small!!");
         goto exit;
     }
-    memcpy(data,requests_message,requests_message_size);
-    memcpy(data + requests_message_size,message.c_str(),message.size());
+    memcpy(data, requests_message, requests_message_size);
+    memcpy(data + requests_message_size, message.c_str(), message.size());
 
-    //Hash setp
-    ret = m_crypto->Sha256(data,sizeof(data),ITHash);
-    if(ret != 0)
+    // Hash setp
+    ret = m_crypto->Sha256(data, sizeof(data), ITHash);
+    if (ret != 0)
     {
         TRACE_ENCLAVE("AE Hash worrying!");
         goto exit;
     }
-    //store and seal
-    ret = seal_state_data_host(requests_message,requests_message_size,message,ITHash);
-    if(ret !=0 ){
+    // store and seal
+    ret = seal_state_data_host(requests_message, requests_message_size, message, ITHash);
+    if (ret != 0)
+    {
         TRACE_ENCLAVE("seal_state_data_host worrying!");
         goto exit;
     }
     ret = m_crypto->aes_encrypt(ITHash, sizeof(ITHash), encrypt_aes_data, &encrypt_aes_data_size, m_aes_key);
-    if(ret != 0)
+    if (ret != 0)
     {
         TRACE_ENCLAVE("Dispatcher Info: encrypt init state request failed.");
         goto exit;
     }
-    
+
     *encrypt_data = (uint8_t *)oe_host_malloc(encrypt_aes_data_size);
-    if (*encrypt_data == nullptr){
+    if (*encrypt_data == nullptr)
+    {
         ret = 1;
         TRACE_ENCLAVE("Error: copying encrypt_ecdsa_data failed, out of memory");
         goto exit;
     }
     memcpy(*encrypt_data, encrypt_aes_data, encrypt_aes_data_size);
     *encrypt_data_size = encrypt_aes_data_size;
-    
+
     // output the mrenclave
     *mrenclave = (uint8_t *)oe_host_malloc(sizeof(m_other_enclave_signer_id));
-    if (*mrenclave == nullptr){
+    if (*mrenclave == nullptr)
+    {
         ret = 1;
         TRACE_ENCLAVE("Error: copying encrypt_ecdsa_data failed, out of memory");
         goto exit;
@@ -550,19 +554,18 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     // }
 exit:
     return ret;
-    
 }
 
 /**
- * @brief process SE's messages 
- * @param reply_data 
- * @param reply_data_size 
- * @return int 
+ * @brief process SE's messages
+ * @param reply_data
+ * @param reply_data_size
+ * @return int
  */
 int ecall_dispatcher::aes_decrypt_server_messages(
     uint8_t *reply_data,
     size_t reply_data_size,
-    size_t* is_ready)
+    size_t *is_ready)
 {
     int ret = 1;
     string message;
@@ -574,15 +577,16 @@ int ecall_dispatcher::aes_decrypt_server_messages(
     size_t pos;
 
     ret = m_crypto->aes_decrypt(reply_data, reply_data_size, decrypt_data, &decrypt_data_size, m_aes_key);
-    if (ret != 0){
+    if (ret != 0)
+    {
         TRACE_ENCLAVE("Dispatch Error: decrypty servers' requests failed.");
         goto exit;
     }
-    //TRACE_ENCLAVE("Request Size:%ld. ", decrypt_data_size);
+    // TRACE_ENCLAVE("Request Size:%ld. ", decrypt_data_size);
     message = uint8_to_hex_string_version2(decrypt_data, decrypt_data_size);
-    //Test print
+    // Test print
     TRACE_ENCLAVE("Dispatch Info: Receiving message: %s", message.c_str());
-    //split the messag
+    // split the messag
     pos = message.find("#");
     if (pos != 0 || pos == string::npos)
     {
@@ -601,23 +605,27 @@ int ecall_dispatcher::aes_decrypt_server_messages(
         TRACE_ENCLAVE("split pki_certificate failed with size %ld", sp.size());
         goto exit;
     }
-    //test print
-    //TRACE_ENCLAVE("sp[0] %s", sp[0].c_str());
-    //TRACE_ENCLAVE("sp[1] %s", sp[1].c_str());
+    // test print
+    // TRACE_ENCLAVE("sp[0] %s", sp[0].c_str());
+    // TRACE_ENCLAVE("sp[1] %s", sp[1].c_str());
 
-    if( (sp[0]).compare("Init_Success") == 0){
-        //verify the nonce in reply 
-        //set_system_ready();
+    if ((sp[0]).compare("Init_Success") == 0)
+    {
+        // verify the nonce in reply
+        // set_system_ready();
         *is_ready = 1;
     }
-    else if((sp[0]).compare("Init_Failure") == 0){
+    else if ((sp[0]).compare("Init_Failure") == 0)
+    {
         *is_ready = 0;
     }
-    else if((sp[0]).compare("Latest_State") == 0){ 
-        //TODO: compare the state with sealed state 
+    else if ((sp[0]).compare("Latest_State") == 0)
+    {
+        // TODO: compare the state with sealed state
         *is_ready = 1;
     }
-    else{
+    else
+    {
         TRACE_ENCLAVE("Dispatch Error: unknown messages.");
     }
     ret = 0;
@@ -627,12 +635,13 @@ exit:
 
 /**
  * @brief unseal data
- * @param sealed_data 
- * @param sealed_data_size 
- * @param data 
- * @param data_size 
- * @return int 
- *///TODO 
+ * @param sealed_data
+ * @param sealed_data_size
+ * @param data
+ * @param data_size
+ * @return int
+ */
+// TODO
 int ecall_dispatcher::unseal_state_data(
     const sealed_data_t *sealed_data,
     size_t sealed_data_size,
@@ -642,12 +651,13 @@ int ecall_dispatcher::unseal_state_data(
     uint8_t *temp_data;
     if (sealed_data_size != sealed_data->sealed_blob_size + sizeof(*sealed_data))
     {
-        TRACE_ENCLAVE( "Seal data does not match the seal data size. Expected %zd, got: " "%zd",
-            sealed_data->sealed_blob_size + sizeof(*sealed_data),
-            sealed_data_size);
+        TRACE_ENCLAVE("Seal data does not match the seal data size. Expected %zd, got: "
+                      "%zd",
+                      sealed_data->sealed_blob_size + sizeof(*sealed_data),
+                      sealed_data_size);
         return ERROR_INVALID_PARAMETER;
     }
-    
+
     int ret = (int)oe_unseal(
         (const uint8_t *)(sealed_data + 1),
         sealed_data->sealed_blob_size,
@@ -668,8 +678,8 @@ int ecall_dispatcher::unseal_state_data(
         ret = OE_OUT_OF_MEMORY;
         goto exit;
     }
-    memcpy(*data, temp_data, *data_size); 
-    
+    memcpy(*data, temp_data, *data_size);
+
 exit:
     oe_free(temp_data);
     return ret;
@@ -677,10 +687,10 @@ exit:
 
 /**
  * @brief seal_state_data
- * @param seal_policy 
- * @param sealed_data 
- * @param sealed_data_size 
- * @return int 
+ * @param seal_policy
+ * @param sealed_data
+ * @param sealed_data_size
+ * @return int
  */
 int ecall_dispatcher::seal_state_data(
     int seal_policy,
@@ -691,18 +701,18 @@ int ecall_dispatcher::seal_state_data(
     uint8_t *blob;
     size_t blob_size;
     sealed_data_t *temp_sealed_data;
-    unsigned char* data = NULL;
-    unsigned char* optional_message = NULL;
+    unsigned char *data = NULL;
+    unsigned char *optional_message = NULL;
     size_t data_size = 0;
 
-    //TODO: prepare the sealed application state 
-    const char* state = "test plaintext";
-    data = (unsigned char*)state;
-    data_size = strlen((const char*)data) + 1;
+    // TODO: prepare the sealed application state
+    const char *state = "test plaintext";
+    data = (unsigned char *)state;
+    data_size = strlen((const char *)data) + 1;
 
-    optional_message = (unsigned char*)state;
-    size_t optional_message_size = strlen((const char*)data); 
-    
+    optional_message = (unsigned char *)state;
+    size_t optional_message_size = strlen((const char *)data);
+
     const oe_seal_setting_t settings[] = {OE_SEAL_SET_POLICY(seal_policy)};
     ret = oe_seal(
         NULL,
@@ -725,7 +735,7 @@ int ecall_dispatcher::seal_state_data(
         ret = OE_OUT_OF_MEMORY;
         goto exit;
     }
-    
+
     temp_sealed_data = (sealed_data_t *)oe_host_malloc(sizeof(*temp_sealed_data) + blob_size);
     if (temp_sealed_data == NULL)
     {
@@ -734,7 +744,7 @@ int ecall_dispatcher::seal_state_data(
     }
 
     memset(temp_sealed_data, 0, sizeof(*temp_sealed_data));
-    memcpy(temp_sealed_data->optional_message,optional_message,optional_message_size);
+    memcpy(temp_sealed_data->optional_message, optional_message, optional_message_size);
     temp_sealed_data->sealed_blob_size = blob_size;
     memcpy(temp_sealed_data + 1, blob, blob_size);
     *sealed_data = temp_sealed_data;
@@ -745,48 +755,49 @@ exit:
     return (int)ret;
 }
 
-
-
 int ecall_dispatcher::seal_state_data_host(
-    uint8_t* requests_message,
-    size_t  requests_message_size,
+    uint8_t *requests_message,
+    size_t requests_message_size,
     string status_message,
-    uint8_t* ITHash){
+    uint8_t *ITHash)
+{
 
-    int seal_policy = 1;//policy for seal
+    int seal_policy = 1; // policy for seal
     int ret = 1;
     uint8_t *blob;
     size_t blob_size;
     oe_result_t result;
     state_info_t state_info_table;
     unsigned char *Ocall_buffer;
-    unsigned char* data = NULL;
-    unsigned char* optional_message = NULL;
+    unsigned char *data = NULL;
+    unsigned char *optional_message = NULL;
     size_t data_size = 0;
-    size_t optional_message_size; 
-    const char* state = "test plaintext";
+    size_t optional_message_size;
+    const char *state = "test plaintext";
     const oe_seal_setting_t settings[] = {OE_SEAL_SET_POLICY(seal_policy)};
     state_info_table.state_size = status_message.size();
     state_info_table.requests_I_size = requests_message_size;
-    if((requests_message_size > sizeof(state_info_table.requests_I)) || (status_message.size() > sizeof(state_info_table.state))){
-        TRACE_ENCLAVE("Size is more bigger than table.You size is %d and %d",requests_message_size,status_message.size());
+    if ((requests_message_size > sizeof(state_info_table.requests_I)) || (status_message.size() > sizeof(state_info_table.state)))
+    {
+        TRACE_ENCLAVE("Size is more bigger than table.You size is %d and %d", requests_message_size, status_message.size());
         goto exit;
     }
-    memcpy(state_info_table.ITHash,ITHash,32);
-    memcpy(state_info_table.requests_I,requests_message,requests_message_size);
-    memcpy(state_info_table.state,status_message.c_str(),status_message.size());
-    
-    data = (unsigned char* )malloc(sizeof(state_info_table) + 1);
-    if(data == nullptr){
+    memcpy(state_info_table.ITHash, ITHash, 32);
+    memcpy(state_info_table.requests_I, requests_message, requests_message_size);
+    memcpy(state_info_table.state, status_message.c_str(), status_message.size());
+
+    data = (unsigned char *)malloc(sizeof(state_info_table) + 1);
+    if (data == nullptr)
+    {
         TRACE_ENCLAVE("malloc a buffer failed!!");
         goto exit;
     }
-    memcpy(data,&state_info_table,sizeof(state_info_table));
+    memcpy(data, &state_info_table, sizeof(state_info_table));
     data_size = sizeof(state_info_table) + 1;
 
-    optional_message = (unsigned char*)state;
-    optional_message_size = strlen((const char*)data); 
-    
+    optional_message = (unsigned char *)state;
+    optional_message_size = strlen((const char *)data);
+
     result = oe_seal(
         NULL,
         settings,
@@ -808,19 +819,20 @@ int ecall_dispatcher::seal_state_data_host(
         ret = 1;
         goto exit;
     }
-    //OCall
+    // OCall
     Ocall_buffer = (unsigned char *)oe_host_malloc(blob_size + 1);
-    memcpy(Ocall_buffer,blob,blob_size);
-    result = seal_host_write(&ret,blob_size + 1,Ocall_buffer);
-    if(result != OE_OK){
+    memcpy(Ocall_buffer, blob, blob_size);
+    result = seal_host_write(&ret, blob_size + 1, Ocall_buffer);
+    if (result != OE_OK)
+    {
         TRACE_ENCLAVE("Ocall save file is failed.");
         goto exit;
     }
-    TRACE_ENCLAVE("Successful seal store state!!");
+    // TRACE_ENCLAVE("Successful seal store state!!");
     ret = 0;
 exit:
-    //TODO Free something
+    // TODO Free something
     oe_free(blob);
-    oe_host_free(Ocall_buffer);//This buffer is in host
+    oe_host_free(Ocall_buffer); // This buffer is in host
     return ret;
 }

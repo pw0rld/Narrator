@@ -306,23 +306,26 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       {
         ser->reply_ecdsa_pki_to_peer(index); // This step is reply pki of ecdsa
         // Next peer se will send its record into tendermint
-        std::cout << "Next peer se will send its record into tendermint" << std::endl;
-        string tendermint_data = read_other_info(se_enclaves);
-        int is_tru = read_and_verify_tendermint(tendermint_data, se_enclaves);
-        if (is_tru == 0)
+        if (ser->self_tendermint_flag)
         {
-          // ser->set_peer_attest_state(i, SYSTEM_INIT_DONE);
-          cout << "[+]Check tendermint record is not exist " << endl;
-          bool is_write = write_tendermint(se_enclaves);
-          if (is_write)
+          std::cout << "Next peer se will send its record into tendermint" << std::endl;
+          string tendermint_data = read_other_info(se_enclaves);
+          int is_tru = read_and_verify_tendermint(tendermint_data, se_enclaves);
+          if (is_tru == 0)
           {
-            cout << "[+]Record  is successful" << endl;
+            // ser->set_peer_attest_state(i, SYSTEM_INIT_DONE);
+            cout << "[+]Check tendermint record is not exist " << endl;
+            bool is_write = write_tendermint(se_enclaves);
+            if (is_write)
+            {
+              cout << "[+]Record  is successful" << endl;
+            }
           }
-        }
-        else
-        {
-          cout << "Recorde message into chain failed! " << endl;
-          exit(1);
+          else
+          {
+            cout << "Recorde message into chain failed! " << endl;
+            exit(1);
+          }
         }
         if (SYSTEM_INIT_EXCHANGE_PK)
         {
@@ -406,6 +409,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       }
     }
     // INFO ROTE; RE accept AE
+    // NOTE one step
     else if (sp[0] == "#AE_Update_Counter_Requests")
     {
       bool pr = true;
@@ -432,7 +436,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       uint32_t sender_port = safe_stoi(sp[2], pr);
       int index = ser->find_peer_index_by_ip_and_port(sender_ip, sender_port);
       string signed_message = process_AE_Update_Echo(sp, se_enclaves);
-      ser->fetch_echo_messages(index, signed_message);
+      ser->fetch_final_messages(index, signed_message); // NOTE tdsc has one step
       if (PRINT_ATTESTATION_MESSAGES)
       {
         cout << "[+]Remote Re processes End the Local Re Echo 1 requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
@@ -476,21 +480,21 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         if (PRINT_ATTESTATION_MESSAGES)
           cout << "[+]Local Re genc Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
         cout << "debug uuid_index " << uuid_index << " index " << index << endl;
-        if (sp.size() > 6)
-        {
-          cout << "debug1" << endl;
-          for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
-          {
-            cout << "debug2" << endl;
-            if (it->round == 1 && stoi(sp[5]) == it->index)
-            {
-              cout << "debug3" << endl;
-              it->round = 2;
-              break;
-            }
-          }
-          cout << "debug4" << endl;
-        }
+        // if (sp.size() > 6)
+        // {
+        // cout << "debug1" << endl;
+        // for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
+        // {
+        //   cout << "debug2" << endl;
+        //   if (it->round == 1 && stoi(sp[5]) == it->index)
+        //   {
+        //     cout << "debug3" << endl;
+        //     it->round = 2;
+        //     break;
+        //   }
+        // }
+        // cout << "debug4" << endl;
+        // }
         cout << "debug5" << endl;
         for (map<int, string>::iterator it = ser->Re_tmp_quorum.begin(); it != ser->Re_tmp_quorum.end(); ++it)
         {
@@ -578,7 +582,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
               {
                 test_time = stol(ser->ae_queues_vector_process.front().timestamp);
               }
-              j[kka] = ser->ae_queues_vector_process.front().timestamp;
+              j[kka] = ser->ae_queues_vector_process.front().timestamp + " @ " + ser->ae_queues_vector_process.front().index_time;
             }
             else
             {
@@ -592,7 +596,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
           ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
           // FIXME Here has a problem that is frequent sending causes latency exceptions.
           ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
-          cout << "[+]Fetch ae This requests id is" << sp[5] << " Now time is " << now_time << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << endl;
+          cout << "[+]Fetch ae This requests id is" << tmp_string << " Now time is " << now_time << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << endl;
           break;
         }
       }

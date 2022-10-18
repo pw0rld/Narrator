@@ -615,6 +615,10 @@ bool tcp_server::isPKISetup()
     {
       counter_re++;
     }
+    // else
+    // {
+    //   cout << "Now peer " << i << " state " << peers[i].attestState << endl;
+    // }
     if (counter_re == Re_Peers.size())
     {
       for (int j = 0; j < peers.size(); j++)
@@ -628,6 +632,10 @@ bool tcp_server::isPKISetup()
       }
       return true;
     }
+    // else
+    // {
+    //   std::cout << "Peer is no setup pki " << counter_re << endl;
+    // }
   }
   return false;
 }
@@ -712,10 +720,7 @@ uint32_t tcp_server::find_uuid_by_ip_and_port(string ip, uint32_t port)
       return peers[i].uuid;
     }
   }
-  if (PRINT_WARNNING_MESSAGES)
-  {
-    cout << "[Function] find_uuid_by_ip_and_port . Peer:" << my_ip << my_port << " cannot find " << ip << port << endl;
-  }
+
   return -1;
 }
 

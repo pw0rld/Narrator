@@ -157,6 +157,7 @@ public:
   int now_group = 0;
   int now_group_first = 0;
   int batch_size = 1;
+  bool self_tendermint_flag = false;
   std::map<int, string> Re_tmp_quorum;
   std::vector<int> test_vector;
   std::map<int, string> Re_tmp_quorum_finally;
@@ -165,7 +166,7 @@ public:
   std::vector<ae_queues> ae_queues_vector;
   // std::vector<ae_queues> ae_queues_vector_process;
   std::queue<ae_queues> ae_queues_vector_process;
-  std::vector<Re_piplines> Re_piplines_vector;
+  // std::vector<Re_piplines> Re_piplines_vector;
   std::vector<size_t> ae_queues_vector_size;
   tcp_server(boost::asio::io_service &io_service, string ip, uint32_t port);
   void add_peer(Peer p, bool is_connected);

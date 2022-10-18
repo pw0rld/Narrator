@@ -96,6 +96,7 @@ class tcp_server
 public:
   // network funtions
   bool isRequestPending = false;
+  int index_message = 0;
   tcp_server(boost::asio::io_service &io_service, string ip, uint32_t port);
   void add_peer(Peer p, bool is_connected);
   void add_indirect_peer_if_doesnt_exist(string p);

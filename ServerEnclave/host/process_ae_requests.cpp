@@ -150,27 +150,27 @@ void process_ae_requests()
 
                         if (send_index != -1)
                         {
-                            Re_piplines rq;
-                            bool find_index = true;
-                            memcpy(rq.encrypt_data, encrypt_data, encrypt_data_size);
-                            rq.encrypt_data_size = encrypt_data_size;
-                            rq.uuid = send_index;
-                            rq.round = 1;
-                            rq.index = index_re;
-                            ser->Re_piplines_vector.push_back(rq);
-                            for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
-                            {
-                                if (it->round == 2 && index_re - 1 == it->index)
-                                {
-                                    it->round = 3;
-                                    message += "," + to_string(it->index);
-                                    break;
-                                }
-                                else if (index_re - 1 == it->index && it->round != 2)
-                                {
-                                    break;
-                                }
-                            }
+                            // Re_piplines rq;
+                            // bool find_index = true;
+                            // memcpy(rq.encrypt_data, encrypt_data, encrypt_data_size);
+                            // rq.encrypt_data_size = encrypt_data_size;
+                            // rq.uuid = send_index;
+                            // rq.round = 1;
+                            // rq.index = index_re;
+                            // ser->Re_piplines_vector.push_back(rq);
+                            // for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
+                            // {
+                            //     if (it->round == 2 && index_re - 1 == it->index)
+                            //     {
+                            //         it->round = 3;
+                            //         message += "," + to_string(it->index);
+                            //         break;
+                            //     }
+                            //     else if (index_re - 1 == it->index && it->round != 2)
+                            //     {
+                            //         break;
+                            //     }
+                            // }
                             ser->fetch_signed_messages(send_index, message);
                         }
                     }

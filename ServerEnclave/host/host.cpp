@@ -57,6 +57,7 @@ string my_role = "norole";
 // Input parmarers: argv1  enclave path; argv2 IP port; argv3 peer config; argv4 public ip addr; argv5 private ip addr
 int main(int argc, const char *argv[])
 {
+    // TODO Change Multi-process
     // create enclave from path
     uint32_t flags = OE_ENCLAVE_FLAG_DEBUG;
     se_enclave = create_enclave(argv[1], flags);
@@ -186,7 +187,7 @@ int main(int argc, const char *argv[])
         mythread = &t1;
     }
     // Start the server
-    server.Re_piplines_vector.reserve(sizeof(Re_piplines) * 1000);
+    // server.Re_piplines_vector.reserve(sizeof(Re_piplines) * 1000);
     server.run_network();
     time_of_start = std::chrono::system_clock::now().time_since_epoch() / std::chrono::milliseconds(1);
     io_service.run();

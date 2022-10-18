@@ -22,6 +22,7 @@
 
 #include "log.h"
 #include <openenclave/enclave.h>
+#include <string.h>
 #include <openssl/pem.h>
 #include <openenclave/corelibc/stdlib.h>
 #include "common/attestation_t.h"

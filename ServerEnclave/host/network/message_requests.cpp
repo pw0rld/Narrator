@@ -315,7 +315,7 @@ bool process_attestation_remote_pk_evidence(vector<std::string> sp, oe_enclave_t
     string sender_ip = sp[1];
     uint32_t sender_port = safe_stoi(sp[2], pr);
     size_t uuid = ser->find_uuid_by_ip_and_port(sender_ip, sender_port);
-
+    cout << "uuid is " << uuid << endl;
     // string ip_port = sp[1] + "_" + sp[2];
     // std::vector<uint8_t> ip_port_vec = hex_string_to_uint8_vec_version2(ip_port);
     std::vector<uint8_t> evidence_vec = hex_string_to_uint8_vec(sp[3]);
@@ -584,12 +584,11 @@ bool process_AE_Update_Counter(vector<std::string> sp, oe_enclave_t *attester_en
     }
     ae_queues aq;
     cout << "sp:" << sp[4] << " " << sp[5] << " " << endl;
-    cout << "?啥问题" << sp.size() << endl;
-    // memcpy(aq.encrypt_data, encrypt_data, encrypt_data_size);
+    memcpy(aq.encrypt_data, encrypt_data, encrypt_data_size);
     aq.encrypt_data_size = 0;
     aq.uuid = uuid;
     aq.first_connect = false;
-    aq.index_time = sp[5];
+    aq.index_time = sp[6];
     aq.timestamp = sp[5];
     aq.round = 1;
     aq.index = (uuid);             // TODO index也好像不知道干什么这一块有点混乱,这一处需要重写。
@@ -630,8 +629,8 @@ bool process_AE_Read(vector<std::string> sp, oe_enclave_t *attester_enclaves)
     aq.encrypt_data_size = encrypt_data_size;
     aq.uuid = uuid;
     aq.first_connect = false;
-    aq.index_time = sp[5];
-    aq.timestamp = sp[6];
+    aq.index_time = sp[6];
+    aq.timestamp = sp[5];
     aq.round = 1;
     aq.index = stoi(sp[5]);
     for (size_t i = 0; i < 1; i++)
@@ -661,13 +660,13 @@ string process_AE_Update_Echo(vector<std::string> sp, oe_enclave_t *attester_enc
     string message = "-1";
     oe_result_t result = OE_OK;
     // pipline
-    Re_piplines rq;
-    memcpy(rq.encrypt_data, encrypt_data, encrypt_data_size);
-    rq.encrypt_data_size = encrypt_data_size;
-    rq.uuid = uuid;
+    // Re_piplines rq;
+    // memcpy(rq.encrypt_data, encrypt_data, encrypt_data_size);
+    // rq.encrypt_data_size = encrypt_data_size;
+    // rq.uuid = uuid;
     // rq.round = 2;
-    rq.index = stoi(sp[5]);
-    ser->Re_piplines_vector.push_back(rq);
+    // rq.index = stoi(sp[5]);
+    // ser->Re_piplines_vector.push_back(rq);
     result = signed_with_verify(attester_enclaves, &ret, uuid, 3, nullptr, 0, encrypt_data, encrypt_data_size, 0, nullptr, 0, &encrypt_data2, &encrypt_data_size); // 4ms
     if ((result != OE_OK) || (ret != 0))
     {
@@ -681,14 +680,14 @@ string process_AE_Update_Echo(vector<std::string> sp, oe_enclave_t *attester_enc
     if (sp.size() > 6)
     {
         cout << "sp" << sp[6] << endl;
-        for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
-        {
-            if (stoi(sp[6]) == it->index)
-            {
-                ser->Re_piplines_vector.erase(it);
-                break;
-            }
-        }
+        // for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
+        // {
+        //     if (stoi(sp[6]) == it->index)
+        //     {
+        //         ser->Re_piplines_vector.erase(it);
+        //         break;
+        //     }
+        // }
     }
     // string ecdsa_sigature_string = uint8_to_hex_string(ecdsa_sigature, ecdsa_sigature_size);
 
@@ -739,14 +738,14 @@ string process_AE_Update_Return_Echo_genc_message(oe_enclave_t *attester_enclave
     temp_info.index = indexre;
     temp_info.echo_time = ser->print_time();
     ser->ae_infos_vector.push_back(temp_info);
-    for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
-    {
-        if (indexre == it->index && it->round == 1)
-        {
-            it->round = 1;
-            break;
-        }
-    }
+    // for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
+    // {
+    //     if (indexre == it->index && it->round == 1)
+    //     {
+    //         it->round = 1;
+    //         break;
+    //     }
+    // }
 
     result = ecdsa_signed(attester_enclaves, &ret, RE_uuid, 1, nullptr, 0,
                           &encrypt_data, &encrypt_data_size);

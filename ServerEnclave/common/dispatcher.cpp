@@ -422,12 +422,13 @@ int ecall_dispatcher::verify_evidence(
     }
 
     // check whether the peer exists
+    // uuid 没对应上
     it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
     if (it != peer_info_vec2.end())
     {
         memcpy((*it).rsa_public_key, pem_key, 512);
         (*it).rsa_key_size = 512;
-        TRACE_ENCLAVE("Warning: Peer already exists.");
+        TRACE_ENCLAVE("Warning: Peer already exists.And uuid is %d", uuid);
         ret = 1;
         return ret;
     }
@@ -439,7 +440,7 @@ int ecall_dispatcher::verify_evidence(
     if (PRINT_DISPATCH_MESSAGES)
     {
         TRACE_ENCLAVE("Dispatcher Info: verify_evidence_and_set_public_key succeeded.The uuid is %zu", uuid);
-        print_peers();
+        // print_peers();
     }
     ret = 0;
 
@@ -935,7 +936,7 @@ int ecall_dispatcher::process_kpi_certificate_ecall(
             peer_info_vec2.push_back(pr);
         }
     }
-    print_peers();
+    // print_peers();
     free(decrypt_data);
     decrypt_data = NULL;
     ret = 0;
@@ -1789,7 +1790,7 @@ int ecall_dispatcher::signed_with_verify(size_t uuid,
         break;
     default:
         memcpy(Re_persistent_state_table.ITHash, decrypt_data, 32); // verify successful save ithash
-        TRACE_ENCLAVE("decrypt_data_size IS %zu", decrypt_data_size);
+        // TRACE_ENCLAVE("decrypt_data_size IS %zu", decrypt_data_size);
         break;
     }
     ret = 0;
@@ -1821,10 +1822,10 @@ int ecall_dispatcher::signed_with_verify(size_t uuid,
     }
     ret = m_crypto->aes_encrypt(sig_message, sizeof(sig_message), encrypt_buffer, &encrypt_buffer_size, Re_persistent_state_table.m_aes_key);
     *encrypt_data_out = (uint8_t *)oe_host_malloc(encrypt_buffer_size + 1);
-    TRACE_ENCLAVE("Successfull to ecdsa signed!!%zu\n", encrypt_buffer_size);
+    // TRACE_ENCLAVE("Successfull to ecdsa signed!!%zu\n", encrypt_buffer_size);
     memcpy(*encrypt_data_out, encrypt_buffer, encrypt_buffer_size);
     *encrypt_data_out_size = encrypt_buffer_size;
-    TRACE_ENCLAVE("Successfull to ecdsa signed!!\n");
+    // TRACE_ENCLAVE("Successfull to ecdsa signed!!\n");
     ret = 0;
 exit:
     return ret;

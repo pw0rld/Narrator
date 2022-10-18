@@ -5,6 +5,7 @@
 
 extern string my_ip;
 extern uint32_t my_port;
+//TODO change it to read file
 std::string tendermint_url = "http://10.20.61.124:26657";
 using namespace boost::archive::iterators;
 
