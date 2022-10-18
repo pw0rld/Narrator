@@ -5,7 +5,7 @@ Narrator is accepted by ACM CCS'22, see [list of accepted papers](https://www.si
 
 ## Overview of the Narrator
 ![overview](./narrator_overview.jpg )
-Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates. You can download the paper [here]().
+Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
 
 
 ## Setting up Narrator
