@@ -34,7 +34,7 @@
 #include <random>
 #include "system_init.h"
 #include "secure_channel.h"
-#include "network/MyServer.hpp"
+#include "network/My_Server.hpp"
 #include "network/get_ip.h"
 #include "configuration.h"
 #include "network/misc.h"

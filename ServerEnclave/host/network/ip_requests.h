@@ -2,7 +2,7 @@
 #define IP_REQUEST_H
 
 #include <iostream>
-#include "MyServer.hpp"
+#include "My_Server.hpp"
 #include "../params.h"
 #include <istream>
 using namespace std;

@@ -26,13 +26,13 @@
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <openssl/sha.h>
-#include "network/MyServer.hpp"
+#include "network/My_Server.hpp"
 #include "configuration.h"
 #include "params.h"
 #include "process_ae_requests.hpp"
 #include <iostream>
 #include "host/enclave_operation.h"
-#include "./network/message_requests.h"
+#include "./network/message_produce.h"
 
 using namespace std;
 extern tcp_server *ser;

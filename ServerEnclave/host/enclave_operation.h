@@ -7,7 +7,7 @@
 #include "attestation_u.h"
 #include "configuration.h"
 #include "params.h"
-#include "./network/MyServer.hpp"
+#include "./network/My_Server.hpp"
 #include "./network/ip_requests.h"
 #include <unistd.h>
 

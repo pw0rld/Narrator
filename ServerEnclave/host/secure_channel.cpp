@@ -26,7 +26,7 @@
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <openssl/sha.h>
-#include "network/MyServer.hpp"
+#include "network/My_Server.hpp"
 #include "configuration.h"
 #include "params.h"
 #include "secure_channel.h"

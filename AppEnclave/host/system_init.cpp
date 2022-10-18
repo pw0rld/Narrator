@@ -26,11 +26,11 @@
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <openssl/sha.h>
-#include "network/MyServer.hpp"
+#include "network/My_Server.hpp"
 #include "params.h"
 #include "system_init.h"
 #include "enclave_operation.h"
-#include "network/messages.h"
+#include "network/messages_produce.h"
 #include "state_requests.h"
 
 using namespace std;

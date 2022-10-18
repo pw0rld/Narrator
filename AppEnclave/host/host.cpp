@@ -33,7 +33,7 @@
 #include <random>
 #include "system_init.h"
 #include "state_requests.h"
-#include "network/MyServer.hpp"
+#include "network/My_Server.hpp"
 #include "network/get_ip.h"
 #include "network/misc.h"
 #include "enclave_operation.h"

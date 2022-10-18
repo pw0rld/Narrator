@@ -15,12 +15,12 @@ add_executable(attestation_host
                host.cpp ${CMAKE_CURRENT_BINARY_DIR}/attestation_u.c
                ../host/system_init.cpp
                ../host/secure_channel.cpp
-               ../host/network/MyServer.cpp
+               ../host/network/My_Server.cpp
                ../host/network/get_ip.cpp
                ../host/network/process_buffer.cpp
                ../host/network/misc.cpp
                ../host/configuration.cpp
-               ../host/network/message_requests.cpp
+               ../host/network/message_produce.cpp
                ../host/network/ip_requests.cpp
                ../host/enclave_operation.cpp
                ../host/process_ae_requests.cpp

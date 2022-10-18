@@ -15,11 +15,11 @@ add_executable(attestation_host
                host.cpp ${CMAKE_CURRENT_BINARY_DIR}/attestation_u.c
                ../host/system_init.cpp
                ../host/state_requests.cpp
-               ../host/network/MyServer.cpp
+               ../host/network/My_Server.cpp
                ../host/network/get_ip.cpp
                ../host/network/process_buffer.cpp
                ../host/network/misc.cpp
-               ../host/network/messages.cpp
+               ../host/network/messages_produce.cpp
                ../host/enclave_operation.cpp
                )
 target_include_directories(

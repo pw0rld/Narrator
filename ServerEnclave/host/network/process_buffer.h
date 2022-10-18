@@ -41,8 +41,8 @@ SOFTWARE.
 #include <string>
 #include <vector>
 #include <map>
-#include "MyServer.hpp"
-#include "message_requests.h"
+#include "My_Server.hpp"
+#include "message_produce.h"
 #include "ip_requests.h"
 #include "misc.h"
 #include "../system_init.h"
