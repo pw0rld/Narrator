@@ -3,10 +3,158 @@ Thank you for your interest in Narrator. This document will get you started with
 Narrator is accepted by ACM CCS'22, see [list of accepted papers](https://www.sigsac.org/ccs/CCS2022/program/accepted-papers.html) for more details. You can download the paper [here]().
 
 
-## Overview of the Narrator
+## Overview of Narrator
 ![overview](./narrator_overview.jpg )
 Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
 
+## WorkFlow of Narrator
+
+TODO
+``` Bash
+# ./
+├── ali_instance.jpg
+├── aliyun.sh           # AliCloud Deployment Script of Narrator
+├── AppEnclave          # AppEnclave's core code
+├── demo.cc    
+├── init.sh             # Initialization Script
+├── narrator_overview.jpg
+├── readme.md
+├── ServerEnclave       # ServerEnclave's core code
+└── tendermint-ansible  # Tendermint Deployment Script
+```
+
+TODO
+``` Bash
+# ./Appenclave
+├── attestation.edl     # 
+├── build
+├── CMakeLists.txt
+├── common
+│   ├── attestation.cpp
+│   ├── attestation.h
+│   ├── CMakeLists.txt
+│   ├── crypto.cpp
+│   ├── crypto.h
+│   ├── dispatcher.cpp
+│   ├── dispatcher.h
+│   └── log.h
+├── enclave
+│   ├── CMakeLists.txt
+│   ├── ecalls.cpp
+│   ├── enc.conf
+│   ├── enclave_a.signed
+│   └── Makefile
+├── gen_pubkey_header.sh
+├── host
+│   ├── _application_state
+│   ├── CMakeLists.txt
+│   ├── enclave_operation.cpp
+│   ├── enclave_operation.h
+│   ├── host.cpp
+│   ├── Makefile
+│   ├── network
+│   │   ├── get_ip.cpp
+│   │   ├── get_ip.h
+│   │   ├── machine_id.cpp
+│   │   ├── messages_produce.cpp
+│   │   ├── messages_produce.h
+│   │   ├── misc.cpp
+│   │   ├── misc.h
+│   │   ├── My_Server.cpp
+│   │   ├── My_Server.hpp
+│   │   ├── process_buffer.cpp
+│   │   └── process_buffer.h
+│   ├── params.h
+│   ├── state_requests.cpp
+│   ├── state_requests.h
+│   ├── system_init.cpp
+│   └── system_init.h
+├── Makefile
+└── README.md
+```
+
+TODO
+``` Bash
+# ServerEnclave
+├── attestation.edl
+├── build
+├── CMakeLists.txt
+├── common
+│   ├── attestation.cpp
+│   ├── attestation.h
+│   ├── CMakeLists.txt
+│   ├── crypto.cpp
+│   ├── crypto.h
+│   ├── dispatcher.cpp
+│   ├── dispatcher.h
+│   ├── ed25519
+│   │   ├── BigNumberUtil.cpp
+│   │   ├── BigNumberUtil.h
+│   │   ├── Crypto.cpp
+│   │   ├── Crypto.h
+│   │   ├── Curve25519.cpp
+│   │   ├── Curve25519.h
+│   │   ├── Ed25519.cpp
+│   │   ├── Ed25519.h
+│   │   ├── Hash.cpp
+│   │   ├── Hash.h
+│   │   ├── SHA512_ed25519.cpp
+│   │   ├── SHA512_ed25519.h
+│   │   └── utility
+│   │       ├── CppSupport.h
+│   │       ├── EndianUtil.h
+│   │       ├── LimbUtil.h
+│   │       ├── ProgMemUtil.h
+│   │       └── RotateUtil.h
+│   └── log.h
+├── enclave
+│   ├── CMakeLists.txt
+│   ├── ecalls.cpp
+│   ├── enc.conf
+│   ├── enclave_a.signed
+│   └── Makefile
+├── gen_pubkey_header.sh
+├── go_cover.go
+├── host
+│   ├── CMakeLists.txt
+│   ├── _configuration
+│   ├── configuration.cpp
+│   ├── configuration.h
+│   ├── enclave_operation.cpp
+│   ├── enclave_operation.h
+│   ├── host.cpp
+│   ├── Makefile
+│   ├── network
+│   │   ├── configuration.h
+│   │   ├── get_ip.cpp
+│   │   ├── get_ip.h
+│   │   ├── ip_requests.cpp
+│   │   ├── ip_requests.h
+│   │   ├── json.hpp
+│   │   ├── machine_id.cpp
+│   │   ├── message_produce.cpp
+│   │   ├── message_produce.h
+│   │   ├── misc.cpp
+│   │   ├── misc.h
+│   │   ├── My_Server.cpp
+│   │   ├── My_Server.hpp
+│   │   ├── _peer_ip_allowed
+│   │   ├── _peers
+│   │   ├── process_buffer.cpp
+│   │   └── process_buffer.h
+│   ├── params.h
+│   ├── process_ae_requests.cpp
+│   ├── process_ae_requests.hpp
+│   ├── secure_channel.cpp
+│   ├── secure_channel.h
+│   ├── system_init.cpp
+│   └── system_init.h
+├── Makefile
+├── quick_start.sh
+├── README.md
+├── start.sh
+└── test.cc
+```
 
 ## Setting up Narrator
 We have prepared an automated environment deployment script(init.sh) for Narrator. Please ensure your machine supports SGX. We chose AliCloud for our test environment. We choose the model ”ecs.c7t.xlarge” as an instance, this instance is equipped with 8GB RAM, a 4v CPU (Intel Xeon Platinum 8369B @ 3.5GHz), and 4GB EPC (Enclave Page Cache). 
@@ -18,6 +166,7 @@ If you want to deploy your own environment, please refer to the following links 
 - [Attestation on OE SDK](https://github.com/openenclave/openenclave/blob/master/docs/DesignDocs/SGX_QuoteEx_Integration.md)
 - [Configure OE SDK SGX on Linux in non-ACC Machines](https://github.com/openenclave/openenclave/blob/master/docs/GettingStartedDocs/Contributors/NonAccMachineSGXLinuxGettingStarted.md)
 - [Intel® SGX Services for ECDSA Attestation ](https://api.portal.trustedservices.intel.com)
+
 
 ## Start Narrator
 As overview says, Narrator include three parts, tendermint, ServerEnclave and Appenclave.
@@ -38,5 +187,7 @@ curl -s '127.0.0.1:26657/abci_query?data="narrator"'        #Query a tx
 ``` Bash
 ./aliyun.sh 127.0.0.1 
 ```
+
+
 
 # LICENCE
