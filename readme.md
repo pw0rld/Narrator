@@ -1,10 +1,11 @@
 # Narrator: Secure and Practical State Continuity for Trusted Execution on Cloud
-
+Thank you for your interest in Narrator. This document will get you started with our prototype implementation. If you have any problems, we will do our best to resolve them as soon as possible. 
+Narrator is accepted by ACM CCS'22, see [list of accepted papers](https://www.sigsac.org/ccs/CCS2022/program/accepted-papers.html) for more details.
 
 
 ## Overview of the Narrator
 ![overview](./narrator_overview.jpg )
-Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
+Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates. You can download the paper [here]().
 
 
 ## Setting up Narrator
@@ -37,3 +38,5 @@ curl -s '127.0.0.1:26657/abci_query?data="narrator"'        #Query a tx
 ``` Bash
 ./aliyun.sh 127.0.0.1 
 ```
+
+# LICENCE
