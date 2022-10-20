@@ -92,10 +92,32 @@ run_narrator_appenclave() {
     $ssh_config root@${cloud_ip} "~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8003 ${cloud_ip} 8001 ${cloud_ip}" >> log.log
 }
 
-
+if [ "$2" == "install" ]
+then
+    echo "Install openenclave and Read for the requirement"
+    send_oe_sdk $1
+    send_cloud_config $1
+    install_oe_sdk $1
+elif [ "$2" == "build" ]
+then
+    echo "Build Narrator and sync to remote machine"
+    build_narrator_local
+    send_narrator $1
+elif [ "$2" == "Tendermint" ]
+then
+    # TODO
+elif [ "$2" == "Serverenclave" ]
+then
+    echo "Setup the Serverenclave";
+    run_narrator_serverenclave $1
+elif [ "$2" == "Appenclave" ]
+then
+    echo "Setup the Appenclave";
+    run_narrator_appenclave $1
+fi
 # send_oe_sdk $1
 # send_cloud_config $1
 # install_oe_sdk $1
 # build_narrator_local
-send_narrator $1
-run_narrator_serverenclave $1
+# send_narrator $1
+# run_narrator_serverenclave $1

@@ -52,7 +52,10 @@ curl -s '127.0.0.1:26657/abci_query?data="narrator"'        #Query a tx
 ```
 ### ServerEnclave & Appenclave Startup
 ``` Bash
-./aliyun.sh 127.0.0.1 
+./aliyun.sh 127.0.0.1 install       # Install the necessary environment
+./aliyun.sh 127.0.0.1 build         # Build Narrator
+./aliyun.sh 127.0.0.1 Serverenclave # Start Serverenclave
+./aliyun.sh 127.0.0.1 Appenclave    # Start Appenclave
 ```
 
 # LICENCE
