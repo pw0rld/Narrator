@@ -81,11 +81,10 @@ void system_init()
 				if (ser->get_peer_wait_count(i) > 0)
 				{
 					ser->decrease_peer_wait_count(i);
-					// boost::this_thread::sleep(boost::posix_time::milliseconds(1000));
 				}
 				else
 				{
-					ser->send_remote_attestation_to_peer(i); //发送一次之后需要等待
+					ser->send_remote_attestation_to_peer(i);
 					ser->set_peer_wait_count(i);
 					if (PRINT_ATTESTATION_MESSAGES)
 					{
@@ -124,7 +123,6 @@ void system_init()
 				{
 					ser->request_ecdsa_pk_from_peer(i);
 					ser->set_peer_wait_count(i);
-					// print the state of sending RA request
 					if (PRINT_ATTESTATION_MESSAGES)
 					{
 						cout << "[+]Local Re over `SYSTEM_INIT_EXCHANGE_PK`.Peer (" << my_ip << ":" << my_port << ") ask ecdsa pub key from peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
@@ -140,7 +138,6 @@ void system_init()
 				{
 					if (ser->self_tendermint_flag)
 					{
-						std::cout << "Now enter the blockchain setp" << std::endl;
 						string tendermint_data = read_other_info(se_enclave);
 						int is_tru = read_and_verify_tendermint(tendermint_data, se_enclave);
 						if (is_tru == 0)
@@ -165,7 +162,7 @@ void system_init()
 				}
 				else
 				{
-					// std::cout << "Master send pki failed. " << std::endl;
+					std::cout << "Master send pki failed. " << std::endl;
 					break;
 				}
 			}
@@ -182,7 +179,7 @@ void system_init()
 					}
 					else
 					{
-						cout << "checkTendermintSetup failed!!!!" << endl;
+						cout << "checkTendermintSetup failed!" << endl;
 						exit(1);
 					}
 				}
@@ -193,7 +190,7 @@ void system_init()
 				// The setp is the finally setp, in this step will check tendermint record.
 				if (ser->self_tendermint_flag)
 				{
-					if (check_tendermint_counter == ser->Re_Peers.size())
+					if (check_tendermint_counter == ser->Re_Peers.size()) // check tendermint
 					{
 						cout << "SYSTEM_INIT_DONE Finish" << endl;
 						is_system_init_finished = true;

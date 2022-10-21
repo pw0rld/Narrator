@@ -284,7 +284,7 @@ string create_remote_attestation_evidence(oe_enclave_t *attester_enclaves)
     string message = evidence_string + "," + pem_key_string;
     if (PRINT_ATTESTATION_MESSAGES)
     {
-        // cout << "[+]Local Re process create_remote_attestation_evidence.Peer (" << my_ip << ":" << to_string(my_port) << ") generate remote evidence size:" << evidence_size << ", pem_key_size: " << pem_key_size << "." << endl;
+        cout << "[+]Local Re process create_remote_attestation_evidence.Peer (" << my_ip << ":" << to_string(my_port) << ") generate remote evidence size:" << evidence_size << ", pem_key_size: " << pem_key_size << "." << endl;
     }
 
     format_id = NULL;

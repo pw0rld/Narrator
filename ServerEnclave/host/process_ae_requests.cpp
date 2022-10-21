@@ -66,7 +66,7 @@ void process_ae_requests()
             vector_size = ser->ae_queues_vector.size();
             message = "";
             result = OE_OK;
-            vector_queue_size = (vector_size > ser->batch_size) ? ser->batch_size : vector_size; // BUG
+            vector_queue_size = (vector_size > ser->batch_size) ? ser->batch_size : vector_size;
             if (ae_index_covert == 0)
             {
                 ae_index_covert = ser->batch_size;
@@ -102,7 +102,7 @@ void process_ae_requests()
                     ae_queues temp_test;
                     temp_test.index = ser->ae_queues_vector.front().index;
                     temp_test.uuid = ser->ae_queues_vector.front().uuid;
-                    temp_test.index_time = ser->ae_queues_vector.front().index_time; //这块好像没用到?
+                    temp_test.index_time = ser->ae_queues_vector.front().index_time;
                     temp_test.timestamp = ser->ae_queues_vector.front().timestamp;
 
                     cout << "[+Ae] Local Re Process Batch.Process If branch. This requests index is " << ser->print_time() << " and id is " << temp_test.index << endl;
@@ -128,7 +128,7 @@ void process_ae_requests()
                     if (PRINT_ATTESTATION_MESSAGES)
                         cout << "[+Ae] Local Re Process Batch.Ready Into `ecdsa_signed` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
 
-                    result = ecdsa_signed(se_enclave, &ret, 2, 3, nullptr, 0, &encrypt_data, &encrypt_data_size); // BUG
+                    result = ecdsa_signed(se_enclave, &ret, 2, 3, nullptr, 0, &encrypt_data, &encrypt_data_size);
                     if ((result != OE_OK) || (ret != 0))
                     {
                         cout << "[-Ae]Local Re Process Batch error.Something failed for updateLocalASECounterTable batch " << endl;

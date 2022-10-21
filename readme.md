@@ -5,15 +5,16 @@ Narrator is accepted by ACM CCS'22, see [list of accepted papers](https://www.si
 
 ## Overview of Narrator
 ![overview](./narrator_overview.jpg )
-Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
+Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs) running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
 
 ## WorkFlow of Narrator
-
+### Code structure
 ``` Bash
 # ./
 ├── ali_instance.jpg
 ├── aliyun.sh           # AliCloud Deployment Script of Narrator
 ├── AppEnclave          # AppEnclave's core code
+
 ├── demo.cc    
 ├── init.sh             # Initialization Script
 ├── narrator_overview.jpg
@@ -21,7 +22,13 @@ Narrator is a performant distributed system, which contains $n = 2f + 1$ State E
 ├── ServerEnclave       # ServerEnclave's core code
 └── tendermint-ansible  # Tendermint Deployment Script
 ```
+### System Initialization
 
+### State Update
+
+### State Read
+
+### Restart Protocol
 
 
 ## Setting up Narrator
