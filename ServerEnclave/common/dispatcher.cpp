@@ -655,7 +655,6 @@ int ecall_dispatcher::aes_encrypt_ecdsa(
     memset(m_ecdsa_private_key, 0, sizeof(m_ecdsa_private_key));
     size_t encrypt_data_size = 0;
     vector<peer_info_t>::iterator it;
-    // TODO: if system has been initizlized, refuse to generate new ecdsa key and to reply
     // check whether the peer exists
     it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
     if (it == peer_info_vec2.end())
@@ -666,16 +665,13 @@ int ecall_dispatcher::aes_encrypt_ecdsa(
         return ret;
         ;
     }
-    // TRACE_ENCLAVE("debug flag");
     m_crypto->copy_ecdsa_pubkey_key(m_ecdsa_public_key);
     m_crypto->copy_ecdsa_pri_key(m_ecdsa_private_key); // INFO ROTE
 
     memcpy(Re_persistent_state_table.m_aes_key, (*it).aes_key, 128);               // INFO ROTE
     memcpy(Re_persistent_state_table.m_ecdsa_public_key, m_ecdsa_public_key, 256); // INFO ROTE
-    // TRACE_ENCLAVE("debug flag");
     memcpy(Re_persistent_state_table.m_ecdsa_private_key, m_ecdsa_private_key, sizeof(m_ecdsa_private_key));
     // Use aes key to encrypt the ecdsa public key
-    // TRACE_ENCLAVE("debug flag");
     ret = m_crypto->aes_encrypt(m_ecdsa_public_key, sizeof(m_ecdsa_public_key), encrypt_data, &encrypt_data_size, (*it).aes_key);
 
     if (ret != 0)
@@ -715,7 +711,6 @@ int ecall_dispatcher::aes_decrypt_ecdsa_reply(
     int ret = 1;
     uint8_t *decrypt_data;
     size_t decrypt_data_size;
-    // TRACE_ENCLAVE("Dispatch Info: ecdsa key size: %ld.", decrypt_data_size);
     decrypt_data = (uint8_t *)malloc(encrypt_aes_data_size + 128);
     vector<peer_info_t>::iterator it;
     it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
@@ -733,7 +728,6 @@ int ecall_dispatcher::aes_decrypt_ecdsa_reply(
     {
         memcpy((*it).ecdsa_public_key, decrypt_data, 256);
         (*it).ecdsa_key_size = 256;
-        // TRACE_ENCLAVE("Dispatch Info: aes decrypt succeed!");
     }
     else
     {
@@ -891,7 +885,6 @@ int ecall_dispatcher::process_kpi_certificate_ecall(
         if (pos == w.npos)
         {
             TRACE_ENCLAVE("can not find the end symbol!");
-            //         ret = 1;
             return ret;
             ;
         }
@@ -1314,7 +1307,6 @@ int ecall_dispatcher::seal_state_data(
     unsigned char *optional_message = NULL;
     size_t data_size = 0;
 
-    // TODO: prepare the sealed application state
     const char *state = "test plaintext";
     data = (unsigned char *)state;
     data_size = strlen((const char *)data) + 1;
@@ -1631,7 +1623,6 @@ exit:
  * @param sig_data_size
  * @return int
  */
-// TODO 固定读写入
 int ecall_dispatcher::acceptNewState(int sealPolicy)
 {
     int ret = 1;
@@ -1809,7 +1800,6 @@ int ecall_dispatcher::signed_with_verify(size_t uuid,
         {
             memset(sig_message, 0, sizeof(sig_message));
             memcpy(sig_message, message.c_str(), message.size());
-            // TRACE_ENCLAVE("Successful to genc return echo message signed!\n ");
         }
         break;
     case 2:
@@ -1822,10 +1812,8 @@ int ecall_dispatcher::signed_with_verify(size_t uuid,
     }
     ret = m_crypto->aes_encrypt(sig_message, sizeof(sig_message), encrypt_buffer, &encrypt_buffer_size, Re_persistent_state_table.m_aes_key);
     *encrypt_data_out = (uint8_t *)oe_host_malloc(encrypt_buffer_size + 1);
-    // TRACE_ENCLAVE("Successfull to ecdsa signed!!%zu\n", encrypt_buffer_size);
     memcpy(*encrypt_data_out, encrypt_buffer, encrypt_buffer_size);
     *encrypt_data_out_size = encrypt_buffer_size;
-    // TRACE_ENCLAVE("Successfull to ecdsa signed!!\n");
     ret = 0;
 exit:
     return ret;
@@ -1882,7 +1870,7 @@ int ecall_dispatcher::LedgerRead_other_key(uint8_t **publickey_id, size_t *publi
     }
     memset(*publickey_id, 0, 512);
     vector<peer_info_t>::iterator it;
-    it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid); // FIXME
+    it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
     if (it != peer_info_vec2.end())
     {
         memcpy(*publickey_id, (*it).rsa_public_key, 512);

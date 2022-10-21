@@ -402,7 +402,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         }
         else
         {
-          // TODO: send to all SE peers
           printf("\033[32;1m Warnning: unknown message flow%s\n\033[0m", sp[0].c_str());
           fflush(stdout);
         }
@@ -479,7 +478,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         string send_message = process_AE_Update_Return_Echo_genc_message(se_enclaves, uuid_index, sp[5]);
         if (PRINT_ATTESTATION_MESSAGES)
           cout << "[+]Local Re genc Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
-        cout << "debug uuid_index " << uuid_index << " index " << index << endl;
+        // pipline
         // if (sp.size() > 6)
         // {
         // cout << "debug1" << endl;
@@ -495,7 +494,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         // }
         // cout << "debug4" << endl;
         // }
-        cout << "debug5" << endl;
         for (map<int, string>::iterator it = ser->Re_tmp_quorum.begin(); it != ser->Re_tmp_quorum.end(); ++it)
         {
           ser->fetch_return_echo_messages(it->first, send_message);
@@ -537,7 +535,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
-      // int index = safe_stoi(sp[6], pr);
       int batch_group = safe_stoi(sp[5], pr);
       int indexb = ser->find_peer_index_by_ip_and_port(sender_ip, sender_port);
       if (!(process_AE_Update_Final_verify(sp, se_enclaves)))
@@ -549,7 +546,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         cout << "[+]Local Re processes finish verify the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
 
       ser->Re_tmp_quorum_finally[indexb] = ""; // activate
-      // if (ser->Re_tmp_quorum_finally.size() >= ser->Re_Peers.size() / 2 && ser->now_group == batch_group)
       if (ser->Re_tmp_quorum_finally.size() == ser->Re_Peers.size())
       {
         ser->now_group++;
@@ -594,7 +590,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
           }
           tmp_string = j.dump();
           ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
-          // FIXME Here has a problem that is frequent sending causes latency exceptions.
           ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
           cout << "[+]Fetch ae This requests id is" << tmp_string << " Now time is " << now_time << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << endl;
           break;
