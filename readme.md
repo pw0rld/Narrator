@@ -4,7 +4,7 @@ Narrator is accepted by ACM CCS'22, see [list of accepted papers](https://www.si
 
 
 ## Overview of Narrator
-![overview](./narrator_overview.jpg )
+![overview](./figure/narrator_overview.jpg )
 Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs) running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
 
 ## WorkFlow of Narrator
@@ -23,8 +23,38 @@ Narrator is a performant distributed system, which contains $n = 2f + 1$ State E
 └── tendermint-ansible  # Tendermint Deployment Script
 ```
 ### System Initialization
+To realize an initialization protocol, in which all SEs autonomously interact with a BFT-based blockchain to complete the config.
+
+```
+Master ---------->  remote evidence ----------> slave 
+Master <----------  remote evidence <---------- slave
+Master ---------->  ASE pk and nonce ---------> slave 
+Master <----------  ASE        reply <--------- slave 
+Master ---------->  Singed PKI certificate ---> slave 
+Master <----------  PKI certificate key <------ slave
+Slave & Master ---> Init Messgae -------------> blockchain
+Slave & Master <--- Reply messgae <------------ blockchain
+Slave & Master System Init Done
+```
+
+First, Master SE will genc RSA key public with a remote attestation message and send this evidence to all peers. Peers will verify the master's evidence and return evidence. The master also will verify, then the master will genc only as key as the PKI key to encrypt secrets and broadcast all peers. If finished, the master will record this init message to the blockchain.
+
 
 ### State Update
+
+```
+AE ---------->  local evidence ----------> local SE 
+AE <----------  local evidence <---------- local SE
+AE       ---------->  State Update   ----------> local SE 
+local SE ---------->  Prepare State   ---------->  SEs 
+AE <----------  Prepare State <---------- SEs 
+Master <----------  ASE        reply <--------- slave 
+Master ---------->  Singed PKI certificate ---> slave 
+Master <----------  PKI certificate key <------ slave
+Slave & Master ---> Init Messgae -------------> blockchain
+Slave & Master <--- Reply messgae <------------ blockchain
+Slave & Master System Init Done
+```
 
 ### State Read
 
