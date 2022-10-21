@@ -43,22 +43,30 @@ First, Master SE will genc RSA key public with a remote attestation message and 
 ### State Update
 
 ```
-AE ---------->  local evidence ----------> local SE 
-AE <----------  local evidence <---------- local SE
+AE       ---------->  local evidence ----------> local SE 
+AE       <----------  local evidence <---------- local SE
 AE       ---------->  State Update   ----------> local SE 
-local SE ---------->  Prepare State   ---------->  SEs 
-AE <----------  Prepare State <---------- SEs 
-Master <----------  ASE        reply <--------- slave 
-Master ---------->  Singed PKI certificate ---> slave 
-Master <----------  PKI certificate key <------ slave
-Slave & Master ---> Init Messgae -------------> blockchain
-Slave & Master <--- Reply messgae <------------ blockchain
-Slave & Master System Init Done
+local SE ---------->  Prepare State  ---------->  SEs 
+local SE <----------  Echo OK        <---------- SEs 
+local SE ---------->  exeute & update  ---------->  AE 
+AE finish a State Update
 ```
 
 ### State Read
 
+```
+AE       ---------->  local evidence ----------> local SE 
+AE       <----------  local evidence <---------- local SE
+AE       ---------->  State Read     ----------> local SE 
+local SE ---------->  Prepare State  ---------->  SEs 
+local SE <----------  Echo OK        <---------- SEs 
+local SE ---------->  exeute & update  ---------->  AE 
+AE finish a State Read
+```
 ### Restart Protocol
+
+
+
 
 
 ## Setting up Narrator
