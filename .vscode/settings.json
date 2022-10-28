@@ -14,5 +14,6 @@
         "valarray": "cpp",
         "iostream": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": true
 }

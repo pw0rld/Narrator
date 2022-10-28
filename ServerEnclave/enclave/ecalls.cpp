@@ -175,9 +175,9 @@ int ecdsa_verify_sign_message(
     return dispatcher.ecdsa_verify_sign_message(data, data_size, sig_data, sig_data_size, ecdsa_key, ecdsa_key_size);
 }
 
-int LedgerRead_key(uint8_t **publickey_id, size_t *publickey_id_size, uint8_t **sgx_uid, size_t *sgx_uid_size)
+int LedgerRead_key(uint8_t **publickey_id, size_t *publickey_id_size/*, uint8_t **sgx_uid, size_t *sgx_uid_size*/)
 {
-    return dispatcher.LedgerRead_key(publickey_id, publickey_id_size, sgx_uid, sgx_uid_size);
+    return dispatcher.LedgerRead_key(publickey_id, publickey_id_size);
 }
 
 int LedgerRead_other_key(uint8_t **publickey_id, size_t *publickey_id_size, uint8_t **sgx_uid, size_t *sgx_uid_size, size_t uuid)

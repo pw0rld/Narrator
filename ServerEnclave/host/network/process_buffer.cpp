@@ -468,8 +468,9 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       // string signed_message = process_AE_Update_Return_Echo(sp,se_enclaves);
       // ser->Re_tmp_quorum[index] = signed_message;
       // If the specified rule is fulfil,host will request enclave
-      // if (ser->Re_tmp_quorum.size() >= ser->Re_Peers.size() / 2 && ser->now_group_first == batch_group)
-      if (ser->Re_tmp_quorum.size() == ser->Re_Peers.size())
+      //TODO LX condition to f+1
+      if (ser->Re_tmp_quorum.size() >= ser->Re_Peers.size() / 2 + 1)
+      // if (ser->Re_tmp_quorum.size() == ser->Re_Peers.size()) //NOTE Modified version need test
       {
         ser->now_group_first++;
         now_time = ser->print_time();
@@ -506,7 +507,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       }
       else
       {
-        cout << "\033[35m Not receiving all quorum to continue.Next thread will check again \033[0m" << sp[5] << endl;
+        cout << "\033[35m Not receiving enough quorum to continue. Next thread will check again \033[0m" << sp[5] << endl;
       }
     }
     // INFO ROTE; RE accept AE+10

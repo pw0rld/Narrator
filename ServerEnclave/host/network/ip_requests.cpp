@@ -433,16 +433,16 @@ bool write_tendermint(oe_enclave_t *enclave)
   uint8_t *sgx_uid;
   size_t sgx_uid_size;
   oe_result_t result = OE_OK;
+  //TODO LX string sgx_blob = get_cert_info()
   result = LedgerRead_key(
       enclave,
       &ret,
       &publickey_id,
-      &publickey_id_size,
-      &sgx_uid,
-      &sgx_uid_size);
+      &publickey_id_size);
+      
   string publickey_id_s = uint8_to_hex_stringb(publickey_id, publickey_id_size);
   string sgx_uid_s = uint8_to_hex_stringb(sgx_uid, sgx_uid_size);
-  string tendermint_data = publickey_id_s + sgx_uid_s + "22";
+  string tendermint_data = publickey_id_s + sgx_uid_s + "22"; // TODO '22' which is sgx_blob should be produces by get_cert_info()
   cout << "tendermint_data " << tendermint_data << endl;
 
   std::string url = tendermint_url + "/broadcast_tx_commit?tx=\"" + tendermint_data + "\"";
@@ -471,27 +471,25 @@ bool write_tendermint(oe_enclave_t *enclave)
 string read_other_info(oe_enclave_t *enclave)
 {
   int ret;
-  uint8_t *publickey_id;
-  size_t publickey_id_size;
-  uint8_t *sgx_uid;
-  size_t sgx_uid_size;
+  uint8_t *sgx_publickey;
+  size_t sgx_publickey_size;
+  // uint8_t *sgx_uid;
+  // size_t sgx_uid_size;
   oe_result_t result = OE_OK;
   result = LedgerRead_key(
       enclave,
       &ret,
-      &publickey_id,
-      &publickey_id_size,
-      &sgx_uid,
-      &sgx_uid_size);
+      &sgx_publickey,
+      &sgx_publickey_size);
 
-  string publickey_id_s = uint8_to_hex_stringb(publickey_id, publickey_id_size);
-
-  string sgx_uid_s = uint8_to_hex_stringb(sgx_uid, sgx_uid_size);
-  string tendermint_data = publickey_id_s + sgx_uid_s + "22";
-  free(sgx_uid);
-  sgx_uid = NULL;
-  free(publickey_id);
-  publickey_id = NULL;
+  string sgx_publickey_s = uint8_to_hex_stringb(sgx_publickey, sgx_publickey_size);
+  // string sgx_uid_s = uint8_to_hex_stringb(sgx_uid, sgx_uid_size);
+  string tendermint_data = sgx_publickey_s + "22";
+  // TODO 
+  // free(sgx_uid);
+  // sgx_uid = NULL;
+  free(sgx_publickey);
+  sgx_publickey = NULL;
   return tendermint_data;
 }
 

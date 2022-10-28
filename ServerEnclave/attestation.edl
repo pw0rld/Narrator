@@ -129,8 +129,9 @@ enclave {
         public int LedgerRead_key(
             [out]uint8_t **publickey_id, 
             [out]size_t *publickey_id_size, 
-            [out]uint8_t **sgx_uid, 
-            [out]size_t *sgx_uid_size);
+            //[out]uint8_t **sgx_uid, 
+            //[out]size_t *sgx_uid_size
+            );
 
         public int LedgerRead_other_key(
             [out]uint8_t **publickey_id, 

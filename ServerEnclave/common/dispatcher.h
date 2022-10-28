@@ -133,7 +133,7 @@ public:
   ecall_dispatcher(const char *name, enclave_config_data_t *enclave_config);
   ~ecall_dispatcher();
 
-  int LedgerRead_key(uint8_t **publickey_id, size_t *publickey_id_size, uint8_t **sgx_uid, size_t *sgx_uid_size);
+  int LedgerRead_key(uint8_t **publickey_id, size_t *publickey_id_size/*, uint8_t **sgx_uid, size_t *sgx_uid_size*/);
   int LedgerRead_other_key(uint8_t **publickey_id, size_t *publickey_id_size, uint8_t **sgx_uid, size_t *sgx_uid_size, size_t uuid);
 
   int verify_ed25519(uint8_t *signture, size_t signture_size, uint8_t *source_text, size_t source_text_size);

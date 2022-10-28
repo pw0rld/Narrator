@@ -1819,31 +1819,40 @@ exit:
     return ret;
 }
 
-int ecall_dispatcher::LedgerRead_key(uint8_t **publickey_id, size_t *publickey_id_size, uint8_t **sgx_uid, size_t *sgx_uid_size)
+int ecall_dispatcher::get_cert_info(){
+    // TODO LX sgx_blob produces and signature
+    return 0;
+}
+
+
+int ecall_dispatcher::LedgerRead_key(uint8_t **sgx_publickey, size_t *sgx_publickey_size/*, uint8_t **sgx_uid, size_t *sgx_uid_size*/)
 {
     int ret = 1;
-    *sgx_uid = (uint8_t *)oe_host_malloc(sizeof(m_enclave_signer_id) + 1);
-    if (*sgx_uid == nullptr)
-    {
-        TRACE_ENCLAVE("sgx_uid malloc failed!!!");
-        return ret;
-    }
-    memset(*sgx_uid, 0, sizeof(m_enclave_signer_id) + 1);
-    memcpy(*sgx_uid, m_enclave_signer_id, sizeof(m_enclave_signer_id));
-    *sgx_uid_size = sizeof(m_enclave_signer_id);
+    // *sgx_uid = (uint8_t *)oe_host_malloc(sizeof(m_enclave_signer_id) + 1);
+    // if (*sgx_uid == nullptr)
+    // {
+    //     TRACE_ENCLAVE("sgx_uid malloc failed!!!");
+    //     return ret;
+    // }
+    // memset(*sgx_uid, 0, sizeof(m_enclave_signer_id) + 1);
+    // memcpy(*sgx_uid, m_enclave_signer_id, sizeof(m_enclave_signer_id));
+    // *sgx_uid_size = sizeof(m_enclave_signer_id);
 
     uint8_t m_rsa_public_key[512];
     m_crypto->copy_rsa_public_key(m_rsa_public_key);
-    *publickey_id = (uint8_t *)oe_host_malloc(512);
-    if (*publickey_id == nullptr)
+    *sgx_publickey = (uint8_t *)oe_host_malloc(600);// Prevent buf overflow
+    if (*sgx_publickey == nullptr)
     {
         TRACE_ENCLAVE("publickey_id malloc failed!!!");
         return ret;
     }
 
-    memset(*publickey_id, 0, 512);
-    memcpy(*publickey_id, m_rsa_public_key, 512);
-    *publickey_id_size = 512;
+    memset(*sgx_publickey, 0, 600);
+    memcpy(*sgx_publickey, m_rsa_public_key, 512);
+    memcpy(*sgx_publickey + 512, m_enclave_signer_id, sizeof(m_enclave_signer_id));
+    *sgx_publickey_size = sizeof(m_rsa_public_key) + sizeof(m_enclave_signer_id) + 1;
+    // TODO blob produces and signature
+
     ret = 0;
     TRACE_ENCLAVE("LedgerRead Successful!");
     return ret;

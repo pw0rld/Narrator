@@ -42,6 +42,9 @@ boost::thread *mythread2;
 
 void system_init()
 {
+	// string tendermint_data = read_other_info(se_enclave);
+	// cout << "Test data " << tendermint_data << endl;
+	// exit(1);
 	while (1)
 	{
 		try

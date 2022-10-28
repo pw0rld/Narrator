@@ -23,25 +23,22 @@ Narrator is a performant distributed system, which contains $n = 2f + 1$ State E
 └── tendermint-ansible  # Tendermint Deployment Script
 ```
 ### System Initialization
-To use `write_tendermint()` and `read_and_verify_tendermint()`, we implemented $\mathrm{Blockchain.write} (\mathrm{ID} , <key, blob>)\rightarrow \sigma$ and $\mathrm{Blockchain.read} (\mathrm{ID} , key) \rightarrow (blob, \sigma)$, respectively. The $ID+key$ and $blob$ corespond to variates `sgx_pulickey` and `sgx_blob`, respectively.
+In this procedure, we utilize [Tendermint](https://tendermint.com/) as a BFT-based blockchain platform interact with all SEs autonomously. There is only one legitimate group of n SEs with known identities running on n different SGX-enabled platforms. 
 
+Building functions `write_tendermint()` and `read_and_verify_tendermint()`, we implement $\mathrm{Blockchain.write} (\mathrm{ID} , <key, blob>)\rightarrow \sigma$ and $\mathrm{Blockchain.read} (\mathrm{ID} , key) \rightarrow (blob, \sigma)$, respectively. The $ID+key$ and $blob$ correspond to variables `sgx_pulickey` and `sgx_blob`, severally.
 
-
-Code is included in `ServerEnclave/host/system_init.cpp`
-There is some configuration of secure communication channel in `/host/network/` from both of AppEnclave and ServerEnclave, the detail of building process as following.
-
-To realize an initialization protocol, in which all SEs autonomously interact with a BFT-based blockchain to complete the config. The initialization process should ensure that there is only one legitimate group of n SEs with known identities running on n different SGX-enabled platforms. 
+`/ServerEnclave/host/system_init.cpp` contains the code for the SE initialization process, in which some codes are also reused in `/AppEnclave`. In `/host/network/`, there are several configurations for secure communication channel from both the `/AppEnclave` and the `/ServerEnclave`, with the building process details as follows. 
 
 ```
-Master ---------->  remote evidence ----------> slave 
-Master <----------  remote evidence <---------- slave
-Master ---------->  AES pk and nonce ---------> slave 
-Master <----------  AES        reply <--------- slave 
-Master ---------->  Singed PKI certificate ---> slave 
-Master <----------  PKI certificate key <------ slave
-Slave & Master ---> Init Messgae -------------> blockchain
-Slave & Master <--- Reply messgae <------------ blockchain
-Slave & Master System Init Done
+Master SE ---------->  remote evidence ----------> Slave SE
+Master SE <----------  remote evidence <---------- Slave SE
+Master SE ---------->  AES pk and nonce ---------> Slave SE
+Master SE <----------  AES        reply <--------- Slave SE
+Master SE ---------->  Singed PKI certificate ---> Slave SE
+Master SE <----------  PKI certificate key <------ Slave SE
+Slave & Master SE ---> Init Messgae -------------> Tendermint
+Slave & Master SE <--- Reply messgae <------------ Tendermint
+Slave & Master SE System Init Done
 ```
 
 First, Master SE will genc RSA key public with a remote attestation message and send this evidence to all peers. Peers will verify the master's evidence and return evidence. The master also will verify, then the master will genc only as key as the PKI key to encrypt secrets and broadcast all peers. If finished, the master will record this init message to the blockchain.

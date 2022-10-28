@@ -28,8 +28,8 @@
 /* The system setup process
 Master ---------->  remote evidence ----------> slave 
 Master <----------  remote evidence <---------- slave
-Master ---------->  ASE pk and nonce ---------> slave 
-Master <----------  ASE        reply <--------- slave 
+Master ---------->  AES pk and nonce ---------> slave 
+Master <----------  AES        reply <--------- slave 
 Master ---------->  ECDSA key request --------> slave
 Master <----------  ECDSA        key <--------- slave
 Master ---------->  Singed PKI certificate ---> slave 
