@@ -4,7 +4,7 @@ Narrator is accepted by ACM CCS'22, see [list of accepted papers](https://www.si
 
 
 ## Overview of Narrator
-![overview](./figure/narrator_overview.jpg )
+![overview](./figure/narrator_arch.png)
 Narrator is a performant distributed system, which contains $n = 2f + 1$ State Enclaves (SEs) running on different SGX-enabled platforms. Each SE can provide state continuity service to all the Application Enclaves (AEs) on the same platform. To tolerate unexpected failures, Narrator adopts a customized version of the consistent broadcast protocol rather than complicated consensus protocols for state updates.
 
 ## WorkFlow of Narrator
@@ -22,7 +22,9 @@ Narrator is a performant distributed system, which contains $n = 2f + 1$ State E
 - [tendermint-ansible](./tendermint-ansible) Tendermint Deployment Script
 
 ### System Initialization
-In this procedure, we utilize [Tendermint](https://tendermint.com/) as a BFT-based blockchain platform interact with all SEs autonomously. There is only one legitimate group of n SEs with known identities running on n different SGX-enabled platforms, with the building process details as follows. 
+In this procedure, we utilize [Tendermint](https://tendermint.com/) as a BFT-based blockchain platform interact with all SEs autonomously. There is only one legitimate group of n SEs with known identities running on n different SGX-enabled platforms.
+
+The protocol flow figure is shown in [sys_init.png](./figure/sys_init.png), with the building process details as follows. 
 
 ```
 Master SE ---------->  remote evidence ----------> Slave SE
@@ -36,7 +38,7 @@ Slave & Master SE <--- Reply messgae <------------ Tendermint
 Slave & Master SE System Init Done
 ```
 
-First, Master SE will genc RSA key public with a remote attestation message and send this evidence to all peers. Peers will verify the master's evidence and return evidence. The master also will verify, then the master will genc only as key as the PKI key to encrypt secrets and broadcast all peers. If finished, the master will record this init message to the Tendermint.
+First, Master SE will genc RSA key public with a remote attestation message and send this evidence to all peers. Peers will verify the master's evidence and return evidence. The master also will verify, then the master will genc only as key as the PKI key to encrypt secrets and broadcast all peers. If finished, the master will record this init message to the Tendermint. 
 
 By building functions `write_tendermint()` and `read_and_verify_tendermint()`, we implement $\mathrm{Blockchain.write} (\mathrm{ID} , <key, blob>)\rightarrow \sigma$ and $\mathrm{Blockchain.read} (\mathrm{ID} , key) \rightarrow (blob, \sigma)$, respectively. The $ID+key$ and $blob$ correspond to variables `sgx_pulickey` and `sgx_blob`, severally.
 
@@ -44,7 +46,9 @@ By building functions `write_tendermint()` and `read_and_verify_tendermint()`, w
 
 
 ### State Update
-In this procedure, we utilize $Echo\ Broadcast$'s variants as communication protocol to implement State Update. After State Initialization, the target SE is ready to process AEs’ state update requests, it follows the protocol shown following.
+In this procedure, we utilize $Echo\ Broadcast$'s variants as communication protocol to implement State Update. After State Initialization, the target SE is ready to process AEs’ state update requests.
+
+The protocol flow figure is shown in [state_update.png](./figure/state_update.png), with the building process details as follows. 
 
 ```
 AE       ---------->  local evidence ----------> local SE 
@@ -55,6 +59,7 @@ local SE <----------  f+1 ACKs       <---------- SEs
 local SE ---------->  exeute & update ---------->AE 
 AE finish a State Update
 ```
+
 
 AE's communication code is included in `AppEnclave/host/system_init.cpp`, local SE's communicate code is implemented in `ServerEnclave/host/system_init.cpp`, similarly. Code of process request betwen SEs is in `ServerEnclave/host/network/process_buffer.cpp`.
 
@@ -67,6 +72,8 @@ In addition, $new\ inputs$ is implemented by function `state_requests()`, and $r
 When an AE wants to check the freshness of its state or the sealed data from OS, it calls the function $readState()$ to obtain the latest state digests from the target SE.
 
 The difference between State Read and Update means `read state from disk to memeory` and `write state from memeory to disk`. To read the state to Enclave memeory, use fuction `load_application_state()`.
+
+The protocol flow figure is shown in [state_read.png](./figure/state_read.png), with the building process details as follows. 
 
 ```
 AE       ---------->  local evidence ----------> local SE 
