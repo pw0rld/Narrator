@@ -20,19 +20,7 @@ Narrator is a performant distributed system, which contains $n = 2f + 1$ State E
     - [host](./ServerEnclave/host/) ServerEnclave's function realization code
         - [host/network](./AppEnclave/host/network) ServerEnclave's communication channel realization code
 - [tendermint-ansible](./tendermint-ansible) Tendermint Deployment Script
-``` Bash
-# ./
-├── ali_instance.jpg
-├── aliyun.sh           # AliCloud Deployment Script of Narrator
-├── AppEnclave          # AppEnclave's core code
 
-├── demo.cc    
-├── init.sh             # Initialization Script
-├── narrator_overview.jpg
-├── readme.md
-├── ServerEnclave       # ServerEnclave's core code
-└── tendermint-ansible  # Tendermint Deployment Script
-```
 ### System Initialization
 In this procedure, we utilize [Tendermint](https://tendermint.com/) as a BFT-based blockchain platform interact with all SEs autonomously. There is only one legitimate group of n SEs with known identities running on n different SGX-enabled platforms, with the building process details as follows. 
 
