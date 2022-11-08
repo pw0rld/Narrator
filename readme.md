@@ -9,6 +9,17 @@ Narrator is a performant distributed system, which contains $n = 2f + 1$ State E
 
 ## WorkFlow of Narrator
 ### Directory Outline
+- [aliyun.sh](./aliyun.sh) AliCloud Deployment Script of Narrator
+- [init.sh](./init.sh) Initialization Script
+- [AppEnclave](./AppEnclave) AppEnclave's Core Code
+    - [common](./AppEnclave/common/) AppEnclave's basic communication protocols code include cryptographic algorithms and SGX attestation protocol
+    - [host](./AppEnclave/host/) AppEnclave's function realization code
+        - [host/network](./AppEnclave/host/network) AppEnclave's communication channel realization code
+- [ServerEnclave](./ServerEnclave) ServerEnclave's Core Code
+    - [common](./ServerEnclave/common/) ServerEnclave's basic communication protocols code include cryptographic algorithms and SGX attestation protocol
+    - [host](./ServerEnclave/host/) ServerEnclave's function realization code
+        - [host/network](./AppEnclave/host/network) ServerEnclave's communication channel realization code
+- [tendermint-ansible](./tendermint-ansible) Tendermint Deployment Script
 ``` Bash
 # ./
 ├── ali_instance.jpg
