@@ -38,7 +38,7 @@ Slave & Master SE <--- Reply messgae <------------ Tendermint
 Slave & Master SE System Init Done
 ```
 
-First, Master SE will genc RSA key public with a remote attestation message and send this evidence to all peers. Peers will verify the master's evidence and return evidence. The master also will verify, then the master will genc only as key as the PKI key to encrypt secrets and broadcast all peers. If finished, the master will record this init message to the Tendermint. 
+First, Master SE will generate RSA public key with a remote attestation message and send this evidence to all peers. Peers will verify the master's evidence and return evidence. The master also will verify, then the master will genc only as key as the PKI key to encrypt secrets and broadcast all peers. If finished, the master will record this init message to the Tendermint. 
 
 By building functions `write_tendermint()` and `read_and_verify_tendermint()`, we implement $\mathrm{Blockchain.write} (\mathrm{ID} , <key, blob>)\rightarrow \sigma$ and $\mathrm{Blockchain.read} (\mathrm{ID} , key) \rightarrow (blob, \sigma)$, respectively. The $ID+key$ and $blob$ correspond to variables `sgx_pulickey` and `sgx_blob`, severally.
 
@@ -59,7 +59,7 @@ local SE <----------  f+1 ACKs       <---------- SEs
 local SE ---------->  exeute & update ---------->AE 
 AE finish a State Update
 ```
-
+TODO: A paragraph describing the above process like System Initialization.
 
 AE's communication code is included in `AppEnclave/host/system_init.cpp`, local SE's communicate code is implemented in `ServerEnclave/host/system_init.cpp`, similarly. Code of process request betwen SEs is in `ServerEnclave/host/network/process_buffer.cpp`.
 
@@ -84,6 +84,8 @@ local SE <----------  f+1 ACKs        <---------- SEs
 local SE ---------->  exeute & update  ---------->  AE 
 AE finish a State Read
 ```
+
+TODO: A paragraph describing the above process like System Initialization.
 ### Restart Protocol
 
 TODO
