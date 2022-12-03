@@ -1,3 +1,5 @@
+## Overview of Implementation
+
 ### System Initialization
 In this procedure, we utilize [Tendermint](https://tendermint.com/) as a BFT-based blockchain platform interact with all SEs autonomously. There is only one legitimate group of n SEs with known identities running on n different SGX-enabled platforms. Master SE is elected by group of n SEs by using distributed system consensus, and Slave SE is other SE instead of Master SE. 
 
