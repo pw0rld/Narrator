@@ -37,14 +37,6 @@ send_narrator() {
     root@${cloud_ip}:~/${narrator_folder_name}/
 }
 
-send_oe_sdk() {
-    cloud_ip=$1
-    echo "sending oe sdk to ${cloud_ip} $workdir"
-    time rsync -a -e "$ssh_config" --exclude 'build' \
-    $workdir/../../openenclave_0.17.0/ \
-    root@${cloud_ip}:~/aliyun_oe_0.17.0/    
-}
-
 install_oe_sdk() {
     cloud_ip=$1
     $ssh_config root@${cloud_ip} "
@@ -92,12 +84,34 @@ run_narrator_appenclave() {
     $ssh_config root@${cloud_ip} "~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8003 ${cloud_ip} 8001 ${cloud_ip}" >> log.log
 }
 
+send_oe_sdk() {
+    cloud_ip=$1
+    echo "git clone source to ${cloud_ip} $workdir"
+    $ssh_config root@${cloud_ip} "
+        cd ~/;
+        git clone https://github.com/pw0rld/Narrator.git;
+        cd ~/Narrator;
+        chmod +x init.sh;
+        ./init.sh;
+        cd ~/Narrator/openenclave17/;
+        rm -rf ./build;
+        mkdir ./build;
+        cd ./build;
+        cmake .. -DCMAKE_INSTALL_PREFIX=/opt/openenclave_0_17;
+        sudo make -j8 install;
+    "
+    # time rsync -a -e "$ssh_config" --exclude 'build' \
+    # $workdir/../../openenclave_0.17.0/ \
+    # root@${cloud_ip}:~/aliyun_oe_0.17.0/    
+}
+
+
 if [ "$2" == "install" ]
 then
     echo "Install openenclave and Read for the requirement"
     send_oe_sdk $1
-    send_cloud_config $1
-    install_oe_sdk $1
+    # send_cloud_config $1
+    # install_oe_sdk $1
 elif [ "$2" == "build" ]
 then
     echo "Build Narrator and sync to remote machine"
