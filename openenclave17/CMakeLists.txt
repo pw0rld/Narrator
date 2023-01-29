@@ -414,9 +414,9 @@ endif ()
 
 # Skip samples when enabling the code coverage test.
 # Otherwise, all the samples need to explicitly link against the libgcov library.
-if (NOT CODE_COVERAGE)
-  add_subdirectory(samples)
-endif ()
+#if (NOT CODE_COVERAGE)
+#  add_subdirectory(samples)
+#endif ()
 
 add_subdirectory(tools)
 
