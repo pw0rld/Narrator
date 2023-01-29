@@ -1,6 +1,6 @@
 #! /bin/bash
 workdir=$(cd $(dirname $0); pwd)
-ssh_config="ssh -i $workdir/../../narrator-tdsc.pem" #Here is your machine's ssh keypair
+ssh_config="ssh -i $workdir/../aliyun_key/narrator-bj.pem" #Here is your machine's ssh keypair
 cluster_size=5
 index=0
 
@@ -105,11 +105,39 @@ send_oe_sdk() {
     # root@${cloud_ip}:~/aliyun_oe_0.17.0/    
 }
 
+Update_host_config(){
+    cloud_ip=$1
+    echo '''
+    Add to /etc/hosts, this step inorder to speed up the access on github
+    204.232.175.78 http://documentcloud.github.com
+    207.97.227.239 http://github.com
+    204.232.175.94 http://gist.github.com
+    107.21.116.220 http://help.github.com
+    207.97.227.252 http://nodeload.github.com
+    199.27.76.130 http://raw.github.com
+    107.22.3.110 http://status.github.com
+    204.232.175.78 http://training.github.com
+    207.97.227.243 http://www.github.com
+    ''';
+    $ssh_config root@${cloud_ip} "
+    cat << EOF >/etc/hosts
+    204.232.175.78 http://documentcloud.github.com
+    207.97.227.239 http://github.com
+    204.232.175.94 http://gist.github.com
+    107.21.116.220 http://help.github.com
+    207.97.227.252 http://nodeload.github.com
+    199.27.76.130 http://raw.github.com
+    107.22.3.110 http://status.github.com
+    204.232.175.78 http://training.github.com
+    207.97.227.243 http://www.github.com
+    EOF;
+    "
+}
 
 if [ "$2" == "install" ]
 then
     echo "Install openenclave and Read for the requirement"
-    send_oe_sdk $1
+    Update_host_config $1
     # send_cloud_config $1
     # install_oe_sdk $1
 elif [ "$2" == "build" ]
@@ -117,9 +145,9 @@ then
     echo "Build Narrator and sync to remote machine"
     build_narrator_local
     send_narrator $1
-elif [ "$2" == "Tendermint" ]
-then
-    # TODO
+# elif [ "$2" == "Tendermint" ]
+# then
+#     # TODO
 elif [ "$2" == "Serverenclave" ]
 then
     echo "Setup the Serverenclave";
