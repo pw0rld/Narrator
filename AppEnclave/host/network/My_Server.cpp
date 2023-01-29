@@ -430,7 +430,7 @@ void tcp_server::setup_secure_channel_to_server()
 // init the state at SE if not setup previously
 void tcp_server::send_client_requests(size_t message_type)
 {
-  // cout << "Start to send_client_requests.And milliseconds time is " << ser->print_time() << endl;
+  cout << "Start to send_client_requests.And milliseconds time is " << ser->print_time() << endl;
   string msg = create_client_message(cl_enclave, message_type);
   // cout << "End to send_client_requests.And milliseconds time is " << ser->print_time() << endl;
 

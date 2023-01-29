@@ -47,10 +47,10 @@ typedef struct _enclave_config_data
 typedef struct _state_info
 {
   //TODO Key of attestation should write in this struct?
-  uint8_t state[512] = {0};
-  size_t state_size;
+  uint8_t state[10000] = {0};
+  // size_t state_size;
   uint8_t requests_I[512] = {0};
-  size_t requests_I_size;
+  // size_t requests_I_size;
   uint8_t ITHash[32];
 } state_info_t;
 

@@ -46,7 +46,7 @@ void system_init()
 	// cout << "Test data " << tendermint_data << endl;
 	// exit(1);
 	while (1)
-	{
+	{cout << "debug 1" << endl;
 		try
 		{
 			boost::this_thread::sleep(boost::posix_time::milliseconds(1));
@@ -67,11 +67,12 @@ void system_init()
 
 			if (PRINT_ATTESTATION_MESSAGES)
 			{
-				// cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
+				cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
 			}
 
 			if (ser->is_peer_connected(i) == false && (ser->get_peer_role(i)).compare("se_slave") == 0)
 			{									 // if peer is not connected, check the next one+
+				cout << "debug" <<init_state << endl;
 				is_system_init_finished = false; // make sure all peer finish system init
 				continue;
 			}

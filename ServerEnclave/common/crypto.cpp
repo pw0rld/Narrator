@@ -180,20 +180,15 @@ int Crypto::init_openssl(void)
     uint8_t **tmp_buffer;
     oe_result_t result;
     *tmp_buffer = (uint8_t *)oe_host_malloc(32);
-
-    result = load_ed25519(&ret, tmp_buffer);
-    if (result != OE_OK)
-    {
-        TRACE_ENCLAVE("Ocall load_ed25519 is failed.");
-        ret = 1;
-        return ret;
-    }
-    memcpy(ed25519_public_key, *tmp_buffer, 32);
-    // TRACE_ENCLAVE("The ed25519publickey:");
-    // for (uint8_t i = 0; i < 32; i++)
+    // Test for aliyun
+    // result = load_ed25519(&ret, tmp_buffer);
+    // if (result != OE_OK)
     // {
-    //     printf("%x ", ed25519_public_key[i]);
+    //     TRACE_ENCLAVE("Ocall load_ed25519 is failed.");
+    //     ret = 1;
+    //     return ret;
     // }
+    // memcpy(ed25519_public_key, *tmp_buffer, 32);
     TRACE_ENCLAVE("OpenSsl ECDSA step init Successful!");
     // BUG Here is a double pointer no free. If call oe_free this pointer, program will crash with :OE_ENCLAVE_ABORTING
     //  oe_free(*tmp_buffer);

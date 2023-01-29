@@ -421,14 +421,19 @@ int Crypto::aes_encrypt(
     BIO *temp = NULL;
     unsigned char *swap_buffer;
     unsigned char *swap_buffer_test;
-    // TRACE_ENCLAVE(" init data %s", data);
     if (m_crypto_initialized != 0) // If init failed can not continue
         goto exit;
+    // TRACE_ENCLAVE("Debug part data_size %d ",data_size);
     swap_buffer = (unsigned char *)malloc(data_size + 128);
+    // TRACE_ENCLAVE("Debug part 1");
     memset(swap_buffer, 0, data_size + 128);
+    // TRACE_ENCLAVE("Debug part 2");
     swap_buffer_test = (unsigned char *)malloc(data_size + 128);
+    // TRACE_ENCLAVE("Debug part 3");
     temp_bn = BN_new();
-    BN_rand(bn, AES_BLOCK_SIZE * 8, -1, 1); // genc 16 iv
+    // TRACE_ENCLAVE("Debug part 4");
+    // BN_rand(bn, AES_BLOCK_SIZE * 8, -1, 1); // genc 16 iv
+    // TRACE_ENCLAVE("Debug part ");
     // memcpy(iv,BN_bn2hex(bn), AES_BLOCK_SIZE);//Random iv
     if (AES_set_encrypt_key(aes_key, AES_BLOCK_SIZE * 8, &AesKeys) < 0)
     {

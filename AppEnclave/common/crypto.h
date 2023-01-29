@@ -32,7 +32,7 @@
 #include <openssl/aes.h>
 #include <openssl/rsa.h>
 #include <openssl/bn.h>
-
+#include <cstring>
 
 
 #define OE_RSA_PRIVATE_KEY_SIZE 2048

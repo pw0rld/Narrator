@@ -54,10 +54,10 @@ void state_requests()
 	{
 		ser->send_client_requests(STATE_UPDATE);
 		ser->isRequestPending = true;
-		if (PRINT_STATES_MESSAGES)
-		{
-			std::cout << "Peer (" << my_ip << ":" << my_port << ") send state-update request to server (" << ser->get_server_ip() << ":" << ser->get_server_port() << ")." << std::endl;
-		}
+		// if (PRINT_STATES_MESSAGES)
+		// {
+		// 	std::cout << "Peer (" << my_ip << ":" << my_port << ") send state-update request to server (" << ser->get_server_ip() << ":" << ser->get_server_port() << ")." << std::endl;
+		// }
 	}
 
 	state_requests();

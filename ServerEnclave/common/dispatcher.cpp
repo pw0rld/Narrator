@@ -413,13 +413,13 @@ int ecall_dispatcher::verify_evidence(
     }
 
     // Attest the evidence and accompanying key.
-    if (m_attestation->attest_attestation_evidence(format_id, evidence, evidence_size, pem_key, pem_key_size) == false)
-    {
-        TRACE_ENCLAVE("Error: verify_evidence_and_set_public_key failed.");
-        ret = 1;
-        return ret;
-        ;
-    }
+    // if (m_attestation->attest_attestation_evidence(format_id, evidence, evidence_size, pem_key, pem_key_size) == false)
+    // {
+    //     TRACE_ENCLAVE("Error: verify_evidence_and_set_public_key failed.");
+    //     ret = 1;
+    //     return ret;
+    //     ;
+    // }
 
     // check whether the peer exists
     // uuid 没对应上
@@ -1819,10 +1819,10 @@ exit:
     return ret;
 }
 
-int ecall_dispatcher::get_cert_info(){
-    // TODO LX sgx_blob produces and signature
-    return 0;
-}
+// int ecall_dispatcher::get_cert_info(){
+//     // TODO LX sgx_blob produces and signature
+//     return 0;
+// }
 
 
 int ecall_dispatcher::LedgerRead_key(uint8_t **sgx_publickey, size_t *sgx_publickey_size/*, uint8_t **sgx_uid, size_t *sgx_uid_size*/)

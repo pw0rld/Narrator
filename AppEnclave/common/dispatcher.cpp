@@ -488,7 +488,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
     size_t encrypt_aes_data_size;
-    uint8_t data[1024];
+    uint8_t data[102400];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
     memset(data, 0, sizeof(data));
@@ -496,8 +496,8 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     memset(m_aes_key, 0, sizeof(m_aes_key));
     memset(ITHash, 0, sizeof(ITHash));
     m_crypto->get_aes_key(m_aes_key);
-
-    string message = rand_str(20);
+    string message = rand_str(10000);
+    // TRACE_ENCLAVE("message size is %d",message.size());
     if ((requests_message_size + message.size()) > sizeof(data))
     {
         TRACE_ENCLAVE("Encrypt data buffer is more small!!");
@@ -505,7 +505,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     }
     memcpy(data, requests_message, requests_message_size);
     memcpy(data + requests_message_size, message.c_str(), message.size());
-
+    // message.shrink_to_fit(); //free the string
     // Hash setp
     ret = m_crypto->Sha256(data, sizeof(data), ITHash);
     if (ret != 0)
@@ -520,6 +520,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
         TRACE_ENCLAVE("seal_state_data_host worrying!");
         goto exit;
     }
+    // cout <<"Debug 1" << endl;
     ret = m_crypto->aes_encrypt(ITHash, sizeof(ITHash), encrypt_aes_data, &encrypt_aes_data_size, m_aes_key);
     if (ret != 0)
     {
@@ -775,17 +776,17 @@ int ecall_dispatcher::seal_state_data_host(
     size_t optional_message_size;
     const char *state = "test plaintext";
     const oe_seal_setting_t settings[] = {OE_SEAL_SET_POLICY(seal_policy)};
-    state_info_table.state_size = status_message.size();
-    state_info_table.requests_I_size = requests_message_size;
-    if ((requests_message_size > sizeof(state_info_table.requests_I)) || (status_message.size() > sizeof(state_info_table.state)))
-    {
-        TRACE_ENCLAVE("Size is more bigger than table.You size is %d and %d", requests_message_size, status_message.size());
-        goto exit;
-    }
+    // state_info_table.state_size = status_message.size();
+    // state_info_table.requests_I_size = requests_message_size;
+    // if ((requests_message_size > sizeof(state_info_table.requests_I)) || (status_message.size() > sizeof(state_info_table.state)))
+    // {
+    //     TRACE_ENCLAVE("Size is more bigger than table.You size is %d and %d", requests_message_size, status_message.size());
+    //     goto exit;
+    // }
     memcpy(state_info_table.ITHash, ITHash, 32);
     memcpy(state_info_table.requests_I, requests_message, requests_message_size);
     memcpy(state_info_table.state, status_message.c_str(), status_message.size());
-
+    // TRACE_ENCLAVE("State size is %d and status size is %d requests message size %d",sizeof(state_info_table) + 1,status_message.size(),requests_message_size);
     data = (unsigned char *)malloc(sizeof(state_info_table) + 1);
     if (data == nullptr)
     {
@@ -832,7 +833,13 @@ int ecall_dispatcher::seal_state_data_host(
     ret = 0;
 exit:
     // TODO Free something
+    // oe_free(optional_message);
+    optional_message = NULL;
     oe_free(blob);
     oe_host_free(Ocall_buffer); // This buffer is in host
+    blob = NULL;
+    Ocall_buffer= NULL;
+    oe_free(data);
+    data = NULL;
     return ret;
 }
