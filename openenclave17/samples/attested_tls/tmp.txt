@@ -1,0 +1,48 @@
+| tls_client_enc.signed:tcb-comp-svn = 11
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825716Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 11
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825723Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 2
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825730Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 2
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825737Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 2
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825744Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 128
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825751Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825757Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825764Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825771Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825778Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825784Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825791Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825803Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825810Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825817Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:tcb-comp-svn = 0
+ [/home/jetli/sgx-learning/project/SGX_BRAFT/openenclave_0.17.0/common/sgx/sgxcertextensions.c:_read_integer_extension:281]
+2021-07-03T19:25:32+0800.825824Z [(E)INFO] tid(0x7f6ae94b6740) | tls_client_enc.signed:pce-svn = 11
+
+
+0b038f08cc844cc8b34a56c493ef2592
+
+sudo server/host/tls_server_host server/enc/tls_server_enc.signed -port:12341 2>&1 |tee server.log
+
+sudo client/host/tls_client_host client/enc/tls_client_enc.signed -server:localhost -port:12341 2>&1 | tee client.log
+
+
+curl --noproxy "*" -v -k -G "https://localhost:8081/sgx/certification/v2/rootcacrl"
+curl --noproxy "*" -v -k -G "https://localhost:8081/sgx/certification/v2/tcb?fmspc=00A065510000"
+
+
+
+curl --noproxy "*" -v -k -G "https://localhost:8081/sgx/certification/v2/pckcert?qeid=CB4789D729EE86099EB7573BA1A1F8DF&encrypted_ppid=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&cpusvn=0B0BFF0DFF8000000000000000000000&pcesvn=0B00&pceid=0000"

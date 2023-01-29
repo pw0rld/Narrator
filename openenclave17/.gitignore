@@ -9,7 +9,6 @@
 .vscode/
 graphviz/
 build/
-samples/
 winbuild/
 
 devex/cross-nuget/linux/build
