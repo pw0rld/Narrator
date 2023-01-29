@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="RIoTEmulator.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\CyReP\RiotAes128.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotAesTables.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotBase64.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotCrypt.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotDerEnc.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotEcc.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotHmac.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotKdf.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotSha256.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\RiotX509Bldr.c">
+      <Filter>CyReP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\tinycbor\src\cborencoder.c">
+      <Filter>TinyCBOR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\tinycbor\src\cborencoder_close_container_checked.c">
+      <Filter>TinyCBOR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\tinycbor\src\cborerrorstrings.c">
+      <Filter>TinyCBOR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\tinycbor\src\cborparser.c">
+      <Filter>TinyCBOR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\External\tinycbor\src\cborparser_dup_string.c">
+      <Filter>TinyCBOR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\tcps\TcpsId.c">
+      <Filter>TCPS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CyReP\tcps\cborhelper.c">
+      <Filter>TCPS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\CyReP\CyReP\RiotAes128.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotBase64.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotCrypt.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotDerEnc.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotEcc.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotHmac.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotKdf.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotSha256.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotStatus.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotTarget.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\CyReP\RiotX509Bldr.h">
+      <Filter>CyReP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\tinycbor\src\cbor.h">
+      <Filter>TinyCBOR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\tcps\TcpsId.h">
+      <Filter>TCPS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CyReP\tcps\cborhelper.h">
+      <Filter>TCPS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CyReP">
+      <UniqueIdentifier>{290a1e25-ea08-4077-b0fd-ead96f0ea839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyCBOR">
+      <UniqueIdentifier>{a9459869-10c0-4921-9181-529ab3b4c650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TCPS">
+      <UniqueIdentifier>{c55467c2-0c96-4c9f-b3f2-21de7ba230fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

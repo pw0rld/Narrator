@@ -1,0 +1,43 @@
+# Copyright (c) Open Enclave SDK contributors.
+# Licensed under the MIT License.
+
+if (UNIX)
+  set(PTRACE_LIBRARY ${OE_LIBDIR}/openenclave/debugger/liboe_ptrace.so)
+
+  include(ExternalProject)
+
+  ExternalProject_Add(
+    ptraceLib
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ptraceLib
+    BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/ptraceLib
+    CMAKE_ARGS -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+               -DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}
+               -DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}
+    BUILD_ALWAYS on
+    TEST_BEFORE_INSTALL off
+    INSTALL_COMMAND cp ${CMAKE_CURRENT_BINARY_DIR}/ptraceLib/libsgxptrace.so
+                    ${PTRACE_LIBRARY}
+    BUILD_BYPRODUCTS ${PTRACE_LIBRARY})
+
+  install(PROGRAMS ${PTRACE_LIBRARY}
+          DESTINATION ${CMAKE_INSTALL_LIBDIR}/openenclave/debugger)
+
+  add_subdirectory(gdb-extension)
+
+  # Copy oegdb to build/output/bin so that it can be used
+  # for debugging enclaves built as part of OE SDK.
+  file(COPY oegdb DESTINATION ${OE_BINDIR})
+
+  install(PROGRAMS oegdb DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+  add_subdirectory(lldb-extension)
+
+  # Copy oelldb to build/output/bin so that it can be used
+  # for debugging enclaves built as part of OE SDK.
+  file(COPY oelldb DESTINATION ${OE_BINDIR})
+
+  install(PROGRAMS oelldb DESTINATION ${CMAKE_INSTALL_BINDIR})
+endif ()
+
+# debugrt is built on all SGX platforms
+add_subdirectory(debugrt)

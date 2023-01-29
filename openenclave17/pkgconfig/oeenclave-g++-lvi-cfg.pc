@@ -1,0 +1,16 @@
+# Copyright (c) Open Enclave SDK contributors.
+# Licensed under the MIT License.
+
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+mbedtlslibslvicfg=@LVI_MITIGATION_MBEDTLS_CRYPTO_LIBS@
+openssllibslvicfg=@LVI_MITIGATION_OPENSSL_CRYPTO_LIBS@
+
+Name: Open Enclave
+Description: Open Enclave g++ flags and libraries for building enclaves with LVI mitigation.
+Version: @OE_VERSION@
+Requires:
+Cflags: @ENCLAVE_LVI_MITIGATION_CFLAGS_GCC@ @ENCLAVE_CXXINCLUDES@
+Libs: @ENCLAVE_LVI_MITIGATION_CXXLIBS@
