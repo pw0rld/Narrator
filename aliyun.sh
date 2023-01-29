@@ -120,7 +120,7 @@ Update_host_config(){
     207.97.227.243 http://www.github.com
     ''';
     $ssh_config root@${cloud_ip} "
-    cat << EOF >/etc/hosts
+    sudo cat << EOF >/etc/hosts
     204.232.175.78 http://documentcloud.github.com
     207.97.227.239 http://github.com
     204.232.175.94 http://gist.github.com
