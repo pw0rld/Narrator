@@ -37,6 +37,13 @@ send_narrator() {
     root@${cloud_ip}:~/${narrator_folder_name}/
 }
 
+download_log(){
+    cloud_ip=$1
+    echo "Download log ${cloud_ip}"
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE.log /tmp/AE.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE.log /tmp/SE.log
+}
+
 install_oe_sdk() {
     cloud_ip=$1
     $ssh_config root@${cloud_ip} "
@@ -84,12 +91,13 @@ run_narrator_appenclave() {
     $ssh_config root@${cloud_ip} "~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8003 ${cloud_ip} 8001 ${cloud_ip}" >> log.log
 }
 
-send_oe_sdk() {
+Clone_Narrator() {
     cloud_ip=$1
     echo "git clone source to ${cloud_ip} $workdir"
     $ssh_config root@${cloud_ip} "
         cd ~/;
-        git clone https://github.com/pw0rld/Narrator.git;
+        # git clone https://github.com/pw0rld/Narrator.git;
+        git clone https://gitee.com/pw0rld/Narrator.git;
         cd ~/Narrator;
         chmod +x init.sh;
         ./init.sh;
@@ -120,7 +128,7 @@ Update_host_config(){
     207.97.227.243 http://www.github.com
     ''';
     $ssh_config root@${cloud_ip} "
-    sudo cat << EOF >/etc/hosts
+sudo cat <<EOF>>/etc/hosts
     204.232.175.78 http://documentcloud.github.com
     207.97.227.239 http://github.com
     204.232.175.94 http://gist.github.com
@@ -130,21 +138,48 @@ Update_host_config(){
     107.22.3.110 http://status.github.com
     204.232.175.78 http://training.github.com
     207.97.227.243 http://www.github.com
-    EOF;
+EOF
     "
 }
+
+write_conf(){
+    cloud_ip=$1
+    echo "Clean current _peer_ip_allowed and _peers"
+    $ssh_config root@${cloud_ip} "
+rm ~/Narrator/ServerEnclave/host/network/_peer_ip_allowed;
+rm ~/Narrator/ServerEnclave/host/network/_peers;
+    "
+    echo "Write _peer_ip_allowed"
+    $ssh_config root@${cloud_ip} "
+sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
+    172.19.155.223
+    172.19.155.223
+    172.19.155.224
+    127.0.0.1
+EOF
+    "
+    echo "Write _peers"
+    $ssh_config root@${cloud_ip} "
+sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
+    172.19.155.223:3389:1:se_master
+    172.19.155.224:3388:2:se_slave
+    127.0.0.1:8707:1:client
+EOF
+    "
+    echo "Finish!!!"
+}
+
 
 if [ "$2" == "install" ]
 then
     echo "Install openenclave and Read for the requirement"
-    Update_host_config $1
-    # send_cloud_config $1
+    # Clone_Narrator $1
+    write_conf $1
     # install_oe_sdk $1
-elif [ "$2" == "build" ]
+elif [ "$2" == "fetchlog" ]
 then
-    echo "Build Narrator and sync to remote machine"
-    build_narrator_local
-    send_narrator $1
+    echo "Fetch the remote log"
+    download_log $1
 # elif [ "$2" == "Tendermint" ]
 # then
 #     # TODO
