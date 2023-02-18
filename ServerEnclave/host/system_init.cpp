@@ -64,8 +64,8 @@ void system_init()
 		for (uint32_t i = 0; i < ser->get_peers_size(); i++)
 		{
 			uint8_t init_state = ser->get_peer_attest_state(i); // obtain peers' state
-
-			if (PRINT_ATTESTATION_MESSAGES)
+			if((ser->get_peer_role(i).compare("se_slave") == 0)){
+				if (PRINT_ATTESTATION_MESSAGES)
 			{
 				cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
 			}
@@ -232,6 +232,7 @@ void system_init()
 			}
 			break;
 		}
+			}
 	}
 	return;
 }
