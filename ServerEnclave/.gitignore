@@ -1,1 +1,3 @@
 build
+./host/network/_peers
+./host/network/_peer_ip_allowed
