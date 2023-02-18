@@ -54,124 +54,126 @@ void secure_channel()
 	// iterate for each SE peer to do remote attestation
 	for (uint32_t i = 0; i < ser->get_peers_size(); i++)
 	{
-		if (ser->is_peer_connected(i) == false)
-		{ // if peer is not connected, check the next one
-			is_system_init_finished = false;
-			continue;
-		}
-		else if ((ser->get_peer_role(i)).compare("client") == 0)
-		{
-			continue;
-		}
-		uint8_t init_state = ser->get_peer_attest_state(i); // obtain peers' state
-		cout << "peer index: " << to_string(i) << " State:" << to_string(init_state) << endl;
-		switch (init_state)
-		{
-		// do mutual remote attestation
-		case SYSTEM_INIT_START:
-		{
-			if (ser->get_peer_wait_count(i) > 0)
-			{
-				ser->decrease_peer_wait_count(i);
+		if(((peers[i].role).compare("se_slave") == 0)){
+			if (ser->is_peer_connected(i) == false)
+			{ // if peer is not connected, check the next one
+				is_system_init_finished = false;
+				continue;
 			}
-			else
+			else if ((ser->get_peer_role(i)).compare("client") == 0)
 			{
-				ser->send_remote_attestation_to_peer(i);
-				ser->set_peer_wait_count(i);
-				// print the state of sending RA request
-				if (PRINT_ATTESTATION_MESSAGES)
+				continue;
+			}
+			uint8_t init_state = ser->get_peer_attest_state(i); // obtain peers' state
+			cout << "peer index: " << to_string(i) << " State:" << to_string(init_state) << endl;
+			switch (init_state)
+			{
+			// do mutual remote attestation
+			case SYSTEM_INIT_START:
+			{
+				if (ser->get_peer_wait_count(i) > 0)
 				{
-					cout << "Peer (" << my_ip << ":" << my_port << ") send remote attestation to peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					ser->decrease_peer_wait_count(i);
 				}
-			}
-			break;
-		}
-		// generate AES key for secure communication
-		case SYSTEM_INIT_SECURE_CHANNEL:
-		{
-			if (ser->get_peer_wait_count(i) > 0)
-			{
-				ser->decrease_peer_wait_count(i);
-			}
-			else
-			{
-				ser->setup_secure_channel_to_peer(i);
-				ser->set_peer_wait_count(i);
-				// print the state of sending RA request
-				if (PRINT_ATTESTATION_MESSAGES)
+				else
 				{
-					cout << "Peer (" << my_ip << ":" << my_port << ") send AES setup to peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					ser->send_remote_attestation_to_peer(i);
+					ser->set_peer_wait_count(i);
+					// print the state of sending RA request
+					if (PRINT_ATTESTATION_MESSAGES)
+					{
+						cout << "Peer (" << my_ip << ":" << my_port << ") send remote attestation to peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					}
 				}
-			}
-			break;
-		}
-		// Ask for ECDSA pk for PKI certificate
-		case SYSTEM_INIT_EXCHANGE_PK:
-		{
-			if (ser->get_peer_wait_count(i) > 0)
-			{
-				ser->decrease_peer_wait_count(i);
-			}
-			else
-			{
-				ser->request_ecdsa_pk_from_peer(i);
-				ser->set_peer_wait_count(i);
-				// print the state of sending RA request
-				if (PRINT_ATTESTATION_MESSAGES)
-				{
-					cout << "Peer (" << my_ip << ":" << my_port << ") ask ecdsa pub key from peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
-				}
-			}
-			break;
-		}
-		// send PKI certificate
-		case SYSTEM_INIT_PKI_SETUP:
-		{
-			if (ser->isPKISetup() == false)
 				break;
-			if (ser->get_peer_wait_count(i) > 0)
-			{
-				ser->decrease_peer_wait_count(i);
 			}
-			else
+			// generate AES key for secure communication
+			case SYSTEM_INIT_SECURE_CHANNEL:
 			{
-				if (PRINT_ATTESTATION_MESSAGES)
+				if (ser->get_peer_wait_count(i) > 0)
 				{
-					cout << "Peer (" << my_ip << ":" << my_port << ") send pki-certificate to peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					ser->decrease_peer_wait_count(i);
 				}
-
-				ser->broadcast_ecdsa_pki_to_peers(i);
-				ser->set_peer_wait_count(i);
-				// print the state of sending RA request
+				else
+				{
+					ser->setup_secure_channel_to_peer(i);
+					ser->set_peer_wait_count(i);
+					// print the state of sending RA request
+					if (PRINT_ATTESTATION_MESSAGES)
+					{
+						cout << "Peer (" << my_ip << ":" << my_port << ") send AES setup to peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					}
+				}
+				break;
 			}
-			break;
-		}
-		// upload initialization info to chain to prevent forking
-		case SYSTEM_INIT_UPDATE_CHAIN:
-		{
-			// TODO: interact with blockchain
-			break;
-		}
-		// complete the init process
-		case SYSTEM_INIT_DONE:
-		{
-			// TODO: interact with blockchain
-			break;
-		}
-		default:
-		{
-			if (PRINT_WARNNING_MESSAGES)
+			// Ask for ECDSA pk for PKI certificate
+			case SYSTEM_INIT_EXCHANGE_PK:
 			{
-				cout << "Peer (" << my_ip << ":" << my_port << ") init process: unknown state." << endl;
+				if (ser->get_peer_wait_count(i) > 0)
+				{
+					ser->decrease_peer_wait_count(i);
+				}
+				else
+				{
+					ser->request_ecdsa_pk_from_peer(i);
+					ser->set_peer_wait_count(i);
+					// print the state of sending RA request
+					if (PRINT_ATTESTATION_MESSAGES)
+					{
+						cout << "Peer (" << my_ip << ":" << my_port << ") ask ecdsa pub key from peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					}
+				}
+				break;
 			}
-			break;
-		}
-		}
+			// send PKI certificate
+			case SYSTEM_INIT_PKI_SETUP:
+			{
+				if (ser->isPKISetup() == false)
+					break;
+				if (ser->get_peer_wait_count(i) > 0)
+				{
+					ser->decrease_peer_wait_count(i);
+				}
+				else
+				{
+					if (PRINT_ATTESTATION_MESSAGES)
+					{
+						cout << "Peer (" << my_ip << ":" << my_port << ") send pki-certificate to peer (" << ser->get_peer_ip(i) << ":" << ser->get_peer_port(i) << ")." << std::endl;
+					}
 
-		// check whether the init process completes
-		if (init_state != SYSTEM_INIT_DONE)
-		{
-			is_system_init_finished = false;
+					ser->broadcast_ecdsa_pki_to_peers(i);
+					ser->set_peer_wait_count(i);
+					// print the state of sending RA request
+				}
+				break;
+			}
+			// upload initialization info to chain to prevent forking
+			case SYSTEM_INIT_UPDATE_CHAIN:
+			{
+				// TODO: interact with blockchain
+				break;
+			}
+			// complete the init process
+			case SYSTEM_INIT_DONE:
+			{
+				// TODO: interact with blockchain
+				break;
+			}
+			default:
+			{
+				if (PRINT_WARNNING_MESSAGES)
+				{
+					cout << "Peer (" << my_ip << ":" << my_port << ") init process: unknown state." << endl;
+				}
+				break;
+			}
+			}
+
+			// check whether the init process completes
+			if (init_state != SYSTEM_INIT_DONE)
+			{
+				is_system_init_finished = false;
+			}
 		}
 	}
 
