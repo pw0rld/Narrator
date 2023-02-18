@@ -54,7 +54,7 @@ void secure_channel()
 	// iterate for each SE peer to do remote attestation
 	for (uint32_t i = 0; i < ser->get_peers_size(); i++)
 	{
-		if(((peers[i].role).compare("se_slave") == 0)){
+		if((ser->get_peer_role(i).compare("se_slave") == 0)){
 			if (ser->is_peer_connected(i) == false)
 			{ // if peer is not connected, check the next one
 				is_system_init_finished = false;
