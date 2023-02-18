@@ -75,8 +75,8 @@ void process_ae_requests()
             if (control_wait >= 0)
             {
                 control_wait--;
-                if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+Ae] Local Re Process Batch.This requests index is " << index_re << " AE requests id is " << ae_index_covert_v << " and now batch process vector size is " << vector_queue_size << " and batch vector size is " << ser->ae_queues_vector.size() << " Time is " << ser->print_time() << endl;
+                // if (PRINT_ATTESTATION_MESSAGES)
+                    // cout << "[+Ae] Local Re Process Batch.This requests index is " << index_re << " AE requests id is " << ae_index_covert_v << " and now batch process vector size is " << vector_queue_size << " and batch vector size is " << ser->ae_queues_vector.size() << " Time is " << ser->print_time() << endl;
             }
             if (batch_turnon && vector_queue_size > 0)
             {
@@ -105,7 +105,7 @@ void process_ae_requests()
                     temp_test.index_time = ser->ae_queues_vector.front().index_time;
                     temp_test.timestamp = ser->ae_queues_vector.front().timestamp;
 
-                    cout << "[+Ae] Local Re Process Batch.Process If branch. This requests index is " << ser->print_time() << " and id is " << temp_test.index << endl;
+                    // cout << "[+Ae] Local Re Process Batch.Process If branch. This requests index is " << ser->print_time() << " and id is " << temp_test.index << endl;
                     ser->ae_queues_vector_process.push(temp_test);
                     ser->ae_queues_vector.erase(ser->ae_queues_vector.begin());
                 }
@@ -114,11 +114,11 @@ void process_ae_requests()
                 memset(temp_data_buffer, 0, temp_queue_size + 1);
                 memcpy(temp_data_buffer, &temp_queue_vector, temp_queue_size);
                 int64_t new_time = ser->print_time();
-                if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+Ae] Local Re Process Batch.Ready Into `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                // if (PRINT_ATTESTATION_MESSAGES)
+                    // cout << "[+Ae] Local Re Process Batch.Ready Into `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 result = updateLocalASECounterTable(se_enclave, &ret, -1, temp_data_buffer, temp_queue_size);
-                if (PRINT_ATTESTATION_MESSAGES)
-                    cout << "[+Ae] Local Re Process Batch.Finish `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
+                // if (PRINT_ATTESTATION_MESSAGES)
+                    // cout << "[+Ae] Local Re Process Batch.Finish `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 free(temp_data_buffer);
                 temp_data_buffer = NULL;
                 if (ret == 0)

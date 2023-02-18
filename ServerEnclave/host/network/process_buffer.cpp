@@ -313,7 +313,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
           int is_tru = read_and_verify_tendermint(tendermint_data, se_enclaves);
           if (is_tru == 0)
           {
-            // ser->set_peer_attest_state(i, SYSTEM_INIT_DONE);
+            // ser->set_peer_attest_state(index, SYSTEM_INIT_DONE);
             cout << "[+]Check tendermint record is not exist " << endl;
             bool is_write = write_tendermint(se_enclaves);
             if (is_write)
@@ -345,8 +345,9 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         printf("\033[32;1m Warnning: unknown aes reply message.\n\033[0m");
         fflush(stdout);
       }
-      ser->set_peer_attest_state(index, SYSTEM_INIT_UPDATE_CHAIN);
+      // ser->set_peer_attest_state(index, SYSTEM_INIT_UPDATE_CHAIN);
       ser->clear_peer_wait_count(index);
+      ser->set_peer_attest_state(index, SYSTEM_INIT_DONE);
       if (PRINT_ATTESTATION_MESSAGES)
       {
         cout << "[+] PKI_Reply process.Peer (" << my_ip << ":" << to_string(my_port) << ") succeed pki-broadcast to peer (" << sender_ip << ":" << to_string(sender_port) << ")." << endl;

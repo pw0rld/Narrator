@@ -437,6 +437,7 @@ bool process_aes_setup_request(vector<std::string> sp, oe_enclave_t *attester_en
     if ((result != OE_OK) || (ret != 0))
     {
         cout << "[-]Local Re process process_aes_setup_request failed.Peer (" << my_ip << ":" << to_string(my_port) << ") failed to decrypt aes-reply from peer (" << sender_ip << ":" << to_string(sender_port) << ")." << endl;
+        exit(1);
         return false;
     }
     else

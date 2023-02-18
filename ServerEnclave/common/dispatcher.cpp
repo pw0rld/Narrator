@@ -426,9 +426,15 @@ int ecall_dispatcher::verify_evidence(
     it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
     if (it != peer_info_vec2.end())
     {
-        memcpy((*it).rsa_public_key, pem_key, 512);
-        (*it).rsa_key_size = 512;
-        TRACE_ENCLAVE("Warning: Peer already exists.And uuid is %d", uuid);
+        if((*it).state)
+        {
+            TRACE_ENCLAVE("Warning: Peer send again. And uuid is %d", uuid);
+            ret = 0;
+            return ret;
+        }
+        // memcpy((*it).rsa_public_key, pem_key, 512);
+        // (*it).rsa_key_size = 512;
+        TRACE_ENCLAVE("Warning: Bug Peer already exists.And uuid is %d", uuid);
         ret = 1;
         return ret;
     }
@@ -436,6 +442,7 @@ int ecall_dispatcher::verify_evidence(
     memcpy(pr.rsa_public_key, pem_key, pem_key_size);
     pr.uuid = uuid;
     pr.rsa_key_size = pem_key_size;
+    pr.state = true;
     peer_info_vec2.push_back(pr);
     if (PRINT_DISPATCH_MESSAGES)
     {

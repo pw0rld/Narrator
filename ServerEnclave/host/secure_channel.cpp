@@ -38,6 +38,8 @@ extern oe_enclave_t *se_enclave;
 extern string my_ip;
 extern uint32_t my_port;
 
+int se_slave_count = 0;
+// Just for client request 
 void secure_channel()
 {
 	// periodically run the thread to execute system setup

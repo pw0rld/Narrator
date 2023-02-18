@@ -205,7 +205,7 @@ void tcp_server::print_peers()
     {
 
       Re_Peers[i][peers[i].ip] = peers[i].port;
-      cout << '\t' << (peers[i]).ip << " : " << peers[i].port << "   connected: " << peers[i].connected << "   Attested: " << to_string(peers[i].attestState) << endl;
+      cout << '\t' << (peers[i]).ip << " : " << peers[i].port << "   connected: " << peers[i].connected << "   Attested: " << to_string(peers[i].attestState) << " UUID :" << peers[i].uuid << endl;
     }
   }
 

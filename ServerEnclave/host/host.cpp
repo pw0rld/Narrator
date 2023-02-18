@@ -168,24 +168,24 @@ int main(int argc, const char *argv[])
         infile2.close();
     }
 
-    bool isSystemSetup = false;
+    // bool isSystemSetup = false;
     // read previously sealed configuration info; if system has already intilized, skip the pki setup and blockchain checking phase
 
-    if (isSystemSetup == false)
-    {
+    // if (isSystemSetup == false)
+    // {
         // If system hasn't initialized previously and the SE's role is master, start an system initialization thread
         if (my_role.compare("se_master") == 0)
         {
             boost::thread t1(system_init);
             mythread = &t1;
         }
-    }
-    else
-    {
-        // initilize secure communication channel
-        boost::thread t1(secure_channel);
-        mythread = &t1;
-    }
+        // else if (my_role.compare("se_client") == 0)
+        // {
+        //     // initilize secure communication channel
+        //     boost::thread t1(secure_channel);
+        //     mythread = &t1;
+        // }
+    // }
     // Start the server
     // server.Re_piplines_vector.reserve(sizeof(Re_piplines) * 1000);
     server.run_network();

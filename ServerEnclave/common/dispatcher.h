@@ -50,7 +50,7 @@ typedef struct _peer_info
   size_t ecdsa_key_size;
   uint8_t aes_key[128] = {0};
   size_t aes_key_size;
-
+  bool state = false;
   int quorum = 0;
   int nonce = 0;
   uint8_t ITHash[32] = {0};

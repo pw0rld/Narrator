@@ -46,7 +46,7 @@ void system_init()
 	// cout << "Test data " << tendermint_data << endl;
 	// exit(1);
 	while (1)
-	{cout << "debug 1" << endl;
+	{
 		try
 		{
 			boost::this_thread::sleep(boost::posix_time::milliseconds(1));
@@ -65,18 +65,18 @@ void system_init()
 		{
 			uint8_t init_state = ser->get_peer_attest_state(i); // obtain peers' state
 			if((ser->get_peer_role(i).compare("se_slave") == 0)){
-				if (PRINT_ATTESTATION_MESSAGES)
-			{
-				cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
-			}
+			// 	if (PRINT_ATTESTATION_MESSAGES)
+			// {
+			// 	cout << "[+]Local Re check peer status.Peer index: " << to_string(i) << " State:" << to_string(init_state) << " Port: " << ser->get_peer_port(i) << " uuid is " << ser->get_peer_uuid(i) << " and connected " << ser->is_peer_connected(i) << " is_system_init_finished " << is_system_init_finished << endl;
+			// }
 
 			if (ser->is_peer_connected(i) == false && (ser->get_peer_role(i)).compare("se_slave") == 0)
 			{									 // if peer is not connected, check the next one+
-				cout << "debug" <<init_state << endl;
+				// cout << "debug" <<init_state << endl;
 				is_system_init_finished = false; // make sure all peer finish system init
 				continue;
 			}
-
+			cout << "init_state " << to_string(init_state) <<endl;
 			switch (init_state)
 			{
 			// do mutual remote attestation
@@ -166,7 +166,8 @@ void system_init()
 				}
 				else
 				{
-					std::cout << "Master send pki failed. " << std::endl;
+					std::cout << "Master send pki failed. Ready again! " << std::endl;
+					boost::this_thread::sleep(boost::posix_time::milliseconds(1));
 					break;
 				}
 			}
@@ -191,26 +192,64 @@ void system_init()
 			// complete the init process
 			case SYSTEM_INIT_DONE:
 			{
+				cout << "SYSTEM_INIT_DONE == ?" << (SYSTEM_INIT_DONE == init_state) << endl;
 				// The setp is the finally setp, in this step will check tendermint record.
 				if (ser->self_tendermint_flag)
 				{
-					if (check_tendermint_counter == ser->Re_Peers.size()) // check tendermint
+					int client_num = 0;
+					for (uint32_t k = 0; k < ser->get_peers_size(); k++){
+							if((ser->get_peer_role(i).compare("client") == 0)){
+								client_num += 1;
+							}
+						}
+					if (check_tendermint_counter == ser->Re_Peers.size() - client_num) // check tendermint
 					{
 						cout << "SYSTEM_INIT_DONE Finish" << endl;
 						is_system_init_finished = true;
 						check_tendermint_counter = 0;
+						exit(1);
 						break;
 					}
 				}
 				else
 				{
-					is_system_init_finished = true;
+					int client_num = 0;
+					for (uint32_t k = 0; k < ser->get_peers_size(); k++){
+							if((ser->get_peer_role(i).compare("client") == 0)){
+								client_num += 1;
+							}
+						}
+					int se_slave = -1; // no calc the master
+					for (uint32_t k = 0; k < ser->get_peers_size(); k++){
+							if((ser->get_peer_attest_state(i) == SYSTEM_INIT_DONE && ser->get_peer_role(i).compare("se_slave") == 0)){
+								se_slave += 1;
+							}
+						}
+					// cout << "SYSTEM_INIT_DONE Finish " << se_slave << " peers " << ser->Re_Peers.size()  << " client_num " << client_num <<  endl;
+					if (se_slave == ser->Re_Peers.size() - client_num ) // check tendermint
+					{
+						cout << "SYSTEM_INIT_DONE Finish" << endl;
+						cout << "[+]Local Re entry process_ae_requests step " << endl;
+						ser->ae_queues_vector.reserve(sizeof(ae_queues) * 1000);
+						ser->ae_infos_vector.reserve(sizeof(ae_infos) * 10);
+						boost::thread t1(process_ae_requests);
+						mythread2 = &t1;
+						if (PRINT_ATTESTATION_MESSAGES)
+						{
+							cout << "[+]Master (" << my_ip << ":" << my_port << ") finish PKI Setup." << std::endl;
+							ser->print_peers();
+						}
+						return;
+					}
+					break;
 				}
 			}
 			default:
 			{
+				// cout << "SYSTEM_INIT_DONE == ?" << (SYSTEM_INIT_DONE == init_state) << endl;
 				if (PRINT_WARNNING_MESSAGES)
 				{
+					
 					cout << "[+]Local Re over `default`.Peer (" << my_ip << ":" << my_port << ") init process: unknown state." << endl;
 				}
 				break;
@@ -232,7 +271,7 @@ void system_init()
 			}
 			break;
 		}
-			}
+	}
 	}
 	return;
 }
