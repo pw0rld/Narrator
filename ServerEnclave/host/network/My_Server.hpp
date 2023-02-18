@@ -193,6 +193,7 @@ public:
   size_t get_peer_uuid(uint32_t index);
   void set_peer_attest_state(uint32_t index, uint8_t state);
   uint8_t get_peer_attest_state(uint32_t index);
+  string get_peer_role(uint32_t index);
   // uint32_t get_peer_port(uint32_t index);
   uint32_t get_peer_wait_count(uint32_t index);
   void set_peer_wait_count(uint32_t index);
