@@ -736,6 +736,11 @@ uint8_t tcp_server::get_peer_attest_state(uint32_t index)
   return peers[index].attestState;
 }
 
+uint8_t tcp_server::get_peer_role(uint32_t index)
+{
+  return peers[index].role;
+}
+
 void tcp_server::set_peer_attest_state(uint32_t index, uint8_t state)
 {
   peers[index].attestState = state;
