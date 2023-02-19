@@ -6,7 +6,7 @@ index=0
 
 
 client_ip="eng_client"
-narrator_folder_name="narrator"
+narrator_folder_name="Narrator"
 engraft_folder_name="engraft"
 raft_cli_folder_name="raft_client"
 damysus_folder_name="damysus"
@@ -42,6 +42,8 @@ download_log(){
     echo "Download log ${cloud_ip}"
     time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE.log /tmp/AE.log
     time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE.log /tmp/SE.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE1.log /tmp/SE1.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE2.log /tmp/SE2.log
 }
 
 install_oe_sdk() {
@@ -144,8 +146,14 @@ EOF
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 172.25.164.21:3389:1:se_master
 172.25.164.21:3388:2:se_slave
-172.25.164.22:3387:3:se_slave
-172.25.164.22:3386:4:se_slave
+172.25.164.21:3387:3:se_slave
+172.25.164.21:3386:4:se_slave
+172.25.164.21:3385:5:se_slave
+172.25.164.22:3389:10:se_slave
+172.25.164.22:3388:11:se_slave
+172.25.164.22:3387:12:se_slave
+172.25.164.22:3386:13:se_slave
+172.25.164.22:3385:14:se_slave
 127.0.0.1:8707:9:client
 EOF
     "
@@ -153,23 +161,29 @@ EOF
 }
 # cd ~/Narrator/ServerEnclave/build/
 # ~/Narrator/ServerEnclave/build/host/attestation_host ~/Narrator/ServerEnclave/build/enclave/enclave_a.signed 3386 ~/Narrator/ServerEnclave/host/network/_peers 172.25.164.22
-# ~/Narrator/AppEnclave/build/host/attestation_host ~/Narrator/AppEnclave/build/enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.19>> /tmp/AE.log
+# ~/Narrator/AppEnclave/build/host/attestation_host ~/Narrator/AppEnclave/build/enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.21>> /tmp/AE.log
 run_narrator_serverenclave() {
     cloud_ip=$1
     echo "Shudown Narrator"
     $ssh_config root@${cloud_ip} "ps -ef | grep attestation | grep -v grep | awk '{print \$2}' |sudo xargs kill -9"
     echo "Running ServerEnclave to ${cloud_ip}"
     $ssh_config root@${cloud_ip} "
-    cd ~/ServerEnclave/build;
-    ~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8001 ~/$narrator_folder_name/ServerEnclave/host/network/_peers ${cloud_ip}
-    " >> ServerEnclave.log
+    cd ~/$narrator_folder_name/ServerEnclave/build;
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers \$(hostname -I) &
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers \$(hostname -I) >> /tmp/SE1.log 2>&1 &
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers \$(hostname -I) >> /tmp/SE2log 2>&1 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers \$(hostname -I) >> /tmp/SE3log 2>&1 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers \$(hostname -I) >> /tmp/SE4log 2>&1 &  
+    "
 }
 
 
 run_narrator_appenclave() {
     cloud_ip=$1
-    echo "Running ServerEnclave to ${cloud_ip}"
-    $ssh_config root@${cloud_ip} "~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8003 ${cloud_ip} 8001 ${cloud_ip}" >> log.log
+    echo "Running Appenclave to ${cloud_ip}"
+    $ssh_config root@${cloud_ip} "
+        cd ~/$narrator_folder_name/AppEnclave/build;
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.21 >> /tmp/AE.log 2>&1 &" 
 }
 
 build_narrator(){
@@ -200,16 +214,17 @@ then
     Clone_Narrator $1
     write_conf $1
     build_narrator $1
-elif [ "$2" == "fetchlog" ]
+elif [ "$2" == "log" ]
 then
     echo "Fetch the remote log"
     download_log $1
 # elif [ "$2" == "Tendermint" ]
 # then
 #     # TODO
-elif [ "$2" == "Serverenclave" ]
+elif [ "$2" == "Update" ]
 then
-    echo "Setup the Serverenclave";
+    echo "Update the Serverenclave";
+    write_conf $1
     run_narrator_serverenclave $1
 elif [ "$2" == "Appenclave" ]
 then
