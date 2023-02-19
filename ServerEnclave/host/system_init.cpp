@@ -260,7 +260,7 @@ void system_init()
 		if (is_system_init_finished)
 		{
 			cout << "[+]Local Re entry process_ae_requests step " << endl;
-			ser->ae_queues_vector.reserve(sizeof(ae_queues) * 1000);
+			ser->ae_queues_vector.reserve(sizeof(ae_queues) * 100);
 			ser->ae_infos_vector.reserve(sizeof(ae_infos) * 10);
 			boost::thread t1(process_ae_requests);
 			mythread2 = &t1;

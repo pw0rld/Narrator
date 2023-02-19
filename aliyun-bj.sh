@@ -134,32 +134,35 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     echo "Write _peer_ip_allowed"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
-172.25.164.19
-172.25.164.20
+172.25.164.22
+172.25.164.21
 127.0.0.1
 EOF
     "
     echo "Write _peers"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
-172.25.164.19:3389:1:se_master
-172.25.164.19:3388:2:se_slave
-172.25.164.19:3387:3:se_slave
-172.25.164.19:3386:4:se_slave
+172.25.164.21:3389:1:se_master
+172.25.164.21:3388:2:se_slave
+172.25.164.22:3387:3:se_slave
+172.25.164.22:3386:4:se_slave
 127.0.0.1:8707:9:client
 EOF
     "
     echo "Finish!!!"
 }
 # cd ~/Narrator/ServerEnclave/build/
-# ~/Narrator/ServerEnclave/build/host/attestation_host ~/Narrator/ServerEnclave/build/enclave/enclave_a.signed 3389 ~/Narrator/ServerEnclave/host/network/_peers 172.25.164.19
+# ~/Narrator/ServerEnclave/build/host/attestation_host ~/Narrator/ServerEnclave/build/enclave/enclave_a.signed 3386 ~/Narrator/ServerEnclave/host/network/_peers 172.25.164.22
 # ~/Narrator/AppEnclave/build/host/attestation_host ~/Narrator/AppEnclave/build/enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.19>> /tmp/AE.log
 run_narrator_serverenclave() {
     cloud_ip=$1
     echo "Shudown Narrator"
     $ssh_config root@${cloud_ip} "ps -ef | grep attestation | grep -v grep | awk '{print \$2}' |sudo xargs kill -9"
     echo "Running ServerEnclave to ${cloud_ip}"
-    $ssh_config root@${cloud_ip} "~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8001 ~/$narrator_folder_name/ServerEnclave/host/network/_peers ${cloud_ip}" >> ServerEnclave.log
+    $ssh_config root@${cloud_ip} "
+    cd ~/ServerEnclave/build;
+    ~/$narrator_folder_name/ServerEnclave/build/host/attestation_host ~/$narrator_folder_name/ServerEnclave/build/enclave/enclave_a.signed 8001 ~/$narrator_folder_name/ServerEnclave/host/network/_peers ${cloud_ip}
+    " >> ServerEnclave.log
 }
 
 
@@ -194,9 +197,9 @@ build_narrator(){
 if [ "$2" == "install" ]
 then
     echo "Install openenclave and Read for the requirement"
-    # Clone_Narrator $1
+    Clone_Narrator $1
     write_conf $1
-    # build_narrator $1
+    build_narrator $1
 elif [ "$2" == "fetchlog" ]
 then
     echo "Fetch the remote log"
