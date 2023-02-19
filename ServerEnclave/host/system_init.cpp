@@ -45,6 +45,8 @@ void system_init()
 	// string tendermint_data = read_other_info(se_enclave);
 	// cout << "Test data " << tendermint_data << endl;
 	// exit(1);
+	ser->ae_queues_vector.reserve(sizeof(ae_queues) * 1000);
+	ser->ae_infos_vector.reserve(sizeof(ae_infos) * 10);
 	while (1)
 	{
 		try
@@ -230,8 +232,6 @@ void system_init()
 					{
 						cout << "SYSTEM_INIT_DONE Finish" << endl;
 						cout << "[+]Local Re entry process_ae_requests step " << endl;
-						ser->ae_queues_vector.reserve(sizeof(ae_queues) * 1000);
-						ser->ae_infos_vector.reserve(sizeof(ae_infos) * 10);
 						boost::thread t1(process_ae_requests);
 						mythread2 = &t1;
 						if (PRINT_ATTESTATION_MESSAGES)
