@@ -469,6 +469,13 @@ string rand_str(int len)
     str += end_synbol; // The end symbol
     return str;
 }
+int64_t print_time3()
+{
+
+    std::chrono::milliseconds ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+        std::chrono::system_clock::now().time_since_epoch());
+    return ms.count();
+}
 
 /**
  * @brief sent init application state request
@@ -488,7 +495,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
     size_t encrypt_aes_data_size;
-    uint8_t data[1024000];
+    uint8_t data[10240];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
     memset(data, 0, sizeof(data));
@@ -496,8 +503,10 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     memset(m_aes_key, 0, sizeof(m_aes_key));
     memset(ITHash, 0, sizeof(ITHash));
     m_crypto->get_aes_key(m_aes_key);
-    string message = rand_str(1000000); // 1000 K
-    // TRACE_ENCLAVE("message size is %d",message.size());
+    int64_t rand_str_start = print_time3();
+    string message = rand_str(10000);
+    int64_t rand_str_end = print_time3();
+    TRACE_ENCLAVE("Rand_str time is  %d",rand_str_end - rand_str_start);
     if ((requests_message_size + message.size()) > sizeof(data))
     {
         TRACE_ENCLAVE("Encrypt data buffer is more small!!");
@@ -811,7 +820,7 @@ int ecall_dispatcher::seal_state_data_host(
         &blob_size);
     if (result != OE_OK)
     {
-        TRACE_ENCLAVE("oe_seal() failed with %d\n", ret);
+        TRACE_ENCLAVE("oe_seal() failed with %d %s\n", ret,oe_result_str(result));
         goto exit;
     }
     if (blob_size > UINT32_MAX)
