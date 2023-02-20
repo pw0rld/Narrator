@@ -170,7 +170,7 @@ void system_init()
 				{
 					ser->print_peers();
 					std::cout << "Master send pki failed. Ready again! " << std::endl;
-					boost::this_thread::sleep(boost::posix_time::milliseconds(2));
+					boost::this_thread::sleep(boost::posix_time::milliseconds(5));
 					break;
 				}
 			}
