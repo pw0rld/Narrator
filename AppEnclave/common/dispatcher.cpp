@@ -488,7 +488,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
     size_t encrypt_aes_data_size;
-    uint8_t data[102400];
+    uint8_t data[1024000];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
     memset(data, 0, sizeof(data));
@@ -496,7 +496,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     memset(m_aes_key, 0, sizeof(m_aes_key));
     memset(ITHash, 0, sizeof(ITHash));
     m_crypto->get_aes_key(m_aes_key);
-    string message = rand_str(10000);
+    string message = rand_str(1000000); // 1000 K
     // TRACE_ENCLAVE("message size is %d",message.size());
     if ((requests_message_size + message.size()) > sizeof(data))
     {
