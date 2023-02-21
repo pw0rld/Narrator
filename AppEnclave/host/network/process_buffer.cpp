@@ -179,7 +179,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *attester_enclaves)
       int64_t new_time = ser->print_time();
       int64_t gap = new_time - old_time;
       // cout << "Finish to updateCounter.And milliseconds time is " << new_time << " send_time " << old_time << " back_message" << back_message << " gap is " << gap << endl;
-      cout << "gap is " << gap << endl;
+      cout << "gap is " << gap << " new_time " << new_time << endl;
     }
     else
     {
