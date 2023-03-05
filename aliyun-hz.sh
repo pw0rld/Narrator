@@ -1,6 +1,6 @@
 #! /bin/bash
 workdir=$(cd $(dirname $0); pwd)
-ssh_config="ssh -i $workdir/../aliyun_key/narrator-bj.pem" #Here is your machine's ssh keypair
+ssh_config="ssh -i $workdir/../aliyun_key/narrator-hz.pem" #Here is your machine's ssh keypair
 cluster_size=5
 index=0
 
@@ -175,17 +175,17 @@ run_narrator_serverenclave() {
     # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers \$(hostname -I) >> /tmp/SE3log 2>&1 &  
     # sleep 1
     # Wlan
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 39.106.224.238 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 121.41.1.148 &  
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 39.106.224.238 >> /tmp/SE1log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 121.41.1.148 >> /tmp/SE1log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 39.106.224.238 >> /tmp/SE2log 2>&1 & 
+    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 121.41.1.148 >> /tmp/SE2log 2>&1 & 
     sleep 1
-    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 39.106.224.238 >> /tmp/SE3log 2>&1 & 
+    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 121.41.1.148 >> /tmp/SE3log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 39.106.224.238 >> /tmp/SE4log 2>&1 & 
+    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 121.41.1.148 >> /tmp/SE4log 2>&1 & 
     sleep 1
-    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 39.105.111.195 >> /tmp/SE5log 2>&1 & 
+    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 121.41.1.148 >> /tmp/SE5log 2>&1 & 
     "
 }
 
@@ -196,10 +196,7 @@ run_narrator_appenclave() {
     $ssh_config root@${cloud_ip} "
         cd ~/$narrator_folder_name/AppEnclave/build;
         rm /tmp/AE.log 2>&1;
-        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
-        # wlan
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 39.106.224.238 >> /tmp/AE.log 2>&1 & 
-        "
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & " 
 }
 
 build_narrator(){

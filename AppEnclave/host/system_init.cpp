@@ -67,6 +67,7 @@ void system_init()
 			}
 			else
 			{
+				// ser->send_client_requests(STATE_INIT); // State Read 
 				ser->send_attestation_challenge();
 				wait_count = MESSAGE_WAIT_COUNT;
 				if (PRINT_ATTESTATION_MESSAGES)
