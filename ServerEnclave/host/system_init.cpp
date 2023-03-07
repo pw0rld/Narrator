@@ -228,7 +228,7 @@ void system_init()
 								se_slave += 1;
 							}
 						}
-					// cout << "SYSTEM_INIT_DONE Finish " << se_slave << " peers " << ser->Re_Peers.size()  << " client_num " << client_num <<  endl;
+					cout << "SYSTEM_INIT_DONE Finish " << se_slave << " peers " << ser->Re_Peers.size()  << " client_num " << client_num <<  endl;
 					if (se_slave == ser->Re_Peers.size() ) // check tendermint
 					{
 						cout << "SYSTEM_INIT_DONE Finish" << endl;
