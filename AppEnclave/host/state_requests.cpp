@@ -37,30 +37,33 @@ extern oe_enclave_t *cl_enclave;
 extern string my_ip;
 extern uint32_t my_port;
 extern bool is_system_init;
-void state_requests()
+void state_requests(int64_t pass_time)
 {
 	// periodically run the thread to execute system setup
-	try
-	{
-		boost::this_thread::sleep(boost::posix_time::milliseconds(EXPECTED_REQUESTS_INTERVEL_IN_MILLISECONDS));
-	}
-	catch (boost::thread_interrupted)
-	{
-		state_requests();
-	}
+	// try
+	// {
+	// 	// boost::this_thread::sleep(boost::posix_time::milliseconds(EXPECTED_REQUESTS_INTERVEL_IN_MILLISECONDS));
+	// }
+	// catch (boost::thread_interrupted)
+	// {
+	// 	// state_requests();
+	// }
 
 	// if the system is initialized and no pending requests, then generate state update requests
-	if (is_system_init == true && ser->isRequestPending == false)
-	{
-		ser->send_client_requests(STATE_UPDATE);
-		ser->isRequestPending = true;
-		// if (PRINT_STATES_MESSAGES)
-		// {
-		// 	std::cout << "Peer (" << my_ip << ":" << my_port << ") send state-update request to server (" << ser->get_server_ip() << ":" << ser->get_server_port() << ")." << std::endl;
-		// }
+	while(1){
+		if (is_system_init == true && ser->isRequestPending == false)
+		{
+			ser->send_client_requests(STATE_UPDATE);
+			ser->isRequestPending = true;
+		}
+		int64_t now_time = ser->print_time();
+		if(now_time - pass_time >= 60000){
+			cout << "一分钟到了！！！" << endl;
+			exit(0);
+		}
 	}
-
-	state_requests();
+	
+	// state_requests();
 
 	return;
 }

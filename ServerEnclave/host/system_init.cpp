@@ -239,6 +239,7 @@ void system_init()
 						{
 							cout << "[+]Master (" << my_ip << ":" << my_port << ") finish PKI Setup." << std::endl;
 							ser->print_peers();
+							cout << "SeverEnclave End time " << ser->print_time() << endl;
 						}
 						return;
 					}

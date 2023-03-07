@@ -181,7 +181,7 @@ void system_init()
 	}
 	else
 	{
-		state_requests();
+		state_requests(ser->print_time());
 	}
 	return;
 }
