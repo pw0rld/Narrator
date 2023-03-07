@@ -218,13 +218,13 @@ void system_init()
 				{
 					int client_num = 0;
 					for (uint32_t k = 0; k < ser->get_peers_size(); k++){
-							if((ser->get_peer_role(i).compare("client") == 0)){
+							if((ser->get_peer_role(k).compare("client") == 0)){
 								client_num += 1;
 							}
 						}
 					int se_slave = -1; // no calc the master
 					for (uint32_t k = 0; k < ser->get_peers_size(); k++){
-							if((ser->get_peer_attest_state(i) == SYSTEM_INIT_DONE && ser->get_peer_role(i).compare("se_slave") == 0)){
+							if((ser->get_peer_attest_state(k) == SYSTEM_INIT_DONE && ser->get_peer_role(i).compare("se_slave") == 0)){
 								se_slave += 1;
 							}
 						}
