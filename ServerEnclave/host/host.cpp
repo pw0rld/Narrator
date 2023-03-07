@@ -54,11 +54,21 @@ tcp_server *ser = NULL;
 oe_enclave_t *se_enclave = NULL;
 string my_role = "norole";
 
+int64_t test()
+{
+
+  std::chrono::microseconds ms = std::chrono::duration_cast<std::chrono::microseconds>(
+      std::chrono::system_clock::now().time_since_epoch());
+  return ms.count();
+}
+
+
 // Input parmarers: argv1  enclave path; argv2 IP port; argv3 peer config; argv4 public ip addr; argv5 private ip addr
 int main(int argc, const char *argv[])
 {
     // TODO Change Multi-process
     // create enclave from path
+    cout << "SeverEnclave Start time " << test() << endl;
     uint32_t flags = OE_ENCLAVE_FLAG_DEBUG;
     se_enclave = create_enclave(argv[1], flags);
 
