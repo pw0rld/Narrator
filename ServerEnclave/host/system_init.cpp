@@ -229,7 +229,7 @@ void system_init()
 							}
 						}
 					cout << "SYSTEM_INIT_DONE Finish " << se_slave << " peers " << ser->Re_Peers.size()  << " client_num " << ser->get_peers_size() <<  endl;
-					if (se_slave == ser->Re_Peers.size() + 1 ) // check tendermint
+					if (se_slave == ser->Re_Peers.size()) // check tendermint
 					{
 						cout << "SYSTEM_INIT_DONE Finish" << endl;
 						cout << "[+]Local Re entry process_ae_requests step " << endl;
