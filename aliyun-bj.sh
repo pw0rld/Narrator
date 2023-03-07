@@ -83,6 +83,7 @@ Clone_Narrator() {
     echo "git clone source to ${cloud_ip} $workdir"
     $ssh_config root@${cloud_ip} "
         cd ~/;
+        rm ~/Narrator -rf;
         # git clone https://github.com/pw0rld/Narrator.git;
         git clone https://gitee.com/pw0rld/Narrator.git;
         cd ~/Narrator;
@@ -136,26 +137,26 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     echo "Write _peer_ip_allowed"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
-39.105.199.174
-121.40.118.63
+123.56.73.249
+121.41.42.28
 127.0.0.1
 EOF
     "
     echo "Write _peers"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
-39.105.199.174:3389:1:se_master
-39.105.199.174:3388:2:se_slave
-39.105.199.174:3387:3:se_slave
-39.105.199.174:3386:4:se_slave
-39.105.199.174:3385:5:se_slave
-39.105.199.174:3384:6:se_slave
-121.40.118.63:3389:11:se_slave
-121.40.118.63:3388:12:se_slave
-121.40.118.63:3387:13:se_slave
-121.40.118.63:3386:14:se_slave
-121.40.118.63:3385:15:se_slave
-121.40.118.63:3384:16:se_slave
+123.56.73.249:3389:1:se_master
+123.56.73.249:3388:2:se_slave
+123.56.73.249:3387:3:se_slave
+123.56.73.249:3386:4:se_slave
+123.56.73.249:3385:5:se_slave
+123.56.73.249:3384:6:se_slave
+121.41.42.28:3389:11:se_slave
+121.41.42.28:3388:12:se_slave
+121.41.42.28:3387:13:se_slave
+121.41.42.28:3386:14:se_slave
+121.41.42.28:3385:15:se_slave
+121.41.42.28:3384:16:se_slave
 127.0.0.1:8707:9:client
 EOF
     "
@@ -183,17 +184,17 @@ run_narrator_serverenclave() {
     # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers \$(hostname -I) >> /tmp/SE3log 2>&1 &  
     # sleep 1
     # Wlan
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 39.105.199.174 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 123.56.73.249 &  
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 39.105.199.174 >> /tmp/SE1log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 123.56.73.249 >> /tmp/SE1log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 39.105.199.174 >> /tmp/SE2log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 123.56.73.249 >> /tmp/SE2log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 39.105.199.174 >> /tmp/SE3log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 123.56.73.249 >> /tmp/SE3log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 39.105.199.174 >> /tmp/SE4log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 123.56.73.249 >> /tmp/SE4log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 39.105.199.174 >> /tmp/SE5log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 123.56.73.249 >> /tmp/SE5log 2>&1 & 
     "
 }
 
@@ -206,7 +207,7 @@ run_narrator_appenclave() {
         rm /tmp/AE.log 2>&1;
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
         # wlan
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 39.105.199.174 >> /tmp/AE.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 123.56.73.249 >> /tmp/AE.log 2>&1 & 
         "
 }
 

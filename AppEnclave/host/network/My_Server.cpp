@@ -435,15 +435,12 @@ void tcp_server::send_client_requests(size_t message_type)
   string msg = create_client_message(cl_enclave, message_type);
   // cout << "End to send_client_requests.And milliseconds time is " << ser->print_time() << endl;
 
-  for(int i =0;i <= 50;i++)
+  if (msg.compare("-1") != 0)
   {
-      if (msg.compare("-1") != 0)
-    {
-      ser->index_message++;
-      msg = "#AE_Update_Counter_Requests," + my_ip + "," + to_string(my_port) + "," + msg + "," + to_string(times) + "," + to_string(ser->index_message);
-      peers[0]._strand->post(boost::bind(&tcp_server::strand_write, this, msg, 0));
-      // cout << "Create Send client requests over. And milliseconds time is " << ser->print_time() << endl;
-    }
+    ser->index_message++;
+    msg = "#AE_Update_Counter_Requests," + my_ip + "," + to_string(my_port) + "," + msg + "," + to_string(times) + "," + to_string(ser->index_message);
+    peers[0]._strand->post(boost::bind(&tcp_server::strand_write, this, msg, 0));
+    // cout << "Create Send client requests over. And milliseconds time is " << ser->print_time() << endl;
   }
 }
 
