@@ -18,5 +18,5 @@
 
 #define EXPECTED_REQUESTS_INTERVEL_IN_MILLISECONDS 10
 
-void state_requests( );
+void state_requests(int64_t pass_time);
 #endif
