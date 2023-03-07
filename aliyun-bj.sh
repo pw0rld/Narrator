@@ -150,14 +150,16 @@ sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 123.56.73.249:3387:3:se_slave
 123.56.73.249:3386:4:se_slave
 123.56.73.249:3385:5:se_slave
+123.56.73.249:3384:6:se_slave
 121.41.42.28:3389:11:se_slave
 121.41.42.28:3388:12:se_slave
 121.41.42.28:3387:13:se_slave
 121.41.42.28:3386:14:se_slave
 121.41.42.28:3385:15:se_slave
+121.41.42.28:3384:16:se_slave
 127.0.0.1:8707:29:client
 127.0.0.1:8706:28:client
-127.0.0.1:8705:27:client
+127.0.0.1:8707:27:client
 EOF
     "
     echo "Finish!!!"
@@ -194,7 +196,7 @@ run_narrator_serverenclave() {
     sleep 1
     nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 123.56.73.249 >> /tmp/SE4log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 123.56.73.249 >> /tmp/SE5log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 123.56.73.249 >> /tmp/SE5log 2>&1 & 
     "
 }
 
@@ -208,8 +210,6 @@ run_narrator_appenclave() {
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
         # wlan
         nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 123.56.73.249 >> /tmp/AE.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 123.56.73.249 >> /tmp/AE.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 123.56.73.249 >> /tmp/AE.log 2>&1 & 
         "
 }
 
