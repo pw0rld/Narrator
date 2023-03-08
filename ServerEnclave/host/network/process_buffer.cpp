@@ -557,8 +557,8 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         for (vector<size_t>::iterator it = ser->ae_queues_vector_size.begin(); it != ser->ae_queues_vector_size.end(); it++)
         {
           size_t counter_size = *it;
-          if (PRINT_ATTESTATION_MESSAGES)
-            cout << "[+]Local Re send all of the Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << endl;
+          // if (PRINT_ATTESTATION_MESSAGES)
+            // cout << "[+]Local Re send all of the Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << endl;
           if (counter_size == 0 || counter_size > 100)
           {
             cout << "[Worry]Nothing to do " << endl;
@@ -572,6 +572,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
           string tmp_string = "";
           size_t indexkkk = 0;
           int64_t test_time = 0;
+          cout << "pushcount " << pushcount << endl;
           for (int kka = 0; kka < pushcount; kka++)
           {
             if (ser->ae_queues_vector_process.front().timestamp.size())
