@@ -40,7 +40,12 @@ send_narrator() {
 download_log(){
     cloud_ip=$1
     echo "Download log ${cloud_ip}"
-    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE.log /tmp/AE.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE1.log /tmp/AE1.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE2.log /tmp/AE2.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE3.log /tmp/AE3.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE4.log /tmp/AE4.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE5.log /tmp/AE5.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE5.log /tmp/AE6.log
     # time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE.log /tmp/SE.log
     # time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE1.log /tmp/SE1.log
     # time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE2.log /tmp/SE2.log
@@ -138,7 +143,7 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
 123.56.73.249
-121.41.42.28
+121.40.118.63
 127.0.0.1
 EOF
     "
@@ -151,15 +156,18 @@ sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 123.56.73.249:3386:4:se_slave
 123.56.73.249:3385:5:se_slave
 123.56.73.249:3384:6:se_slave
-121.41.42.28:3389:11:se_slave
-121.41.42.28:3388:12:se_slave
-121.41.42.28:3387:13:se_slave
-121.41.42.28:3386:14:se_slave
-121.41.42.28:3385:15:se_slave
-121.41.42.28:3384:16:se_slave
+121.40.118.63:3389:11:se_slave
+121.40.118.63:3388:12:se_slave
+121.40.118.63:3387:13:se_slave
+121.40.118.63:3386:14:se_slave
+121.40.118.63:3385:15:se_slave
+121.40.118.63:3384:16:se_slave
 127.0.0.1:8707:29:client
 127.0.0.1:8706:28:client
 127.0.0.1:8705:27:client
+127.0.0.1:8704:26:client
+127.0.0.1:8703:25:client
+127.0.0.1:8702:24:client
 EOF
     "
     echo "Finish!!!"
@@ -206,12 +214,15 @@ run_narrator_appenclave() {
     echo "Running Appenclave to ${cloud_ip}"
     $ssh_config root@${cloud_ip} "
         cd ~/$narrator_folder_name/AppEnclave/build;
-        rm /tmp/AE.log 2>&1;
+        rm /tmp/AE*  2>&1;
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
         # wlan
         nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 123.56.73.249 >> /tmp/AE1.log 2>&1 & 
         nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 123.56.73.249 >> /tmp/AE2.log 2>&1 & 
         nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 123.56.73.249 >> /tmp/AE3.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 123.56.73.249 >> /tmp/AE4.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8703 127.0.0.1 3389 123.56.73.249 >> /tmp/AE5.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8702 127.0.0.1 3389 123.56.73.249 >> /tmp/AE6.log 2>&1 & 
         "
 }
 
