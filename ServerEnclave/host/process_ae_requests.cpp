@@ -72,12 +72,10 @@ void process_ae_requests()
                 ae_index_covert = ser->batch_size;
                 ae_index_covert_v++;
             }
-            if (control_wait >= 0)
-            {
-                control_wait--;
-                // if (PRINT_ATTESTATION_MESSAGES)
-                    // cout << "[+Ae] Local Re Process Batch.This requests index is " << index_re << " AE requests id is " << ae_index_covert_v << " and now batch process vector size is " << vector_queue_size << " and batch vector size is " << ser->ae_queues_vector.size() << " Time is " << ser->print_time() << endl;
-            }
+            // if (control_wait >= 0)
+            // {
+            //     control_wait--;
+            // }
             if (batch_turnon && vector_queue_size > 0)
             {
                 control_wait = 15;
@@ -187,7 +185,7 @@ void process_ae_requests()
             }
             else
             {
-                boost::this_thread::sleep(boost::posix_time::milliseconds(5));
+                // boost::this_thread::sleep(boost::posix_time::milliseconds(5));
             }
         }
         catch (boost::thread_interrupted &)
