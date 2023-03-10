@@ -469,7 +469,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       // string signed_message = process_AE_Update_Return_Echo(sp,se_enclaves);
       // ser->Re_tmp_quorum[index] = signed_message;
       // If the specified rule is fulfil,host will request enclave
-      //TODO LX condition to f+1
+      // TODO LX condition to f+1
       if (ser->Re_tmp_quorum.size() >= ser->Re_Peers.size() / 2 + 1)
       // if (ser->Re_tmp_quorum.size() == ser->Re_Peers.size()) //NOTE Modified version need test
       {
@@ -534,7 +534,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       int64_t now_time = ser->print_time();
       if (PRINT_ATTESTATION_MESSAGES)
         // cout << "[+]Local Re processes Start the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
-      bool pr = true;
+        bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
       int batch_group = safe_stoi(sp[5], pr);
@@ -547,7 +547,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       if (PRINT_ATTESTATION_MESSAGES)
         // cout << "[+]Local Re processes finish verify the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
 
-      ser->Re_tmp_quorum_finally[indexb] = ""; // activate
+        ser->Re_tmp_quorum_finally[indexb] = ""; // activate
       if (ser->Re_tmp_quorum_finally.size() == ser->Re_Peers.size())
       {
         ser->now_group++;
@@ -558,7 +558,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         {
           size_t counter_size = *it;
           // if (PRINT_ATTESTATION_MESSAGES)
-            // cout << "[+]Local Re send all of the Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << endl;
+          // cout << "[+]Local Re send all of the Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << endl;
           if (counter_size == 0 || counter_size > 100)
           {
             cout << "[Worry]Nothing to do " << endl;
@@ -573,28 +573,29 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
           size_t indexkkk = 0;
           int64_t test_time = 0;
           cout << "pushcount " << pushcount << endl;
-            for (int kka = 0; kka < pushcount; kka++)
+          for (int kka = 0; kka < pushcount; kka++)
+          {
+            if (ser->ae_queues_vector_process.front().timestamp.size())
             {
-              if (ser->ae_queues_vector_process.front().timestamp.size())
+              if (test_time == 0)
               {
-                if (test_time == 0)
-                {
-                  test_time = stol(ser->ae_queues_vector_process.front().timestamp);
-                }
-                j[kka] = ser->ae_queues_vector_process.front().timestamp + " @ " + ser->ae_queues_vector_process.front().index_time;
+                test_time = stol(ser->ae_queues_vector_process.front().timestamp);
               }
-              else
-              {
-                j[kka] = "";
-              }
-              indexkkk = ser->ae_queues_vector_process.front().uuid;
-              cout << " k is " << ser->ae_queues_vector_process.front().timestamp << " b is " << ser->ae_queues_vector_process.front().uuid << endl;
-              ser->ae_queues_vector_process.pop();
+              j[kka] = ser->ae_queues_vector_process.front().timestamp + " @ " + ser->ae_queues_vector_process.front().index_time;
             }
+            else
+            {
+              j[kka] = "";
+            }
+            indexkkk = ser->ae_queues_vector_process.front().uuid;
+            cout << " k is " << ser->ae_queues_vector_process.front().timestamp << " b is " << ser->ae_queues_vector_process.front().uuid << endl;
+            ser->ae_queues_vector_process.pop();
+          }
 
           tmp_string = j.dump();
           ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
-          for(int kkb = 0; kkb < counter_size; kkb++){
+          for (int kkb = 0; kkb < counter_size; kkb++)
+          {
             ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
           }
           cout << "[+]Fetch ae This requests id is" << tmp_string << " Now time is " << now_time << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << endl;

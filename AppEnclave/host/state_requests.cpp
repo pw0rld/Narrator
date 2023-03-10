@@ -50,19 +50,21 @@ void state_requests(int64_t pass_time)
 	// }
 
 	// if the system is initialized and no pending requests, then generate state update requests
-	while(1){
-		if (is_system_init == true && ser->isRequestPending == false)
+	while (1)
+	{
+		if (is_system_init == true) // && ser->isRequestPending == false)
 		{
 			ser->send_client_requests(STATE_UPDATE);
 			ser->isRequestPending = true;
 		}
 		int64_t now_time = ser->print_time();
-		if(now_time - pass_time >= 60000){
+		if (now_time - pass_time >= 60000)
+		{
 			cout << "一分钟到了！！！" << endl;
 			exit(0);
 		}
 	}
-	
+
 	// state_requests();
 
 	return;
