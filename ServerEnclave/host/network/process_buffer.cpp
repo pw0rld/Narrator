@@ -412,13 +412,13 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
     // NOTE one step
     else if (sp[0] == "#AE_Update_Counter_Requests")
     {
-      bool pr = true;
-      string sender_ip;
-      uint32_t sender_port;
-      int send_index;
-      string AE_sender_ip = sp[1];
-      uint32_t AE_sender_port = safe_stoi(sp[2], pr);
-      int AE_index = ser->find_peer_index_by_ip_and_port(AE_sender_ip, AE_sender_port);
+      // bool pr = true;
+      // string sender_ip;
+      // uint32_t sender_port;
+      // int send_index;
+      // string AE_sender_ip = sp[1];
+      // uint32_t AE_sender_port = safe_stoi(sp[2], pr);
+      // int AE_index = ser->find_peer_index_by_ip_and_port(AE_sender_ip, AE_sender_port);
       if (process_AE_Update_Counter(sp, se_enclaves))
       {
         if (PRINT_ATTESTATION_MESSAGES)
@@ -533,7 +533,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
     {
       int64_t now_time = ser->print_time();
       if (PRINT_ATTESTATION_MESSAGES)
-        cout << "[+]Local Re processes Start the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
+        // cout << "[+]Local Re processes Start the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
@@ -545,7 +545,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         return;
       }
       if (PRINT_ATTESTATION_MESSAGES)
-        cout << "[+]Local Re processes finish verify the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
+        // cout << "[+]Local Re processes finish verify the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
 
       ser->Re_tmp_quorum_finally[indexb] = ""; // activate
       if (ser->Re_tmp_quorum_finally.size() == ser->Re_Peers.size())
