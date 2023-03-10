@@ -143,7 +143,7 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
 123.56.73.249
-121.40.118.63
+112.124.21.44
 127.0.0.1
 EOF
     "
@@ -154,10 +154,10 @@ sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 123.56.73.249:3388:2:se_slave
 123.56.73.249:3387:3:se_slave
 123.56.73.249:3386:4:se_slave
-121.40.118.63:3389:11:se_slave
-121.40.118.63:3388:12:se_slave
-121.40.118.63:3387:13:se_slave
-121.40.118.63:3386:14:se_slave
+112.124.21.44:3389:11:se_slave
+112.124.21.44:3388:12:se_slave
+112.124.21.44:3387:13:se_slave
+112.124.21.44:3386:14:se_slave
 127.0.0.1:8707:29:client
 127.0.0.1:8706:28:client
 127.0.0.1:8705:27:client

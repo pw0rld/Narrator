@@ -138,7 +138,7 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
 123.56.73.249
-121.40.118.63
+112.124.21.44
 127.0.0.1
 EOF
     "
@@ -149,10 +149,10 @@ sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 123.56.73.249:3388:2:se_slave
 123.56.73.249:3387:3:se_slave
 123.56.73.249:3386:4:se_slave
-121.40.118.63:3389:11:se_slave
-121.40.118.63:3388:12:se_slave
-121.40.118.63:3387:13:se_slave
-121.40.118.63:3386:14:se_slave
+112.124.21.44:3389:11:se_slave
+112.124.21.44:3388:12:se_slave
+112.124.21.44:3387:13:se_slave
+112.124.21.44:3386:14:se_slave
 127.0.0.1:8707:29:client
 127.0.0.1:8706:28:client
 127.0.0.1:8705:27:client
@@ -182,17 +182,17 @@ run_narrator_serverenclave() {
     # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers \$(hostname -I) >> /tmp/SE3log 2>&1 &  
     # sleep 1
     # Wlan
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 121.40.118.63 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 112.124.21.44 &  
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 121.40.118.63 >> /tmp/SE1log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 112.124.21.44 >> /tmp/SE1log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 121.40.118.63 >> /tmp/SE2log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 112.124.21.44 >> /tmp/SE2log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 121.40.118.63 >> /tmp/SE3log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 112.124.21.44 >> /tmp/SE3log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 121.40.118.63 >> /tmp/SE4log 2>&1 & 
+    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 112.124.21.44 >> /tmp/SE4log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 121.40.118.63 >> /tmp/SE5log 2>&1 & 
+    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 112.124.21.44 >> /tmp/SE5log 2>&1 & 
     "
 }
 

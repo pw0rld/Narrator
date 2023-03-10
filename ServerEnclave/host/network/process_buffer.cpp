@@ -535,10 +535,10 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       if (PRINT_ATTESTATION_MESSAGES)
         // cout << "[+]Local Re processes Start the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
         bool pr = true;
-      string sender_ip = sp[1];
-      uint32_t sender_port = safe_stoi(sp[2], pr);
-      int batch_group = safe_stoi(sp[5], pr);
-      int indexb = ser->find_peer_index_by_ip_and_port(sender_ip, sender_port);
+      // string sender_ip = sp[1];
+      // uint32_t sender_port = safe_stoi(sp[2], pr);
+      // int batch_group = safe_stoi(sp[5], pr);
+      // int indexb = ser->find_peer_index_by_ip_and_port(sender_ip, sender_port);
       if (!(process_AE_Update_Final_verify(sp, se_enclaves)))
       {
         cout << "【WA】RE main Verify Failed!" << endl;
