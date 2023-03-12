@@ -430,17 +430,13 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
     else if (sp[0] == "#AE_Update_signed") // INFO ROTE; RE accept RE
     {
       int64_t now_time = ser->print_time();
-      cout << "[+]Remote Re processes Start the Local Re Echo 1 requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
       int index = ser->find_peer_index_by_ip_and_port(sender_ip, sender_port);
       string signed_message = process_AE_Update_Echo(sp, se_enclaves);
       ser->fetch_final_messages(index, signed_message); // NOTE tdsc has one step
-      if (PRINT_ATTESTATION_MESSAGES)
-      {
-        cout << "[+]Remote Re processes End the Local Re Echo 1 requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
-      }
+      cout << "[+]Remote Re processes End the Local Re Echo 1 requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
     }
     // INFO ROTE; RE accept RE +10
     //  frame of OHEI, its message processing of Server is Single instead multithreading
@@ -520,7 +516,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         return;
       }
 
-      ser->Re_tmp_quorum_finally[indexb] = ""; // activate
+      ser->Re_tmp_quorum_finally[indexb] = "1"; // activate
       if (ser->Re_tmp_quorum_finally.size() == ser->Re_Peers.size())
       {
         ser->now_group++;
