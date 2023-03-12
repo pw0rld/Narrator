@@ -587,7 +587,7 @@ void tcp_server::fetch_AE_return_messages(uint32_t index, string message, string
     if (peers[i].connected && peers[i].uuid == index)
     {
       peers[i]._strand->post(boost::bind(&tcp_server::strand_write, this, msg, i));
-      cout << "[+]Re Post thie requests  Now time is " << ser->print_time() << " the message is  " << msg << endl;
+      // cout << "[+]Re Post thie requests  Now time is " << ser->print_time() << " the message is  " << msg << endl;
       break;
     }
   }
@@ -623,7 +623,8 @@ bool tcp_server::isPKISetup()
     {
       for (int j = 0; j < peers.size(); j++)
       {
-        if(((peers[j].role).compare("se_slave") == 0)){
+        if (((peers[j].role).compare("se_slave") == 0))
+        {
           ser->broadcast_ecdsa_pki_to_peers(j);
           ser->set_peer_wait_count(j);
         }

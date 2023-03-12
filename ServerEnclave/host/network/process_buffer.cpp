@@ -539,7 +539,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
           string tmp_string = "";
           size_t indexkkk = 0;
           int64_t test_time = 0;
-          cout << "pushcount " << pushcount << endl;
           for (int kka = 0; kka < pushcount; kka++)
           {
             if (ser->ae_queues_vector_process.front().timestamp.size())
@@ -555,17 +554,17 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
               j[kka] = "";
             }
             indexkkk = ser->ae_queues_vector_process.front().uuid;
-            cout << " k is " << ser->ae_queues_vector_process.front().timestamp << " b is " << ser->ae_queues_vector_process.front().uuid << endl;
+            // cout << " k is " << ser->ae_queues_vector_process.front().timestamp << " b is " << ser->ae_queues_vector_process.front().uuid << endl;
             ser->ae_queues_vector_process.pop();
           }
 
           tmp_string = j.dump();
-          ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
+          // ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
           for (int kkb = 0; kkb < counter_size; kkb++)
           {
             ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
           }
-          cout << "[+]Fetch ae This requests id is" << tmp_string << " Now time is " << now_time << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << endl;
+          cout << "[+]Fetch ae This requests id is" << tmp_string << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and finish size  " << counter_size << endl;
           break;
         }
       }
