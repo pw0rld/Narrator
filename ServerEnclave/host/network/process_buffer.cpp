@@ -571,7 +571,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       }
       else
       {
-        cout << "[+]Local Re Waitting the Remove Re echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << endl;
+        cout << "[+]Local Re Waitting the Remove Re echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << " Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and remote peer size is " << ser->Re_Peers.size() << " Now the indexb " << indexb << endl;
       }
     }
     // INFO New

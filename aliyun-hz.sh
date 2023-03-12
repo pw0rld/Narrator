@@ -211,6 +211,7 @@ build_narrator(){
     echo "Build Narrator ServerEnclave"
     $ssh_config root@${cloud_ip} "
         cd ~/Narrator/ServerEnclave/;
+        git pull;
         mkdir build;
         cd build;
         cmake ..;
