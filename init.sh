@@ -22,7 +22,7 @@ sudo apt-get -y install libsgx-dcap-ql libsgx-dcap-ql-dev libsgx-urts libsgx-quo
 
 # For DCAP remote attestation
 sudo apt-get -y install libsgx-dcap-default-qpl
-sudo ln -s /usr/lib/x86_64-linux-gnu/libdcap_quoteprov.so.1.13.102.3 /usr/lib/x86_64-linux-gnu/libdcap_quoteprov.so
+sudo ln -s /usr/lib/x86_64-linux-gnu/libdcap_quoteprov.so.1 /usr/lib/x86_64-linux-gnu/libdcap_quoteprov.so # more bug
 sudo cp ../config/sgx_default_qcnl.conf /etc/
 
 sudo apt-get -y install libgflags-dev

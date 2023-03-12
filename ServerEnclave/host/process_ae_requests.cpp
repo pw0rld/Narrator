@@ -112,11 +112,7 @@ void process_ae_requests()
                 memset(temp_data_buffer, 0, temp_queue_size + 1);
                 memcpy(temp_data_buffer, &temp_queue_vector, temp_queue_size);
                 int64_t new_time = ser->print_time();
-                // if (PRINT_ATTESTATION_MESSAGES)
-                    // cout << "[+Ae] Local Re Process Batch.Ready Into `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 result = updateLocalASECounterTable(se_enclave, &ret, -1, temp_data_buffer, temp_queue_size);
-                // if (PRINT_ATTESTATION_MESSAGES)
-                    // cout << "[+Ae] Local Re Process Batch.Finish `updateLocalASECounterTable` enclave function. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 free(temp_data_buffer);
                 temp_data_buffer = NULL;
                 if (ret == 0)

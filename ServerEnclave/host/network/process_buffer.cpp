@@ -205,8 +205,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         printf("\033[32;1m Warnning: unknown aes setup message.\n\033[0m");
         fflush(stdout);
       }
-      // if (PRINT_ATTESTATION_MESSAGES)
-      if (1)
+      if (PRINT_ATTESTATION_MESSAGES)
       {
         cout << "[+]AES_Setup process.Peer (" << my_ip << ":" << to_string(my_port) << ") receive aes-setup request from peer (" << sender_ip << ":" << to_string(sender_port) << ")." << endl;
       }
@@ -422,15 +421,16 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       if (process_AE_Update_Counter(sp, se_enclaves))
       {
         if (PRINT_ATTESTATION_MESSAGES)
+        {
           cout << "[+]Local Re AE_Update_Counter_Requests .Save ae into vector successfule" << endl;
+        }
       }
     }
     // INFO ROTE +10
     else if (sp[0] == "#AE_Update_signed") // INFO ROTE; RE accept RE
     {
       int64_t now_time = ser->print_time();
-      if (PRINT_ATTESTATION_MESSAGES)
-        cout << "[+]Remote Re processes Start the Local Re Echo 1 requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
+      cout << "[+]Remote Re processes Start the Local Re Echo 1 requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
@@ -450,8 +450,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
     else if (sp[0] == "#AE_Update_echo")
     {
       int64_t now_time = ser->print_time();
-      if (PRINT_ATTESTATION_MESSAGES)
-        cout << "[+]Local Re processes Start the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
+      // cout << "[+]Local Re processes Start the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
@@ -462,8 +461,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       {
         cout << "【WA】RE main Verify Failed!" << endl;
       }
-      if (PRINT_ATTESTATION_MESSAGES)
-        cout << "[+]Local Re processes Start the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
+      // cout << "[+]Local Re processes Start the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
 
       ser->Re_tmp_quorum[index] = ""; // activate
       // string signed_message = process_AE_Update_Return_Echo(sp,se_enclaves);
@@ -475,27 +473,8 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       {
         ser->now_group_first++;
         now_time = ser->print_time();
-        if (PRINT_ATTESTATION_MESSAGES)
-          cout << "[+]Local Re Collected all of the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
+        // cout << "[+]Local Re Collected all of the Remove Re Echo 1 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
         string send_message = process_AE_Update_Return_Echo_genc_message(se_enclaves, uuid_index, sp[5]);
-        if (PRINT_ATTESTATION_MESSAGES)
-          cout << "[+]Local Re genc Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
-        // pipline
-        // if (sp.size() > 6)
-        // {
-        // cout << "debug1" << endl;
-        // for (vector<Re_piplines>::iterator it = ser->Re_piplines_vector.begin(); it != ser->Re_piplines_vector.end(); ++it)
-        // {
-        //   cout << "debug2" << endl;
-        //   if (it->round == 1 && stoi(sp[5]) == it->index)
-        //   {
-        //     cout << "debug3" << endl;
-        //     it->round = 2;
-        //     break;
-        //   }
-        // }
-        // cout << "debug4" << endl;
-        // }
         for (map<int, string>::iterator it = ser->Re_tmp_quorum.begin(); it != ser->Re_tmp_quorum.end(); ++it)
         {
           ser->fetch_return_echo_messages(it->first, send_message);
@@ -515,8 +494,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
     else if (sp[0] == "#AE_Update_return_echo")
     {
       int64_t now_time = ser->print_time();
-      if (PRINT_ATTESTATION_MESSAGES)
-        cout << "[+]Remove Re processes Start the Local Re Echo 2 requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
@@ -532,8 +509,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
     else if (sp[0] == "#AE_Update_final")
     {
       int64_t now_time = ser->print_time();
-      // if (PRINT_ATTESTATION_MESSAGES)
-      // cout << "[+]Local Re processes Start the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << now_time << endl;
       bool pr = true;
       string sender_ip = sp[1];
       uint32_t sender_port = safe_stoi(sp[2], pr);
@@ -544,10 +519,8 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         cout << "【WA】RE main Verify Failed!" << endl;
         return;
       }
-      if (PRINT_ATTESTATION_MESSAGES)
-        // cout << "[+]Local Re processes finish verify the Remove Re Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << " the gap is " << ser->print_time() - now_time << endl;
 
-        ser->Re_tmp_quorum_finally[indexb] = ""; // activate
+      ser->Re_tmp_quorum_finally[indexb] = ""; // activate
       if (ser->Re_tmp_quorum_finally.size() == ser->Re_Peers.size())
       {
         ser->now_group++;
@@ -557,8 +530,6 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         for (vector<size_t>::iterator it = ser->ae_queues_vector_size.begin(); it != ser->ae_queues_vector_size.end(); it++)
         {
           size_t counter_size = *it;
-          // if (PRINT_ATTESTATION_MESSAGES)
-          // cout << "[+]Local Re send all of the Echo 2 return requests. This requests id is" << sp[5] << " Now time is " << ser->print_time() << endl;
           if (counter_size == 0 || counter_size > 100)
           {
             cout << "[Worry]Nothing to do " << endl;
@@ -619,8 +590,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
       int AE_index = ser->find_peer_index_by_ip_and_port(AE_sender_ip, AE_sender_port);
       if (process_AE_Update_Counter(sp, se_enclaves))
       {
-        if (PRINT_ATTESTATION_MESSAGES)
-          cout << "[+]Local Re AE_Update_Counter_Requests .Save ae into vector successfule" << endl;
+        cout << "[+]Local Re AE_Update_Counter_Requests .Save ae into vector successfule" << endl;
       }
     }
 

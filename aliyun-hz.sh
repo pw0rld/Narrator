@@ -137,22 +137,22 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     echo "Write _peer_ip_allowed"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
-123.56.73.249
-112.124.21.44
+182.92.157.244
+114.55.66.65
 127.0.0.1
 EOF
     "
     echo "Write _peers"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
-123.56.73.249:3389:1:se_master
-123.56.73.249:3388:2:se_slave
-123.56.73.249:3387:3:se_slave
-123.56.73.249:3386:4:se_slave
-112.124.21.44:3389:11:se_slave
-112.124.21.44:3388:12:se_slave
-112.124.21.44:3387:13:se_slave
-112.124.21.44:3386:14:se_slave
+182.92.157.244:3389:1:se_master
+182.92.157.244:3388:2:se_slave
+182.92.157.244:3387:3:se_slave
+182.92.157.244:3386:4:se_slave
+114.55.66.65:3389:11:se_slave
+114.55.66.65:3388:12:se_slave
+114.55.66.65:3387:13:se_slave
+114.55.66.65:3386:14:se_slave
 127.0.0.1:8707:29:client
 127.0.0.1:8706:28:client
 127.0.0.1:8705:27:client
@@ -182,17 +182,17 @@ run_narrator_serverenclave() {
     # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers \$(hostname -I) >> /tmp/SE3log 2>&1 &  
     # sleep 1
     # Wlan
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 112.124.21.44 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 114.55.66.65 &  
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 112.124.21.44 >> /tmp/SE1log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 114.55.66.65 >> /tmp/SE1log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 112.124.21.44 >> /tmp/SE2log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 114.55.66.65 >> /tmp/SE2log 2>&1 & 
     sleep 1
-    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 112.124.21.44 >> /tmp/SE3log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 114.55.66.65 >> /tmp/SE3log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 112.124.21.44 >> /tmp/SE4log 2>&1 & 
+    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 114.55.66.65 >> /tmp/SE4log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 112.124.21.44 >> /tmp/SE5log 2>&1 & 
+    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 114.55.66.65 >> /tmp/SE5log 2>&1 & 
     "
 }
 
@@ -244,6 +244,7 @@ then
 elif [ "$2" == "Update" ]
 then
     echo "Update the Serverenclave";
+    # build_narrator $1
     write_conf $1
     run_narrator_serverenclave $1
 elif [ "$2" == "Appenclave" ]
