@@ -166,6 +166,7 @@ void process_ae_requests()
                             //     }
                             // }
                             ser->fetch_signed_messages(send_index, message);
+                            boost::this_thread::sleep(boost::posix_time::milliseconds(1));
                         }
                     }
                     ae_infos temp_info;
@@ -181,7 +182,7 @@ void process_ae_requests()
             }
             else
             {
-                // boost::this_thread::sleep(boost::posix_time::milliseconds(5));
+                boost::this_thread::sleep(boost::posix_time::milliseconds(5));
             }
         }
         catch (boost::thread_interrupted &)

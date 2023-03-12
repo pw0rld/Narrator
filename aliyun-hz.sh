@@ -211,7 +211,9 @@ build_narrator(){
     echo "Build Narrator ServerEnclave"
     $ssh_config root@${cloud_ip} "
         cd ~/Narrator/ServerEnclave/;
+        git reset --hard;
         git pull;
+        rm -rf build;
         mkdir build;
         cd build;
         cmake ..;
@@ -220,6 +222,7 @@ build_narrator(){
     echo "Build Narrator ServerEnclave Successful! Now build the AppEnclave"
     $ssh_config root@${cloud_ip} "
         cd ~/Narrator/AppEnclave/;
+        rm -rf build;
         mkdir build;
         cd build;
         cmake ..;
