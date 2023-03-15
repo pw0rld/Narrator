@@ -54,6 +54,7 @@ void state_requests(int64_t pass_time)
 	{
 		if (is_system_init == true) // && ser->isRequestPending == false)
 		{
+			boost::this_thread::sleep(boost::posix_time::milliseconds(5));
 			ser->send_client_requests(STATE_UPDATE);
 			ser->isRequestPending = true;
 		}

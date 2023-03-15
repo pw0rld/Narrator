@@ -15,8 +15,8 @@
 #include "message_produce.h"
 #include "misc.h"
 // include <boost/uuid/uuid.hpp>
-//#include <boost/uuid/uuid_io.hpp>
-//#include <boost/uuid/uuid_generators.hpp>
+// #include <boost/uuid/uuid_io.hpp>
+// #include <boost/uuid/uuid_generators.hpp>
 
 extern string my_ip;
 extern uint32_t my_port;
@@ -593,7 +593,7 @@ bool process_AE_Update_Counter(vector<std::string> sp, oe_enclave_t *attester_en
     aq.timestamp = sp[5];
     aq.round = 1;
     aq.index = (uuid);             // TODO index也好像不知道干什么这一块有点混乱,这一处需要重写。
-    for (size_t i = 0; i < 1; i++) //一个当50
+    for (size_t i = 0; i < 1; i++) // 一个当50
     {
         if (PRINT_ATTESTATION_MESSAGES)
             cout << "[+]Local Re push ae requests into queue .The requests id is " << sp[5] << " Time is " << ser->print_time() << endl;
@@ -639,7 +639,7 @@ bool process_AE_Read(vector<std::string> sp, oe_enclave_t *attester_enclaves)
         if (PRINT_ATTESTATION_MESSAGES)
             cout << "[+]Local Re push ae requests into queue .The requests id is " << sp[5] << " Time is " << ser->print_time() << endl;
 
-        ser->ae_queues_vector.push_back(aq); //一个当50
+        ser->ae_queues_vector.push_back(aq); // 一个当50
     }
 
     return true;

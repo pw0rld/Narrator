@@ -515,12 +515,15 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
         cout << "【WA】RE main Verify Failed!" << endl;
         return;
       }
-
+      ser->m.lock();
       ser->Re_tmp_quorum_finally[indexb] = "1"; // activate
+      ser->m.unlock();
       if (ser->Re_tmp_quorum_finally.size() == ser->Re_Peers.size())
       {
         ser->now_group++;
+        ser->m.lock();
         ser->Re_tmp_quorum_finally.clear();
+        ser->m.unlock();
         bool find_index = true;
         int count_round_4 = 1;
         for (vector<size_t>::iterator it = ser->ae_queues_vector_size.begin(); it != ser->ae_queues_vector_size.end(); it++)
@@ -531,8 +534,10 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
             cout << "[Worry]Nothing to do " << endl;
             continue;
           }
+          ser->m.lock();
           ser->ae_queues_vector_size.erase(it);
           it--;
+          ser->m.unlock();
           counter_size = count_round_4 * counter_size;
           int pushcount = ser->ae_queues_vector_process.size();
           json j;
@@ -556,15 +561,17 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
             indexkkk = ser->ae_queues_vector_process.front().uuid;
             // cout << " k is " << ser->ae_queues_vector_process.front().timestamp << " b is " << ser->ae_queues_vector_process.front().uuid << endl;
             ser->ae_queues_vector_process.pop();
-          }
-
-          tmp_string = j.dump();
-          // ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
-          for (int kkb = 0; kkb < counter_size; kkb++)
-          {
+            tmp_string = j.dump();
             ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
           }
-          cout << "[+]Fetch ae This requests id is" << tmp_string << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and finish size  " << counter_size << endl;
+
+          // tmp_string = j.dump();
+          // ser->log_file("Vector time is ", ser->print_time(), test_time, indexkkk);
+          // for (int kkb = 0; kkb < counter_size; kkb++)
+          // {
+          // ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
+          // }
+          cout << "[+]Fetch ae This requests id count is" << pushcount << "Now watting queue size is " << ser->Re_tmp_quorum_finally.size() << " and finish size  " << counter_size << endl;
           break;
         }
       }

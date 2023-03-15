@@ -154,6 +154,7 @@ class tcp_server
 {
 public:
   // network funtions
+  mutex m;
   int now_group = 0;
   int now_group_first = 0;
   int batch_size = 10;

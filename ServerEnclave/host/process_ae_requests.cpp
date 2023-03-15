@@ -84,7 +84,9 @@ void process_ae_requests()
                     cout << "[+Ae] Local Re Process Batch.Into If branch. This requests index is " << ser->print_time() << " and id is " << index_re << endl;
                 ret = 1;
                 temp_queue_vector.clear();
+                ser->m.lock();
                 ser->ae_queues_vector_size.push_back(vector_queue_size);
+                ser->m.unlock();
                 for (size_t it = 0; it < vector_queue_size; ++it)
                 {
                     if (ser->ae_queues_vector.front().encrypt_data_size > 2048)

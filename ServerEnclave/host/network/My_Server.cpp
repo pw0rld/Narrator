@@ -518,8 +518,15 @@ void tcp_server::reply_client_messages(uint32_t index, string message)
 int64_t tcp_server::print_time()
 {
 
-  std::chrono::microseconds ms = std::chrono::duration_cast<std::chrono::microseconds>(
+  std::chrono::milliseconds ms = std::chrono::duration_cast<std::chrono::milliseconds>(
       std::chrono::system_clock::now().time_since_epoch());
+  // std::cout << ms.count() << std::endl;
+  // const boost::posix_time::ptime now = boost::posix_time::microsec_clock::local_time();
+  // const boost::posix_time::time_duration td = now.time_of_day();
+  // const long hours  = td.hours();
+  // const long minutes  = td.minutes();
+  // const long seconds  = td.seconds();
+  // const long milliseconds = td.total_milliseconds() - (hours * 3600 + minutes * 60 + seconds) * 1000;
   return ms.count();
 }
 
