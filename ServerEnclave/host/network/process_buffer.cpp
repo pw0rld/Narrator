@@ -563,6 +563,7 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *se_enclaves)
             ser->ae_queues_vector_process.pop();
             tmp_string = j.dump();
             ser->fetch_AE_return_messages(indexkkk, "", replace_all(tmp_string, ",", "$"));
+            j[kka] = "";
           }
 
           // tmp_string = j.dump();

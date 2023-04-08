@@ -186,7 +186,7 @@ run_narrator_serverenclave() {
     sleep 1
     nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 112.124.17.142 >> /tmp/SE1log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 112.124.17.142 >> /tmp/SE2log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 112.124.17.142 >> /tmp/SE2log 2>&1 & 
     sleep 1
     nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 112.124.17.142 >> /tmp/SE3log 2>&1 & 
     sleep 1
@@ -248,7 +248,7 @@ then
 elif [ "$2" == "Update" ]
 then
     echo "Update the Serverenclave";
-    # build_narrator $1
+    build_narrator $1
     write_conf $1
     run_narrator_serverenclave $1
 elif [ "$2" == "Appenclave" ]

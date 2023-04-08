@@ -31,9 +31,9 @@
 #include "common/attestation_t.h"
 
 #define PRINT_DISPATCH_MESSAGES 1
-#define STATE_INIT  1
+#define STATE_INIT 1
 #define STATE_FETCH 2
-#define STATE_UPDATE  3
+#define STATE_UPDATE 3
 
 using namespace std;
 
@@ -46,8 +46,8 @@ typedef struct _enclave_config_data
 
 typedef struct _state_info
 {
-  //TODO Key of attestation should write in this struct?
-  uint8_t state[10000] = {0};
+  // TODO Key of attestation should write in this struct?
+  uint8_t state[100000] = {0};
   // size_t state_size;
   uint8_t requests_I[512] = {0};
   // size_t requests_I_size;
@@ -103,17 +103,17 @@ public:
       size_t *mrenclave_size);
 
   int aes_encrypt_client_messages(
-    uint8_t* requests_message,
-    size_t  requests_message_size,
-    uint8_t **encrypt_data,
-    size_t *encrypt_data_size,
-    uint8_t **mrenclave,
-    size_t *mrenclave_size);
-  
+      uint8_t *requests_message,
+      size_t requests_message_size,
+      uint8_t **encrypt_data,
+      size_t *encrypt_data_size,
+      uint8_t **mrenclave,
+      size_t *mrenclave_size);
+
   int aes_decrypt_server_messages(
-    uint8_t *reply_data,
-    size_t reply_data_size,
-    size_t* is_ready);
+      uint8_t *reply_data,
+      size_t reply_data_size,
+      size_t *is_ready);
 
   int aes_encrypt_ecdsa(
       uint8_t **encrypt_aes_data,
@@ -122,20 +122,20 @@ public:
       size_t *mrenclave_size);
 
   int seal_state_data(
-        int seal_policy,
-        sealed_data_t **sealed_data,
-        size_t *sealed_data_size);
+      int seal_policy,
+      sealed_data_t **sealed_data,
+      size_t *sealed_data_size);
 
-    int unseal_state_data(
-        const sealed_data_t *sealed_data,
-        size_t sealed_data_size,
-        unsigned char **data,
-        size_t *data_size);
-    int seal_state_data_host(
-      uint8_t* requests_message,
-      size_t  requests_message_size,
+  int unseal_state_data(
+      const sealed_data_t *sealed_data,
+      size_t sealed_data_size,
+      unsigned char **data,
+      size_t *data_size);
+  int seal_state_data_host(
+      uint8_t *requests_message,
+      size_t requests_message_size,
       string status_message,
-      uint8_t* ITHash);
+      uint8_t *ITHash);
 
 private:
   bool initialize(const char *name);

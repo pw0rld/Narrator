@@ -152,8 +152,12 @@ EOF
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 123.56.73.249:3389:1:se_master
 123.56.73.249:3388:2:se_slave
+123.56.73.249:3387:3:se_slave
+123.56.73.249:3386:4:se_slave
 112.124.17.142:3389:11:se_slave
 112.124.17.142:3388:12:se_slave
+112.124.17.142:3387:13:se_slave
+112.124.17.142:3386:14:se_slave
 127.0.0.1:8707:29:client
 127.0.0.1:8706:28:client
 127.0.0.1:8705:27:client
@@ -190,9 +194,9 @@ run_narrator_serverenclave() {
     sleep 1
     nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 123.56.73.249 >> /tmp/SE1log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 123.56.73.249 >> /tmp/SE2log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 123.56.73.249 >> /tmp/SE2log 2>&1 & 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 123.56.73.249 >> /tmp/SE3log 2>&1 & 
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 123.56.73.249 >> /tmp/SE3log 2>&1 & 
     sleep 1
     #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 123.56.73.249 >> /tmp/SE4log 2>&1 & 
     sleep 1

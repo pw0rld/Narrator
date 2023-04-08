@@ -495,7 +495,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
     size_t encrypt_aes_data_size;
-    uint8_t data[10240];
+    uint8_t data[102400];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
     memset(data, 0, sizeof(data));
@@ -504,9 +504,9 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     memset(ITHash, 0, sizeof(ITHash));
     m_crypto->get_aes_key(m_aes_key);
     int64_t rand_str_start = print_time3();
-    string message = rand_str(10000);
+    string message = rand_str(100000);
     int64_t rand_str_end = print_time3();
-    TRACE_ENCLAVE("Rand_str time is  %d",rand_str_end - rand_str_start);
+    TRACE_ENCLAVE("Rand_str time is  %d", rand_str_end - rand_str_start);
     if ((requests_message_size + message.size()) > sizeof(data))
     {
         TRACE_ENCLAVE("Encrypt data buffer is more small!!");
@@ -820,7 +820,7 @@ int ecall_dispatcher::seal_state_data_host(
         &blob_size);
     if (result != OE_OK)
     {
-        TRACE_ENCLAVE("oe_seal() failed with %d %s\n", ret,oe_result_str(result));
+        TRACE_ENCLAVE("oe_seal() failed with %d %s\n", ret, oe_result_str(result));
         goto exit;
     }
     if (blob_size > UINT32_MAX)
@@ -847,7 +847,7 @@ exit:
     oe_free(blob);
     oe_host_free(Ocall_buffer); // This buffer is in host
     blob = NULL;
-    Ocall_buffer= NULL;
+    Ocall_buffer = NULL;
     oe_free(data);
     data = NULL;
     return ret;
