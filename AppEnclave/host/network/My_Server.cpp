@@ -78,7 +78,7 @@ void tcp_connection::start()
                             {
                               if (!ec)
                               {
-                                //写入本地文件
+                                // 写入本地文件
                                 if (WRITE_SESSIONS_TO_HDD)
                                 {
                                   string filename = folder_sessions + "/" + to_string(id);
@@ -431,7 +431,7 @@ void tcp_server::setup_secure_channel_to_server()
 void tcp_server::send_client_requests(size_t message_type)
 {
   int64_t times = ser->print_time();
-  cout << "Start to send_client_requests.And milliseconds time is " << times << endl;
+  // cout << "Start to send_client_requests.And milliseconds time is " << times << endl;
   string msg = create_client_message(cl_enclave, message_type);
   // cout << "End to send_client_requests.And milliseconds time is " << ser->print_time() << endl;
 

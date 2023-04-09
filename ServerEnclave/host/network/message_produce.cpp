@@ -584,7 +584,7 @@ bool process_AE_Update_Counter(vector<std::string> sp, oe_enclave_t *attester_en
         return false;
     }
     ae_queues aq;
-    cout << "sp:" << sp[4] << " " << sp[5] << " " << endl;
+    // cout << "sp:" << sp[4] << " " << sp[5] << " " << endl;
     memcpy(aq.encrypt_data, encrypt_data, encrypt_data_size);
     aq.encrypt_data_size = 0;
     aq.uuid = uuid;
