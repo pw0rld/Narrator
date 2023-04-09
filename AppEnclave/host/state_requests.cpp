@@ -54,18 +54,16 @@ void state_requests(int64_t pass_time)
 	{
 		if (is_system_init == true) // && ser->isRequestPending == false)
 		{
-			boost::this_thread::sleep(boost::posix_time::milliseconds(5));
+			// boost::this_thread::sleep(boost::posix_time::milliseconds(5));
 			ser->send_client_requests(STATE_UPDATE);
 			ser->isRequestPending = true;
 		}
-		if (!ser->flag_first)
+
+		int64_t now_time = ser->print_time();
+		if (now_time - pass_time >= 60000)
 		{
-			int64_t now_time = ser->print_time();
-			if (now_time - ser->passtime >= 60000)
-			{
-				cout << "一分钟到了！！！" << endl;
-				exit(0);
-			}
+			cout << "一分钟到了！！！" << endl;
+			exit(0);
 		}
 	}
 

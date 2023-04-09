@@ -263,7 +263,7 @@ then
 elif [ "$2" == "Update" ]
 then
     echo "Update the Serverenclave";
-    build_narrator $1
+    # build_narrator $1
     write_conf $1
     run_narrator_serverenclave $1
 elif [ "$2" == "Appenclave" ]
