@@ -58,11 +58,14 @@ void state_requests(int64_t pass_time)
 			ser->send_client_requests(STATE_UPDATE);
 			ser->isRequestPending = true;
 		}
-		int64_t now_time = ser->print_time();
-		if (now_time - ser->passtime >= 60000 or ser->flag_first)
+		if (!ser->flag_first)
 		{
-			cout << "一分钟到了！！！" << endl;
-			exit(0);
+			int64_t now_time = ser->print_time();
+			if (now_time - ser->passtime >= 60000)
+			{
+				cout << "一分钟到了！！！" << endl;
+				exit(0);
+			}
 		}
 	}
 
