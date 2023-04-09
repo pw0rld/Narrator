@@ -495,7 +495,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
     size_t encrypt_aes_data_size;
-    uint8_t data[1024];
+    uint8_t data[102400];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
     memset(data, 0, sizeof(data));
@@ -506,7 +506,7 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int64_t rand_str_start = print_time3();
     string message = rand_str(1);
     int64_t rand_str_end = print_time3();
-    TRACE_ENCLAVE("Rand_str time is  %d", rand_str_end - rand_str_start);
+    // TRACE_ENCLAVE("Rand_str time is  %d", rand_str_end - rand_str_start);
     if ((requests_message_size + message.size()) > sizeof(data))
     {
         TRACE_ENCLAVE("Encrypt data buffer is more small!!");
