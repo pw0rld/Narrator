@@ -46,9 +46,10 @@ download_log(){
    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE4.log /tmp/AE4.log
    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE5.log /tmp/AE5.log
    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE6.log /tmp/AE6.log
-    # time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE.log /tmp/SE.log
-    # time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE1.log /tmp/SE1.log
-    # time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/SE2.log /tmp/SE2.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE7.log /tmp/AE7.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE8.log /tmp/AE8.log
+    time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE9.log /tmp/AE9.log
+     time rsync -a -e "$ssh_config" root@${cloud_ip}:/tmp/AE10.log /tmp/AE10.log
 }
 
 install_oe_sdk() {
@@ -160,6 +161,10 @@ sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peers
 127.0.0.1:8704:26:client
 127.0.0.1:8703:25:client
 127.0.0.1:8702:24:client
+127.0.0.1:8701:23:client
+127.0.0.1:8708:22:client
+127.0.0.1:8709:21:client
+127.0.0.1:8700:20:client
 EOF
     "
     echo "Finish!!!"
@@ -212,12 +217,16 @@ run_narrator_appenclave() {
         rm /tmp/AE*  2>&1;
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
         # wlan
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.22 >> /tmp/AE1.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 172.25.164.22 >> /tmp/AE2.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 172.25.164.22 >> /tmp/AE3.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 172.25.164.22 >> /tmp/AE4.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8703 127.0.0.1 3389 172.25.164.22 >> /tmp/AE5.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8702 127.0.0.1 3389 172.25.164.22 >> /tmp/AE6.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8709 127.0.0.1 3389 172.25.164.22 >> /tmp/AE1.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8708 127.0.0.1 3389 172.25.164.22 >> /tmp/AE2.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.22 >> /tmp/AE3.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 172.25.164.22 >> /tmp/AE4.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 172.25.164.22 >> /tmp/AE5.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 172.25.164.22 >> /tmp/AE6.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8703 127.0.0.1 3389 172.25.164.22 >> /tmp/AE7.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8702 127.0.0.1 3389 172.25.164.22 >> /tmp/AE8.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8701 127.0.0.1 3389 172.25.164.22 >> /tmp/AE9.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8700 127.0.0.1 3389 172.25.164.22 >> /tmp/AE10.log 2>&1 & 
 
         "
 }

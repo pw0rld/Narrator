@@ -157,7 +157,7 @@ public:
   mutex m;
   int now_group = 0;
   int now_group_first = 0;
-  int batch_size = 40;
+  int batch_size = 1;
   bool self_tendermint_flag = false;
   std::map<int, string> Re_tmp_quorum;
   std::vector<int> test_vector;
