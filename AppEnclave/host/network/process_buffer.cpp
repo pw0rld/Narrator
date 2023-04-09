@@ -175,12 +175,12 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *attester_enclaves)
       // Update Requests
       ser->isRequestPending = false;
       string back_message = sp[4];
-      // back_message.erase(0, 2);
-      // back_message.erase(back_message.find("@"), back_message.find("]"));
+      back_message.erase(0, 2);
+      back_message.erase(back_message.find("@"), back_message.find("]"));
       int64_t old_time = 0;
-      // std::stringstream ss; // Pengw String cover to int64_t
-      // ss << back_message;
-      // ss >> old_time;
+      std::stringstream ss; // Pengw String cover to int64_t
+      ss << back_message;
+      ss >> old_time;
       int64_t new_time = ser->print_time();
       int64_t gap = new_time - old_time;
       // cout << "Finish to updateCounter.And milliseconds time is send_time " << old_time << " back_message" << back_message << endl;
