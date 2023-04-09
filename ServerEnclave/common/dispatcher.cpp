@@ -196,7 +196,7 @@ int ecall_dispatcher::initialize(const char *name)
         ret = 1;
         return ret;
     }
-    batch_queue_decrypt.reserve(sizeof(Ae_queues_decrypt) * 10);
+    batch_queue_decrypt.reserve(sizeof(Ae_queues_decrypt) * 40);
     ret = 0;
 
     oe_free(report);
@@ -426,7 +426,7 @@ int ecall_dispatcher::verify_evidence(
     it = std::find(peer_info_vec2.begin(), peer_info_vec2.end(), uuid);
     if (it != peer_info_vec2.end())
     {
-        if((*it).state)
+        if ((*it).state)
         {
             TRACE_ENCLAVE("Warning: Peer send again. And uuid is %d", uuid);
             ret = 0;
@@ -1831,8 +1831,7 @@ exit:
 //     return 0;
 // }
 
-
-int ecall_dispatcher::LedgerRead_key(uint8_t **sgx_publickey, size_t *sgx_publickey_size/*, uint8_t **sgx_uid, size_t *sgx_uid_size*/)
+int ecall_dispatcher::LedgerRead_key(uint8_t **sgx_publickey, size_t *sgx_publickey_size /*, uint8_t **sgx_uid, size_t *sgx_uid_size*/)
 {
     int ret = 1;
     // *sgx_uid = (uint8_t *)oe_host_malloc(sizeof(m_enclave_signer_id) + 1);
@@ -1847,7 +1846,7 @@ int ecall_dispatcher::LedgerRead_key(uint8_t **sgx_publickey, size_t *sgx_public
 
     uint8_t m_rsa_public_key[512];
     m_crypto->copy_rsa_public_key(m_rsa_public_key);
-    *sgx_publickey = (uint8_t *)oe_host_malloc(600);// Prevent buf overflow
+    *sgx_publickey = (uint8_t *)oe_host_malloc(600); // Prevent buf overflow
     if (*sgx_publickey == nullptr)
     {
         TRACE_ENCLAVE("publickey_id malloc failed!!!");
