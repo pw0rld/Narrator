@@ -218,11 +218,11 @@ run_narrator_appenclave() {
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
         # wlan
         nohup ./host/attestation_host ./enclave/enclave_a.signed 8709 127.0.0.1 3389 172.25.164.22 >> /tmp/AE1.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8708 127.0.0.1 3389 172.25.164.22 >> /tmp/AE2.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.22 >> /tmp/AE3.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 172.25.164.22 >> /tmp/AE4.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 172.25.164.22 >> /tmp/AE5.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 172.25.164.22 >> /tmp/AE6.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8708 127.0.0.1 3389 172.25.164.22 >> /tmp/AE2.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.22 >> /tmp/AE3.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 172.25.164.22 >> /tmp/AE4.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 172.25.164.22 >> /tmp/AE5.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 172.25.164.22 >> /tmp/AE6.log 2>&1 & 
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8703 127.0.0.1 3389 172.25.164.22 >> /tmp/AE7.log 2>&1 & 
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8702 127.0.0.1 3389 172.25.164.22 >> /tmp/AE8.log 2>&1 & 
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8701 127.0.0.1 3389 172.25.164.22 >> /tmp/AE9.log 2>&1 & 

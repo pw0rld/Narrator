@@ -181,10 +181,10 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *attester_enclaves)
       // std::stringstream ss; // Pengw String cover to int64_t
       // ss << back_message;
       // ss >> old_time;
-      // int64_t new_time = ser->print_time();
-      // int64_t gap = new_time - old_time;
-      cout << "Finish to updateCounter.And milliseconds time is send_time " << old_time << " back_message" << back_message << endl;
-      // cout << "gap is " << gap << " new_time " << new_time << endl;
+      int64_t new_time = ser->print_time();
+      int64_t gap = new_time - old_time;
+      // cout << "Finish to updateCounter.And milliseconds time is send_time " << old_time << " back_message" << back_message << endl;
+      cout << "gap is " << gap << " new_time " << new_time << endl;
     }
     else
     {
