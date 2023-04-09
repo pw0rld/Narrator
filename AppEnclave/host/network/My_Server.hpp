@@ -95,6 +95,7 @@ class tcp_server
 {
 public:
   // network funtions
+
   bool isRequestPending = false;
   int index_message = 0;
   tcp_server(boost::asio::io_service &io_service, string ip, uint32_t port);
@@ -120,6 +121,8 @@ public:
   bool is_server_connected();
   void reply_aes_secure_channel_to_peer(uint32_t index);
   int64_t print_time();
+  int64_t passtime;
+  bool flag_first = true;
 
 private:
   void start_accept();

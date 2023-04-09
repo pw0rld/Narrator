@@ -166,6 +166,11 @@ void process_buffer(string &m, tcp_server *ser, oe_enclave_t *attester_enclaves)
     }
     else if (sp[0] == "#AE_Return_Final")
     {
+      if (ser->flag_first)
+      {
+        ser->passtime = ser->print_time();
+      }
+      ser->flag_first = false;
       size_t is_ready;
       // Update Requests
       ser->isRequestPending = false;
