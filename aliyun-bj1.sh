@@ -143,8 +143,8 @@ rm ~/Narrator/ServerEnclave/host/network/_peers;
     echo "Write _peer_ip_allowed"
     $ssh_config root@${cloud_ip} "
 sudo cat <<EOF>>~/Narrator/ServerEnclave/host/network/_peer_ip_allowed
-172.19.155.227
 172.19.155.228
+172.19.155.227
 127.0.0.1
 EOF
     "
@@ -170,7 +170,7 @@ EOF
     echo "Finish!!!"
 }
 # cd ~/Narrator/ServerEnclave/build/
-# ~/Narrator/ServerEnclave/build/host/attestation_host ~/Narrator/ServerEnclave/build/enclave/enclave_a.signed 3386 ~/Narrator/ServerEnclave/host/network/_peers 172.19.155.228
+# ~/Narrator/ServerEnclave/build/host/attestation_host ~/Narrator/ServerEnclave/build/enclave/enclave_a.signed 3386 ~/Narrator/ServerEnclave/host/network/_peers 172.25.164.22
 # ~/Narrator/AppEnclave/build/host/attestation_host ~/Narrator/AppEnclave/build/enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.21>> /tmp/AE.log
 run_narrator_serverenclave() {
     cloud_ip=$1
@@ -184,27 +184,27 @@ run_narrator_serverenclave() {
     cd ~/$narrator_folder_name/ServerEnclave/build;
     nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers \$(hostname -I) &
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers \$(hostname -I) >> /tmp/SE1.log 2>&1 &
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers \$(hostname -I) >> /tmp/SE1.log 2>&1 &
 
     sleep 1
-    #nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers \$(hostname -I) >> /tmp/SE2log 2>&1 &  
+    nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers \$(hostname -I) >> /tmp/SE2log 2>&1 &  
     sleep 1
     #nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers \$(hostname -I) >> /tmp/SE3log 2>&1 &  
     sleep 1
 
 
     # Wlan
-    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 172.19.155.228 &  
+    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3389 ../host/network/_peers 172.25.164.22 &  
     # sleep 1
-    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 172.19.155.228 >> /tmp/SE1log 2>&1 & 
+    # nohup ./host/attestation_host ./enclave/enclave_a.signed 3388 ../host/network/_peers 172.25.164.22 >> /tmp/SE1log 2>&1 & 
     # sleep 1
-    # # nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 172.19.155.228 >> /tmp/SE2log 2>&1 & 
+    # # nohup ./host/attestation_host ./enclave/enclave_a.signed 3387 ../host/network/_peers 172.25.164.22 >> /tmp/SE2log 2>&1 & 
     # sleep 1
-    # # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 172.19.155.228 >> /tmp/SE3log 2>&1 & 
+    # # nohup ./host/attestation_host ./enclave/enclave_a.signed 3386 ../host/network/_peers 172.25.164.22 >> /tmp/SE3log 2>&1 & 
     # sleep 1
-    # #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 172.19.155.228 >> /tmp/SE4log 2>&1 & 
+    # #nohup ./host/attestation_host ./enclave/enclave_a.signed 3385 ../host/network/_peers 172.25.164.22 >> /tmp/SE4log 2>&1 & 
     # sleep 1
-    # #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 172.19.155.228 >> /tmp/SE5log 2>&1 & 
+    # #nohup ./host/attestation_host ./enclave/enclave_a.signed 3384 ../host/network/_peers 172.25.164.22 >> /tmp/SE5log 2>&1 & 
     "
 }
 
@@ -217,13 +217,17 @@ run_narrator_appenclave() {
         rm /tmp/AE*  2>&1;
         # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 \$(hostname -I) >> /tmp/AE.log 2>&1 & 
         # wlan
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8709 127.0.0.1 3389 172.19.155.228 >> /tmp/AE1.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8708 127.0.0.1 3389 172.19.155.228 >> /tmp/AE2.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.19.155.228 >> /tmp/AE3.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 172.19.155.228 >> /tmp/AE4.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 172.19.155.228 >> /tmp/AE5.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 172.19.155.228 >> /tmp/AE6.log 2>&1 & 
-        nohup ./host/attestation_host ./enclave/enclave_a.signed 8703 127.0.0.1 3389 172.19.155.228 >> /tmp/AE7.log 2>&1 & 
+        nohup ./host/attestation_host ./enclave/enclave_a.signed 8709 127.0.0.1 3389 172.25.164.22 >> /tmp/AE1.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8708 127.0.0.1 3389 172.25.164.22 >> /tmp/AE2.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8707 127.0.0.1 3389 172.25.164.22 >> /tmp/AE3.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8706 127.0.0.1 3389 172.25.164.22 >> /tmp/AE4.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8705 127.0.0.1 3389 172.25.164.22 >> /tmp/AE5.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8704 127.0.0.1 3389 172.25.164.22 >> /tmp/AE6.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8703 127.0.0.1 3389 172.25.164.22 >> /tmp/AE7.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8702 127.0.0.1 3389 172.25.164.22 >> /tmp/AE8.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8701 127.0.0.1 3389 172.25.164.22 >> /tmp/AE9.log 2>&1 & 
+        # nohup ./host/attestation_host ./enclave/enclave_a.signed 8700 127.0.0.1 3389 172.25.164.22 >> /tmp/AE10.log 2>&1 & 
+
         "
 }
 
