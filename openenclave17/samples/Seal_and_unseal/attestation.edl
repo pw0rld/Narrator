@@ -1,0 +1,92 @@
+// Copyright (c) Open Enclave SDK contributors.
+// Licensed under the MIT License.
+
+/* Copyright (c) 2021 SUSTech University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+enclave {
+    from "openenclave/edl/attestation.edl" import *;
+    from "openenclave/edl/syscall.edl" import *;
+    from "platform.edl" import *;
+    include "common/log.h"
+    
+    trusted {
+        public int get_enclave_format_settings(
+            [in] const oe_uuid_t* format_id,
+            [out] uint8_t** format_settings,
+            [out] size_t* format_settings_size);
+
+        // Return the public key of this enclave along with the enclave's evidence.
+        // Another enclave can use the evidence to attest the enclave and verify
+        // the integrity of the public key.
+        public int get_evidence_with_public_key(
+            [in] const oe_uuid_t* format_id,
+            [in, size=format_settings_size] uint8_t* format_settings_buffer,
+            size_t format_settings_size,
+            [out] uint8_t **pem_key,
+            [out] size_t *pem_key_size,
+            [out] uint8_t **evidence_buffer,
+            [out] size_t *evidence_buffer_size);
+
+        // Attest and store the public key of another enclave
+        public int verify_evidence(
+            [in] const oe_uuid_t* format_id,
+            [in, count=pem_key_size] uint8_t *pem_key,
+            size_t pem_key_size,
+            [in, count=evidence_size] uint8_t *evidence,
+            size_t evidence_size,
+            size_t uuid);
+        
+        public int rsa_encrypt_aes_key( 
+            [out] uint8_t** encrypt_aes_data,
+            [out] size_t*  encrypt_aes_data_size,
+            [out] uint8_t** mrenclave,
+            [out] size_t*  mrenclave_size);
+        
+        public int aes_encrypt_client_messages( 
+            [in,count = requests_message_size] uint8_t * requests_message,
+            size_t requests_message_size,
+            [out] uint8_t** encrypt_aes_data,
+            [out] size_t*  encrypt_aes_data_size,
+            [out] uint8_t** mrenclave,
+            [out] size_t*  mrenclave_size,
+            int seal_size);
+        
+        public int genc_data( 
+            int seal_size);
+
+
+        public int unseal_state_data([in, size = opt_msg_len] unsigned char* opt_mgs,
+                               size_t opt_msg_len,)transition_using_threads ;
+
+        public int aes_decrypt_server_messages( 
+            [in,count=reply_data_size] uint8_t* reply_data,
+            size_t  reply_data_size,
+            [out] size_t* is_ready) transition_using_threads;
+        
+        public int updateITHash(uint8_t *reply_data,size_t reply_data_size) transition_using_threads;
+    };
+        
+        
+    untrusted {
+        //There is Ocall implement
+        int seal_host_write(
+            [in,size = sealed_data_size] unsigned char* sealed_data,
+            size_t sealed_data_size,
+        ) transition_using_threads;
+    };
+};
+
+};
