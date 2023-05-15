@@ -67,6 +67,9 @@ enclave {
                              [out] sealed_data_t** sealed_data,
                              [out] size_t* sealed_data_size);
 
+        public int genc_data( 
+            int seal_size);
+
         public int unseal_state_data([in, size = sealed_data_size] sealed_data_t *sealed_data,
                                size_t sealed_data_size,
                                [out] unsigned char** data,

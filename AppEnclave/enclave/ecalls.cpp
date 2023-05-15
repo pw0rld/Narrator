@@ -33,7 +33,7 @@
 // The second enclave decrypts the received data and adds it to its own
 // g_enclave_secret_data, and sends it back to the other enclave.
 
-//TODO: remove the secret
+// TODO: remove the secret
 uint8_t g_enclave_secret_data[ENCLAVE_SECRET_DATA_SIZE] =
     {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 
@@ -100,33 +100,37 @@ int rsa_encrypt_aes_key(
     return dispatcher.rsa_encrypt_aes_key(encrypt_aes_data, encrypt_aes_data_size, mrenclave, mrenclave_size);
 }
 
+int genc_data(
+    int seal_size)
+{
+    return dispatcher.genc_data(seal_size);
+}
 
 int aes_encrypt_client_messages(
-    uint8_t * requests_message,
-    size_t  requests_message_size,
+    uint8_t *requests_message,
+    size_t requests_message_size,
     uint8_t **encrypt_aes_data,
     size_t *encrypt_aes_data_size,
     uint8_t **mrenclave,
     size_t *mrenclave_size)
 {
-    return dispatcher.aes_encrypt_client_messages(requests_message,requests_message_size,encrypt_aes_data, encrypt_aes_data_size, mrenclave, mrenclave_size);
+    return dispatcher.aes_encrypt_client_messages(requests_message, requests_message_size, encrypt_aes_data, encrypt_aes_data_size, mrenclave, mrenclave_size);
 }
 
 int aes_decrypt_server_messages(
     uint8_t *reply_data,
     size_t reply_data_size,
-    size_t* is_ready)
+    size_t *is_ready)
 {
     return dispatcher.aes_decrypt_server_messages(reply_data, reply_data_size, is_ready);
 }
-
 
 int seal_state_data(
     int sealPolicy,
     sealed_data_t **sealed_data,
     size_t *sealed_data_size)
 {
-    return dispatcher.seal_state_data(sealPolicy,sealed_data,sealed_data_size);
+    return dispatcher.seal_state_data(sealPolicy, sealed_data, sealed_data_size);
 }
 
 int unseal_state_data(

@@ -124,6 +124,21 @@ ecall_dispatcher::~ecall_dispatcher()
         delete m_attestation;
 }
 
+string rand_str(int len)
+{
+    string str;
+    char c;
+    string end_synbol = "@";
+    int idx;
+    for (int i = 0; i < len; i++)
+    {
+        c = 'a' + rand() % 26;
+        str.push_back(c);
+    }
+    str += end_synbol; // The end symbol
+    return str;
+}
+
 bool ecall_dispatcher::initialize(const char *name)
 {
     bool ret = false;
@@ -163,6 +178,8 @@ bool ecall_dispatcher::initialize(const char *name)
 
         goto exit;
     }
+    state_message = rand_str(random_size);
+    TRACE_ENCLAVE("Init state_message: Successfule (%zu)", state_message.size());
     ret = 0;
 exit:
     return ret;
@@ -455,26 +472,21 @@ exit:
     return ret;
 }
 
-string rand_str(int len)
-{
-    string str;
-    char c;
-    string end_synbol = "@";
-    int idx;
-    for (int i = 0; i < len; i++)
-    {
-        c = 'a' + rand() % 26;
-        str.push_back(c);
-    }
-    str += end_synbol; // The end symbol
-    return str;
-}
 int64_t print_time3()
 {
 
     std::chrono::milliseconds ms = std::chrono::duration_cast<std::chrono::milliseconds>(
         std::chrono::system_clock::now().time_since_epoch());
     return ms.count();
+}
+
+int ecall_dispatcher::genc_data(int seal_size)
+{
+
+    // TRACE_ENCLAVE("Init state_message: Successfule (%zu)", state_message.size());
+    state_message = rand_str(seal_size);
+    // TRACE_ENCLAVE("Init state_message: Successfule (%zu)", state_message.size());
+    return 0;
 }
 
 /**
@@ -495,35 +507,34 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     int ret = 1;
     uint8_t encrypt_aes_data[1024];
     size_t encrypt_aes_data_size;
-    uint8_t data[102400];
     uint8_t m_aes_key[Aes_Key_Size];
     uint8_t ITHash[32];
-    memset(data, 0, sizeof(data));
+    memset(random_data, 0, sizeof(random_data));
     memset(encrypt_aes_data, 0, sizeof(encrypt_aes_data));
     memset(m_aes_key, 0, sizeof(m_aes_key));
     memset(ITHash, 0, sizeof(ITHash));
     m_crypto->get_aes_key(m_aes_key);
     int64_t rand_str_start = print_time3();
-    string message = rand_str(1);
+    // string message = rand_str(1);
     int64_t rand_str_end = print_time3();
     // TRACE_ENCLAVE("Rand_str time is  %d", rand_str_end - rand_str_start);
-    if ((requests_message_size + message.size()) > sizeof(data))
+    if ((requests_message_size + state_message.size()) > sizeof(random_data))
     {
         TRACE_ENCLAVE("Encrypt data buffer is more small!!");
         goto exit;
     }
-    memcpy(data, requests_message, requests_message_size);
-    memcpy(data + requests_message_size, message.c_str(), message.size());
+    memcpy(random_data, requests_message, requests_message_size);
+    memcpy(random_data + requests_message_size, state_message.c_str(), state_message.size());
     // message.shrink_to_fit(); //free the string
     // Hash setp
-    ret = m_crypto->Sha256(data, sizeof(data), ITHash);
+    ret = m_crypto->Sha256(random_data, sizeof(random_data), ITHash);
     if (ret != 0)
     {
         TRACE_ENCLAVE("AE Hash worrying!");
         goto exit;
     }
     // store and seal
-    ret = seal_state_data_host(requests_message, requests_message_size, message, ITHash);
+    ret = seal_state_data_host(requests_message, requests_message_size, state_message, ITHash);
     if (ret != 0)
     {
         TRACE_ENCLAVE("seal_state_data_host worrying!");
@@ -558,10 +569,6 @@ int ecall_dispatcher::aes_encrypt_client_messages(
     memcpy(*mrenclave, m_other_enclave_signer_id, sizeof(m_other_enclave_signer_id));
     *mrenclave_size = sizeof(m_other_enclave_signer_id);
     ret = 0;
-    // TRACE_ENCLAVE("aes_encrypt_client_messages successful!Size is %d",encrypt_aes_data_size);
-    // for(size_t i = 0 ; i< encrypt_aes_data_size;i++){
-    //     TRACE_ENCLAVE("The encrypt data is 0x%x",encrypt_aes_data[i]);
-    // }
 exit:
     return ret;
 }

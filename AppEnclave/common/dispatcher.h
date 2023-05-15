@@ -62,6 +62,9 @@ private:
     Attestation *m_attestation;
     string m_name;
     enclave_config_data_t *m_enclave_config;
+    string state_message = "";
+    const int random_size = 1024;
+    uint8_t random_data[1024];
     unsigned char m_other_enclave_signer_id[32];
 
 public:
@@ -125,6 +128,9 @@ public:
         int seal_policy,
         sealed_data_t **sealed_data,
         size_t *sealed_data_size);
+
+    int genc_data(
+        int seal_size);
 
     int unseal_state_data(
         const sealed_data_t *sealed_data,
